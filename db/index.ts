@@ -10,8 +10,16 @@ import * as schema from './schema';
 const connectionString =
   process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/postgres';
 
+// Enable SSL for any real (non-local) host — Supabase requires it — so the
+// DATABASE_URL can be pasted verbatim without an `?sslmode=require` suffix.
+// Local fallback stays plaintext (and never actually connects during build).
+const isLocal = /@(localhost|127\.0\.0\.1)[:/]/.test(connectionString);
+
 // `prepare: false` is required for Supabase's transaction pooler (PgBouncer),
 // which does not support prepared statements.
-export const client = postgres(connectionString, { prepare: false });
+export const client = postgres(connectionString, {
+  prepare: false,
+  ssl: isLocal ? false : 'require',
+});
 
 export const db = drizzle(client, { schema });
