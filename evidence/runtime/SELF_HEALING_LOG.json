@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-10T10:27:10Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 2,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "healing_events": [
+      {
+        "timestamp": "2026-07-10T10:25:40Z",
+        "defect": "Missing translation wrapper in site-header.tsx navigation label causing E2E default Dutch homepage check to fail",
+        "action": "Replaced hardcoded Primary label with tCommon('primarySections')",
+        "result": "RESOLVED_PASS"
+      },
+      {
+        "timestamp": "2026-07-10T10:25:52Z",
+        "defect": "E2E tests loading bare /case and / paths resolve to Dutch, causing English text assertions to fail",
+        "action": "Updated e2e/site-smoke.spec.ts test targets to use explicit /en and /en/case locale paths",
+        "result": "RESOLVED_PASS"
+      }
+    ]
+  }
+}

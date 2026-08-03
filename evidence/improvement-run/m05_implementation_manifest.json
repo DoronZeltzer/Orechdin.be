@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "module": "M05",
+  "target_repo": "NIR-WEBSITE",
+  "implementation_mode": "DONER_FREE_AI_HARDENING",
+  "proof_ladder_rung": "L4",
+  "spec_sections_read": [
+    "IMPLEMENTATION_DISCOVERY_INDEX",
+    "UNIFIED_CASCADE_0",
+    "0D",
+    "Section_10_REFERENCE_BEHAVIORAL_CONTRACT"
+  ],
+  "file_map": {
+    "cascade_runner": "lib/free-ai-nokey/cascade.ts",
+    "router": "app/api/v1/freeai/nokey/chat/route.ts",
+    "adapters": "lib/free-ai-nokey/adapters.ts",
+    "resilience": "lib/free-ai-nokey/resilience.ts",
+    "intent": "lib/free-ai-nokey/intent.ts",
+    "resolution": "lib/free-ai-nokey/resolution.ts",
+    "scavenger": null,
+    "tests_router": "tests/unit/free-ai-nokey/cascade.test.ts",
+    "tests_scavenger": null
+  },
+  "gs_food_parity_checked": false,
+  "tests": {
+    "T0U_passed": ["T0U_1", "T0U_2", "T0U_4", "T0U_5", "T0U_8", "T0U_9"],
+    "T0D_passed": ["T0D_1", "T0D_8", "T0D_11", "T0D_12"],
+    "T0G_passed": []
+  },
+  "evidence_paths": [
+    "evidence/improvement-run/m05_implementation_manifest.json",
+    "evidence/improvement-run/free_ai_nokey/acceptance_summary.json"
+  ],
+  "proof_status": "IMPLEMENTATION_PROVEN",
+  "blocked_reason": null
+}

@@ -1,0 +1,53 @@
+{
+  "name": "orechdin-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "install:browsers": "playwright install chromium",
+    "capture": "node scripts/capture.mjs",
+    "capture:live": "node scripts/capture.mjs live",
+    "capture:local": "node scripts/capture.mjs local",
+    "diff": "node scripts/diff-screens.mjs",
+    "test:e2e": "playwright test",
+    "test:free-ai": "tsx --test tests/unit/free-ai-nokey/cascade.test.ts",
+    "portraits:build": "node scripts/build-lawyer-portraits.mjs"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.2",
+    "@react-pdf/renderer": "^4.5.1",
+    "better-auth": "^1.6.0",
+    "clsx": "^2.1.1",
+    "docx": "^9.6.1",
+    "drizzle-orm": "^0.45.2",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "next": "^15.1.6",
+    "next-intl": "^4.9.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.1.6",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.49.1",
+    "pngjs": "^7.0.0",
+    "postcss": "^8.4.49",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.1",
+    "typescript": "^5.7.2"
+  }
+}

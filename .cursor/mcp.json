@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "AGIMDesktop": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "d:\\GITHUB RESPIRATORY\\AGIM-COMMAND-SERVER\\src\\mcp\\agim-tools\\index.ts"
+      ],
+      "type": "stdio"
+    },
+    "VSCodeCursorBridge": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "d:\\GITHUB RESPIRATORY\\AGIM-COMMAND-SERVER\\src\\mcp\\bridge\\index.ts"
+      ],
+      "type": "stdio"
+    },
+    "KnowledgeBase": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "d:\\GITHUB RESPIRATORY\\AGIM-COMMAND-SERVER\\src\\mcp\\kb\\index.ts"
+      ],
+      "type": "stdio"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-05-29T21:49:52.212Z",
+  "objective": "Improvements memory retrieval agent goal loop CRAG sidecar",
+  "compact_brief": "NEO BRIEF | Improvements memory retrieval agent goal loop CRAG sidecar\nproject: D:\\GITHUB RESPIRATORY\\NIR-WEBSITE | gaps: 0\nlift: evidence=236 chunks=150 crag=142/24 fidelity=0.33\nmedia: {\"binary_other\":21,\"archive\":19}\nrag: D:\\GITHUB RESPIRATORY\\AG-P\\NEO_Librarian\\evidence\\rag_packs\\rag_pack_NIR_WEBSITE_20260529214952..json\n---\n1. [Medium] Governance doc indexed: AGENTS.md\n2. [Medium] Self-scan hit: .aiexclude\n3. [Medium] Self-scan hit: .antigravityignore\n4. [Medium] Self-scan hit: settings.json\n5. [Medium] Self-scan hit: mcp.json\n6. [Medium] Self-scan hit: agim-command-server.mdc\n7. [Medium] Self-scan hit: .cursorrules\n8. [Medium] Self-scan hit: .dev.err.log\n9. [Medium] Self-scan hit: .dev.log\n10. [Medium] Self-scan hit: .devserver.err.log\n11. [Medium] Self-scan hit: .devserver.out.log\n12. [Medium] Self-scan hit: .env.example\nanchors: PROJ_GOVERNANCE_DOC_INDEXED_AGENTS_MD_AGENTS_MD, PROJ_SELF_SCAN_HIT_AIEXCLUDE_AIEXCLUDE, PROJ_SELF_SCAN_HIT_ANTIGRAVITYIGNORE_ANTIGRAVITYIGNORE, PROJ_SELF_SCAN_HIT_SETTINGS_JSON_SETTINGS_JSON, PROJ_SELF_SCAN_HIT_MCP_JSON_MCP_JSON, PROJ_SELF_SCAN_HIT_AGIM_COMMAND_SERVER_MDC_AGIM_COMMAND_SERVER_MDC, PROJ_SELF_SCAN_HIT_CURSORRULES_CURSORRULES, PROJ_SELF_SCAN_HIT_DEV_ERR_LOG_DEV_ERR_LOG",
+  "rag_pack": {
+    "pack_json_path": "D:\\GITHUB RESPIRATORY\\AG-P\\NEO_Librarian\\evidence\\rag_packs\\rag_pack_NIR_WEBSITE_20260529214952..json",
+    "pack_md_path": "D:\\GITHUB RESPIRATORY\\AG-P\\NEO_Librarian\\evidence\\rag_packs\\rag_pack_NIR_WEBSITE_20260529214952..md",
+    "project_chunks_path": "D:\\GITHUB RESPIRATORY\\AG-P\\NEO_Librarian\\evidence\\rag_packs\\rag_pack_NIR_WEBSITE_20260529214952._project_chunks.json",
+    "receipt_path": "D:\\GITHUB RESPIRATORY\\AG-P\\NEO_Librarian\\evidence\\search_receipts\\rag_delivery_pack_20260529214952..json",
+    "crag_fidelity": 0.33,
+    "pack_item_count": 15
+  },
+  "rag_ready": true,
+  "gap_count": 0,
+  "not_scanned_roots": [
+    "C:\\Users\\agim",
+    "C:\\Users\\agim\\Downloads",
+    "C:\\Users\\agim\\Downloads\\BUSINESS G-P-T",
+    "C:\\Users\\agim\\Downloads\\BUSINESS G-P-T\\NEO AI",
+    "C:\\Users\\agim\\Desktop",
+    "C:\\Users\\agim\\Documents",
+    "C:\\Users\\agim\\Project",
+    "C:\\Users\\agim\\AG_VALON_ENTERPRISE",
+    "C:\\Users\\agim\\VALON_CORE",
+    "G:\\My Drive",
+    "G:\\My Drive\\001-AI-Technology-PROJECTS",
+    "G:\\My Drive\\001-AI-Technology-PROJECTS\\Blueprints-Inventions"
+  ]
+}

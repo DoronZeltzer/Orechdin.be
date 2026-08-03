@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-07-10T10:08:00Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Analyze codebase imports",
+      "exit_code": 0,
+      "stdout_hash": "358ae8e2e2ea8ea9f49ad4762c9cdebe2e72a08f5d0f622d99d30087095066914",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\CAPABILITY_DEPENDENCY_GRAPH_analysis.txt"
+    }
+  ],
+  "data": {
+    "edges": [
+      {
+        "source": "CAP-01-WORKSPACE-UI",
+        "target": "CAP-02-STATE-ROUTING",
+        "type": "IMPORTS_AND_CALLS"
+      },
+      {
+        "source": "CAP-01-WORKSPACE-UI",
+        "target": "CAP-04-6SLOT-COMPOSER",
+        "type": "IMPORTS_AND_CALLS"
+      },
+      {
+        "source": "CAP-01-WORKSPACE-UI",
+        "target": "CAP-05-CASEFILE-EXPORT",
+        "type": "CALLS"
+      },
+      {
+        "source": "CAP-01-WORKSPACE-UI",
+        "target": "CAP-08-SPEECH-REC",
+        "type": "IMPORTS"
+      },
+      {
+        "source": "CAP-02-STATE-ROUTING",
+        "target": "CAP-09-DB-AUTH",
+        "type": "READS_WRITES_DATA"
+      },
+      {
+        "source": "CAP-02-STATE-ROUTING",
+        "target": "CAP-03-SKILLS-ROUTING",
+        "type": "CALLS"
+      },
+      {
+        "source": "CAP-03-SKILLS-ROUTING",
+        "target": "CAP-04-6SLOT-COMPOSER",
+        "type": "CALLS"
+      },
+      {
+        "source": "CAP-04-6SLOT-COMPOSER",
+        "target": "CAP-06-FREE-AI-CASCADE",
+        "type": "FALLBACK_INFERENCE"
+      },
+      {
+        "source": "CAP-05-CASEFILE-EXPORT",
+        "target": "CAP-07-SAFETY-PII",
+        "type": "CALLS"
+      },
+      {
+        "source": "CAP-04-6SLOT-COMPOSER",
+        "target": "CAP-07-SAFETY-PII",
+        "type": "CALLS"
+      }
+    ],
+    "circular_dependencies_detected": [],
+    "hub_capabilities": [
+      {
+        "id": "CAP-01-WORKSPACE-UI",
+        "out_degree": 4,
+        "blast_radius": 9
+      },
+      {
+        "id": "CAP-02-STATE-ROUTING",
+        "out_degree": 2,
+        "blast_radius": 7
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "project": "NIR-WEBSITE",
+  "adoption_tier": "TIER_1_MVP",
+  "timestamp": "2026-07-10T10:30:00Z",
+  "scorecard": {
+    "PRG-00-Identity": "PASS",
+    "PRG-01-Secrets-Safety": "PASS",
+    "PRG-02-CI-Tooling": "PASS",
+    "PRG-03-Horizontal-Wiring": "PASS (Lite)",
+    "PRG-04-Vertical-Wiring": "PASS (Lite)",
+    "PRG-12-Security-Privacy": "PASS",
+    "PRG-16-Teardown-Data": "PASS",
+    "PRG-18-Release-Authority": "PASS"
+  },
+  "overall_verdict": "PASS"
+}

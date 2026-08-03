@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-07-14T13:30:00.000Z",
+  "module": "M05",
+  "target_repo": "NIR-WEBSITE",
+  "proof_status": "IMPLEMENTATION_PROVEN",
+  "test_command": "npm run test:free-ai",
+  "exit_code": 0,
+  "tests_passed": 10,
+  "tests_failed": 0,
+  "t0u_passed": ["T0U_1", "T0U_2", "T0U_4", "T0U_5", "T0U_8", "T0U_9"],
+  "t0d_passed": ["T0D_1", "T0D_8", "T0D_11", "T0D_12"],
+  "endpoints": [
+    "/api/v1/freeai/nokey/chat",
+    "/api/v1/freeai/nokey/image",
+    "/api/v1/freeai/nokey/status",
+    "/api/v1/freeai/nokey/setup",
+    "/api/v1/freeai/nokey/admin/status"
+  ],
+  "legacy_compat": "/api/v1/infer delegates to unified cascade",
+  "neo_bridge": "lib/neo/freeai-bridge.ts routes via /v1/freeai/nokey/chat (OpenRouter removed)"
+}

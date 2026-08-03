@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-07-10T10:27:20Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 2,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "node -v; npm -v",
+      "exit_code": 0,
+      "stdout_hash": "a4b26a6d8689ba48d3eb6e55c3c1e2a08f5d0f622d99d3008709506691456ca2",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\env_versions.txt"
+    }
+  ],
+  "data": {
+    "parity_status": "MATCH",
+    "versions": {
+      "node": "v20.11.0",
+      "npm": "10.2.4"
+    },
+    "database": {
+      "migration_status": "SYNCED",
+      "drizzle_kit_status": "UP_TO_DATE"
+    },
+    "environment_variables_checked": [
+      "DATABASE_URL",
+      "BETTER_AUTH_SECRET"
+    ]
+  }
+}

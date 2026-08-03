@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-10T10:09:10Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "blockers": [
+      {
+        "id": "BLK-01-MOCK-SMTP",
+        "description": "SendBrief API still defaults to console-logging mock send in development. Must wire real SMTP helper.",
+        "severity": "CRITICAL",
+        "resolved": false
+      }
+    ]
+  }
+}

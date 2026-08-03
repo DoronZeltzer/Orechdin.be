@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-orech-paper text-orech-ink antialiased;
+    font-feature-settings: "kern", "liga", "calt", "ss01";
+  }
+
+  /* Long-form copy adopts the academic prose face by default. UI chrome
+     (nav, buttons, form controls, monospaced eyebrows) explicitly opts out
+     by setting `font-sans` or `font-mono` on its container. */
+  p,
+  blockquote,
+  li,
+  dd,
+  address,
+  figcaption {
+    font-family: var(--font-prose), Charter, "Iowan Old Style", Georgia, serif;
+    font-feature-settings: "kern", "liga", "calt", "onum", "ss01";
+  }
+
+  /* Headline italic — replaces Playfair's italic with a true editorial
+     italic (Cormorant Garamond). Applied to <em> inside display headings,
+     and exposed as the `.italic-display` utility for pull text. */
+  h1 em,
+  h2 em,
+  h3 em,
+  .italic-display {
+    font-family: var(--font-display-italic), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    color: theme("colors.orech.bronze");
+    letter-spacing: -0.005em;
+  }
+
+  /* When the visitor pulls focus, render a calm hairline outline using the
+     bronze accent on the cream paper. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-orech-bronze ring-offset-2 ring-offset-orech-paper;
+  }
+
+  ::selection {
+    background-color: rgba(154, 107, 31, 0.18);
+    color: inherit;
+  }
+
+  /* Instant page paint — eliminate FOUC */
+  html {
+    background-color: #F6F4EE;
+  }
+
+  @media (min-width: 1024px) {
+    body.neo-hub-open {
+      padding-right: 420px;
+    }
+  }
+
+  /* Case Room: full-screen NEO workspace; hide marketing chrome and the
+     floating side panel rail so the visitor has a focused two-pane surface. */
+  body.neo-case-room footer[data-site-footer],
+  body.neo-case-room aside[aria-label="NEO assistant"],
+  body.neo-case-room button[aria-label="Open NEO assistant"] {
+    display: none !important;
+  }
+  body.neo-case-room {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* ─── Editorial primitives ─── */
+
+  /* Monospace eyebrow above section titles. Used everywhere from the
+     hero to the dossier so the visitor's eye learns one rhythm. */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] font-medium uppercase text-orech-bronze;
+    letter-spacing: theme("letterSpacing.eyebrow");
+  }
+
+  /* Display headline tuned for Playfair: light weight, tight tracking, and
+     `text-balance` so two-line headlines never orphan a single word. */
+  .display-headline {
+    @apply font-display font-light text-balance text-orech-ink;
+    letter-spacing: theme("letterSpacing.editorial");
+    line-height: theme("lineHeight.headline");
+  }
+
+  /* Lead paragraph — sits under H1 / H2 to introduce a section. */
+  .lead {
+    @apply font-prose text-lg leading-relaxed text-orech-ink/85;
+    font-feature-settings: "kern", "liga", "onum";
+  }
+
+  /* Hairline rule used under H2s as an editorial accent. */
+  .rule-gold {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background-color: theme("colors.orech.bronze");
+    opacity: 0.7;
+    margin-top: 1rem;
+  }
+
+  /* Hairline-bordered plate. Replaces 1px borders on premium cards. */
+  .plate {
+    @apply rounded-2xl bg-orech-paper;
+    box-shadow: theme("boxShadow.hairline");
+    transition:
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .plate:hover {
+    box-shadow: theme("boxShadow.hairlineLift");
+  }
+
+  /* Staggered reveal system for enterprise page sections */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.35s; }
+  .reveal-delay-4 { animation-delay: 0.5s; }
+  .reveal-delay-5 { animation-delay: 0.65s; }
+
+  /* Premium card hover lift */
+  .card-lift {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(28, 25, 23, 0.08),
+                0 4px 12px rgba(184, 134, 11, 0.06);
+  }
+
+  /* Shimmer loading effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(184, 134, 11, 0.04) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes mvp-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-mvp-marquee {
+    animation: mvp-marquee 28s linear infinite;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out both;
+  }
+
+  /* Smooth number counter */
+  @keyframes count-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-count {
+    animation: count-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+/* ─── 2026 VIEW TRANSITIONS API ─── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: fade-out, scale-down;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-in, scale-up;
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes scale-down {
+  to { transform: scale(0.98); }
+}
+
+@keyframes scale-up {
+  from { transform: scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ─── PRINT STYLESHEET ────────────────────────────────────────────────────
+ *
+ * Lets the lawyer (or visitor) print just the case-file dossier as a clean
+ * A4 document, without the chrome around it. Anything outside the
+ * `.case-file-printable` subtree is hidden when printing. Inside it, colours
+ * collapse to black on white and links print their href so a paper copy
+ * is still actionable.
+ */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .case-file-printable,
+  .case-file-printable * {
+    visibility: visible !important;
+  }
+
+  .case-file-printable {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+  }
+
+  .case-file-printable section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .case-file-printable h1,
+  .case-file-printable h2,
+  .case-file-printable h3 {
+    color: #111111 !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .case-file-printable a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555555;
+  }
+
+  .print\:hidden,
+  header[role="banner"],
+  nav,
+  footer:not(.case-file-printable footer),
+  aside:not(.case-file-printable aside) {
+    display: none !important;
+  }
+}

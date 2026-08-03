@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-07-10T10:10:00Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "gdpr_compliance": {
+      "pii_redacted_fields": [
+        "phone",
+        "email",
+        "client_name",
+        "national_id"
+      ],
+      "redaction_method": "Regex token substitution to contentRedacted before writing to caseMessages table."
+    },
+    "encryption": {
+      "at_rest": "SQLite DB encryption (libsql local database)",
+      "in_transit": "TLS 1.3 enforced on HTTP endpoints"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "verdict": "FAIL",
+  "timestamp": "2026-07-10T10:31:25.390Z",
+  "failures": [
+    "Blocking truth debt open: TD-001"
+  ]
+}

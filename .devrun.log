@@ -1,0 +1,15 @@
+
+> orechdin-web@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.39:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.9s
+ ✓ Compiled /middleware in 478ms (235 modules)
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 3.4s (2027 modules)
+ GET / 200 in 6168ms

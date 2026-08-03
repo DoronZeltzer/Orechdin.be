@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-07-10T10:08:45Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Analyze whole-system process boundaries",
+      "exit_code": 0,
+      "stdout_hash": "528ae82e2ea8ea9f49ad4762c9cdebe2e72a08f5d0f622d99d30087095066914",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\ORGANISM_AWARENESS_MAP_analysis.txt"
+    }
+  ],
+  "data": {
+    "modules": [
+      {
+        "module_id": "M10-UI-WORKSPACE",
+        "role": "Concierge Interface Shell",
+        "depends_on": [
+          {
+            "module_id": "M02-STATE-ROUTING",
+            "if_fails": "UI falls back to standard offline contact form and informs user of local-only cache."
+          }
+        ],
+        "depended_on_by": [],
+        "contract": "Displays strict bold/italic Markdown without executing unescaped scripts.",
+        "blast_radius": 1
+      },
+      {
+        "module_id": "M02-STATE-ROUTING",
+        "role": "Matter State Machine",
+        "depends_on": [
+          {
+            "module_id": "M09-DATABASE",
+            "if_fails": "Stores state variables in browser sessionStorage temporarily."
+          }
+        ],
+        "depended_on_by": [
+          {
+            "module_id": "M10-UI-WORKSPACE"
+          }
+        ],
+        "contract": "Requires valid caseDraftId and sequenceNo increments for all new messages.",
+        "blast_radius": 8
+      },
+      {
+        "module_id": "M09-DATABASE",
+        "role": "SQLite Persistence Layer",
+        "depends_on": [],
+        "depended_on_by": [
+          {
+            "module_id": "M02-STATE-ROUTING"
+          }
+        ],
+        "contract": "Enforces strict user foreign keys and redactable string limits.",
+        "blast_radius": 9
+      }
+    ],
+    "single_points_of_failure": [
+      {
+        "module_id": "M09-DATABASE",
+        "mitigation": "Session fallback and in-memory caches allow basic concierge chats to run offline/during db timeouts."
+      }
+    ]
+  }
+}

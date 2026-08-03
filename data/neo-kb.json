@@ -1,0 +1,314 @@
+[
+  {
+    "id": "disclaimer",
+    "title": "Results and expectations",
+    "tags": ["disclaimer", "result", "outcome", "guarantee"],
+    "body": "Orechdin Law Office does not commit to any specific result but will make every effort to achieve the best possible outcome. Case-specific advice requires direct contact with the firm.",
+    "href": null,
+    "primaryAgent": "legal-guide"
+  },
+  {
+    "id": "contact-general",
+    "title": "Reaching the office",
+    "tags": ["contact", "phone", "email", "call", "reach", "appointment"],
+    "body": "General office line: +32 3 227 50 57. Email: info@orechdin.be. Address: Lange Herentalsestraat 122, 2018 Antwerp, Belgium.",
+    "href": "/contact",
+    "primaryAgent": "contact-router"
+  },
+  {
+    "id": "lawyers-overview",
+    "title": "The lawyers",
+    "tags": ["lawyer", "team", "who", "nir", "deborah", "partner"],
+    "body": "Matters are supervised by senior partner Nir Zeltzer and Deborah Johnson. Each lawyer’s direct mobile and email are listed on The Lawyers and Office pages for client contact.",
+    "href": "/lawyers",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "services-scope",
+    "title": "Services offered",
+    "tags": ["services", "practice", "civil", "criminal", "family", "employment", "real estate", "traffic", "commercial"],
+    "body": "Orechdin advises private individuals, companies, and self-employed clients. The firm handles commercial, criminal, real estate and construction, civil, family, employment, traffic, residence and civil liability matters, rental disputes, and debt collection. Specialist counsel is engaged for foreign and international files.",
+    "href": "/services",
+    "primaryAgent": "services-guide"
+  },
+  {
+    "id": "office-location",
+    "title": "Office and approach",
+    "tags": ["antwerp", "location", "office", "about", "heart"],
+    "body": "The office describes itself as dynamic and growing, located in the heart of Antwerp. Clients are involved in major procedural decisions; the firm emphasises care and clear advice.",
+    "href": "/office",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "privacy-dpo",
+    "title": "Privacy and data protection",
+    "tags": ["privacy", "gdpr", "avg", "data", "dpo", "rights"],
+    "body": "ORECHDIN (KBO 0879.210.671) processes personal data under GDPR. The data protection officer is Meester Deborah Johnson at the Antwerp office; privacy requests: dj@orechdin.be or 03/227.50.57. Full statement dated 24/05/2018 is on the official privacy page.",
+    "href": "/privacy",
+    "primaryAgent": "policy-helper"
+  },
+  {
+    "id": "intake-human",
+    "title": "When you need a lawyer",
+    "tags": ["advice", "legal advice", "urgent", "case", "lawsuit"],
+    "body": "NEO provides general orientation only. It does not replace advice from a qualified lawyer. Share facts with the office in confidence via the Contact page on this site, or ask NEO for published contact details when you are ready to reach the firm.",
+    "href": "/contact",
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "document-boundary",
+    "title": "Documents and interpretation",
+    "tags": ["document", "contract", "review", "translate"],
+    "body": "Do not upload confidential documents here. For document-related questions, contact the office so a lawyer can review materials under professional secrecy and applicable rules.",
+    "href": "/contact",
+    "primaryAgent": "document-helper"
+  },
+  {
+    "id": "nir-real-estate",
+    "title": "Real estate and business law (Nir Zeltzer)",
+    "tags": ["real estate", "property", "construction", "business law", "negotiation"],
+    "body": "The firm highlights Nir Zeltzer’s real estate experience and Master in Business Law. For property or commercial matters, route your enquiry through contact so it reaches the right lawyer.",
+    "href": "/lawyers",
+    "primaryAgent": "legal-guide"
+  },
+  {
+    "id": "deborah-fields",
+    "title": "Family, criminal, employment, traffic (Deborah Johnson)",
+    "tags": ["family", "divorce", "criminal", "employment", "traffic", "dpo"],
+    "body": "Deborah Johnson focuses on family law, criminal law, employment law, and traffic cases and serves as DPO for privacy matters.",
+    "href": "/lawyers",
+    "primaryAgent": "legal-guide"
+  },
+  {
+    "id": "nir-experience",
+    "title": "Nir Zeltzer — background and qualifications",
+    "tags": ["nir", "experience", "since 1999", "antwerp university", "diploma", "real estate expertise", "master in business law"],
+    "body": "Nir Zeltzer obtained his diploma in law at Antwerp University and has practised since 1999. He has built considerable experience in real estate, supported by comprehensive studies in Real Estate and a diploma in Real Estate Expertise. He also obtained a Master in Business Law at Antwerp University.",
+    "href": "/lawyers",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "nir-strengths",
+    "title": "Nir Zeltzer — approach to cases",
+    "tags": ["analytical", "negotiation", "conflict resolution", "pressure", "complex procedures"],
+    "body": "Nir is described as an experienced lawyer with strong analytical powers, focused on achieving results for clients. He is noted for resolving conflicts and reaching optimum results during negotiations, even under pressure and through complex procedures.",
+    "href": "/lawyers",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "deborah-career",
+    "title": "Deborah Johnson — career path",
+    "tags": ["deborah", "turnhout bar", "antwerp", "since 2002", "diploma", "antwerp university"],
+    "body": "Deborah Johnson obtained her diploma in law at Antwerp University and started her career at the Turnhout Bar. In 2002 she moved to Antwerp and joined the Orechdin law office. Her work is described as combining profound insight with a professional yet human touch that clients appreciate.",
+    "href": "/lawyers",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "legal-entity",
+    "title": "Firm registration and identity",
+    "tags": ["kbo", "rpr", "antwerp business court", "company number", "entity", "orechdin bv"],
+    "body": "The firm operates as ORECHDIN (KBO 0879.210.671), with the Antwerp business court (RPR Antwerpen) as the registered jurisdiction. Copyright entity: ORECHDIN BV.",
+    "href": "/privacy",
+    "primaryAgent": "policy-helper"
+  },
+  {
+    "id": "international-counsel",
+    "title": "International and foreign-law files",
+    "tags": ["international", "foreign", "abroad", "cross-border", "specialist counsel"],
+    "body": "For foreign and international files, the office engages specialist counsel rather than handling them directly. If your matter has a cross-border dimension, mention it during intake so it can be routed appropriately.",
+    "href": "/services",
+    "primaryAgent": "services-guide"
+  },
+  {
+    "id": "office-character",
+    "title": "How the office works with clients",
+    "tags": ["client involvement", "approach", "advice", "decisions", "transparency"],
+    "body": "The office describes its approach as care-driven and clear: clients are involved in the major procedural decisions on their file rather than being kept at arm’s length. The team presents itself as a dynamic and growing practice in the heart of Antwerp.",
+    "href": "/office",
+    "primaryAgent": "office-navigator"
+  },
+  {
+    "id": "belgian-court-structure",
+    "title": "Belgian court structure (general orientation)",
+    "tags": ["court", "rechtbank", "tribunal", "vredegerecht", "appeal", "cassatie", "structure"],
+    "body": "General orientation only: in Belgium, ordinary civil disputes start at the vredegerecht (justice of the peace) for limited claims, the rechtbank van eerste aanleg / tribunal de première instance for most civil and family matters, and the ondernemingsrechtbank / tribunal de l'entreprise for commercial matters. Appeals go to the hof van beroep / cour d'appel; the Hof van Cassatie / Cour de cassation reviews points of law. Source: official portal justice.belgium.be. NEO uses this to ask the visitor where their matter sits — it is not legal advice.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "antwerp-jurisdiction",
+    "title": "Antwerp judicial district",
+    "tags": ["antwerp", "antwerpen", "jurisdiction", "rpr", "ondernemingsrechtbank"],
+    "body": "Orientation only: the Antwerp judicial district covers the province of Antwerp, with the ondernemingsrechtbank Antwerpen handling commercial matters (RPR Antwerpen — the same court the firm is registered with). Procedural language in this district is Dutch. Foreign-language litigants typically need a sworn translator. Source: justice.belgium.be. NEO uses this to confirm jurisdiction and language during intake.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "language-regime",
+    "title": "Court language regime in Belgium",
+    "tags": ["language", "dutch", "french", "translator", "interpreter", "wet 1935"],
+    "body": "General orientation: Belgian court language is fixed by the law of 15 June 1935 on the use of languages in judicial matters. In Antwerp the procedural language is Dutch; in Brussels and Wallonia it is French (Brussels has bilingual mechanisms). NEO will ask the visitor in which language the proceedings have been (or will be) conducted, so the firm can plan translator support if needed. This is procedural orientation, not advice on choice of language.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "intake-essentials",
+    "title": "What a Belgian lawyer typically needs at intake",
+    "tags": ["intake", "dossier", "samenvatting", "documents", "ovb"],
+    "body": "Procedural orientation: NEO operates as an advanced intellectual pre-processor. It gathers identity, conflict-check data, and critical documents (contracts, default notices, damages proof). NEO's primary function is to transform a visitor's raw narrative into an academically structured, highly professional file that is almost intellectually ready for formal legal submission. This allows the lawyer to immediately engage in high-level strategic review rather than basic fact-finding.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "professional-secrecy",
+    "title": "Professional secrecy (beroepsgeheim) — orientation",
+    "tags": ["beroepsgeheim", "secret professionnel", "confidentiality", "privilege", "ovb"],
+    "body": "General orientation: communications between a Belgian advocaat and a client are protected by professional secrecy under the OVB Codex Deontologie and the Penal Code (Art. 458). This protection takes effect once a lawyer is engaged. The public NEO chat is NOT yet a privileged channel — visitors should avoid sharing confidential case facts here and instead reach the office via the published contact path so any sensitive material is handled under professional secrecy.",
+    "href": "/contact",
+    "primaryAgent": "policy-helper"
+  },
+  {
+    "id": "engagement-letter",
+    "title": "Engagement letter (opdrachtbevestiging)",
+    "tags": ["engagement letter", "opdrachtbevestiging", "client agreement", "ovb", "fees"],
+    "body": "Procedural orientation only: under the OVB Behandeling-dossier guidance, every Belgian advocaat-client relationship starts with a written engagement letter / opdrachtbevestiging covering scope, fees, billing rhythm, and termination. This step happens at the office, not through NEO. NEO mentions it during intake so the visitor knows the next concrete step after the lawyer accepts the matter.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "limitation-orientation",
+    "title": "Time limits in Belgian law (general orientation)",
+    "tags": ["verjaring", "prescription", "statute of limitations", "deadline"],
+    "body": "Strictly general orientation, not advice: many Belgian civil claims are subject to a five- or ten-year prescription period (Art. 2262bis Belgian Civil Code), with shorter or longer regimes for specific matters (e.g. one year for transport, three years for product liability under Art. 1386bis). Criminal limitation periods differ. NEO never tells a visitor what their specific deadline is — it flags time-sensitivity and recommends they reach the office quickly. Always confirmed by a lawyer.",
+    "href": null,
+    "primaryAgent": "urgency-triage"
+  },
+  {
+    "id": "ovb-bar-context",
+    "title": "Bar membership and the OVB",
+    "tags": ["ovb", "orde van vlaamse balies", "balie", "bar", "deontology"],
+    "body": "Orientation: Flemish lawyers are members of the local bar (e.g. Balie Provincie Antwerpen) and bound by the OVB Codex Deontologie. This governs conflict checks, professional secrecy, fees, and case-file handling. NEO references this only to explain the procedural gates a Belgian lawyer must pass before opening a file — it is general background, not advice.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "case-file-structure",
+    "title": "How NEO structures a case file for the lawyer",
+    "tags": ["case file", "dossier", "ovb", "structure", "intake summary", "submission"],
+    "body": "Preparation orientation: NEO assembles every intake into a highly professional, submission-ready intellectual dossier. This includes an Executive Summary, Parties Roster, Conflict Gate, strict Chronology, Legal-Issues mapping with NITA-style case theory, Evidentiary Gap Analysis, Procedural Posture (deadlines/statute strings), and an OVB four-folder mapping. By presenting the case almost intellectually ready for formal submission, NEO minimizes lawyer overhead and maximizes case velocity.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "adr-negotiation-philosophy",
+    "title": "Alternative Dispute Resolution (ADR) and Negotiation",
+    "tags": ["strategy", "analysis", "adr", "negotiation", "mediation", "settlement"],
+    "body": "Strategic orientation: While litigation is sometimes unavoidable, early and effective negotiation often mitigates systemic risk, reduces cost, and maintains commercial relationships. Approaches include structured mediation, binding arbitration, and direct counsel-to-counsel settlement talks. Evaluation of these pathways focuses on BATNA (Best Alternative to a Negotiated Agreement). NEO can map dispute options but a lawyer determines specific strategic viability.",
+    "href": "/services",
+    "primaryAgent": "strategic-advisor"
+  },
+  {
+    "id": "real-estate-transaction-hazards",
+    "title": "Real Estate Frameworks and Transaction Hazards",
+    "tags": ["strategy", "real estate", "construction", "zoning", "transaction", "liability"],
+    "body": "Analytical orientation: Real estate transactions in Belgium are encumbered by layers of regulatory hurdles: urban planning permits (omgevingsvergunning), soil certificates (bodemattest), hidden defect liability (verborgen gebreken), and strict ten-year constructor liability. A rigorous due diligence framework prevents post-acquisition structural litigation. Focus on securing protective contractual clauses prior to signing a compromis.",
+    "href": "/services",
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "metacognitive-intake-patterns",
+    "title": "Metacognitive Case Structuring",
+    "tags": ["strategy", "analysis", "mapping", "structure", "metacognition", "timeline"],
+    "body": "Methodology orientation: Structuring complex scenarios involves chronological ordering, identifying key actors, and recognizing evidentiary gaps. Legal metacognition breaks a narrative into components: cause of action, identifiable harm, causation linkage, and mitigation. NEO employs these advanced cognitive structures to clarify the narrative prior to human review. Conclusions regarding the strength of the chain are strictly reserved for the lawyer.",
+    "href": null,
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "corporate-risk-liability",
+    "title": "Corporate Risk and Director Liability",
+    "tags": ["strategy", "business law", "liability", "directors", "corporate", "risk"],
+    "body": "Analytical orientation: Corporate structures afford protection but do not provide an absolute shield against director liability (bestuurdersaansprakelijkheid) in occurrences of gross negligence or severe fiscal infractions. Effective legal strategy involves isolating operational risk from personal assets, understanding shareholder agreements, and managing insolvency mechanisms defensively.",
+    "href": "/services",
+    "primaryAgent": "strategic-advisor"
+  },
+  {
+    "id": "contractual-breach-response",
+    "title": "Contractual Breach and Enforcement Mechanisms",
+    "tags": ["strategy", "analysis", "contract", "breach", "enforcement", "damages"],
+    "body": "Strategic orientation: When a contractual breach occurs (wanprestatie), mechanisms include formal notice of default (ingebrekestelling), claiming specific performance (gedwongen uitvoering), termination (ontbinding), or seeking damages (schadevergoeding). Strategy dictates choosing the pathway that balances operational continuity against legal leverage and costs. The choice of mechanism depends on documented evidence, which a lawyer must review.",
+    "href": "/contact",
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "adverse-party-barrier",
+    "title": "Adverse Party Conflict Barrier",
+    "tags": ["conflict", "adverse", "opposing party", "secrecy", "bar association", "ethics"],
+    "body": "Procedural orientation: Before Neo gathers substantive case facts, it must clear the Conflict-of-Interest barrier. Neo must explicitly ask the user to name the opposing party or company. This protects professional secrecy by ensuring Orechdin does not already represent the opponent. Once identified, Neo may proceed to structure the file.",
+    "href": null,
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "quantum-damages-model",
+    "title": "Quantum & Damages Structuring",
+    "tags": ["damages", "quantum", "financial", "principal", "interests", "costs", "model"],
+    "body": "Analytical orientation: Neo must convert messy financial claims into severe structural models. It pushes the client to categorize claimed losses accurately into: Principal Sum (hoofdsom), Statutory Interests (wettelijke intresten), Consequential Costs (gevolgschade/kosten), and Moral Damages (morele schade). This provides a precise actionable framework for lawyer assessment.",
+    "href": null,
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "evidence-blueprint",
+    "title": "Targeted Evidence Blueprint",
+    "tags": ["evidence", "documents", "blueprint", "checklist", "consultation"],
+    "body": "Structural orientation: At the conclusion of narrative structuring, Neo dynamically generates an itemized Targeted Evidence Checklist for the user. Rather than a generic instruction, it specifies exact documents (e.g., 'the signed compromis', 'email default notice', 'color photographs') the client must produce for their direct consultation with the lawyer.",
+    "href": "/contact",
+    "primaryAgent": "document-helper"
+  },
+  {
+    "id": "comparative-translation",
+    "title": "Comparative Legal Translation",
+    "tags": ["translation", "statutory", "jurisdiction", "expat", "language", "belgian law"],
+    "body": "Methodology orientation: When speaking English or French to expats regarding Belgian law, Neo utilizes exact statutory terminology (e.g., 'ingebrekestelling', 'verborgen gebreken', 'omgevingsvergunning') paired intricately with the intellectual translation. This prevents jurisdictional meaning loss and trains the client to speak the correct procedural language.",
+    "href": null,
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "intake-reflection-receipt",
+    "title": "Intake Reflection Handover Summary",
+    "tags": ["receipt", "handover", "summary", "closure", "psychological comfort"],
+    "body": "Procedural orientation: To provide absolute competence mirroring the firm's quality, Neo completes the session by presenting an Intake Reflection Receipt to the client. This is a clean, non-confidential, high-level summary confirming the client’s file has been intellectually mapped and routed securely to the Orechdin legal team.",
+    "href": "/contact",
+    "primaryAgent": "intake-assistant"
+  },
+  {
+    "id": "cross-border-disputes",
+    "title": "Cross-Border Dispute Mechanisms",
+    "tags": ["strategy", "cross-border", "international", "jurisdiction", "arbitration", "enforcement", "conflict of laws"],
+    "body": "Analytical orientation: Cross-border disputes require immediate identification of the competent jurisdiction and applicable law (Rome I/II, Brussels I bis). Strategic defense often involves assessing the viability of international arbitration (e.g., ICC, CEPANI) versus domestic litigation, and understanding the mechanisms for cross-border enforcement of judgments (exequatur). Structural advice minimizes jurisdictional risk before engaging substantive claims.",
+    "href": "/services",
+    "primaryAgent": "cross-border-strategist"
+  },
+  {
+    "id": "ip-tech-protection",
+    "title": "IP & Technology Asset Protection",
+    "tags": ["strategy", "ip", "intellectual property", "technology", "software", "trade secrets", "infringement"],
+    "body": "Strategic orientation: In the technology sector, the protection of intellectual property (copyright, patents, trademarks, and trade secrets) is paramount. Disputes over software development contracts, SaaS agreements, or IP infringement require rapid securing of evidence (e.g., beslag inzake namaak / saisie-contrefaçon) and rigorous contractual audits. Escalate complex IP valuation and infringement mapping directly to the legal team.",
+    "href": "/services",
+    "primaryAgent": "legal-analyst"
+  },
+  {
+    "id": "corporate-insolvency-mechanisms",
+    "title": "Complex Corporate Insolvency",
+    "tags": ["strategy", "insolvency", "bankruptcy", "wco", "restructuring", "creditors", "directors"],
+    "body": "Analytical orientation: Corporate restructuring and insolvency proceedings (e.g., faillissement, WCO / PRJ) demand highly specialized navigation. Key vulnerabilities include director liability for delayed filing (kennelijk grove fout) and clawback risks (actio pauliana). Creditors must rapidly file claims (schuldvordering) and assert retention of title clauses. The firm provides structural intervention to mitigate exposure during financial distress.",
+    "href": "/services",
+    "primaryAgent": "strategic-advisor"
+  },
+  {
+    "id": "executive-compensation-disputes",
+    "title": "Executive Compensation & Severance Disputes",
+    "tags": ["strategy", "employment", "executive", "severance", "compensation", "non-compete", "golden parachute"],
+    "body": "Strategic orientation: Disputes involving C-level executives or management companies typically hinge on complex remuneration structures (bonus plans, stock options, golden parachutes) and restrictive covenants (non-compete, non-solicitation). Under Belgian law, the distinction between an employee and an independent director dictates the applicable legal framework. Resolution prioritizes discrete, high-leverage negotiation over public litigation.",
+    "href": "/services",
+    "primaryAgent": "legal-analyst"
+  }
+]

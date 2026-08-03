@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-07-10T10:09:50Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "contracts": [
+      {
+        "id": "CON-01-API-CASE-FILE",
+        "boundary": "Client Workspace -> POST /api/neo/case-file",
+        "rules": [
+          "Request must contain non-empty messages array.",
+          "Response is either JSON object (with downloadName and reference) or raw PDF/DOCX binary."
+        ]
+      },
+      {
+        "id": "CON-02-DB-MESSAGES",
+        "boundary": "State Machine -> caseMessages SQLite Table",
+        "rules": [
+          "role must be either 'user' or 'assistant'.",
+          "contentRedacted must be non-empty and sanitized of direct PII."
+        ]
+      }
+    ]
+  }
+}

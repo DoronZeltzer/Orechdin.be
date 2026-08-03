@@ -1,0 +1,6 @@
+
+## 🧠 Local Personal Memory System
+You MUST persist state locally inside this project.
+1. **Initialize**: ALWAYS view_file INDEX.md and activeContext.md in this project directory before coding.
+2. **Synchronize**: Update activeContext.md with your intent.
+3. **Persist**: Write bug fixes to lessonsLearned.md.

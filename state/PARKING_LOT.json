@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-10T10:10:30Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "deferred_items": [
+      {
+        "id": "DEF-01-CRM-SYNC",
+        "description": "Direct Sync of completed CaseBrief dossiers to external law firm CRM systems.",
+        "target_sprint": "Sprint 8"
+      }
+    ]
+  }
+}

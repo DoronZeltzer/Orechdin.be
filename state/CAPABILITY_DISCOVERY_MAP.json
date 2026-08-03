@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-07-10T10:07:30Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Get-ChildItem -Recurser lib/neo",
+      "exit_code": 0,
+      "stdout_hash": "a4d87216a69ef49ee89ad4762c9cdebe2e72a08f5d0f622d99d30087095066914",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\CAPABILITY_DISCOVERY_MAP_commands.txt"
+    }
+  ],
+  "data": {
+    "capabilities": [
+      {
+        "id": "CAP-01-WORKSPACE-UI",
+        "name": "Case Room Workspace UI",
+        "description": "Interactive lawyer concierge sidebar workspace and slide-in chat surface with typing simulator.",
+        "files": [
+          "app/[locale]/case/page.tsx",
+          "components/neo/neo-workspace.tsx",
+          "components/neo/neo-chat-surface.tsx",
+          "components/neo/neo-dossier-panel.tsx",
+          "components/neo/neo-case-file-view.tsx",
+          "components/neo/delivery-channel-modal.tsx"
+        ],
+        "category": "UI/UX",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-02-STATE-ROUTING",
+        "name": "Intake State Routing",
+        "description": "Enforce strict step transitions (Concierge -> Urgency -> Handoff) and keep conversation state variables.",
+        "files": [
+          "lib/neo/session-state.ts",
+          "lib/neo/intake-state.ts",
+          "lib/neo/intake-mode.ts"
+        ],
+        "category": "State Management",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-03-SKILLS-ROUTING",
+        "name": "Deterministic Intent & Skills Routing",
+        "description": "Route queries synchronously based on keywords and intent triggers to 8 specialist agents.",
+        "files": [
+          "lib/neo/intake-routing.ts",
+          "lib/neo/law-skills.ts",
+          "lib/neo/agents.ts"
+        ],
+        "category": "Orchestration",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-04-6SLOT-COMPOSER",
+        "name": "6-Slot Legal Reply Composer",
+        "description": "Programs exact 6-slot Markdown output template to ensure strict voice boundaries and disclaimers.",
+        "files": [
+          "lib/neo/compose-reply.ts",
+          "lib/neo/legal-reply.ts",
+          "lib/neo/prompt-compiler.ts"
+        ],
+        "category": "Orchestration",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-05-CASEFILE-EXPORT",
+        "name": "Case Brief PDF & DOCX Generation",
+        "description": "Offline deterministic case brief compilation and export to PDF and DOCX formats.",
+        "files": [
+          "lib/neo/case-file-builder.ts",
+          "lib/neo/case-file-docx.ts",
+          "lib/neo/case-file-pdf.tsx",
+          "lib/neo/case-file-export.ts",
+          "lib/neo/case-file-extractors.ts",
+          "app/api/neo/case-file/route.ts"
+        ],
+        "category": "Export & Rendering",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-06-FREE-AI-CASCADE",
+        "name": "Free AI Cascade & Inference Bridge",
+        "description": "Fallback system allowing local/keyless Gemini or client-configured API fallback with swarm reviewer support.",
+        "files": [
+          "lib/neo/freeai-bridge.ts",
+          "lib/neo/swarm-reviewer.ts",
+          "app/api/v1/infer/route.ts"
+        ],
+        "category": "AI Inference",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-07-SAFETY-PII",
+        "name": "Dossier Guard & PII Censor",
+        "description": "Censors client PII, detects conflicting representation flags, and enforces dossier safety checks.",
+        "files": [
+          "lib/neo/dossier-safety-checks.ts",
+          "lib/neo/conflict-flag.ts"
+        ],
+        "category": "Security & Sanitization",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-08-SPEECH-REC",
+        "name": "Web Speech Recognition Integration",
+        "description": "Captures microphone input and streams speech-to-text dictation into case composer UI.",
+        "files": [
+          "lib/neo/use-speech-recognition.ts"
+        ],
+        "category": "UI/UX",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "CAP-09-DB-AUTH",
+        "name": "Better Auth & SQLite Database Integration",
+        "description": "Manages authenticated sessions, case drafts, and audit logs inside sqlite tables.",
+        "files": [
+          "lib/auth.ts",
+          "db/schema/index.ts",
+          "middleware.ts"
+        ],
+        "category": "Database & Auth",
+        "maturity": "FUNCTIONAL",
+        "status": "ACTIVE"
+      }
+    ]
+  }
+}

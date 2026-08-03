@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-07-10T10:10:50Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "nervous_nodes": [
+      {
+        "id": "NODE-01-COMPOSER",
+        "type": "UI_INPUT",
+        "description": "User message text/audio intake triggers detectLanguage() hook."
+      },
+      {
+        "id": "NODE-02-ROUTER",
+        "type": "ORCHESTRATOR_ROUTER",
+        "description": "Synchronously selects matching specialist skill based on regex keywords."
+      },
+      {
+        "id": "NODE-03-TELEMETRY",
+        "type": "TELEMETRY_LOG",
+        "description": "Fires audit event hooks after every step transition or case submission."
+      }
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-07-10T10:07:45Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Check code structure for error-handling and tests",
+      "exit_code": 0,
+      "stdout_hash": "236ae184f49ad4762c9cdebe2e72a08f5d0f622d99d3008709506691456bcbe2",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\CAPABILITY_HEALTH_SCORES_commands.txt"
+    }
+  ],
+  "data": {
+    "health_scores": {
+      "CAP-01-WORKSPACE-UI": {
+        "health_score": 85,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 60,
+          "error_handling": 80,
+          "performance": 90,
+          "docs": 85,
+          "dependency_freshness": 95,
+          "security": 85,
+          "real_world_ready": 90,
+          "observability": 90
+        }
+      },
+      "CAP-02-STATE-ROUTING": {
+        "health_score": 90,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 70,
+          "error_handling": 90,
+          "performance": 95,
+          "docs": 90,
+          "dependency_freshness": 95,
+          "security": 90,
+          "real_world_ready": 90,
+          "observability": 90
+        }
+      },
+      "CAP-03-SKILLS-ROUTING": {
+        "health_score": 92,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 80,
+          "error_handling": 90,
+          "performance": 95,
+          "docs": 90,
+          "dependency_freshness": 95,
+          "security": 95,
+          "real_world_ready": 90,
+          "observability": 90
+        }
+      },
+      "CAP-04-6SLOT-COMPOSER": {
+        "health_score": 95,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 85,
+          "error_handling": 95,
+          "performance": 95,
+          "docs": 95,
+          "dependency_freshness": 95,
+          "security": 95,
+          "real_world_ready": 95,
+          "observability": 95
+        }
+      },
+      "CAP-05-CASEFILE-EXPORT": {
+        "health_score": 88,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 65,
+          "error_handling": 85,
+          "performance": 90,
+          "docs": 90,
+          "dependency_freshness": 95,
+          "security": 90,
+          "real_world_ready": 90,
+          "observability": 85
+        }
+      },
+      "CAP-06-FREE-AI-CASCADE": {
+        "health_score": 80,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 50,
+          "error_handling": 80,
+          "performance": 85,
+          "docs": 80,
+          "dependency_freshness": 95,
+          "security": 85,
+          "real_world_ready": 80,
+          "observability": 85
+        }
+      },
+      "CAP-07-SAFETY-PII": {
+        "health_score": 90,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 80,
+          "error_handling": 90,
+          "performance": 95,
+          "docs": 90,
+          "dependency_freshness": 95,
+          "security": 95,
+          "real_world_ready": 90,
+          "observability": 85
+        }
+      },
+      "CAP-08-SPEECH-REC": {
+        "health_score": 85,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 50,
+          "error_handling": 85,
+          "performance": 95,
+          "docs": 85,
+          "dependency_freshness": 95,
+          "security": 90,
+          "real_world_ready": 85,
+          "observability": 80
+        }
+      },
+      "CAP-09-DB-AUTH": {
+        "health_score": 90,
+        "maturity": "FUNCTIONAL",
+        "dimensions": {
+          "test_coverage": 70,
+          "error_handling": 90,
+          "performance": 95,
+          "docs": 90,
+          "dependency_freshness": 95,
+          "security": 90,
+          "real_world_ready": 90,
+          "observability": 90
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-10T10:10:10Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "slos": [
+      {
+        "id": "SLO-01-RESPONSE-TIME",
+        "metric": "Intake Response Render Latency",
+        "threshold": "100ms",
+        "conformance": "99.5%"
+      },
+      {
+        "id": "SLO-02-DB-QUERY",
+        "metric": "Case Draft Fetch Query Time",
+        "threshold": "50ms",
+        "conformance": "99%"
+      }
+    ]
+  }
+}

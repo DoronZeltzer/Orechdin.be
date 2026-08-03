@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-07-10T10:07:00Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Get-Content H2AI-Blueprint.md",
+      "exit_code": 0,
+      "stdout_hash": "b2680d283626e2e0eaeb785a9bc83be2e72a08f5d0f622d99d30087095066914",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\PROJECT_INTENT_discovery_log.txt"
+    }
+  ],
+  "data": {
+    "project_name": "NIR-WEBSITE",
+    "short_name": "NIR-WEBSITE",
+    "version": "1.0.0",
+    "blueprint_source": "H2AI-Blueprint.md",
+    "product_identity": {
+      "name": "NIR Case Room",
+      "description": "Offline-capable, deterministic side-panel chat interface for legal/office context operating via a synchronous pipeline and strict 6-slot Markdown format.",
+      "user_types": [
+        "concierge",
+        "classifier",
+        "evidence_document",
+        "urgency_risk",
+        "lawyer_handoff"
+      ]
+    },
+    "core_features": [
+      "Deterministic 6-slot Markdown reply formatting",
+      "Speech-to-text mic dictation and attachment handling",
+      "Synchronous local routing pipeline (detectLanguage -> detectIntent -> routeAgent)",
+      "Strict rich text rendering (bold, italic, list items only)"
+    ],
+    "business_rules": [
+      "No streaming, character typewriter simulator",
+      "Email/verification before handoff",
+      "Contact information guard",
+      "Offline-first, fallback routing"
+    ],
+    "integrations": [
+      "better-auth",
+      "libsql/drizzle ORM",
+      "playwright tests"
+    ],
+    "tech_stack": {
+      "frontend": "Next.js 15, React 19, Framer Motion, TailwindCSS",
+      "backend": "Drizzle ORM, better-auth, SQLite (libsql)",
+      "testing": "Playwright, TypeScript"
+    }
+  }
+}

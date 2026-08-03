@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-07-10T10:09:30Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [],
+  "data": {
+    "lessons": [
+      {
+        "id": "LES-01-OFFLINE-CACHE",
+        "context": "Offline state testing",
+        "lesson": "Cached data/neo-kb.json lookup must be exact; fuzzy string matching improves UX when offline."
+      },
+      {
+        "id": "LES-02-TYPEWRITER-JITTER",
+        "context": "UI feedback",
+        "lesson": "Jitter range in typewriter renders feels more natural between 10ms and 35ms."
+      }
+    ]
+  }
+}

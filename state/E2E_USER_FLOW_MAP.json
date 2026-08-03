@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-07-10T10:08:15Z",
+  "run_id": "2b4d8d9b-d72b-42fa-986c-48cdebe7038e",
+  "step_index": 1,
+  "target_project": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE",
+  "verifier_agent": "Antigravity",
+  "verification_commands": [
+    {
+      "command": "Inspect UI pages and routes",
+      "exit_code": 0,
+      "stdout_hash": "2b5ae8a2e2ea8ea9f49ad4762c9cdebe2e72a08f5d0f622d99d30087095066914",
+      "log_filepath": "d:\\GITHUB RESPIRATORY\\NIR-WEBSITE\\evidence\\E2E_USER_FLOW_MAP_checks.txt"
+    }
+  ],
+  "data": {
+    "user_flows": [
+      {
+        "flow_id": "FLOW-01-INTAKE",
+        "name": "Case Intake and Matter Compilation Flow",
+        "steps": [
+          {
+            "step": 1,
+            "action": "User navigates to `/case`",
+            "component": "app/[locale]/case/page.tsx",
+            "validation": "Check page renders, loads blank workspace or retrieves active case draft from SQLite"
+          },
+          {
+            "step": 2,
+            "action": "User sends message in chat composer",
+            "component": "components/neo/neo-chat-surface.tsx",
+            "validation": "Check typewriter streams response and matches intent in routing"
+          },
+          {
+            "step": 3,
+            "action": "User uploads file attachment",
+            "component": "components/neo/neo-workspace.tsx",
+            "validation": "Checks size boundaries (<10MB) and mime type validation"
+          },
+          {
+            "step": 4,
+            "action": "User reviews case brief dossier",
+            "component": "components/neo/neo-dossier-panel.tsx",
+            "validation": "Dossier displays extracted metadata, missing fields checklist, and score"
+          },
+          {
+            "step": 5,
+            "action": "User clicks Download Brief",
+            "component": "components/neo/neo-case-file-view.tsx",
+            "validation": "Initiates POST /api/neo/case-file to return binary attachment of PDF/DOCX"
+          }
+        ],
+        "happy_path": {
+          "description": "User completes chat, completes missing data, and successfully downloads compiled brief.",
+          "expected_outcome": "DRAFT status updates to READY_FOR_REVIEW and PDF generated."
+        },
+        "error_paths": [
+          {
+            "trigger": "Empty message input",
+            "mitigation": "Disable Send button and show tooltip validation error."
+          },
+          {
+            "trigger": "File upload exceeds size limits",
+            "mitigation": "Display error message toast and block DB persistence."
+          }
+        ],
+        "edge_cases": [
+          {
+            "scenario": "Simultaneous rapid message submission",
+            "mitigation": "State lock prevents session concurrency race conditions."
+          }
+        ],
+        "auth_boundary": {
+          "required": true,
+          "guard": "better-auth route check",
+          "fallback": "Prompts redirect to /sign-in page"
+        },
+        "offline_path": {
+          "supported": true,
+          "strategy": "Fallback to local SQLite cached data/neo-kb.json lookup"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "receipts": [
+    {
+      "section": "10 §C0",
+      "status": "EXECUTED",
+      "artifact": "state/PROJECT_INTENT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:06:00Z",
+      "finished": "2026-07-10T10:06:50Z"
+    },
+    {
+      "section": "10 §C15",
+      "status": "EXECUTED",
+      "artifact": "state/CAPABILITY_DISCOVERY_MAP.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:07:20Z",
+      "finished": "2026-07-10T10:07:30Z"
+    },
+    {
+      "section": "10 §C25",
+      "status": "EXECUTED",
+      "artifact": "state/PROJECT_BRAIN.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:09:29Z",
+      "finished": "2026-07-10T10:09:32Z"
+    },
+    {
+      "section": "10 §C26",
+      "status": "EXECUTED",
+      "artifact": "state/PUBLISH_BLOCKER_DISCOVERY.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:30Z",
+      "finished": "2026-07-10T10:08:33Z"
+    },
+    {
+      "section": "10 §C27",
+      "status": "EXECUTED",
+      "artifact": "state/TRUTH_DEBT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:09:50Z",
+      "finished": "2026-07-10T10:09:53Z"
+    },
+    {
+      "section": "10 §C28",
+      "status": "EXECUTED",
+      "artifact": "state/UNKNOWNS_REGISTER.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:25Z",
+      "finished": "2026-07-10T10:08:28Z"
+    },
+    {
+      "section": "10 §C29",
+      "status": "EXECUTED",
+      "artifact": "state/CATEGORY_BASELINE.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:35Z",
+      "finished": "2026-07-10T10:08:38Z"
+    },
+    {
+      "section": "10 §C30",
+      "status": "EXECUTED",
+      "artifact": "state/LESSONS_LEDGER.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:40Z",
+      "finished": "2026-07-10T10:08:43Z"
+    },
+    {
+      "section": "10 §C31",
+      "status": "EXECUTED",
+      "artifact": "state/MATURITY_MAP.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:45Z",
+      "finished": "2026-07-10T10:08:47Z"
+    },
+    {
+      "section": "10 §C32",
+      "status": "EXECUTED",
+      "artifact": "state/CAPABILITY_CONTRACTS.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:50Z",
+      "finished": "2026-07-10T10:08:53Z"
+    },
+    {
+      "section": "10 §C33",
+      "status": "EXECUTED",
+      "artifact": "state/DATA_GOVERNANCE_MAP.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:08:55Z",
+      "finished": "2026-07-10T10:08:58Z"
+    },
+    {
+      "section": "10 §C34",
+      "status": "EXECUTED",
+      "artifact": "state/SLO_DEFINITIONS.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:09:00Z",
+      "finished": "2026-07-10T10:09:03Z"
+    },
+    {
+      "section": "10 §C35",
+      "status": "EXECUTED",
+      "artifact": "state/COMPLETION_CONTRACT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:09:06Z",
+      "finished": "2026-07-10T10:09:09Z"
+    },
+    {
+      "section": "10 §C36",
+      "status": "EXECUTED",
+      "artifact": "state/PARKING_LOT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:09:11Z",
+      "finished": "2026-07-10T10:09:15Z"
+    },
+    {
+      "section": "11 §R1",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/SELF_HEALING_LOG.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:21:40Z",
+      "finished": "2026-07-10T10:27:04Z"
+    },
+    {
+      "section": "11 §R19",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/CONTRACT_VALIDATION_REPORT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:27:15Z",
+      "finished": "2026-07-10T10:27:19Z"
+    },
+    {
+      "section": "11 §R20",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/SELF_HEALING_LOG.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:21:40Z",
+      "finished": "2026-07-10T10:27:04Z"
+    },
+    {
+      "section": "11 §R21",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/ENVIRONMENT_PARITY_REPORT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:27:04Z",
+      "finished": "2026-07-10T10:27:09Z"
+    },
+    {
+      "section": "11 §R22",
+      "status": "EXECUTED",
+      "artifact": "evidence/E2E_FLOW_VALIDATION.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:22:50Z",
+      "finished": "2026-07-10T10:27:28Z"
+    },
+    {
+      "section": "11 §R23",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/PROCESS_COLLABORATION_MAP.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:27:19Z",
+      "finished": "2026-07-10T10:27:24Z"
+    },
+    {
+      "section": "11 §R24",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/PERFORMANCE_PROFILE.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:27:09Z",
+      "finished": "2026-07-10T10:27:15Z"
+    },
+    {
+      "section": "11 §R25",
+      "status": "EXECUTED",
+      "artifact": "evidence/runtime/ADAPTIVE_EXECUTION_PLAN.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:21:46Z",
+      "finished": "2026-07-10T10:26:59Z"
+    },
+    {
+      "section": "12 §AA",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AB",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AC",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AD",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AE",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AF",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AH",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AI",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AJ",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AK",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AL",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AM",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AN",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AO",
+      "status": "NA_JUSTIFIED",
+      "artifact": "",
+      "na_reason": "Not required under TIER_1_MVP adoption tier as specified in 12.TESTING-APP.md.",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:02Z"
+    },
+    {
+      "section": "12 §AP",
+      "status": "EXECUTED",
+      "artifact": "evidence/CALIBRATION_REPORT.json",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:00Z",
+      "finished": "2026-07-10T10:31:05Z"
+    },
+    {
+      "section": "13 §T1",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T17",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T18",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T19",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T20",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T21",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T22",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T23",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T24",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T25",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T26",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T27",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    },
+    {
+      "section": "13 §T28",
+      "status": "EXECUTED",
+      "artifact": "evidence/repo_truth/FALSE_COMPLETE_RECONCILIATION.md",
+      "na_reason": "",
+      "started": "2026-07-10T10:31:10Z",
+      "finished": "2026-07-10T10:31:15Z"
+    }
+  ]
+}

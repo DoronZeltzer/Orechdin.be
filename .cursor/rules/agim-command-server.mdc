@@ -1,0 +1,24 @@
+---
+description: Use AGIM Command Server MCP when this workspace loads it; verify with get_system_info.
+alwaysApply: true
+---
+
+# AGIM Command Server — use it in this workspace
+
+This folder includes `.cursor/mcp.json` with **AGIMDesktop**, **VSCodeCursorBridge**, and **KnowledgeBase** (stdio via `AGIM-COMMAND-SERVER`).
+
+## Every session
+
+1. **Verify MCP:** On **AGIMDesktop**, call **`execute_agim_desktop_tool`** with `toolName`: **`get_system_info`** and `{}` args (or use **`get_system_info`** if your Cursor build exposes it as a top-level tool). Success = AGIM stdio bridge is live.
+2. **Prefer AGIM** for: host/system facts, desktop automation, screen capture, IDE bridge, etc.—via **`execute_agim_desktop_tool`** + the underlying `toolName` from the AGIM catalog. Use **KnowledgeBase** MCP (`kb_search`, `kb_read`, `kb_list`, …) for stored KB entries.
+3. **HTTP API (optional):** For REST/WebSocket features, run `npm run dev` in `D:\GITHUB RESPIRATORY\AGIM-COMMAND-SERVER` so **port 8003** is up; health checks: `http://localhost:8003/health`.
+
+## If tools fail
+
+- Ensure **Node** and **npx** are on PATH when Cursor starts.
+- Run **`npm install`** in `AGIM-COMMAND-SERVER` if `tsx` or deps are missing.
+- **Reload Window** after changing `mcp.json` so MCP servers restart.
+
+## 0.KB (file fallback)
+
+If MCP is down, read `D:\GITHUB RESPIRATORY\0.KB\CURSOR_AGIM_0KB_SKILL_PERSONA_INDEX.md` and related paths directly.
