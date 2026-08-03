@@ -1,28 +1,34 @@
-import { sqliteTable, text, integer, blob } from "drizzle-orm/sqlite-core";
+import { pgTable, text, integer, boolean, timestamp } from "drizzle-orm/pg-core";
+
+// Timestamp helper: Postgres `timestamptz`, surfaced to the app as JS `Date`
+// (the shape better-auth and the intake code expect). Ported from the old
+// SQLite `integer(..., { mode: "timestamp" })` columns.
+const ts = (name: string) =>
+  timestamp(name, { mode: "date", withTimezone: true });
 
 // --- BETTER AUTH REQUIRED TABLES ---
-export const user = sqliteTable("user", {
+export const user = pgTable("user", {
 	id: text("id").primaryKey(),
 	name: text("name").notNull(),
 	email: text("email").notNull().unique(),
-	emailVerified: integer("emailVerified", { mode: "boolean" }).notNull(),
+	emailVerified: boolean("emailVerified").notNull(),
 	image: text("image"),
-	createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
-	updatedAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+	createdAt: ts("createdAt").notNull(),
+	updatedAt: ts("updatedAt").notNull(),
 });
 
-export const session = sqliteTable("session", {
+export const session = pgTable("session", {
 	id: text("id").primaryKey(),
-	expiresAt: integer("expiresAt", { mode: "timestamp" }).notNull(),
+	expiresAt: ts("expiresAt").notNull(),
 	token: text("token").notNull().unique(),
-	createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
-	updatedAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+	createdAt: ts("createdAt").notNull(),
+	updatedAt: ts("updatedAt").notNull(),
 	ipAddress: text("ipAddress"),
 	userAgent: text("userAgent"),
 	userId: text("userId").notNull().references(() => user.id)
 });
 
-export const account = sqliteTable("account", {
+export const account = pgTable("account", {
 	id: text("id").primaryKey(),
 	accountId: text("accountId").notNull(),
 	providerId: text("providerId").notNull(),
@@ -30,26 +36,26 @@ export const account = sqliteTable("account", {
 	accessToken: text("accessToken"),
 	refreshToken: text("refreshToken"),
 	idToken: text("idToken"),
-	accessTokenExpiresAt: integer("accessTokenExpiresAt", { mode: "timestamp" }),
-	refreshTokenExpiresAt: integer("refreshTokenExpiresAt", { mode: "timestamp" }),
+	accessTokenExpiresAt: ts("accessTokenExpiresAt"),
+	refreshTokenExpiresAt: ts("refreshTokenExpiresAt"),
 	scope: text("scope"),
 	password: text("password"),
-	createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
-	updatedAt: integer("createdAt", { mode: "timestamp" }).notNull()
+	createdAt: ts("createdAt").notNull(),
+	updatedAt: ts("updatedAt").notNull()
 });
 
-export const verification = sqliteTable("verification", {
+export const verification = pgTable("verification", {
 	id: text("id").primaryKey(),
 	identifier: text("identifier").notNull(),
 	value: text("value").notNull(),
-	expiresAt: integer("expiresAt", { mode: "timestamp" }).notNull(),
-	createdAt: integer("createdAt", { mode: "timestamp" }),
-	updatedAt: integer("createdAt", { mode: "timestamp" })
+	expiresAt: ts("expiresAt").notNull(),
+	createdAt: ts("createdAt"),
+	updatedAt: ts("updatedAt")
 });
 
 
 // --- ADMIN & INTAKE TABLES ---
-export const userProfiles = sqliteTable("user_profiles", {
+export const userProfiles = pgTable("user_profiles", {
   id: text("id").primaryKey(),
   userId: text("userId").notNull().references(() => user.id),
   phone: text("phone"),
@@ -58,31 +64,31 @@ export const userProfiles = sqliteTable("user_profiles", {
   country: text("country"),
   region: text("region"),
   companyName: text("companyName"),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updatedAt", { mode: "timestamp" }).notNull(),
+  createdAt: ts("createdAt").notNull(),
+  updatedAt: ts("updatedAt").notNull(),
 });
 
-export const caseDrafts = sqliteTable("case_drafts", {
+export const caseDrafts = pgTable("case_drafts", {
   id: text("id").primaryKey(),
   userId: text("userId").notNull().references(() => user.id),
   status: text("status").notNull().default("DRAFT"), // "DRAFT" | "READY_FOR_REVIEW" | "SUBMITTED"
   matterTypeInferred: text("matterTypeInferred"),
   readinessScore: integer("readinessScore").default(0),
-  expiresAt: integer("expiresAt", { mode: "timestamp" }),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updatedAt", { mode: "timestamp" }).notNull(),
+  expiresAt: ts("expiresAt"),
+  createdAt: ts("createdAt").notNull(),
+  updatedAt: ts("updatedAt").notNull(),
 });
 
-export const caseMessages = sqliteTable("case_messages", {
+export const caseMessages = pgTable("case_messages", {
   id: text("id").primaryKey(),
   caseDraftId: text("caseDraftId").notNull().references(() => caseDrafts.id),
   role: text("role").notNull(), // "user" | "assistant"
   contentRedacted: text("contentRedacted").notNull(),
   sequenceNo: integer("sequenceNo").notNull(),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+  createdAt: ts("createdAt").notNull(),
 });
 
-export const caseFiles = sqliteTable("case_files", {
+export const caseFiles = pgTable("case_files", {
   id: text("id").primaryKey(),
   caseDraftId: text("caseDraftId").notNull().references(() => caseDrafts.id),
   userId: text("userId").notNull().references(() => user.id),
@@ -91,29 +97,29 @@ export const caseFiles = sqliteTable("case_files", {
   byteSize: integer("byteSize").notNull(),
   storageKey: text("storageKey").notNull(),
   uploadStatus: text("uploadStatus").default("PENDING"),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+  createdAt: ts("createdAt").notNull(),
 });
 
-export const caseSubmissions = sqliteTable("case_submissions", {
+export const caseSubmissions = pgTable("case_submissions", {
   id: text("id").primaryKey(),
   caseDraftId: text("caseDraftId").notNull().references(() => caseDrafts.id),
   userId: text("userId").notNull().references(() => user.id),
   submissionReference: text("submissionReference").notNull(),
   finalStatus: text("finalStatus").notNull(), // "ROUTED" | "NEEDS_MORE_INFO" | "CLOSED"
-  dossierPayloadBlob: blob("dossierPayloadBlob"), // JSON stored as buffer or string
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+  dossierPayloadBlob: text("dossierPayloadBlob"), // JSON stored as a string
+  createdAt: ts("createdAt").notNull(),
 });
 
-export const caseRoutes = sqliteTable("case_routes", {
+export const caseRoutes = pgTable("case_routes", {
   id: text("id").primaryKey(),
   submissionId: text("submissionId").notNull().references(() => caseSubmissions.id),
   targetQueue: text("targetQueue").notNull(),
   confidence: text("confidence").notNull(), // "HIGH", "MEDIUM", "LOW"
   routeReason: text("routeReason"),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+  createdAt: ts("createdAt").notNull(),
 });
 
-export const auditEvents = sqliteTable("audit_events", {
+export const auditEvents = pgTable("audit_events", {
   id: text("id").primaryKey(),
   entityType: text("entityType").notNull(),
   entityId: text("entityId").notNull(),
@@ -121,5 +127,5 @@ export const auditEvents = sqliteTable("audit_events", {
   eventPayloadRedacted: text("eventPayloadRedacted"),
   actorType: text("actorType").notNull(),
   actorIdOrSession: text("actorIdOrSession").notNull(),
-  createdAt: integer("createdAt", { mode: "timestamp" }).notNull(),
+  createdAt: ts("createdAt").notNull(),
 });

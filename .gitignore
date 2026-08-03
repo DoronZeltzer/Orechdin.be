@@ -57,3 +57,7 @@ design-probe-*.png
 .buildrun*.log
 .buildfinal.log
 .devrun.log
+.build*.log
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

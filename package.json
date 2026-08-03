@@ -14,10 +14,12 @@
     "diff": "node scripts/diff-screens.mjs",
     "test:e2e": "playwright test",
     "test:free-ai": "tsx --test tests/unit/free-ai-nokey/cascade.test.ts",
-    "portraits:build": "node scripts/build-lawyer-portraits.mjs"
+    "portraits:build": "node scripts/build-lawyer-portraits.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@libsql/client": "^0.17.2",
     "@react-pdf/renderer": "^4.5.1",
     "better-auth": "^1.6.0",
     "clsx": "^2.1.1",
@@ -27,6 +29,7 @@
     "lucide-react": "^1.7.0",
     "next": "^15.1.6",
     "next-intl": "^4.9.0",
+    "postgres": "^3.4.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.5.0",
