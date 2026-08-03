@@ -52,3 +52,8 @@ reports/
 
 # Temp screenshots / probes
 design-probe-*.png
+
+# Claude scratch build/dev logs
+.buildrun*.log
+.buildfinal.log
+.devrun.log
