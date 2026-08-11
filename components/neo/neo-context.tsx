@@ -292,14 +292,31 @@ export function NeoProvider({ children }: { children: React.ReactNode }) {
     async (consents: { rep_understanding: boolean; info_auth: boolean; use_consent: boolean }) => {
       setIsSubmitting(true);
       try {
+        // 1) Server-side consent gate + reference.
         await submitDossierForReview("draft-1", consents, email);
+        // 2) Assemble the brief from the transcript and deliver it to the
+        //    office intake inbox (PDF + DOCX attachments) via sendBrief().
+        const res = await fetch("/api/neo/case-file", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            send: true,
+            visitorEmail: email,
+            messages,
+            files: uploadedFiles.map((name) => ({ original_filename: name })),
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data?.ok === false) {
+          throw new Error(data?.message || "Brief delivery failed.");
+        }
         setState("SUBMITTED_FOR_LEGAL_REVIEW");
       } catch {
-        alert("Submission failed. Ensure backend runs.");
+        alert("Submission failed. Please try again, or contact the office directly.");
       }
       setIsSubmitting(false);
     },
-    [email],
+    [email, messages, uploadedFiles],
   );
 
   const orchestratorLive = useMemo(

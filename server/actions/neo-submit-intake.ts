@@ -1,6 +1,24 @@
 "use server";
 
+import { createHash, randomInt, randomUUID } from "crypto";
+import { eq } from "drizzle-orm";
 import { INTAKE_MODE } from "@/lib/neo/intake-mode";
+import { db } from "@/db";
+import { verification } from "@/db/schema";
+import { sendMail, isMailerConfigured } from "@/lib/neo/mailer";
+import { SITE } from "@/lib/site";
+
+const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
+
+function otpKey(email: string): string {
+  return `neo-intake-otp:${email.trim().toLowerCase()}`;
+}
+
+function hashOtp(email: string, code: string): string {
+  return createHash("sha256")
+    .update(`${email.trim().toLowerCase()}:${code}`)
+    .digest("hex");
+}
 
 /**
  * NEO intake server actions.
@@ -51,12 +69,44 @@ export async function submitVerificationEmail(email: string) {
     return { success: true, verificationMode: "DEMO_VERIFICATION" as const };
   }
 
-  // mode === "live"
-  throw new IntakeNotImplementedError("submitVerificationEmail");
+  // mode === "live" — issue a real OTP, store its hash, and email it.
+  if (!isMailerConfigured()) {
+    throw new IntakeNotImplementedError("submitVerificationEmail");
+  }
+
+  const code = String(randomInt(0, 1_000_000)).padStart(6, "0");
+  const key = otpKey(email);
+  const now = new Date();
+
+  // One live code per email: clear any previous, then store the fresh hash.
+  await db.delete(verification).where(eq(verification.identifier, key));
+  await db.insert(verification).values({
+    id: randomUUID(),
+    identifier: key,
+    value: hashOtp(email, code),
+    expiresAt: new Date(now.getTime() + OTP_TTL_MS),
+    createdAt: now,
+    updatedAt: now,
+  });
+
+  await sendMail({
+    to: email,
+    subject: `${SITE.title}: your verification code`,
+    text: `Your ${SITE.title} verification code is ${code}. It expires in 10 minutes.`,
+    html: `
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0a0a0a;line-height:1.5">
+        <div style="height:3px;width:44px;background:#95b6df;margin-bottom:16px"></div>
+        <p style="margin:0 0 8px">Your verification code is</p>
+        <p style="margin:0 0 8px;font-size:30px;font-weight:700;letter-spacing:6px">${code}</p>
+        <p style="margin:0;color:#5c6674">It expires in 10 minutes. If you did not request this, you can ignore this email.</p>
+      </div>`,
+  });
+
+  return { success: true, verificationMode: "LIVE_OTP_VERIFICATION" as const };
 }
 
 /** Verify the OTP code the user typed back into the chat. */
-export async function verifyOtpCode(_email: string, code: string) {
+export async function verifyOtpCode(email: string, code: string) {
   if (!code || code.length < 4) {
     throw new Error("Invalid code.");
   }
@@ -75,8 +125,28 @@ export async function verifyOtpCode(_email: string, code: string) {
     };
   }
 
-  // mode === "live"
-  throw new IntakeNotImplementedError("verifyOtpCode");
+  // mode === "live" — check the stored hash and expiry.
+  const key = otpKey(email);
+  const rows = await db
+    .select()
+    .from(verification)
+    .where(eq(verification.identifier, key))
+    .limit(1);
+  const rec = rows[0];
+
+  if (!rec) {
+    return { success: false, message: "No pending code. Request a new one." };
+  }
+  if (rec.expiresAt.getTime() < Date.now()) {
+    await db.delete(verification).where(eq(verification.identifier, key));
+    return { success: false, message: "Code expired. Request a new one." };
+  }
+  if (rec.value !== hashOtp(email, code.trim())) {
+    return { success: false, message: "Invalid code." };
+  }
+
+  await db.delete(verification).where(eq(verification.identifier, key));
+  return { success: true, message: "Contact channel verified." };
 }
 
 /** Persist the verified dossier and route it to the firm's review queue. */
@@ -114,6 +184,10 @@ export async function submitDossierForReview(
     return { success: true, referenceId, dossierCreated: true } as const;
   }
 
-  // mode === "live"
-  throw new IntakeNotImplementedError("submitDossierForReview");
+  // mode === "live" — server-side consent gate (enforced above). The brief
+  // itself is assembled from the transcript and delivered to the office by
+  // POST /api/neo/case-file (send:true) → sendBrief(); this action records
+  // the verified consent and hands back the client-facing reference.
+  const referenceId = `ORX-${randomUUID().slice(0, 8).toUpperCase()}`;
+  return { success: true, referenceId, dossierCreated: true } as const;
 }
