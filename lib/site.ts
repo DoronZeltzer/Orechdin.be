@@ -58,7 +58,7 @@ export const SITE = {
  *   PNG until the optimisation pipeline is re-verified.
  */
 export const MEDIA = {
-  logo: "/media/site/logo-wordmark.svg",
+  logo: "/media/site/logo-orechdin.webp",
   // Hero image: a commissioned editorial photograph of a Belgian chambers
   // interior — panelled walls, leather-bound code reporters, antique brass
   // green-shade lamp, looking onto Antwerp's Grote Markt. Replaces the

@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Cormorant_Garamond,
-  Inter,
-  JetBrains_Mono,
-  Playfair_Display,
-  Source_Serif_4,
-} from "next/font/google";
+import { JetBrains_Mono, Source_Sans_3 } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { LegalServiceJsonLd } from "@/components/layout/json-ld";
@@ -16,42 +10,16 @@ import { NeoShell } from "@/components/neo/neo-shell";
 import { SITE } from "@/lib/site";
 import "../globals.css";
 
-// Display face for headlines, set in light/regular weights to read like a
-// commissioned wordmark rather than a marketing banner.
-const display = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-// Italic display face used exclusively for the firm's signature italic pulls
-// (eyebrows, em-italic in headlines, pull-quotes). Cormorant Garamond is the
-// editorial standard — what NYT Magazine, Pentagram and A24 reach for when
-// they need an italic that reads as composed rather than decorative.
-const displayItalic = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-display-italic",
-  weight: ["400", "500"],
-  style: ["italic"],
-  display: "swap",
-});
-
-// Long-form prose: Source Serif 4 — calibrated for screen reading, sourced
-// from Adobe's editorial program. Used wherever the visitor reads more than
-// one sentence (lead paragraphs, body copy, dossier prose).
-const proseSerif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-prose",
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
-
-// UI chrome only: navigation, buttons, form labels, tabular numerics. Inter
-// stays disciplined — no uses inside body prose.
-const sans = Inter({
+// Brand web typeface. The guidelines specify Slate for all website text;
+// Source Sans 3 is the closest freely-licensed humanist sans and stands in for
+// it. A single family drives every role (display, prose, UI) — the per-role
+// CSS vars (--font-display / --font-prose / --font-display-italic) alias
+// --font-sans in globals.css, so the whole site renders in one clean sans.
+const sans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "600", "700", "900"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -106,7 +74,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${display.variable} ${displayItalic.variable} ${proseSerif.variable} ${sans.variable} ${mono.variable}`}
+      className={`${sans.variable} ${mono.variable}`}
     >
       <body className="min-h-screen font-prose bg-orech-paper text-orech-ink selection:bg-orech-bronze/30">
         <NextIntlClientProvider messages={messages}>

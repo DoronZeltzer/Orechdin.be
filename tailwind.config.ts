@@ -34,24 +34,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand palette (per Orechdin Brand Guidelines): white + black base,
+        // with the #95b6df blue as the single accent and #d0e1ee as the light
+        // overlay/surface tint. Token NAMES are kept (bronze/slate/etc.) so the
+        // whole component tree adopts the new palette without edits — only the
+        // VALUES change.
         orech: {
-          // Slightly deeper and warmer than stone-900 — reads as ink on cream.
-          ink: "#181412",
-          slate: "#EDEAE0", // elegant warm ivory surface
-          mist: "#56514B", // calmer than stone-600, less pure-grey
-          paper: "#F6F4EE", // premium cream background
-          bronze: "#9A6B1F", // deeper, more disciplined gold (was #B8860B)
-          bronzeMuted: "#C49A5A", // restrained warm gold for hover/accent text
-          gold: "#B8870B", // legacy bright accent, used sparingly for highlights
-          line: "#D9D5CB", // softer, warmer line than stone-300
-          lineSoft: "rgba(24,20,18,0.08)", // hairline-on-paper at low alpha
+          ink: "#0A0A0A", // brand black — text & logo
+          slate: "#DCE8F5", // light blue surface (from the #d0e1ee family)
+          mist: "#5C6674", // cool neutral grey for muted/secondary text
+          paper: "#FFFFFF", // brand white — the base surface
+          bronze: "#95B6DF", // brand accent blue — bars, rules, focus, fills
+          bronzeMuted: "#3E6DA6", // deeper blue for accent TEXT/links (legible on white)
+          gold: "#6E97C9", // secondary blue for subtle highlights
+          line: "#DCE6F1", // hairline: soft blue-grey
+          lineSoft: "rgba(10,10,10,0.08)", // hairline-on-white at low alpha
         },
         neo: {
-          panel: "#181412",
-          surface: "#26211D",
-          border: "#3F3A34",
-          accent: "#9A6B1F",
-          muted: "rgba(246,244,238,0.55)",
+          panel: "#0A0A0A", // brand black panel
+          surface: "#161616",
+          border: "#2A2A2A",
+          accent: "#95B6DF", // brand accent on dark
+          muted: "rgba(255,255,255,0.6)",
         },
       },
       fontFamily: {

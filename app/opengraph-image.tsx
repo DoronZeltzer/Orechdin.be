@@ -27,8 +27,8 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: "72px 88px",
           background:
-            "linear-gradient(180deg, #f5efe6 0%, #efe7d8 100%)",
-          color: "#1a1814",
+            "linear-gradient(180deg, #ffffff 0%, #eef4fb 100%)",
+          color: "#0A0A0A",
           fontFamily: "Georgia, 'Times New Roman', serif",
         }}
       >
@@ -40,7 +40,7 @@ export default async function Image() {
             fontFamily: "system-ui, -apple-system, sans-serif",
             fontSize: 18,
             letterSpacing: 6,
-            color: "#5e564d",
+            color: "#5C6674",
             textTransform: "uppercase",
           }}
         >
@@ -50,7 +50,7 @@ export default async function Image() {
               width: 56,
               height: 2,
               background:
-                "linear-gradient(90deg, #8a6230 0%, #b08247 100%)",
+                "linear-gradient(90deg, #95b6df 0%, #3e6da6 100%)",
             }}
           />
           Law Office · Antwerp · Since 1999
@@ -73,7 +73,7 @@ export default async function Image() {
               fontSize: 44,
               lineHeight: 1.15,
               maxWidth: 920,
-              color: "#3a342c",
+              color: "#3A3F47",
             }}
           >
             Counsel for commercial, civil, criminal,
@@ -87,7 +87,7 @@ export default async function Image() {
             justifyContent: "space-between",
             alignItems: "flex-end",
             fontSize: 22,
-            color: "#3a342c",
+            color: "#3A3F47",
             fontFamily: "system-ui, -apple-system, sans-serif",
           }}
         >

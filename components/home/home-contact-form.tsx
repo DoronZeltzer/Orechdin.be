@@ -21,7 +21,7 @@ export function HomeContactForm() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-block rounded-xl bg-orech-bronze px-8 py-3.5 text-center text-sm font-medium text-white transition hover:bg-orech-bronzeMuted hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] w-full sm:w-auto"
+        className="inline-block rounded-xl bg-orech-bronze px-8 py-3.5 text-center text-sm font-semibold text-orech-ink transition hover:bg-orech-bronzeMuted hover:text-white hover:shadow-[0_0_20px_rgba(62,109,166,0.4)] w-full sm:w-auto"
       >
         Open Secure Intake Portal →
       </button>

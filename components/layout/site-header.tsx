@@ -52,8 +52,8 @@ export function SiteHeader() {
           className="flex items-center gap-3 outline-none focus-visible:rounded-md focus-visible:ring-2 focus-visible:ring-orech-bronze focus-visible:ring-offset-4 focus-visible:ring-offset-orech-paper"
           aria-label={`${SITE.title} — ${tNav("home")}`}
         >
-          <span className="relative h-9 w-44 sm:h-10 sm:w-52 text-orech-ink flex items-center">
-            <LogoWordmark className="h-full w-full object-contain object-left" />
+          <span className="relative flex h-11 items-center sm:h-12">
+            <LogoWordmark className="h-full w-auto object-contain object-left" />
             <span className="sr-only">{tCommon("officeLogoAlt", { title: SITE.title, short: SITE.shortName })}</span>
           </span>
         </Link>
@@ -130,7 +130,7 @@ export function SiteHeader() {
           <Link
             href="/case"
             aria-label={tNav("consultNeoMobile")}
-            className="group inline-flex items-center gap-2 rounded-full border border-orech-ink/80 bg-transparent px-5 py-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-orech-ink transition hover:border-orech-bronze hover:bg-orech-bronze hover:text-white focus-visible:ring-2 focus-visible:ring-orech-bronze/50"
+            className="group inline-flex items-center gap-2 rounded-full border border-orech-ink/80 bg-transparent px-5 py-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-orech-ink transition hover:border-orech-bronze hover:bg-orech-bronze hover:text-orech-ink focus-visible:ring-2 focus-visible:ring-orech-bronze/50"
           >
             <span
               aria-hidden

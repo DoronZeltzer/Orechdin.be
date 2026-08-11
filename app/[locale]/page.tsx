@@ -91,7 +91,7 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 reveal reveal-delay-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-medium uppercase tracking-wider text-white shadow-lg transition hover:bg-orech-bronzeMuted hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-orech-ink shadow-lg transition hover:bg-orech-bronzeMuted hover:text-white hover:shadow-xl"
               >
                 {t("hero.primaryCta")} <ArrowRight className="w-4 h-4" aria-hidden />
               </Link>
@@ -290,7 +290,7 @@ export default function HomePage() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-medium uppercase tracking-wider text-white shadow-lg transition hover:bg-orech-bronzeMuted hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-orech-ink shadow-lg transition hover:bg-orech-bronzeMuted hover:text-white hover:shadow-xl"
             >
               {t("contact.primaryCta")} <ArrowRight className="w-4 h-4" aria-hidden />
             </Link>
