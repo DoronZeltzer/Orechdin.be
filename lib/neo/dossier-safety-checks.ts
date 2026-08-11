@@ -151,7 +151,7 @@ export function runDossierSafetyChecks(
     const en = dossier.A_matter_snapshot.executive_narrative;
     if (en.length < 50) {
       flags.push("THIN_EXECUTIVE_NARRATIVE");
-      reasons.push("Executive narrative is under 50 characters — insufficient for partner review.");
+      reasons.push("Executive narrative is under 50 characters - insufficient for partner review.");
     }
     // Check for marketing contamination in executive narrative specifically
     const enLower = en.toLowerCase();

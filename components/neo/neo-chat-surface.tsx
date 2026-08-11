@@ -86,7 +86,7 @@ export function NeoChatSurface({
   });
 
   // On first mount, treat any pre-existing assistant messages as already
-  // revealed — we only want to typewriter-stream replies that arrive while
+  // revealed - we only want to typewriter-stream replies that arrive while
   // the user is watching.
   useEffect(() => {
     if (initRef.current) return;

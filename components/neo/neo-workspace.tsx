@@ -21,7 +21,7 @@ type MobileTab = "chat" | "dossier";
 /**
  * Full-screen Case Room. Two-pane on desktop (chat left, dossier right),
  * tab-toggle on mobile. Pulls everything from NeoContext so the side panel
- * and this surface share one conversation — open it in either, the messages
+ * and this surface share one conversation - open it in either, the messages
  * follow you.
  */
 export function NeoWorkspace() {
@@ -175,7 +175,7 @@ export function NeoWorkspace() {
             <>
               <NeoChatSurface
                 size="workspace"
-                placeholder="Take your time — write, or drop a document into the chat."
+                placeholder="Take your time - write, or drop a document into the chat."
               />
 
               {INTAKE_ENABLED &&
@@ -211,7 +211,7 @@ export function NeoWorkspace() {
         </section>
       </div>
 
-      {/* Bottom helper bar — quiet, no contact info. */}
+      {/* Bottom helper bar - quiet, no contact info. */}
       <footer className="shrink-0 border-t border-orech-line bg-orech-paper/60 px-4 py-2 text-[0.7rem] text-orech-mist lg:px-8">
         <p>
           NEO orients only and is not a legal opinion. When you press{" "}

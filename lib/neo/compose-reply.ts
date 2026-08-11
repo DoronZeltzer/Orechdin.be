@@ -147,7 +147,7 @@ function groundReply(
   };
 }
 
-/** Low-risk intents use deterministic replies — avoids fail-closed AI fallback. */
+/** Low-risk intents use deterministic replies - avoids fail-closed AI fallback. */
 function shouldUseDeterministicReply(intent: NeoIntent): boolean {
   return intent === "greeting" || intent === "out_of_scope";
 }
@@ -268,7 +268,7 @@ export async function composeNeoReply(options: ReplyOptions): Promise<NeoReply> 
     orchestratorConfidence: orchestration.confidence,
   };
 
-  // 4. Prompt Compilation — skip live AI for low-risk conversational intents
+  // 4. Prompt Compilation - skip live AI for low-risk conversational intents
   const skipLiveAi = shouldUseDeterministicReply(intent);
 
   const compiledPrompt = skipLiveAi

@@ -38,7 +38,7 @@ export interface LegalReplyParts {
   body: string;
   /** Soft boundary line (always present, never legal advice). */
   boundary: string;
-  /** Recommended next step (call / page / email — only when relevant). */
+  /** Recommended next step (call / page / email - only when relevant). */
   nextStep?: string;
   /** Required disclaimer when factual claims are made. */
   disclaimer?: string;
@@ -111,28 +111,28 @@ export function buildLegalReply(args: {
   if (intent === "greeting") {
     opener =
       locale === "nl"
-        ? "Hallo — fijn dat u er bent."
+        ? "Hallo - fijn dat u er bent."
         : locale === "fr"
-          ? "Bonjour — ravi de vous accueillir."
-          : "Hello — good to have you here.";
+          ? "Bonjour - ravi de vous accueillir."
+          : "Hello - good to have you here.";
     bridge =
       locale === "nl"
         ? "Ik ben **NEO**, orientatie-assistent van Orechdin. Geen juridisch advies, wel feiten uit het gepubliceerde materiaal:"
         : locale === "fr"
-          ? "Je suis **NEO**, assistant d'orientation d'Orechdin. Pas de conseil juridique — seulement des faits publiés :"
-          : "I'm **NEO**, Orechdin's orientation assistant — not legal advice, but facts from published material:";
+          ? "Je suis **NEO**, assistant d'orientation d'Orechdin. Pas de conseil juridique - seulement des faits publiés :"
+          : "I'm **NEO**, Orechdin's orientation assistant - not legal advice, but facts from published material:";
 
     const welcome =
       locale === "nl"
-        ? "Waarmee kan ik u helpen? Praktijkgebieden, het team, contactgegevens — stel gerust uw vraag."
+        ? "Waarmee kan ik u helpen? Praktijkgebieden, het team, contactgegevens - stel gerust uw vraag."
         : locale === "fr"
-          ? "Comment puis-je vous aider ? Domaines de pratique, l'équipe, coordonnées — posez votre question."
-          : "How can I help? Practice areas, the team, contact details — just ask.";
+          ? "Comment puis-je vous aider ? Domaines de pratique, l'équipe, coordonnées - posez votre question."
+          : "How can I help? Practice areas, the team, contact details - just ask.";
 
     if (lead) {
-      body = `${welcome}\n\n**${lead.title}** — ${lead.body}`;
+      body = `${welcome}\n\n**${lead.title}** - ${lead.body}`;
       if (support.length > 0) {
-        body += "\n\n" + support.map((h) => `· _${h.title}_ — ${h.body}`).join("\n");
+        body += "\n\n" + support.map((h) => `· _${h.title}_ - ${h.body}`).join("\n");
       }
     } else {
       body = welcome;
@@ -140,10 +140,10 @@ export function buildLegalReply(args: {
   } else if (intent === "out_of_scope" && isGeneralKnowledgeQuestion(message)) {
     opener =
       locale === "nl"
-        ? "Goede vraag — maar dat valt buiten wat ik kan doen."
+        ? "Goede vraag - maar dat valt buiten wat ik kan doen."
         : locale === "fr"
-          ? "Bonne question — mais cela dépasse ce que je peux faire."
-          : "Fair question — but that's outside what I can do.";
+          ? "Bonne question - mais cela dépasse ce que je peux faire."
+          : "Fair question - but that's outside what I can do.";
     bridge =
       locale === "nl"
         ? "NEO is geen algemene chatbot. Dit kan ik wel zeggen:"
@@ -172,16 +172,16 @@ export function buildLegalReply(args: {
     }
     parts.push(
       locale === "nl"
-        ? "NEO helpt enkel met **juridische oriëntatie** rond Orechdin — praktijkgebieden, team, contact en privacy."
+        ? "NEO helpt enkel met **juridische oriëntatie** rond Orechdin - praktijkgebieden, team, contact en privacy."
         : locale === "fr"
-          ? "NEO aide uniquement à l'**orientation juridique** autour d'Orechdin — domaines, équipe, contact et confidentialité."
-          : "NEO only helps with **legal orientation** around Orechdin — practice areas, team, contact, and privacy.",
+          ? "NEO aide uniquement à l'**orientation juridique** autour d'Orechdin - domaines, équipe, contact et confidentialité."
+          : "NEO only helps with **legal orientation** around Orechdin - practice areas, team, contact, and privacy.",
     );
     body = parts.join("\n\n");
   } else if (lead) {
-    body = `**${lead.title}** — ${lead.body}`;
+    body = `**${lead.title}** - ${lead.body}`;
     if (support.length > 0) {
-      body += "\n\n" + support.map((h) => `· _${h.title}_ — ${h.body}`).join("\n");
+      body += "\n\n" + support.map((h) => `· _${h.title}_ - ${h.body}`).join("\n");
     }
   } else {
     body = locale === "nl"
@@ -229,7 +229,7 @@ export function buildLegalReply(args: {
   // Disclaimer only when factual claims are made (i.e. we had at least one KB hit).
   const disclaimer = lead && intent !== "greeting" && intent !== "out_of_scope" ? DISCLAIMER[locale] : undefined;
 
-  // Mark routedAgent unused warning — keep available for future expansion.
+  // Mark routedAgent unused warning - keep available for future expansion.
   void routedAgent;
 
   return { opener, bridge, body, boundary, nextStep, disclaimer };
@@ -255,7 +255,7 @@ export function renderLegalReply(parts: LegalReplyParts): string {
 
 /**
  * Two to three contextual follow-ups, derived from intent + KB hits + lawyers.
- * No invented topics — every chip maps to either a published practice area
+ * No invented topics - every chip maps to either a published practice area
  * or a verified people/contact node.
  */
 export function suggestFollowUps(args: {
@@ -366,7 +366,7 @@ export function suggestFollowUps(args: {
         : "How can I speak directly with a lawyer?",
   );
 
-  // Avoid an empty array — fallback chip
+  // Avoid an empty array - fallback chip
   if (out.length === 0) {
     add(
       "what-can-you-do",

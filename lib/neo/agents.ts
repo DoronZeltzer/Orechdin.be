@@ -120,7 +120,7 @@ export const NEO_AGENTS: NeoAgent[] = [
     label: "Strategic Advisor",
     shortLabel: "Strategy",
     description:
-      "Maps dispute-resolution pathways (ADR, negotiation, settlement) and corporate-risk orientation — never recommends a specific strategy.",
+      "Maps dispute-resolution pathways (ADR, negotiation, settlement) and corporate-risk orientation - never recommends a specific strategy.",
     tier: "orientation",
     keywords: [
       "strategy",
@@ -140,7 +140,7 @@ export const NEO_AGENTS: NeoAgent[] = [
     label: "Legal Analyst",
     shortLabel: "Analysis",
     description:
-      "Provides analytical orientation on complex legal structures, contractual mechanisms, and evidentiary frameworks — conclusions reserved for a qualified lawyer.",
+      "Provides analytical orientation on complex legal structures, contractual mechanisms, and evidentiary frameworks - conclusions reserved for a qualified lawyer.",
     tier: "orientation",
     keywords: [
       "analysis",
@@ -162,7 +162,7 @@ export const NEO_AGENTS: NeoAgent[] = [
     label: "Urgency Triage",
     shortLabel: "Urgent",
     description:
-      "Handles time-sensitive inquiries involving prescription periods, court deadlines, and hearings — always routes to the office for definitive dates.",
+      "Handles time-sensitive inquiries involving prescription periods, court deadlines, and hearings - always routes to the office for definitive dates.",
     tier: "routing",
     keywords: [
       "deadline",

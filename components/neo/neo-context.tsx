@@ -148,7 +148,7 @@ export function NeoProvider({ children }: { children: React.ReactNode }) {
       try {
         // Run the reply generation and an artificial "thinking" delay in
         // parallel.  The minimum delay makes NEO feel more contemplative and
-        // human — the indicator stays visible for at least 1.8 – 3.5 s.
+        // human - the indicator stays visible for at least 1.8 – 3.5 s.
         const THINK_MIN_MS = 1800;
         const THINK_MAX_MS = 3500;
         const thinkMs = THINK_MIN_MS + Math.random() * (THINK_MAX_MS - THINK_MIN_MS);
@@ -202,7 +202,7 @@ export function NeoProvider({ children }: { children: React.ReactNode }) {
             id: safeUUID(),
             intake_draft_id: "draft-1",
             role: "assistant",
-            content_redacted: `Sorry — I couldn't reach my system just now (${errMsg}). Please try again, or reach the office directly.`,
+            content_redacted: `Sorry - I couldn't reach my system just now (${errMsg}). Please try again, or reach the office directly.`,
             timestamp: new Date().toISOString(),
             sequence_no: nextMessages.length + 1,
           },

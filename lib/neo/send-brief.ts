@@ -1,5 +1,5 @@
 /**
- * `sendBrief` — adapter for delivering a generated case file to the firm.
+ * `sendBrief` - adapter for delivering a generated case file to the firm.
  *
  * The real channel (IMAP, Microsoft Graph, internal CRM) is wired later.
  * Until then this adapter is intentionally a no-op stub gated by

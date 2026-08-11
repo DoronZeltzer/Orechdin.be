@@ -10,7 +10,7 @@ import React from "react";
  *   - leading "> " for blockquote (disclaimer)
  *   - leading "→ " for next-step bullet
  *   - leading "· " for KB sub-hit bullet
- * No raw HTML. No links inside text — citations and follow-ups live in
+ * No raw HTML. No links inside text - citations and follow-ups live in
  * dedicated UI surfaces.
  */
 export function NeoRichText({ text }: { text: string }) {

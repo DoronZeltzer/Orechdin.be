@@ -1,5 +1,5 @@
 /**
- * CaseFile builder — turns a transcript + uploaded files into the rich
+ * CaseFile builder - turns a transcript + uploaded files into the rich
  * structured case file a partner can pick up cold.
  *
  * Composes the deterministic extractors in case-file-extractors.ts and the
@@ -45,7 +45,7 @@ function pickPracticeArea(messages: IntakeMessage[], inferred: string | undefine
 
 function pickSuggestedLead(area: string): string | undefined {
   const lower = area.toLowerCase();
-  // Mapping is faithful to lib/site.ts bios — no invention.
+  // Mapping is faithful to lib/site.ts bios - no invention.
   if (/(real estate|construction|commercial|business|debt|civil)/.test(lower)) return LAWYERS[0]?.name;
   if (/(family|criminal|employment|traffic|privacy)/.test(lower)) return LAWYERS[1]?.name;
   return undefined;
@@ -55,13 +55,13 @@ function buildCaption(messages: IntakeMessage[], area: string): string {
   const firstUser = messages.find((m) => m.role === "user")?.content_redacted ?? "";
   const headline = firstUser.split(/[.!?\n]/)[0].trim();
   const trimmed = headline.length > 60 ? `${headline.slice(0, 57)}…` : headline;
-  return trimmed ? `${area} — ${trimmed}` : `${area} matter`;
+  return trimmed ? `${area} - ${trimmed}` : `${area} matter`;
 }
 
 function buildTheme(messages: IntakeMessage[], firstChronologyEvent?: string): string {
   const userTurns = messages.filter((m) => m.role === "user");
   if (userTurns.length === 0) return "Visitor opened intake but did not yet describe the matter.";
-  // Synthesise the visitor's stake as one sentence — quote-led so we can never invent.
+  // Synthesise the visitor's stake as one sentence - quote-led so we can never invent.
   const first = userTurns[0].content_redacted.replace(/\s+/g, " ").trim();
   const seed = firstChronologyEvent ?? first;
   const trimmed = seed.length > 180 ? `${seed.slice(0, 177)}…` : seed;
@@ -102,7 +102,7 @@ function buildCover(args: {
 }
 
 // ---------------------------------------------------------------------------
-// Executive summary — deterministic, quote-led so NEO never invents.
+// Executive summary - deterministic, quote-led so NEO never invents.
 // ---------------------------------------------------------------------------
 
 function buildExecutiveSummary(args: {
@@ -169,14 +169,14 @@ function buildRiskGate(args: { transcriptText: string; documentNames: string[] }
 }
 
 // ---------------------------------------------------------------------------
-// OVB allocation — maps each generated artefact to one of the four folders.
+// OVB allocation - maps each generated artefact to one of the four folders.
 // Source: OVB Behandeling dossier (kwaliteitshandboek). Strictly procedural,
 // not legal advice.
 // ---------------------------------------------------------------------------
 
 function buildOvbAllocation(args: { exhibitCount: number; hasProcedural: boolean }): OvbAllocation[] {
   const out: OvbAllocation[] = [
-    { label: "Cover & executive summary", folder: "01_Intake", rationale: "Opens the dossier — partner's first read." },
+    { label: "Cover & executive summary", folder: "01_Intake", rationale: "Opens the dossier - partner's first read." },
     { label: "Parties roster", folder: "01_Intake", rationale: "Identity & relationships, basis for conflict check." },
     { label: "Risk & conflict gate", folder: "01_Intake", rationale: "Pre-engagement checks per OVB Codex Deontologie Deel III, Hfst. 1." },
     { label: "Issues list & case theory", folder: "01_Intake", rationale: "Internal working theory of the matter, lawyer-only." },
@@ -193,7 +193,7 @@ function buildOvbAllocation(args: { exhibitCount: number; hasProcedural: boolean
 }
 
 // ---------------------------------------------------------------------------
-// Completeness scoring — same gauges the dossier panel already uses, plus
+// Completeness scoring - same gauges the dossier panel already uses, plus
 // a 0–100 overall score so the UI can show a single bar.
 // ---------------------------------------------------------------------------
 
@@ -299,7 +299,7 @@ export function buildCaseFile(input: BuildCaseFileInput): CaseFile {
     factualTheory:
       chronology.length > 0
         ? `${chronology.length} reported event${chronology.length === 1 ? "" : "s"}, beginning around ${chronology[0].dateText}.`
-        : "Facts pending — visitor has not yet shared a clear sequence of events.",
+        : "Facts pending - visitor has not yet shared a clear sequence of events.",
     persuasiveTheory: damagesText
       ? `Tangible stakes for the visitor (${damagesText}); their account suggests they are seeking accountability and a workable resolution.`
       : "Visitor is seeking orientation; persuasive frame to be developed once stakes are confirmed.",

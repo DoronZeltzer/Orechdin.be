@@ -36,7 +36,7 @@ export interface DeliveryPayload {
   recipientEmail: string;
   /** Matter reference id. */
   reference: string;
-  /** Download URLs (optional — appended to body). */
+  /** Download URLs (optional - appended to body). */
   pdfUrl?: string;
   docxUrl?: string;
 }
@@ -100,12 +100,12 @@ const CHANNELS: {
 // Native share is appended conditionally when the API is available.
 
 // ---------------------------------------------------------------------------
-// Helpers — build external URLs
+// Helpers - build external URLs
 // ---------------------------------------------------------------------------
 
 function truncateForUrl(text: string, maxLen = 1800): string {
   if (text.length <= maxLen) return text;
-  return text.slice(0, maxLen) + "\n\n[…truncated — full report attached as PDF/Word]";
+  return text.slice(0, maxLen) + "\n\n[…truncated - full report attached as PDF/Word]";
 }
 
 function buildGmailUrl(payload: DeliveryPayload): string {

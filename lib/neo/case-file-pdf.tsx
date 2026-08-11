@@ -6,7 +6,7 @@
  * `case-file-export.ts` so the lawyer reads PDF and Markdown identically.
  *
  * Editorial defaults: A4, 48pt margins, Times-Roman for display headings,
- * Helvetica for body — both bundled with @react-pdf/renderer so the build
+ * Helvetica for body - both bundled with @react-pdf/renderer so the build
  * has zero font dependency.
  */
 
@@ -275,10 +275,10 @@ const styles = StyleSheet.create({
 });
 
 const FOLDER_TITLE: Record<OvbFolder, string> = {
-  "01_Intake": "01 — Intake",
-  "02_Communicatie": "02 — Communicatie",
-  "03_Processtukken": "03 — Processtukken",
-  "04_Overige_stukken": "04 — Overige stukken",
+  "01_Intake": "01 - Intake",
+  "02_Communicatie": "02 - Communicatie",
+  "03_Processtukken": "03 - Processtukken",
+  "04_Overige_stukken": "04 - Overige stukken",
 };
 
 function urgencyChip(urgency: CaseFile["cover"]["urgency"]) {
@@ -289,7 +289,7 @@ function urgencyChip(urgency: CaseFile["cover"]["urgency"]) {
 }
 
 function fmtEuro(minor: number | null | undefined): string {
-  if (minor === null || minor === undefined) return "—";
+  if (minor === null || minor === undefined) return "-";
   return `€ ${(minor / 100).toLocaleString("en-BE", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -303,7 +303,7 @@ function srcLabel(ref: { kind: string; ref: string; quote?: string }): string {
       : ref.kind === "user_message"
         ? `Msg #${ref.ref}`
         : `NEO #${ref.ref}`;
-  return ref.quote ? `${base} — “${ref.quote}”` : base;
+  return ref.quote ? `${base} - “${ref.quote}”` : base;
 }
 
 // ---------------------------------------------------------------------------
@@ -338,12 +338,12 @@ function Cover({ cf }: { cf: CaseFile }) {
         </View>
         <View style={styles.metaRow}>
           <Text style={styles.metaLabel}>Next deadline</Text>
-          <Text style={styles.metaValue}>{cf.cover.nextDeadline ?? "—"}</Text>
+          <Text style={styles.metaValue}>{cf.cover.nextDeadline ?? "-"}</Text>
         </View>
         <View style={styles.metaRow}>
           <Text style={styles.metaLabel}>SOL alert</Text>
           <Text style={styles.metaValue}>
-            {cf.cover.statuteOfLimitationsAlert ?? "—"}
+            {cf.cover.statuteOfLimitationsAlert ?? "-"}
           </Text>
         </View>
         <View style={styles.metaRow}>
@@ -458,7 +458,7 @@ function Chronology({ chronology }: { chronology: ChronologyEntry[] }) {
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>Chronology</Text>
       <Text style={styles.sectionSubtitle}>
-        {chronology.length === 0 ? "—" : `${chronology.length} event(s)`}
+        {chronology.length === 0 ? "-" : `${chronology.length} event(s)`}
       </Text>
       {chronology.length === 0 ? (
         <Text style={styles.paragraph}>No dated events extracted.</Text>
@@ -485,7 +485,7 @@ function Issues({ issues, theory }: { issues: LegalIssue[]; theory: CaseFile["ca
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>Legal issues &amp; theory</Text>
       <Text style={styles.sectionSubtitle}>
-        Working hypothesis only — final classification by the lawyer.
+        Working hypothesis only - final classification by the lawyer.
       </Text>
       {issues.map((iss, i) => (
         <View key={iss.id} style={styles.entry} wrap={false}>
@@ -536,7 +536,7 @@ function Exhibits({ exhibits }: { exhibits: ExhibitEntry[] }) {
       </Text>
       {exhibits.length === 0 ? (
         <Text style={styles.paragraph}>
-          The visitor did not attach any documents — the brief is built from the conversation alone.
+          The visitor did not attach any documents - the brief is built from the conversation alone.
         </Text>
       ) : (
         exhibits.map((e) => (
@@ -559,7 +559,7 @@ function Procedural({ procedural }: { procedural: ProceduralEntry[] }) {
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>Procedural posture</Text>
       <Text style={styles.sectionSubtitle}>
-        {procedural.length === 0 ? "—" : `${procedural.length} item(s)`}
+        {procedural.length === 0 ? "-" : `${procedural.length} item(s)`}
       </Text>
       {procedural.length === 0 ? (
         <Text style={styles.paragraph}>No deadlines or hearings extracted.</Text>
@@ -623,7 +623,7 @@ function OvbAllocation({ cf }: { cf: CaseFile }) {
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>OVB folder allocation</Text>
       <Text style={styles.sectionSubtitle}>
-        Per Orde van Vlaamse Balies — Behandeling dossier.
+        Per Orde van Vlaamse Balies - Behandeling dossier.
       </Text>
       {(Object.keys(byFolder) as OvbFolder[]).map((folder) => {
         const items = byFolder[folder];
@@ -636,7 +636,7 @@ function OvbAllocation({ cf }: { cf: CaseFile }) {
                 <Text style={styles.bulletDot}>·</Text>
                 <Text style={styles.bulletText}>
                   <Text style={{ fontFamily: "Helvetica-Bold" }}>{it.label}</Text>
-                  {` — ${it.rationale}`}
+                  {` - ${it.rationale}`}
                 </Text>
               </View>
             ))}
@@ -689,7 +689,7 @@ function Transcript({ cf }: { cf: CaseFile }) {
 function CaseFileDocument({ cf, disclaimer }: { cf: CaseFile; disclaimer: string }) {
   return (
     <Document
-      title={`Case File — ${cf.cover.caption}`}
+      title={`Case File - ${cf.cover.caption}`}
       author="NEO · Orechdin"
       subject={cf.cover.practiceArea}
       creator="orechdin.be"
@@ -711,7 +711,7 @@ function CaseFileDocument({ cf, disclaimer }: { cf: CaseFile; disclaimer: string
         <Text
           style={styles.footer}
           render={({ pageNumber, totalPages }) =>
-            `${disclaimer} · Assembled by NEO from the visitor's own messages — every fact carries a source pointer (Msg # / Doc:) so the lawyer can verify in seconds. · Page ${pageNumber} / ${totalPages}`
+            `${disclaimer} · Assembled by NEO from the visitor's own messages - every fact carries a source pointer (Msg # / Doc:) so the lawyer can verify in seconds. · Page ${pageNumber} / ${totalPages}`
           }
           fixed
         />

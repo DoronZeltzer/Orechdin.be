@@ -91,7 +91,7 @@ export function NeoCaseFileView() {
     const md = caseFileToMarkdown(cf);
     return {
       markdownBody: md,
-      subject: `Case File — ${cf.cover.caption} [${cf.cover.matterId}]`,
+      subject: `Case File - ${cf.cover.caption} [${cf.cover.matterId}]`,
       recipientEmail: SITE.email,
       reference: cf.cover.matterId,
     };
@@ -208,7 +208,7 @@ export function NeoCaseFileView() {
         const reason = data.message ?? `Server returned ${res.status}.`;
         setStatus({ kind: "error", label: reason });
       } else {
-        const ref = data.reference ?? "—";
+        const ref = data.reference ?? "-";
         setStatus({
           kind: "ok",
           label: `Brief queued (ref ${ref}). You'll hear from Orechdin within 2 business days.`,
@@ -390,7 +390,7 @@ function PartiesBlock({ parties }: { parties: PartyEntry[] }) {
   return (
     <Section
       title={t("parties")}
-      subtitle={parties.length === 0 ? "—" : `${parties.length}`}
+      subtitle={parties.length === 0 ? "-" : `${parties.length}`}
     >
       {parties.length === 0 ? (
         <Empty>{t("partiesEmpty")}</Empty>
@@ -428,7 +428,7 @@ function ChronologyBlock({ chronology }: { chronology: ChronologyEntry[] }) {
       title={t("chronology")}
       subtitle={
         chronology.length === 0
-          ? "—"
+          ? "-"
           : chronology.length === 1
             ? t("chronologyEvent", { count: 1 })
             : t("chronologyEvents", { count: chronology.length })
@@ -510,7 +510,7 @@ function IssuesBlock({
       )}
       <details className="mt-2 text-[0.72rem]">
         <summary className="cursor-pointer text-orech-mist hover:text-orech-bronze">
-          Case theory (NITA framework — intake hypothesis only)
+          Case theory (NITA framework - intake hypothesis only)
         </summary>
         <dl className="mt-1.5 space-y-1 text-[0.7rem] text-orech-mist">
           <div>
@@ -575,7 +575,7 @@ function ProceduralBlock({ procedural }: { procedural: ProceduralEntry[] }) {
   return (
     <Section
       title={t("procedural")}
-      subtitle={procedural.length === 0 ? "—" : `${procedural.length}`}
+      subtitle={procedural.length === 0 ? "-" : `${procedural.length}`}
     >
       {procedural.length === 0 ? (
         <Empty>{t("proceduralEmpty")}</Empty>
@@ -627,12 +627,12 @@ function DamagesBlock({
   const totalLabel =
     totalEurMinor !== null
       ? `€ ${(totalEurMinor / 100).toLocaleString("en-BE", { maximumFractionDigits: 0 })}`
-      : "—";
+      : "-";
   return (
     <Section
       title={t("damages")}
       subtitle={
-        damages.length === 0 ? "—" : t("damagesTotal", { total: totalLabel })
+        damages.length === 0 ? "-" : t("damagesTotal", { total: totalLabel })
       }
     >
       {damages.length === 0 ? (
@@ -731,7 +731,7 @@ function ExportActions({
         ) : null}
       </div>
 
-      {/* Deliver via channel — always visible */}
+      {/* Deliver via channel - always visible */}
       <button
         type="button"
         onClick={onDeliver}

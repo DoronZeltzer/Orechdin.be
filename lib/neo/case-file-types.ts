@@ -1,5 +1,5 @@
 /**
- * Case File schema — what NEO assembles for a lawyer to pick up cold.
+ * Case File schema - what NEO assembles for a lawyer to pick up cold.
  *
  * Designed against the convergence of:
  *  - OVB (Orde van Vlaamse Balies) "Behandeling dossier" four-folder
@@ -50,10 +50,10 @@ export type UrgencyTier = "LOW" | "MEDIUM" | "HIGH" | "CRITICAL";
 export interface CaseFileCover {
   /** Internal matter id (the IntakeDraft id for now). */
   matterId: string;
-  /** Caption shown at the top, e.g. "Tenant deposit dispute — Antwerp 2018". */
+  /** Caption shown at the top, e.g. "Tenant deposit dispute - Antwerp 2018". */
   caption: string;
   /**
-   * One-sentence case theme — the moral / persuasive core a partner can
+   * One-sentence case theme - the moral / persuasive core a partner can
    * repeat in court. NITA convention. Synthesised from the user's words.
    */
   theme: string;
@@ -71,7 +71,7 @@ export interface CaseFileCover {
 }
 
 export interface ExecutiveSummary {
-  /** ≤300 words — partner reads this first. */
+  /** ≤300 words - partner reads this first. */
   paragraph: string;
   bullets: string[];
 }
@@ -107,7 +107,7 @@ export interface PartyEntry {
 }
 
 // ---------------------------------------------------------------------------
-// Chronology (timeline) — the spine of a litigation file.
+// Chronology (timeline) - the spine of a litigation file.
 // ---------------------------------------------------------------------------
 
 export interface ChronologyEntry {
@@ -137,7 +137,7 @@ export type IssueStrength = "WEAK" | "MIXED" | "PROMISING" | "STRONG" | "UNKNOWN
 
 export interface LegalIssue {
   id: string;
-  /** Short title — e.g. "Was the dismissal procedure observed?". */
+  /** Short title - e.g. "Was the dismissal procedure observed?". */
   question: string;
   /** Practice area this issue lives under. */
   area: string;
@@ -247,7 +247,7 @@ export interface DamagesSummary {
 }
 
 // ---------------------------------------------------------------------------
-// Risk & gating flags (top-level — never buried).
+// Risk & gating flags (top-level - never buried).
 // ---------------------------------------------------------------------------
 
 export interface RiskGate {
@@ -308,7 +308,7 @@ export interface CaseFile {
   /** Append-only redacted transcript snapshot for the case file. */
   transcript: { role: "user" | "assistant"; text: string; ts: string; via?: "voice" | "keyboard" }[];
   /**
-   * Completeness gauges reused in the dossier panel — same shape as the
+   * Completeness gauges reused in the dossier panel - same shape as the
    * legacy ReadinessProvenance so existing UI keeps working.
    */
   completeness: {

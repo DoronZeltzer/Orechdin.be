@@ -3,7 +3,7 @@
  *
  * Goal: when NEO is in DRAFT_CASE_BUILDING and the metacognitive evaluator
  * reports a missing fact (timeline, parties, location, files), pick ONE
- * warm, locale-aware question to weave into the next reply — instead of
+ * warm, locale-aware question to weave into the next reply - instead of
  * dumping a generic chip rail at every turn.
  *
  * The questions are written in the "two friends working on a project" voice
@@ -36,7 +36,7 @@ export interface NextQuestion {
   batched: boolean;
 }
 
-/** Lightweight stress detector — informs the adaptive style. */
+/** Lightweight stress detector - informs the adaptive style. */
 function looksStressed(lastUserMessage: string): boolean {
   const t = (lastUserMessage || "").toLowerCase();
   if (!t.trim()) return false;
@@ -80,19 +80,19 @@ const PROMPTS: Record<MissingFact, Record<Locale, string>> = {
     fr: "À peu près quand est-ce que cela a commencé, ou quand le dernier fait s'est-il produit ?",
   },
   parties: {
-    en: "Who else is involved — a person, a company, an institution?",
-    nl: "Wie is er nog betrokken — een persoon, een bedrijf, een instelling?",
-    fr: "Qui d'autre est impliqué — une personne, une entreprise, une institution ?",
+    en: "Who else is involved - a person, a company, an institution?",
+    nl: "Wie is er nog betrokken - een persoon, een bedrijf, een instelling?",
+    fr: "Qui d'autre est impliqué - une personne, une entreprise, une institution ?",
   },
   location: {
-    en: "Where did this take place — Antwerp, somewhere else in Belgium?",
-    nl: "Waar is dit gebeurd — Antwerpen, ergens anders in België?",
-    fr: "Où cela s'est-il passé — Anvers, ailleurs en Belgique ?",
+    en: "Where did this take place - Antwerp, somewhere else in Belgium?",
+    nl: "Waar is dit gebeurd - Antwerpen, ergens anders in België?",
+    fr: "Où cela s'est-il passé - Anvers, ailleurs en Belgique ?",
   },
   documents: {
-    en: "Anything in writing — letters, contracts, emails? Drop them here whenever you're ready.",
-    nl: "Heeft u iets op papier — brieven, contracten, e-mails? Laat het hier vallen wanneer u klaar bent.",
-    fr: "Avez-vous des écrits — lettres, contrats, courriels ? Déposez-les ici quand vous êtes prêt.",
+    en: "Anything in writing - letters, contracts, emails? Drop them here whenever you're ready.",
+    nl: "Heeft u iets op papier - brieven, contracten, e-mails? Laat het hier vallen wanneer u klaar bent.",
+    fr: "Avez-vous des écrits - lettres, contrats, courriels ? Déposez-les ici quand vous êtes prêt.",
   },
   none: { en: "", nl: "", fr: "" },
 };
@@ -145,7 +145,7 @@ export function nextBestQuestion(args: {
 }
 
 /**
- * Lightweight gap-checker for the dossier sidebar — surfaces all currently
+ * Lightweight gap-checker for the dossier sidebar - surfaces all currently
  * missing facts (not just the next one to ask).
  */
 export function listOpenGaps(report: MetacognitiveReport, fileCount: number, locale: Locale): string[] {

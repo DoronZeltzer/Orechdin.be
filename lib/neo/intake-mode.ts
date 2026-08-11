@@ -43,6 +43,6 @@ export const INTAKE_ENABLED: boolean = INTAKE_MODE !== "off";
  */
 export const INTAKE_MODE_LABEL: Record<IntakeMode, string | null> = {
   off: null,
-  demo: "Demo mode — no email is sent and no case is persisted",
+  demo: "Demo mode - no email is sent and no case is persisted",
   live: null,
 };

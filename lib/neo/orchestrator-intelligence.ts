@@ -1,5 +1,5 @@
 /**
- * NEO orchestrator intelligence — intent + metacognition driven routing.
+ * NEO orchestrator intelligence - intent + metacognition driven routing.
  * Replaces naive first-keyword-match with scored, explainable decisions.
  */
 
@@ -174,7 +174,7 @@ function buildReasoning(
   return parts.join(" · ");
 }
 
-/** Live snapshot for UI — no message required. */
+/** Live snapshot for UI - no message required. */
 export function liveOrchestratorSnapshot(args: {
   messages: { role: string; content_redacted: string }[];
   currentState: IntakeState;

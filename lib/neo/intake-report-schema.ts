@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 // ─────────────────────────────────────────────────────────────
-// A. Matter Snapshot — expanded with procedural posture fields
+// A. Matter Snapshot - expanded with procedural posture fields
 // ─────────────────────────────────────────────────────────────
 export const MatterSnapshotSchema = z.object({
   visitor_issue: z.string(),
@@ -66,10 +66,10 @@ export const QuantumDamagesSchema = z.object({
 });
 
 // ─────────────────────────────────────────────────────────────
-// Master Schema — backward-compatible (new sections optional)
+// Master Schema - backward-compatible (new sections optional)
 // ─────────────────────────────────────────────────────────────
 export const StrictIntakeReportSchema = z.object({
-  // Core sections (A–J) — existing contract
+  // Core sections (A–J) - existing contract
   A_matter_snapshot: MatterSnapshotSchema,
   B_confirmed_facts: z.array(z.string()),
   C_likely_unconfirmed_points: z.array(z.string()),
@@ -82,7 +82,7 @@ export const StrictIntakeReportSchema = z.object({
   J_delivery_status: z.enum(["validated", "blocked", "intake-only", "partner-review-ready"]),
   hard_block_status: z.boolean().nullable().optional(),
 
-  // Professional sections (K–O) — new intelligence layers
+  // Professional sections (K–O) - new intelligence layers
   K_liability_exposure: LiabilityExposureSchema.optional(),
   L_strategic_alternatives: z.array(StrategicAlternativeSchema).optional(),
   M_procedural_posture: ProceduralPostureSchema.optional(),

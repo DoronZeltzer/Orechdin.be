@@ -72,7 +72,7 @@ export interface UseSpeechRecognitionResult {
  * - Locale-aware (en-US / nl-BE / fr-BE) so dictation matches the visitor's
  *   language without an extra prompt.
  * - Streams interim results so the composer can show words as the user speaks.
- * - Gracefully reports `supported: false` when the API is missing — the UI
+ * - Gracefully reports `supported: false` when the API is missing - the UI
  *   can simply hide the mic button in that case.
  */
 export function useSpeechRecognition(

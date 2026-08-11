@@ -48,7 +48,7 @@ export function NeoOrchestrator({
         </p>
         {!compact && (
           <p className="mt-1.5 text-[0.78rem] leading-relaxed text-orech-mist/90">
-            Intelligent routing uses your intent, conversation gaps, and metacognition —
+            Intelligent routing uses your intent, conversation gaps, and metacognition -
             not just keywords.
           </p>
         )}

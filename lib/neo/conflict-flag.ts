@@ -14,7 +14,7 @@
  *   header has something for the human reviewer to glance at.
  *
  * Sources of truth used:
- * - lib/site.ts (firm name, two named lawyers — never claim conflict
+ * - lib/site.ts (firm name, two named lawyers - never claim conflict
  *   with a name that resembles the firm's own).
  */
 
@@ -26,7 +26,7 @@ export interface ConflictFlag {
   severity: "INFO" | "WATCH" | "ATTENTION";
   /** Short, lawyer-readable label for the dossier header. */
   label: string;
-  /** Why it fired — included verbatim in the dossier. */
+  /** Why it fired - included verbatim in the dossier. */
   reason: string;
 }
 

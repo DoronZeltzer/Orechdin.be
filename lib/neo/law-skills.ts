@@ -231,7 +231,7 @@ export const LAW_NEO_SKILLS: LawNeoSkill[] = [
       "Map the full spectrum of dispute resolution pathways (negotiation, mediation, arbitration, litigation) with suitability ratings and fact-grounded rationale for each mechanism.",
     boundaries: [
       "Do not predict outcomes of any mechanism",
-      "Suitability ratings must differentiate — not all paths can be RECOMMENDED",
+      "Suitability ratings must differentiate - not all paths can be RECOMMENDED",
       "Defer binding strategy selection to the reviewing lawyer"
     ],
     routesTo: "services",

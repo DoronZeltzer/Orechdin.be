@@ -1,10 +1,10 @@
 /**
- * NEO Session State — with browser-side persistence.
+ * NEO Session State - with browser-side persistence.
  *
  * Design:
  * - `createInitialSessionState()` checks `sessionStorage` for a prior state.
  * - `mergeSessionState()` persists every merge to `sessionStorage`.
- * - State expires with the tab (sessionStorage) — no cross-tab leakage.
+ * - State expires with the tab (sessionStorage) - no cross-tab leakage.
  * - Server-side (SSR) calls get pure in-memory state with no storage calls.
  */
 
@@ -31,7 +31,7 @@ function loadPersistedState(): SessionState | null {
     const raw = sessionStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw);
-    // Basic shape check — reject garbage
+    // Basic shape check - reject garbage
     if (
       typeof parsed === "object" &&
       parsed !== null &&
@@ -51,7 +51,7 @@ function persistState(state: SessionState): void {
   try {
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch {
-    // Storage full or blocked — degrade silently.
+    // Storage full or blocked - degrade silently.
   }
 }
 

@@ -50,7 +50,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex items-center gap-3 outline-none focus-visible:rounded-md focus-visible:ring-2 focus-visible:ring-orech-bronze focus-visible:ring-offset-4 focus-visible:ring-offset-orech-paper"
-          aria-label={`${SITE.title} — ${tNav("home")}`}
+          aria-label={`${SITE.title}, ${tNav("home")}`}
         >
           <span className="relative flex h-11 items-center sm:h-12">
             <LogoWordmark className="h-full w-auto object-contain object-left" />

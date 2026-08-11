@@ -3,7 +3,7 @@
  * into the structured leaves of a CaseFile (parties, chronology, issues,
  * exhibits, deadlines, damages).
  *
- * All extractors are regex / heuristic only. No LLM call — they run on
+ * All extractors are regex / heuristic only. No LLM call - they run on
  * every keystroke in the dossier sidebar. The lawyer is the source of
  * truth; NEO only proposes what it thinks it sees.
  *
@@ -125,7 +125,7 @@ function daysBetween(from: Date, isoTo: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// Chronology — one entry per detected date phrase, anchored to its message.
+// Chronology - one entry per detected date phrase, anchored to its message.
 // ---------------------------------------------------------------------------
 
 const SENTENCE_SPLIT_RX = /(?<=[.!?])\s+|\n+/;
@@ -260,7 +260,7 @@ const PRACTICE_AREA_HINTS: Array<{ area: PracticeAreaSuggestion; rx: RegExp; que
   {
     area: "Rental disputes",
     rx: /\b(rent|lease|landlord|tenant|eviction|deposit|huur|verhuurder|huurder|loyer|bail|locataire|propriétaire)\b/i,
-    question: "Lease performance / deposit / eviction question — which side is in default?",
+    question: "Lease performance / deposit / eviction question - which side is in default?",
   },
   {
     area: "Debt collection",
@@ -275,7 +275,7 @@ const PRACTICE_AREA_HINTS: Array<{ area: PracticeAreaSuggestion; rx: RegExp; que
   {
     area: "Civil",
     rx: /\b(civil|liability|damages|tort|injury|burgerlijk|aansprakelijk|schade|civil|responsabilité|dommage)\b/i,
-    question: "Civil-liability claim — duty, breach, damage, causation.",
+    question: "Civil-liability claim - duty, breach, damage, causation.",
   },
 ];
 

@@ -73,7 +73,7 @@ export function NeoTypewriter({
       return 0;
     };
     // Tiny per-tick jitter (±15 %) so the cadence feels organic rather than
-    // mechanical. Random is fine here — purely cosmetic.
+    // mechanical. Random is fine here - purely cosmetic.
     const jitter = () => 1 + (Math.random() - 0.5) * 0.3;
 
     let cur = 0;

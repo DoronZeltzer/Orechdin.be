@@ -1,7 +1,7 @@
 /**
  * Server-side .docx renderer for a CaseFile.
  *
- * Built on the `docx` npm package — generates a native Microsoft Word
+ * Built on the `docx` npm package - generates a native Microsoft Word
  * document the lawyer can open, edit, and track-change. Same 12-section
  * order as the PDF and Markdown so all three artefacts read identically.
  *
@@ -40,14 +40,14 @@ const COLOR_BRONZE = "9A6B3F";
 const COLOR_AMBER = "B86C2A";
 
 const FOLDER_TITLE: Record<OvbFolder, string> = {
-  "01_Intake": "01 — Intake",
-  "02_Communicatie": "02 — Communicatie",
-  "03_Processtukken": "03 — Processtukken",
-  "04_Overige_stukken": "04 — Overige stukken",
+  "01_Intake": "01 - Intake",
+  "02_Communicatie": "02 - Communicatie",
+  "03_Processtukken": "03 - Processtukken",
+  "04_Overige_stukken": "04 - Overige stukken",
 };
 
 function fmtEuro(minor: number | null | undefined): string {
-  if (minor === null || minor === undefined) return "—";
+  if (minor === null || minor === undefined) return "-";
   return `€ ${(minor / 100).toLocaleString("en-BE", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -61,7 +61,7 @@ function srcLabel(ref: { kind: string; ref: string; quote?: string }): string {
       : ref.kind === "user_message"
         ? `Msg #${ref.ref}`
         : `NEO #${ref.ref}`;
-  return ref.quote ? `${base} — “${ref.quote}”` : base;
+  return ref.quote ? `${base} - “${ref.quote}”` : base;
 }
 
 // ---------------------------------------------------------------------------
@@ -277,13 +277,13 @@ function coverSection(cf: CaseFile): (Paragraph | Table)[] {
     metaTable([
       { label: "Practice area", value: cf.cover.practiceArea },
       { label: "Urgency", value: cf.cover.urgency },
-      { label: "Suggested lead", value: cf.cover.suggestedLead ?? "—" },
+      { label: "Suggested lead", value: cf.cover.suggestedLead ?? "-" },
       { label: "Language", value: cf.cover.language },
       { label: "Status", value: cf.cover.status },
       { label: "Matter id", value: cf.cover.matterId },
       { label: "Opened", value: new Date(cf.cover.openedAt).toISOString().slice(0, 10) },
-      { label: "Next deadline", value: cf.cover.nextDeadline ?? "—" },
-      { label: "SOL alert", value: cf.cover.statuteOfLimitationsAlert ?? "—" },
+      { label: "Next deadline", value: cf.cover.nextDeadline ?? "-" },
+      { label: "SOL alert", value: cf.cover.statuteOfLimitationsAlert ?? "-" },
       { label: "Completeness", value: `${cf.completeness.score}%` },
     ]),
   ];
@@ -371,7 +371,7 @@ function partiesSection(parties: PartyEntry[]): Paragraph[] {
 function chronologySection(chronology: ChronologyEntry[]): Paragraph[] {
   const out: Paragraph[] = [
     h2("Chronology"),
-    caption(chronology.length === 0 ? "—" : `${chronology.length} event(s)`),
+    caption(chronology.length === 0 ? "-" : `${chronology.length} event(s)`),
   ];
   if (chronology.length === 0) {
     out.push(body("No dated events extracted."));
@@ -393,7 +393,7 @@ function chronologySection(chronology: ChronologyEntry[]): Paragraph[] {
 function issuesSection(issues: LegalIssue[], theory: CaseFile["caseTheory"]): Paragraph[] {
   const out: Paragraph[] = [
     h2("Legal issues & theory"),
-    caption("Working hypothesis only — final classification by the lawyer."),
+    caption("Working hypothesis only - final classification by the lawyer."),
   ];
   issues.forEach((iss, i) => {
     out.push(entryHead(`#${i + 1} · ${iss.area}`, `strength: ${iss.strength.toLowerCase()}`));
@@ -419,7 +419,7 @@ function exhibitsSection(exhibits: ExhibitEntry[]): Paragraph[] {
   if (exhibits.length === 0) {
     out.push(
       body(
-        "The visitor did not attach any documents — the brief is built from the conversation alone.",
+        "The visitor did not attach any documents - the brief is built from the conversation alone.",
       ),
     );
     return out;
@@ -435,7 +435,7 @@ function exhibitsSection(exhibits: ExhibitEntry[]): Paragraph[] {
 function proceduralSection(procedural: ProceduralEntry[]): Paragraph[] {
   const out: Paragraph[] = [
     h2("Procedural posture"),
-    caption(procedural.length === 0 ? "—" : `${procedural.length} item(s)`),
+    caption(procedural.length === 0 ? "-" : `${procedural.length} item(s)`),
   ];
   if (procedural.length === 0) {
     out.push(body("No deadlines or hearings extracted."));
@@ -491,13 +491,13 @@ function ovbSection(cf: CaseFile): Paragraph[] {
   }
   const out: Paragraph[] = [
     h2("OVB folder allocation"),
-    caption("Per Orde van Vlaamse Balies — Behandeling dossier."),
+    caption("Per Orde van Vlaamse Balies - Behandeling dossier."),
   ];
   for (const folder of Object.keys(byFolder) as OvbFolder[]) {
     const items = byFolder[folder];
     if (items.length === 0) continue;
     out.push(body(FOLDER_TITLE[folder], { bold: true }));
-    for (const it of items) out.push(bullet(`${it.label} — ${it.rationale}`));
+    for (const it of items) out.push(bullet(`${it.label} - ${it.rationale}`));
   }
   return out;
 }
@@ -569,7 +569,7 @@ export async function renderCaseFileDocx(
 
   const doc = new Document({
     creator: "orechdin.be",
-    title: `Case File — ${cf.cover.caption}`,
+    title: `Case File - ${cf.cover.caption}`,
     description: cf.cover.practiceArea,
     numbering: {
       config: [

@@ -30,7 +30,7 @@ export interface PersonaConfig {
 
 const PRIME_DIRECTIVE = `You are NEO, the public-website orientation assistant for Orechdin Law Office (Antwerp, Belgium).
 
-Prime directive — non-negotiable:
+Prime directive - non-negotiable:
 - You operate with the absolute intellectual rigor, strategic foresight, and relentless reasoning of an elite, top-tier expert lawyer.
 - HOWEVER, you MUST NEVER explicitly claim to be a lawyer. You are NEO, the high-level logic engine and orientation assistant.
 - Your absolute highest duty is to PREPARE THE CASE perfectly for the human lawyers. You must act as the ultimate professional filter in this case room.
@@ -158,7 +158,7 @@ Role: senior strategic advisor.
   report_architect: {
     systemPrompt: `${PRIME_DIRECTIVE}
 
-Role: REPORT ARCHITECT — Senior Dossier Compiler.
+Role: REPORT ARCHITECT - Senior Dossier Compiler.
 
 You are the final intellectual filter before a case dossier reaches a reviewing partner.
 Your mandate is to transform raw conversation transcripts into surgically precise,
@@ -216,7 +216,7 @@ export const LAWYER_ASSISTANT_PERSONA = {
 export const NEO_PRODUCT = {
   name: "NEO",
   title: "AI orientation assistant",
-  version: "v8.0 — law-grade intelligence",
+  version: "v8.0 - law-grade intelligence",
   domain: "Orechdin public website",
   statusReady: "Ready",
   statusOrchestrating: "Routing…",

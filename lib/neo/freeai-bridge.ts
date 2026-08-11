@@ -13,7 +13,7 @@ function baseUrl(): string {
 }
 
 /**
- * M05 spine entry — all NEO inference routes through /v1/freeai/nokey/chat.
+ * M05 spine entry - all NEO inference routes through /v1/freeai/nokey/chat.
  * No OpenRouter or developer API keys in the 0D plane.
  */
 export async function callFreeAI(

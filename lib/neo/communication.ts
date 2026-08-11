@@ -1,5 +1,5 @@
 /**
- * NEO communication layer — intent detection, language inference, urgency,
+ * NEO communication layer - intent detection, language inference, urgency,
  * and tone selection. Donor patterns: Verinox Communication Suite + NEO v7.0
  * "platform-only context" rule. NIR-WEBSITE KB remains the only fact source.
  */
@@ -17,7 +17,7 @@ export type NeoIntent =
   | "out_of_scope"
   | "general";
 
-/** True when the user asks for today's date, day, or time — not a legal urgency cue. */
+/** True when the user asks for today's date, day, or time - not a legal urgency cue. */
 export function isDateOrTimeQuestion(message: string): boolean {
   const m = (message || "").toLowerCase();
   return /(what('s| is) (the )?(date|day|time)|what (date|day|time)|what time is it|welke datum|welke dag|hoe laat is het|quelle date|quelle heure|quel jour|quelle heure est-il)/i.test(
@@ -86,9 +86,9 @@ export const TONE_PROFILES: Record<NeoTone, ToneProfile> = {
     warmth: 0.95,
     directness: 0.45,
     opener: {
-      en: "Take a moment — you are in the right place.",
-      nl: "Neem even de tijd — u bent hier op de juiste plek.",
-      fr: "Prenez un moment — vous êtes au bon endroit.",
+      en: "Take a moment - you are in the right place.",
+      nl: "Neem even de tijd - u bent hier op de juiste plek.",
+      fr: "Prenez un moment - vous êtes au bon endroit.",
     },
     bridge: {
       en: "Here is calm, factual orientation from what the office publishes:",
@@ -115,7 +115,7 @@ export function detectLanguage(text: string): "en" | "nl" | "fr" {
 }
 
 /**
- * Detects user intent. Pattern donor: Verinox conversationIntelligence — adapted
+ * Detects user intent. Pattern donor: Verinox conversationIntelligence - adapted
  * to a legal-orientation scope, not workflow construction.
  */
 export function detectIntent(message: string): NeoIntent {
@@ -209,6 +209,6 @@ export function neoBoundaryLine(locale: "en" | "nl" | "fr"): string {
       return "NEO fournit une orientation générale basée sur le matériel publié d'Orechdin. Pas de conseil juridique.";
     case "en":
     default:
-      return "NEO offers general orientation grounded only in Orechdin's published material — not legal advice.";
+      return "NEO offers general orientation grounded only in Orechdin's published material - not legal advice.";
   }
 }
