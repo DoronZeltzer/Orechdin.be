@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 // must statically detect the `runtime` / `size` exports on each route
 // file and does not follow re-exports.
 export const runtime = "edge";
-export const alt = "Orechdin — Law Office, Antwerp";
+export const alt = "Orechdin Law Office, Antwerp";
 export const size = { width: 1200, height: 630 } as const;
 export const contentType = "image/png";
 

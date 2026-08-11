@@ -68,9 +68,13 @@ export default function HomePage() {
             fill
             priority
             quality={90}
-            className="object-cover object-center"
+            className="object-cover object-center [filter:saturate(0.62)_brightness(1.05)]"
             sizes="100vw"
           />
+          {/* Brand mood: cool the image with a wash in the primary accent
+              blue (per the guidelines' image-overlay treatment). */}
+          <div className="absolute inset-0 bg-gradient-to-br from-orech-bronze/40 via-orech-bronze/12 to-transparent mix-blend-multiply" />
+          {/* White legibility gradients so black hero text stays readable. */}
           <div className="absolute inset-0 bg-gradient-to-r from-orech-paper/95 via-orech-paper/80 to-orech-paper/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-orech-paper via-transparent to-transparent" />
         </div>

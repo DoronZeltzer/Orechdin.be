@@ -236,8 +236,10 @@ export function NeoShell() {
         aria-hidden={open ? undefined : true}
         aria-label="NEO assistant"
         tabIndex={-1}
-        className={`fixed bottom-0 top-0 z-[70] flex w-[min(calc(100vw-52px),420px)] flex-col overflow-hidden border-orech-line bg-orech-paper/95 text-left text-orech-ink shadow-neo-glass backdrop-blur-2xl backdrop-saturate-200 max-lg:right-[52px] max-lg:rounded-l-3xl max-lg:border-l lg:right-0 lg:rounded-l-3xl lg:border-l ${
-          open ? "pointer-events-auto translate-x-0" : "pointer-events-none translate-x-full"
+        className={`fixed bottom-0 top-0 z-[70] flex w-[min(calc(100vw-52px),420px)] flex-col overflow-hidden border-orech-line bg-orech-paper/95 text-left text-orech-ink shadow-neo-glass backdrop-blur-2xl backdrop-saturate-200 max-lg:rounded-l-3xl max-lg:border-l lg:right-0 lg:rounded-l-3xl lg:border-l ${
+          open
+            ? "pointer-events-auto translate-x-0 max-lg:right-[52px]"
+            : "pointer-events-none translate-x-full max-lg:right-0"
         }`}
         style={{
           transition:

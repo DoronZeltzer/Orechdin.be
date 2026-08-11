@@ -29,7 +29,7 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "primarySections": "Primary sections",
-    "officeLogoAlt": "{title} — {short}"
+    "officeLogoAlt": "{title}, {short}"
   },
   "Footer": {
     "contactHeading": "Contact",
@@ -54,24 +54,24 @@
   "HomePage": {
     "metadata": {
       "title": "Counsel and representation in Antwerp",
-      "description": "Orechdin Law Office — published practice areas across commercial, civil, criminal, family, employment, real estate and traffic, supervised by Nir Zeltzer and Deborah Johnson."
+      "description": "Orechdin Law Office, published practice areas across commercial, civil, criminal, family, employment, real estate and traffic, supervised by Nir Zeltzer and Deborah Johnson."
     },
     "hero": {
       "eyebrow": "{city} · Avocats & Advocaten",
       "h1Line1": "Counsel and representation,",
       "h1Italic": "grounded in what we publish.",
-      "lead": "{short} advises companies, private clients and the self-employed across the matter types the firm publishes — commercial, civil, criminal, family, employment, real estate and traffic. Engagement begins with a direct conversation; the intake offered on this site is general orientation, not advice.",
+      "lead": "{short} advises companies, private clients and the self-employed across the matter types the firm publishes, commercial, civil, criminal, family, employment, real estate and traffic. Engagement begins with a direct conversation; the intake offered on this site is general orientation, not advice.",
       "primaryCta": "Contact the office",
       "secondaryCta": "Published practice areas",
       "captionStamp": "est. Antwerp",
-      "imageAlt": "Belgian chambers interior — bookcase, antique desk lamp and a view onto the Antwerp Grote Markt"
+      "imageAlt": "Belgian chambers interior, bookcase, antique desk lamp and a view onto the Antwerp Grote Markt"
     },
     "pillars": {
       "eyebrow": "The practice",
       "headlinePart1": "Counsel you can",
       "headlineItalic": "rely on,",
       "headlinePart2": "kept to what is written.",
-      "lead": "Each commitment below is traceable to material the firm publishes about itself. There are no league tables, no awards furniture, no case-outcome metrics — only the discipline the office maintains for every file it accepts.",
+      "lead": "Each commitment below is traceable to material the firm publishes about itself. There are no league tables, no awards furniture, no case-outcome metrics, only the discipline the office maintains for every file it accepts.",
       "items": [
         {
           "title": "Antwerp practice",
@@ -87,7 +87,7 @@
         },
         {
           "title": "Transparent on results",
-          "body": "The firm publishes its own disclaimer on outcomes — reproduced on this site in full."
+          "body": "The firm publishes its own disclaimer on outcomes, reproduced on this site in full."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "eyebrow": "Practice",
       "headlinePart1": "The matter types the firm",
       "headlineItalic": "publishes.",
-      "lead": "Listings here mirror the office's public website verbatim. Whether a specific file fits a given group is settled in direct conversation with a lawyer — never inferred from the words on a landing page.",
+      "lead": "Listings here mirror the office's public website verbatim. Whether a specific file fits a given group is settled in direct conversation with a lawyer, never inferred from the words on a landing page.",
       "openServices": "Open the full services page",
       "groups": [
         {
@@ -121,7 +121,7 @@
         {
           "kicker": "property · recovery",
           "title": "Property, liability & recovery",
-          "body": "Published property work and enforcement-type matters — without guaranteeing a particular outcome.",
+          "body": "Published property work and enforcement-type matters, without guaranteeing a particular outcome.",
           "items": [
             "Real estate and building cases",
             "Right of abode, civil liability and resolving conflicts",
@@ -135,7 +135,7 @@
       "headlinePart1": "Short,",
       "headlineItalic": "factual",
       "headlinePart2": "reasons.",
-      "lead": "Drawn from what Orechdin publishes about itself — not rankings, awards, or outcome promises. Each line below could be read aloud in court without amendment.",
+      "lead": "Drawn from what Orechdin publishes about itself, not rankings, awards, or outcome promises. Each line below could be read aloud in court without amendment.",
       "items": [
         {
           "roman": "I.",
@@ -155,7 +155,7 @@
         {
           "roman": "IV.",
           "title": "Clear on outcomes",
-          "body": "The firm publishes its own disclaimer on results — reproduced on this site in full."
+          "body": "The firm publishes its own disclaimer on results, reproduced on this site in full."
         }
       ]
     },
@@ -177,11 +177,11 @@
   "LawyersPage": {
     "metadata": {
       "title": "The lawyers",
-      "description": "Nir Zeltzer and Deborah Johnson — roles, published bios, and contact for Orechdin Law Office, Antwerp."
+      "description": "Nir Zeltzer and Deborah Johnson, roles, published bios, and contact for Orechdin Law Office, Antwerp."
     },
     "eyebrow": "The team",
     "headline": "Lawyers you can reach",
-    "lead": "Orechdin advises corporate clients and private individuals and represents clients before the courts. The office describes itself as dynamic and growing, with each matter supervised by the senior partner and his colleague — supported by external specialists when a file requires it.",
+    "lead": "Orechdin advises corporate clients and private individuals and represents clients before the courts. The office describes itself as dynamic and growing, with each matter supervised by the senior partner and his colleague, supported by external specialists when a file requires it.",
     "profilesHeading": "Lawyer profiles",
     "profilesIntro": "Names, roles, and biographical text below are taken from the firm's public materials. They are not legal advice and do not list every matter either lawyer may handle.",
     "biographyNote": "The biography below is published by the firm in English and is reproduced verbatim.",
@@ -214,7 +214,7 @@
       },
       {
         "title": "People, family & employment",
-        "intro": "Personal-life and workplace areas published by the firm — handled with the office's stated care and clarity.",
+        "intro": "Personal-life and workplace areas published by the firm, handled with the office's stated care and clarity.",
         "items": [
           "Private and family law",
           "Employment law",
@@ -223,7 +223,7 @@
       },
       {
         "title": "Property, liability & recovery",
-        "intro": "Published property work and enforcement-type matters — without guaranteeing a particular outcome.",
+        "intro": "Published property work and enforcement-type matters, without guaranteeing a particular outcome.",
         "items": [
           "Real estate and building cases",
           "Right of abode, civil liability and resolving conflicts",
@@ -235,13 +235,13 @@
   "OfficePage": {
     "metadata": {
       "title": "Office",
-      "description": "{short} — location in {city}, how the office presents its approach, and published contact details."
+      "description": "{short}, location in {city}, how the office presents its approach, and published contact details."
     },
     "eyebrow": "About the firm",
     "headline": "Antwerp, close to clients",
     "lead": "Orechdin provides legal advice to companies and individuals and handles representation in court. The office presents itself as dynamic and fast-growing, with matters supervised directly by the senior partner and Deborah Johnson, alongside a network of external specialists when a file demands deeper expertise.",
     "approachHeading": "How the office presents its work",
-    "approachLead": "The public site emphasises accessible counsel, direct contact with named lawyers, and bringing in outside expertise when a matter requires it — without promising a particular result.",
+    "approachLead": "The public site emphasises accessible counsel, direct contact with named lawyers, and bringing in outside expertise when a matter requires it, without promising a particular result.",
     "bullets": [
       "Advice and litigation for companies and private individuals.",
       "Supervision by the senior partner and Deborah Johnson, with external specialists when appropriate.",
@@ -258,20 +258,20 @@
   "ContactPage": {
     "metadata": {
       "title": "Contact",
-      "description": "Contact Orechdin Law Office in Antwerp — phone, email, and office address."
+      "description": "Contact Orechdin Law Office in Antwerp, phone, email, and office address."
     },
     "eyebrow": "Get in touch",
     "headline": "Contact",
     "lead": "For new instructions and confidential matters, please call the office or send an email to the address below. NEO can help you frame your question first; it does not provide legal advice or create representation.",
     "neoTitle": "Frame your question with NEO",
-    "neoBody": "NEO is an orientation assistant grounded in this site's approved knowledge base. It does not give legal advice or create an attorney–client relationship. Use it to organise context before contacting the office.",
+    "neoBody": "NEO is an orientation assistant grounded in this site's approved knowledge base. It does not give legal advice or create an attorney-client relationship. Use it to organise context before contacting the office.",
     "openNeo": "Open NEO assistant →",
     "privacyLink": "Privacy policy"
   },
   "PrivacyPage": {
     "metadata": {
       "title": "Privacy policy",
-      "description": "GDPR / AVG summary for Orechdin — controller, DPO, rights, retention; link to the official privacy page."
+      "description": "GDPR / AVG summary for Orechdin, controller, DPO, rights, retention; link to the official privacy page."
     },
     "eyebrow": "GDPR / AVG",
     "headline": "Privacy statement",
@@ -285,9 +285,9 @@
     "processedHeading": "Categories of data",
     "processedBody": "The firm states that it processes personal data because you use its legal services and/or because you provide data yourself. Examples given include: name; gender; date and place of birth; address; telephone and email; bank account; company and VAT numbers; documents required under anti-money laundering rules; application forms; and, where relevant, special categories such as criminal data or data of persons under 16 (only with consent, guardian involvement, or necessity to protect minors' rights).",
     "purposesHeading": "Purposes and legal bases",
-    "purposesBody": "Processing is described as limited to what is necessary for professional obligations — for example: legal advice and other requested services; handling information requests; legal compliance; client communication; billing; and applications. Legal bases under Article 6(1) GDPR mentioned include consent, contract performance, legal obligation, vital interests, and legitimate interests in the context of legal practice.",
+    "purposesBody": "Processing is described as limited to what is necessary for professional obligations, for example: legal advice and other requested services; handling information requests; legal compliance; client communication; billing; and applications. Legal bases under Article 6(1) GDPR mentioned include consent, contract performance, legal obligation, vital interests, and legitimate interests in the context of legal practice.",
     "retentionHeading": "Retention and sharing",
-    "retentionBody": "Personal data are retained for the period required by law — the public statement refers, where applicable, to retention up to five years after termination of the client agreement. Data are shared with third parties only when necessary for legal obligations or the agreement (courts, bailiffs, notaries, other lawyers, accountants, etc.) or with processors under appropriate measures. Transfers outside the EEA are limited to what the statement describes for international filings.",
+    "retentionBody": "Personal data are retained for the period required by law, the public statement refers, where applicable, to retention up to five years after termination of the client agreement. Data are shared with third parties only when necessary for legal obligations or the agreement (courts, bailiffs, notaries, other lawyers, accountants, etc.) or with processors under appropriate measures. Transfers outside the EEA are limited to what the statement describes for international filings.",
     "rightsHeading": "Your rights",
     "rightsBody1": "You may exercise rights of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent where applicable. Requests may be sent to ORECHDIN via",
     "rightsBody2": ". You may lodge a complaint with the Belgian Data Protection Authority.",
@@ -345,7 +345,7 @@
       "start": "Dictate a message",
       "stop": "Stop dictation",
       "title": "Dictate (speech-to-text)",
-      "listening": "Listening — speak now. Click the mic again to stop.",
+      "listening": "Listening, speak now. Click the mic again to stop.",
       "blocked": "Microphone access blocked. Allow it in your browser settings to dictate.",
       "ariaLabel": "Dictated by voice",
       "titleLabel": "Dictated"
@@ -357,7 +357,7 @@
         "afternoon": "Good afternoon",
         "evening": "Good evening"
       },
-      "introTitle": "{greeting} — I'm NEO.",
+      "introTitle": "{greeting}, I'm NEO.",
       "introWorkspace": "Tell me what's going on, and I'll help you put together everything a lawyer here would need to look at it. Take your time. You can type, dictate, or drop a document straight into the chat.",
       "introPanel": "Ask me anything about Orechdin and I'll point you to the right place. You can type, tap the mic to speak, or drop a document to start a file."
     },
@@ -379,8 +379,8 @@
     "panelBuilding": "Building your file",
     "panelSubtitle": "OVB-aligned · every fact carries a source pointer",
     "panelFooter": "This file is built from your own messages. Nothing is shared with the office until you press Submit.",
-    "panelSubmitted": " — Submitted.",
-    "emptyIntro": "As you and NEO chat, the panel on the right fills in with what an Antwerp lawyer would want to see — parties, chronology, the legal issue, supporting documents, and a conflict gate. Everything carries a source pointer back to your own words.",
+    "panelSubmitted": ", Submitted.",
+    "emptyIntro": "As you and NEO chat, the panel on the right fills in with what an Antwerp lawyer would want to see, parties, chronology, the legal issue, supporting documents, and a conflict gate. Everything carries a source pointer back to your own words.",
     "emptyWarning": "Nothing is shared with the office until you press Submit.",
     "cryptoHeading": "Cryptographic Safety",
     "cryptoSafetyText": "This session is secured with TLS 1.3 End-to-End Encryption. Case data processing strictly adheres to the EU GDPR minimization principles and the EU AI Act (Art. 13) transparency requirements.",
@@ -403,14 +403,14 @@
     "issues": "Legal issues & theory",
     "issuesEmpty": "No issue inferred yet.",
     "openQuestions": "Open questions ({count})",
-    "caseTheory": "Case theory (NITA framework — intake hypothesis only)",
+    "caseTheory": "Case theory (NITA framework, intake hypothesis only)",
     "legalTheory": "Legal theory.",
     "factualTheory": "Factual theory.",
     "persuasiveTheory": "Persuasive theory.",
     "evidence": "Evidence index",
     "evidenceExhibit": "{count} exhibit",
     "evidenceExhibits": "{count} exhibits",
-    "evidenceEmpty": "Drop documents into the chat — they show up here, indexed.",
+    "evidenceEmpty": "Drop documents into the chat, they show up here, indexed.",
     "procedural": "Procedural posture",
     "proceduralEmpty": "No deadlines or procedural events extracted yet.",
     "proceduralDaysIn": "in {count} day",
@@ -422,7 +422,7 @@
     "damagesEmpty": "No monetary stakes mentioned yet.",
     "openQuestionsLawyer": "Open questions for the lawyer",
     "handoff": "Hand-off to lawyer",
-    "exportDesc": "The brief is generated server-side as a real PDF or Word document — same artefact the office receives. The layout follows the OVB Behandeling-dossier indeling so the lawyer can drop it straight into a matter folder.",
+    "exportDesc": "The brief is generated server-side as a real PDF or Word document, same artefact the office receives. The layout follows the OVB Behandeling-dossier indeling so the lawyer can drop it straight into a matter folder.",
     "btnWord": "Download Word",
     "btnWordWorking": "…Word",
     "btnPdf": "Download PDF",
@@ -430,12 +430,12 @@
     "btnSend": "Send brief to Orechdin",
     "btnSendWorking": "…Sending",
     "notSentNote": "Nothing reaches the office until you press Send brief.",
-    "disabledNote": "Downloads are for your own records — sending to the office is currently disabled in this environment.",
+    "disabledNote": "Downloads are for your own records, sending to the office is currently disabled in this environment.",
     "btnDeliver": "Deliver case file via…",
     "btnDeliverAgain": "Deliver again via…",
     "deliverEyebrow": "Delivery channel",
     "deliverTitle": "Choose how to deliver",
-    "deliverDesc": "Select a channel below. Your case file — including the full dossier, timeline, and evidence index — will be composed and opened in your chosen app. You can review before sending.",
+    "deliverDesc": "Select a channel below. Your case file, including the full dossier, timeline, and evidence index, will be composed and opened in your chosen app. You can review before sending.",
     "deliverFooter": "The full PDF and Word documents can be downloaded separately using the buttons above. The text delivered via these channels is a summary; attach the PDF for the complete record.",
     "deliveredSuccess": "Case file delivered! The office will review your submission.",
     "channel_gmail": "Gmail",

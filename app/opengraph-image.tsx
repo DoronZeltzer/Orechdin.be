@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 import { SITE } from "@/lib/site";
 
 export const runtime = "edge";
-export const alt = "Orechdin — Law Office, Antwerp";
+export const alt = "Orechdin Law Office, Antwerp";
 export const size = { width: 1200, height: 630 } as const;
 export const contentType = "image/png";
 

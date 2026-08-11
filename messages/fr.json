@@ -29,7 +29,7 @@
     "emailLabel": "Email",
     "phoneLabel": "Téléphone",
     "primarySections": "Sections principales",
-    "officeLogoAlt": "{title} — {short}"
+    "officeLogoAlt": "{title}, {short}"
   },
   "Footer": {
     "contactHeading": "Contact",
@@ -54,24 +54,24 @@
   "HomePage": {
     "metadata": {
       "title": "Conseil et représentation à Anvers",
-      "description": "Orechdin Law Office — domaines de pratique publiés en droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation, sous la supervision de Nir Zeltzer et Deborah Johnson."
+      "description": "Orechdin Law Office, domaines de pratique publiés en droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation, sous la supervision de Nir Zeltzer et Deborah Johnson."
     },
     "hero": {
       "eyebrow": "{city} · Avocats & Advocaten",
       "h1Line1": "Conseil et représentation,",
       "h1Italic": "ancrés dans ce que nous publions.",
-      "lead": "{short} conseille les entreprises, les particuliers et les indépendants dans les matières que le cabinet publie — droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation. Toute mission commence par un entretien direct ; l'intake proposé sur ce site constitue une orientation générale, et non un avis juridique.",
+      "lead": "{short} conseille les entreprises, les particuliers et les indépendants dans les matières que le cabinet publie, droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation. Toute mission commence par un entretien direct ; l'intake proposé sur ce site constitue une orientation générale, et non un avis juridique.",
       "primaryCta": "Contacter le cabinet",
       "secondaryCta": "Domaines publiés",
       "captionStamp": "est. Anvers",
-      "imageAlt": "Intérieur d'un cabinet belge — bibliothèque, lampe de bureau ancienne et vue sur la Grote Markt d'Anvers"
+      "imageAlt": "Intérieur d'un cabinet belge, bibliothèque, lampe de bureau ancienne et vue sur la Grote Markt d'Anvers"
     },
     "pillars": {
       "eyebrow": "La pratique",
       "headlinePart1": "Un conseil sur lequel vous pouvez",
       "headlineItalic": "compter,",
       "headlinePart2": "tenu à ce qui est écrit.",
-      "lead": "Chaque engagement ci-dessous est traçable dans les éléments que le cabinet publie sur lui-même. Pas de classements, pas de prix d'agences, pas de statistiques sur les résultats — uniquement la discipline que le cabinet maintient pour chaque dossier qu'il accepte.",
+      "lead": "Chaque engagement ci-dessous est traçable dans les éléments que le cabinet publie sur lui-même. Pas de classements, pas de prix d'agences, pas de statistiques sur les résultats, uniquement la discipline que le cabinet maintient pour chaque dossier qu'il accepte.",
       "items": [
         {
           "title": "Pratique anversoise",
@@ -87,7 +87,7 @@
         },
         {
           "title": "Transparent sur les résultats",
-          "body": "Le cabinet publie son propre disclaimer sur les résultats — reproduit intégralement sur ce site."
+          "body": "Le cabinet publie son propre disclaimer sur les résultats, reproduit intégralement sur ce site."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "eyebrow": "Pratique",
       "headlinePart1": "Les types de dossiers que le cabinet",
       "headlineItalic": "publie.",
-      "lead": "Les listes ci-dessous reproduisent à la lettre le site public du cabinet. L'adéquation d'un dossier à un groupe se règle dans un entretien direct avec un avocat — jamais déduite des termes d'une page d'accueil.",
+      "lead": "Les listes ci-dessous reproduisent à la lettre le site public du cabinet. L'adéquation d'un dossier à un groupe se règle dans un entretien direct avec un avocat, jamais déduite des termes d'une page d'accueil.",
       "openServices": "Ouvrir la page complète des domaines",
       "groups": [
         {
@@ -121,7 +121,7 @@
         {
           "kicker": "immobilier · recouvrement",
           "title": "Immobilier, responsabilité & recouvrement",
-          "body": "Travail immobilier publié et matières de type exécution — sans garantir un résultat particulier.",
+          "body": "Travail immobilier publié et matières de type exécution, sans garantir un résultat particulier.",
           "items": [
             "Affaires immobilières et de construction",
             "Droit de séjour, responsabilité civile et résolution de conflits",
@@ -135,7 +135,7 @@
       "headlinePart1": "Des raisons",
       "headlineItalic": "factuelles,",
       "headlinePart2": "courtes.",
-      "lead": "Tirées de ce qu'Orechdin publie sur lui-même — pas de classements, de prix ou de promesses de résultat. Chaque ligne ci-dessous pourrait être lue à l'audience sans amendement.",
+      "lead": "Tirées de ce qu'Orechdin publie sur lui-même, pas de classements, de prix ou de promesses de résultat. Chaque ligne ci-dessous pourrait être lue à l'audience sans amendement.",
       "items": [
         {
           "roman": "I.",
@@ -155,7 +155,7 @@
         {
           "roman": "IV.",
           "title": "Clair sur les résultats",
-          "body": "Le cabinet publie son propre disclaimer sur les résultats — reproduit intégralement sur ce site."
+          "body": "Le cabinet publie son propre disclaimer sur les résultats, reproduit intégralement sur ce site."
         }
       ]
     },
@@ -177,11 +177,11 @@
   "LawyersPage": {
     "metadata": {
       "title": "Les avocats",
-      "description": "Nir Zeltzer et Deborah Johnson — fonctions, biographies publiées et contact pour Orechdin Law Office, Anvers."
+      "description": "Nir Zeltzer et Deborah Johnson, fonctions, biographies publiées et contact pour Orechdin Law Office, Anvers."
     },
     "eyebrow": "L'équipe",
     "headline": "Des avocats que vous pouvez joindre",
-    "lead": "Orechdin conseille les entreprises et les particuliers et représente ses clients devant les juridictions. Le cabinet se présente comme dynamique et en croissance, chaque dossier étant supervisé par l'associé senior et sa collègue — épaulés par des spécialistes externes lorsque le dossier l'exige.",
+    "lead": "Orechdin conseille les entreprises et les particuliers et représente ses clients devant les juridictions. Le cabinet se présente comme dynamique et en croissance, chaque dossier étant supervisé par l'associé senior et sa collègue, épaulés par des spécialistes externes lorsque le dossier l'exige.",
     "profilesHeading": "Profils des avocats",
     "profilesIntro": "Les noms, fonctions et textes biographiques ci-dessous proviennent des éléments publics du cabinet. Ils ne constituent pas un avis juridique et ne recensent pas tous les types de dossiers que chaque avocat peut traiter.",
     "biographyNote": "La biographie ci-dessous est publiée par le cabinet en anglais et reproduite intégralement.",
@@ -193,7 +193,7 @@
   "ServicesPage": {
     "metadata": {
       "title": "Domaines de pratique",
-      "description": "Domaines de pratique publiés par Orechdin Law Office à Anvers — droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation."
+      "description": "Domaines de pratique publiés par Orechdin Law Office à Anvers, droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation."
     },
     "eyebrow": "Domaines de pratique disciplinés",
     "headline": "Domaines que le cabinet publie",
@@ -214,7 +214,7 @@
       },
       {
         "title": "Personnes, famille & travail",
-        "intro": "Domaines personnels et professionnels publiés par le cabinet — traités avec le soin et la clarté que le cabinet revendique.",
+        "intro": "Domaines personnels et professionnels publiés par le cabinet, traités avec le soin et la clarté que le cabinet revendique.",
         "items": [
           "Droit privé et de la famille",
           "Droit du travail",
@@ -223,7 +223,7 @@
       },
       {
         "title": "Immobilier, responsabilité & recouvrement",
-        "intro": "Travail immobilier publié et matières de type exécution — sans garantir un résultat particulier.",
+        "intro": "Travail immobilier publié et matières de type exécution, sans garantir un résultat particulier.",
         "items": [
           "Affaires immobilières et de construction",
           "Droit de séjour, responsabilité civile et résolution de conflits",
@@ -235,13 +235,13 @@
   "OfficePage": {
     "metadata": {
       "title": "Cabinet",
-      "description": "{short} — implantation à {city}, manière dont le cabinet présente son approche, et coordonnées publiées."
+      "description": "{short}, implantation à {city}, manière dont le cabinet présente son approche, et coordonnées publiées."
     },
     "eyebrow": "À propos du cabinet",
     "headline": "Anvers, au plus près des clients",
     "lead": "Orechdin offre des conseils juridiques aux entreprises et aux particuliers et assure la représentation devant les juridictions. Le cabinet se présente comme dynamique et en forte croissance, les dossiers étant supervisés directement par l'associé senior et Deborah Johnson, aux côtés d'un réseau de spécialistes externes lorsqu'un dossier exige une expertise plus approfondie.",
     "approachHeading": "Comment le cabinet présente son travail",
-    "approachLead": "Le site public met l'accent sur un conseil accessible, le contact direct avec les avocats nommés, et le recours à une expertise externe lorsque la matière l'exige — sans promettre un résultat particulier.",
+    "approachLead": "Le site public met l'accent sur un conseil accessible, le contact direct avec les avocats nommés, et le recours à une expertise externe lorsque la matière l'exige, sans promettre un résultat particulier.",
     "bullets": [
       "Conseil et procédure pour les entreprises et les particuliers.",
       "Supervision par l'associé senior et Deborah Johnson, avec des spécialistes externes lorsque cela se justifie.",
@@ -258,7 +258,7 @@
   "ContactPage": {
     "metadata": {
       "title": "Contact",
-      "description": "Contacter Orechdin Law Office à Anvers — téléphone, email, adresse du cabinet."
+      "description": "Contacter Orechdin Law Office à Anvers, téléphone, email, adresse du cabinet."
     },
     "eyebrow": "Prendre contact",
     "headline": "Contact",
@@ -271,7 +271,7 @@
   "PrivacyPage": {
     "metadata": {
       "title": "Politique de confidentialité",
-      "description": "Résumé GDPR / AVG pour Orechdin — responsable du traitement, DPO, droits, conservation ; lien vers la page de confidentialité officielle."
+      "description": "Résumé GDPR / AVG pour Orechdin, responsable du traitement, DPO, droits, conservation ; lien vers la page de confidentialité officielle."
     },
     "eyebrow": "GDPR / AVG",
     "headline": "Déclaration de confidentialité",
@@ -285,9 +285,9 @@
     "processedHeading": "Catégories de données",
     "processedBody": "Le cabinet déclare traiter des données personnelles parce que vous utilisez ses services juridiques et/ou parce que vous lui fournissez des données. Les exemples cités incluent : nom ; sexe ; date et lieu de naissance ; adresse ; téléphone et email ; compte bancaire ; numéros d'entreprise et de TVA ; documents requis par la législation anti-blanchiment ; formulaires de demande ; et, le cas échéant, des catégories particulières comme les données pénales ou les données de personnes de moins de 16 ans (uniquement avec consentement, intervention du tuteur, ou nécessité de protéger les droits des mineurs).",
     "purposesHeading": "Finalités et bases légales",
-    "purposesBody": "Le traitement est décrit comme limité à ce qui est nécessaire aux obligations professionnelles — par exemple : conseil juridique et autres services demandés ; traitement des demandes d'information ; conformité légale ; communication client ; facturation ; et candidatures. Les bases légales mentionnées au titre de l'article 6(1) du GDPR comprennent le consentement, l'exécution du contrat, l'obligation légale, les intérêts vitaux et les intérêts légitimes dans le cadre de la pratique du droit.",
+    "purposesBody": "Le traitement est décrit comme limité à ce qui est nécessaire aux obligations professionnelles, par exemple : conseil juridique et autres services demandés ; traitement des demandes d'information ; conformité légale ; communication client ; facturation ; et candidatures. Les bases légales mentionnées au titre de l'article 6(1) du GDPR comprennent le consentement, l'exécution du contrat, l'obligation légale, les intérêts vitaux et les intérêts légitimes dans le cadre de la pratique du droit.",
     "retentionHeading": "Conservation et partage",
-    "retentionBody": "Les données personnelles sont conservées pendant la période exigée par la loi — la déclaration publique mentionne, le cas échéant, une conservation jusqu'à cinq ans après la fin de la convention client. Les données ne sont partagées avec des tiers que si nécessaire aux obligations légales ou à la convention (juridictions, huissiers, notaires, autres avocats, comptables, etc.) ou avec des sous-traitants moyennant les mesures appropriées. Les transferts hors EEE sont limités à ce que la déclaration décrit pour les dossiers internationaux.",
+    "retentionBody": "Les données personnelles sont conservées pendant la période exigée par la loi, la déclaration publique mentionne, le cas échéant, une conservation jusqu'à cinq ans après la fin de la convention client. Les données ne sont partagées avec des tiers que si nécessaire aux obligations légales ou à la convention (juridictions, huissiers, notaires, autres avocats, comptables, etc.) ou avec des sous-traitants moyennant les mesures appropriées. Les transferts hors EEE sont limités à ce que la déclaration décrit pour les dossiers internationaux.",
     "rightsHeading": "Vos droits",
     "rightsBody1": "Vous pouvez exercer les droits d'accès, de rectification, d'effacement, de limitation, de portabilité, d'opposition et de retrait du consentement lorsque cela s'applique. Les demandes peuvent être adressées à ORECHDIN via",
     "rightsBody2": ". Vous pouvez introduire une plainte auprès de l'Autorité belge de protection des données.",
@@ -345,7 +345,7 @@
       "start": "Dicter un message",
       "stop": "Arrêter la dictée",
       "title": "Dicter (voix vers texte)",
-      "listening": "À l'écoute — parlez maintenant. Cliquez à nouveau pour arrêter.",
+      "listening": "À l'écoute, parlez maintenant. Cliquez à nouveau pour arrêter.",
       "blocked": "Accès au micro refusé. Autorisez-le dans votre navigateur pour dicter.",
       "ariaLabel": "Dicté vocalement",
       "titleLabel": "Dicté"
@@ -357,7 +357,7 @@
         "afternoon": "Bonjour",
         "evening": "Bonsoir"
       },
-      "introTitle": "{greeting} — Je suis NEO.",
+      "introTitle": "{greeting}, Je suis NEO.",
       "introWorkspace": "Expliquez-moi votre situation, et je vous aiderai à réunir ce qu'un avocat de notre cabinet doit examiner. Prenez votre temps. Vous pouvez écrire, dicter ou déposer un document dans le chat.",
       "introPanel": "Posez-moi n'importe quelle question sur Orechdin. Vous pouvez écrire, dicter ou déposer un document."
     },
@@ -379,8 +379,8 @@
     "panelBuilding": "Construction du dossier",
     "panelSubtitle": "Aligné OVB · chaque fait a une source détaillée",
     "panelFooter": "Ce fichier est construit à partir de vos propres messages. Rien n'est partagé avec le cabinet avant que vous appuyiez sur Soumettre.",
-    "panelSubmitted": " — Soumis.",
-    "emptyIntro": "Pendant que vous discutez avec NEO, ce panneau se remplit avec ce qu'un avocat d'Anvers voudrait voir — parties, chronologie, questions juridiques, documents de support et contrôle de conflit. Tout inclut une référence vers vos propres mots.",
+    "panelSubmitted": ", Soumis.",
+    "emptyIntro": "Pendant que vous discutez avec NEO, ce panneau se remplit avec ce qu'un avocat d'Anvers voudrait voir, parties, chronologie, questions juridiques, documents de support et contrôle de conflit. Tout inclut une référence vers vos propres mots.",
     "emptyWarning": "Rien n'est partagé avec le cabinet tant que vous ne soumettez pas.",
     "cryptoHeading": "Sécurité Cryptographique",
     "cryptoSafetyText": "Cette session est sécurisée par le chiffrement de bout en bout TLS 1.3. Le traitement strict des données du dossier adhère aux principes de minimisation du RGPD de l'UE et de l'AI Act de l'UE (Art. 13).",
@@ -403,7 +403,7 @@
     "issues": "Questions juridiques et théorie",
     "issuesEmpty": "Aucune problématique déduite.",
     "openQuestions": "Questions ouvertes ({count})",
-    "caseTheory": "Théorie du cas (Cadre NITA — hypothèse d'admission uniquement)",
+    "caseTheory": "Théorie du cas (Cadre NITA, hypothèse d'admission uniquement)",
     "legalTheory": "Théorie juridique.",
     "factualTheory": "Théorie factuelle.",
     "persuasiveTheory": "Théorie persuasive.",
@@ -435,7 +435,7 @@
     "btnDeliverAgain": "Renvoyer via…",
     "deliverEyebrow": "Canal de livraison",
     "deliverTitle": "Choisissez comment envoyer",
-    "deliverDesc": "Sélectionnez un canal ci-dessous. Votre dossier — y compris la synthèse complète, la chronologie et l'index des preuves — sera composé et ouvert dans l'application choisie. Vous pouvez relire avant l'envoi.",
+    "deliverDesc": "Sélectionnez un canal ci-dessous. Votre dossier, y compris la synthèse complète, la chronologie et l'index des preuves, sera composé et ouvert dans l'application choisie. Vous pouvez relire avant l'envoi.",
     "deliverFooter": "Les documents PDF et Word complets peuvent être téléchargés séparément via les boutons ci-dessus. Le texte envoyé par ces canaux est un résumé ; joignez le PDF pour le dossier complet.",
     "deliveredSuccess": "Dossier envoyé ! Le cabinet examinera votre soumission.",
     "channel_gmail": "Gmail",

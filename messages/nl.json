@@ -29,7 +29,7 @@
     "emailLabel": "E-mail",
     "phoneLabel": "Telefoon",
     "primarySections": "Hoofdsecties",
-    "officeLogoAlt": "{title} — {short}"
+    "officeLogoAlt": "{title}, {short}"
   },
   "Footer": {
     "contactHeading": "Contact",
@@ -54,24 +54,24 @@
   "HomePage": {
     "metadata": {
       "title": "Advies en vertegenwoordiging in Antwerpen",
-      "description": "Orechdin Law Office — gepubliceerde praktijkgebieden in handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht, onder leiding van Nir Zeltzer en Deborah Johnson."
+      "description": "Orechdin Law Office, gepubliceerde praktijkgebieden in handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht, onder leiding van Nir Zeltzer en Deborah Johnson."
     },
     "hero": {
       "eyebrow": "{city} · Advocaten & Avocats",
       "h1Line1": "Advies en vertegenwoordiging,",
       "h1Italic": "geworteld in wat wij publiceren.",
-      "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen in de zaaktypes die het kantoor publiceert — handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht. Een opdracht begint met een rechtstreeks gesprek; de intake op deze site is algemene oriëntatie, geen juridisch advies.",
+      "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen in de zaaktypes die het kantoor publiceert, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht. Een opdracht begint met een rechtstreeks gesprek; de intake op deze site is algemene oriëntatie, geen juridisch advies.",
       "primaryCta": "Contacteer het kantoor",
       "secondaryCta": "Gepubliceerde praktijkgebieden",
       "captionStamp": "est. Antwerpen",
-      "imageAlt": "Belgisch kantoorinterieur — boekenkast, antieke bureaulamp en zicht op de Antwerpse Grote Markt"
+      "imageAlt": "Belgisch kantoorinterieur, boekenkast, antieke bureaulamp en zicht op de Antwerpse Grote Markt"
     },
     "pillars": {
       "eyebrow": "De praktijk",
       "headlinePart1": "Advies waarop u kunt",
       "headlineItalic": "vertrouwen,",
       "headlinePart2": "binnen wat wij schriftelijk publiceren.",
-      "lead": "Elke vermelding hieronder is herleidbaar tot wat het kantoor over zichzelf publiceert. Geen ranglijsten, geen prijzenmuur, geen statistieken over uitkomsten — alleen de discipline die het kantoor toepast op elk dossier dat het aanvaardt.",
+      "lead": "Elke vermelding hieronder is herleidbaar tot wat het kantoor over zichzelf publiceert. Geen ranglijsten, geen prijzenmuur, geen statistieken over uitkomsten, alleen de discipline die het kantoor toepast op elk dossier dat het aanvaardt.",
       "items": [
         {
           "title": "Antwerpse praktijk",
@@ -87,7 +87,7 @@
         },
         {
           "title": "Helder over resultaten",
-          "body": "Het kantoor publiceert zelf zijn disclaimer over uitkomsten — integraal weergegeven op deze site."
+          "body": "Het kantoor publiceert zelf zijn disclaimer over uitkomsten, integraal weergegeven op deze site."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "eyebrow": "Praktijk",
       "headlinePart1": "De zaaktypes die het kantoor",
       "headlineItalic": "publiceert.",
-      "lead": "De vermeldingen hieronder volgen letterlijk de publieke website van het kantoor. Of een specifiek dossier binnen een groep past, wordt beslist in een rechtstreeks gesprek met een advocaat — nooit afgeleid uit landingspagina-tekst.",
+      "lead": "De vermeldingen hieronder volgen letterlijk de publieke website van het kantoor. Of een specifiek dossier binnen een groep past, wordt beslist in een rechtstreeks gesprek met een advocaat, nooit afgeleid uit landingspagina-tekst.",
       "openServices": "Open de volledige praktijkpagina",
       "groups": [
         {
@@ -121,7 +121,7 @@
         {
           "kicker": "property · recovery",
           "title": "Vastgoed, aansprakelijkheid & invordering",
-          "body": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken — zonder enig resultaat te garanderen.",
+          "body": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken, zonder enig resultaat te garanderen.",
           "items": [
             "Vastgoed- en bouwzaken",
             "Verblijfsrecht, burgerlijke aansprakelijkheid en geschillenoplossing",
@@ -135,7 +135,7 @@
       "headlinePart1": "Korte,",
       "headlineItalic": "feitelijke",
       "headlinePart2": "redenen.",
-      "lead": "Ontleend aan wat Orechdin over zichzelf publiceert — geen ranglijsten, prijzen of beloften over uitkomst. Elke regel hieronder kan voorgelezen worden in de rechtbank zonder aanpassing.",
+      "lead": "Ontleend aan wat Orechdin over zichzelf publiceert, geen ranglijsten, prijzen of beloften over uitkomst. Elke regel hieronder kan voorgelezen worden in de rechtbank zonder aanpassing.",
       "items": [
         {
           "roman": "I.",
@@ -155,7 +155,7 @@
         {
           "roman": "IV.",
           "title": "Helder over uitkomst",
-          "body": "Het kantoor publiceert zelf zijn disclaimer over resultaten — integraal weergegeven op deze site."
+          "body": "Het kantoor publiceert zelf zijn disclaimer over resultaten, integraal weergegeven op deze site."
         }
       ]
     },
@@ -177,11 +177,11 @@
   "LawyersPage": {
     "metadata": {
       "title": "De advocaten",
-      "description": "Nir Zeltzer en Deborah Johnson — rollen, gepubliceerde biografieën en contact voor Orechdin Law Office, Antwerpen."
+      "description": "Nir Zeltzer en Deborah Johnson, rollen, gepubliceerde biografieën en contact voor Orechdin Law Office, Antwerpen."
     },
     "eyebrow": "Het team",
     "headline": "Advocaten die u kunt bereiken",
-    "lead": "Orechdin adviseert ondernemingen en particulieren en vertegenwoordigt cliënten voor de rechtbanken. Het kantoor presenteert zichzelf als dynamisch en groeiend, met elk dossier onder rechtstreeks toezicht van de vennoot en zijn collega — bijgestaan door externe specialisten wanneer een dossier dat vereist.",
+    "lead": "Orechdin adviseert ondernemingen en particulieren en vertegenwoordigt cliënten voor de rechtbanken. Het kantoor presenteert zichzelf als dynamisch en groeiend, met elk dossier onder rechtstreeks toezicht van de vennoot en zijn collega, bijgestaan door externe specialisten wanneer een dossier dat vereist.",
     "profilesHeading": "Advocaatprofielen",
     "profilesIntro": "Namen, rollen en biografische tekst hieronder zijn ontleend aan de publieke materialen van het kantoor. Zij vormen geen juridisch advies en sommen niet elk type zaak op dat een van beide advocaten kan behandelen.",
     "biographyNote": "De biografische tekst is gepubliceerd door het kantoor in het Engels en hier integraal weergegeven.",
@@ -193,7 +193,7 @@
   "ServicesPage": {
     "metadata": {
       "title": "Praktijkgebieden",
-      "description": "Praktijkgebieden gepubliceerd door Orechdin Law Office in Antwerpen — handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht."
+      "description": "Praktijkgebieden gepubliceerd door Orechdin Law Office in Antwerpen, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht."
     },
     "eyebrow": "Gedefinieerde praktijkgebieden",
     "headline": "Praktijkgebieden die het kantoor publiceert",
@@ -214,7 +214,7 @@
       },
       {
         "title": "Personen, familie & arbeid",
-        "intro": "Persoonlijke en professionele domeinen die het kantoor publiceert — behandeld met de zorg en helderheid die het kantoor benadrukt.",
+        "intro": "Persoonlijke en professionele domeinen die het kantoor publiceert, behandeld met de zorg en helderheid die het kantoor benadrukt.",
         "items": [
           "Privaat- en familierecht",
           "Arbeidsrecht",
@@ -223,7 +223,7 @@
       },
       {
         "title": "Vastgoed, aansprakelijkheid & invordering",
-        "intro": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken — zonder een specifieke uitkomst te garanderen.",
+        "intro": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken, zonder een specifieke uitkomst te garanderen.",
         "items": [
           "Vastgoed- en bouwzaken",
           "Verblijfsrecht, burgerlijke aansprakelijkheid en geschillenoplossing",
@@ -235,13 +235,13 @@
   "OfficePage": {
     "metadata": {
       "title": "Kantoor",
-      "description": "{short} — locatie in {city}, hoe het kantoor zijn aanpak presenteert, en gepubliceerde contactgegevens."
+      "description": "{short}, locatie in {city}, hoe het kantoor zijn aanpak presenteert, en gepubliceerde contactgegevens."
     },
     "eyebrow": "Over het kantoor",
     "headline": "Antwerpen, dicht bij de cliënt",
     "lead": "Orechdin biedt juridisch advies aan ondernemingen en particulieren en behandelt vertegenwoordiging voor de rechtbanken. Het kantoor presenteert zichzelf als dynamisch en snelgroeiend, met dossiers onder rechtstreeks toezicht van de vennoot en Deborah Johnson, naast een netwerk van externe specialisten wanneer een dossier diepere expertise vereist.",
     "approachHeading": "Hoe het kantoor zijn werk presenteert",
-    "approachLead": "De publieke site benadrukt toegankelijk advies, rechtstreeks contact met vermelde advocaten, en het inschakelen van externe expertise wanneer een zaak dat vereist — zonder een specifiek resultaat te beloven.",
+    "approachLead": "De publieke site benadrukt toegankelijk advies, rechtstreeks contact met vermelde advocaten, en het inschakelen van externe expertise wanneer een zaak dat vereist, zonder een specifiek resultaat te beloven.",
     "bullets": [
       "Advies en procesvoering voor ondernemingen en particulieren.",
       "Toezicht door de vennoot en Deborah Johnson, met externe specialisten waar gepast.",
@@ -258,7 +258,7 @@
   "ContactPage": {
     "metadata": {
       "title": "Contact",
-      "description": "Contacteer Orechdin Law Office in Antwerpen — telefoon, e-mail, kantooradres."
+      "description": "Contacteer Orechdin Law Office in Antwerpen, telefoon, e-mail, kantooradres."
     },
     "eyebrow": "Neem contact op",
     "headline": "Contact",
@@ -271,7 +271,7 @@
   "PrivacyPage": {
     "metadata": {
       "title": "Privacybeleid",
-      "description": "GDPR / AVG-samenvatting voor Orechdin — verwerkingsverantwoordelijke, FG, rechten, bewaring; link naar de officiële privacypagina."
+      "description": "GDPR / AVG-samenvatting voor Orechdin, verwerkingsverantwoordelijke, FG, rechten, bewaring; link naar de officiële privacypagina."
     },
     "eyebrow": "GDPR / AVG",
     "headline": "Privacyverklaring",
@@ -285,9 +285,9 @@
     "processedHeading": "Categorieën van gegevens",
     "processedBody": "Het kantoor verklaart persoonsgegevens te verwerken omdat u zijn juridische diensten gebruikt en/of omdat u gegevens zelf verstrekt. Voorbeelden zijn: naam; geslacht; geboortedatum en -plaats; adres; telefoon en e-mail; bankrekening; ondernemings- en btw-nummers; documenten vereist onder anti-witwasregels; aanvraagformulieren; en, waar relevant, bijzondere categorieën zoals gerechtelijke gegevens of gegevens van personen jonger dan 16 (alleen met toestemming, betrokkenheid van de voogd, of noodzaak ter bescherming van de rechten van minderjarigen).",
     "purposesHeading": "Doelen en rechtsgronden",
-    "purposesBody": "De verwerking is beschreven als beperkt tot wat noodzakelijk is voor professionele verplichtingen — bijvoorbeeld: juridisch advies en andere gevraagde diensten; behandeling van informatieverzoeken; wettelijke naleving; cliëntcommunicatie; facturatie; en aanvragen. Vermelde rechtsgronden onder Artikel 6(1) GDPR zijn toestemming, uitvoering van een overeenkomst, wettelijke verplichting, vitale belangen, en gerechtvaardigde belangen in de context van de advocatenpraktijk.",
+    "purposesBody": "De verwerking is beschreven als beperkt tot wat noodzakelijk is voor professionele verplichtingen, bijvoorbeeld: juridisch advies en andere gevraagde diensten; behandeling van informatieverzoeken; wettelijke naleving; cliëntcommunicatie; facturatie; en aanvragen. Vermelde rechtsgronden onder Artikel 6(1) GDPR zijn toestemming, uitvoering van een overeenkomst, wettelijke verplichting, vitale belangen, en gerechtvaardigde belangen in de context van de advocatenpraktijk.",
     "retentionHeading": "Bewaring en delen",
-    "retentionBody": "Persoonsgegevens worden bewaard gedurende de wettelijk vereiste periode — de publieke verklaring verwijst, waar van toepassing, naar bewaring tot vijf jaar na beëindiging van de cliëntovereenkomst. Gegevens worden alleen met derden gedeeld wanneer noodzakelijk voor wettelijke verplichtingen of de overeenkomst (rechtbanken, gerechtsdeurwaarders, notarissen, andere advocaten, accountants, enz.) of met verwerkers onder passende maatregelen. Doorgiften buiten de EER zijn beperkt tot wat de verklaring beschrijft voor internationale dossiers.",
+    "retentionBody": "Persoonsgegevens worden bewaard gedurende de wettelijk vereiste periode, de publieke verklaring verwijst, waar van toepassing, naar bewaring tot vijf jaar na beëindiging van de cliëntovereenkomst. Gegevens worden alleen met derden gedeeld wanneer noodzakelijk voor wettelijke verplichtingen of de overeenkomst (rechtbanken, gerechtsdeurwaarders, notarissen, andere advocaten, accountants, enz.) of met verwerkers onder passende maatregelen. Doorgiften buiten de EER zijn beperkt tot wat de verklaring beschrijft voor internationale dossiers.",
     "rightsHeading": "Uw rechten",
     "rightsBody1": "U kunt rechten van toegang, rectificatie, wissing, beperking, overdraagbaarheid, bezwaar en intrekking van toestemming uitoefenen waar van toepassing. Verzoeken kunnen worden gericht aan ORECHDIN via",
     "rightsBody2": ". U kunt een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit.",
@@ -345,7 +345,7 @@
       "start": "Spreek een bericht in",
       "stop": "Stop dicteren",
       "title": "Dicteren (spraak-naar-tekst)",
-      "listening": "Luistert — spreek nu in. Klik nogmaals op de microfoon om te stoppen.",
+      "listening": "Luistert, spreek nu in. Klik nogmaals op de microfoon om te stoppen.",
       "blocked": "Microfoontoegang geblokkeerd. Sta dit toe in de browserinstellingen om te dicteren.",
       "ariaLabel": "Gedicteerd via spraak",
       "titleLabel": "Gedicteerd"
@@ -357,7 +357,7 @@
         "afternoon": "Goedemiddag",
         "evening": "Goedenavond"
       },
-      "introTitle": "{greeting} — Ik ben NEO.",
+      "introTitle": "{greeting}, Ik ben NEO.",
       "introWorkspace": "Vertel me wat de situatie is, en ik help u de informatie te verzamelen die een advocaat nodig heeft. Neem uw tijd. U kunt typen, dicteren of een document direct in de chat slepen.",
       "introPanel": "Vraag me alles over Orechdin en ik help u op weg. U kunt typen, op de microfoon klikken om te praten, of een document slepen om een dossier te starten."
     },
@@ -379,8 +379,8 @@
     "panelBuilding": "We bouwen uw dossier op",
     "panelSubtitle": "OVB-conform · elk feit bevat een bronverwijzing",
     "panelFooter": "Dit dossier wordt opgebouwd uit uw eigen berichten. Niets wordt gedeeld met het kantoor totdat u op Verzenden drukt.",
-    "panelSubmitted": " — Verzonden.",
-    "emptyIntro": "Terwijl u en NEO chatten, wordt het paneel rechts aangevuld met wat een Antwerpse advocaat zou willen zien — partijen, chronologie, het juridische vraagstuk, bewijsstukken en een conflictcontrole. Alles bevat een bronverwijzing naar uw eigen woorden.",
+    "panelSubmitted": ", Verzonden.",
+    "emptyIntro": "Terwijl u en NEO chatten, wordt het paneel rechts aangevuld met wat een Antwerpse advocaat zou willen zien, partijen, chronologie, het juridische vraagstuk, bewijsstukken en een conflictcontrole. Alles bevat een bronverwijzing naar uw eigen woorden.",
     "emptyWarning": "Niets wordt gedeeld met het kantoor totdat u op Verzenden drukt.",
     "cryptoHeading": "Cryptografische veiligheid",
     "cryptoSafetyText": "Deze sessie is beveiligd met TLS 1.3 End-to-End Encryption. De gegevensverwerking van de zaak voldoet strikt aan de EU GDPR-minimalisatieprincipes en de EU AI Act (Art. 13) transparantievereisten.",
@@ -403,7 +403,7 @@
     "issues": "Juridische kwesties & theorie",
     "issuesEmpty": "Nog geen probleem afgeleid.",
     "openQuestions": "Open vragen ({count})",
-    "caseTheory": "Pleit-theorie (NITA structuur — enkel intake hypothese)",
+    "caseTheory": "Pleit-theorie (NITA structuur, enkel intake hypothese)",
     "legalTheory": "Juridische theorie.",
     "factualTheory": "Feitelijke theorie.",
     "persuasiveTheory": "Overtuigende theorie.",
@@ -422,7 +422,7 @@
     "damagesEmpty": "Geen financiële belangen genoemd.",
     "openQuestionsLawyer": "Open vragen voor de advocaat",
     "handoff": "Overdracht aan de advocaat",
-    "exportDesc": "De briefing wordt hier als een echte PDF of Word document gegenereerd — hetzelfde object krijgt het kantoor. De opmaak is volgens de OVB Behandeling-dossier indeling zodat de advocaat dit meteen kan opslaan.",
+    "exportDesc": "De briefing wordt hier als een echte PDF of Word document gegenereerd, hetzelfde object krijgt het kantoor. De opmaak is volgens de OVB Behandeling-dossier indeling zodat de advocaat dit meteen kan opslaan.",
     "btnWord": "Download Word",
     "btnWordWorking": "…Word",
     "btnPdf": "Download PDF",
@@ -435,7 +435,7 @@
     "btnDeliverAgain": "Opnieuw verzenden via…",
     "deliverEyebrow": "Verzendkanaal",
     "deliverTitle": "Kies hoe u wilt verzenden",
-    "deliverDesc": "Selecteer een kanaal hieronder. Uw dossier — inclusief de volledige briefing, tijdlijn en bewijsindex — wordt samengesteld en geopend in de gekozen app. U kunt alles nakijken vóór verzending.",
+    "deliverDesc": "Selecteer een kanaal hieronder. Uw dossier, inclusief de volledige briefing, tijdlijn en bewijsindex, wordt samengesteld en geopend in de gekozen app. U kunt alles nakijken vóór verzending.",
     "deliverFooter": "De volledige PDF- en Word-documenten kunt u apart downloaden via de knoppen hierboven. De tekst die via deze kanalen wordt verstuurd is een samenvatting; voeg de PDF toe voor het volledige dossier.",
     "deliveredSuccess": "Dossier verzonden! Het kantoor zal uw inzending beoordelen.",
     "channel_gmail": "Gmail",
