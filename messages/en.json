@@ -35,9 +35,10 @@
     "contactHeading": "Contact",
     "legalHeading": "Legal",
     "privacyPolicy": "Privacy policy",
-    "officialPrivacyLive": "Official privacy page (live site)",
+    "officialPrivacyLive": "General privacy statement of the office",
     "builtFor": "Built for",
-    "copyright": "© {year} {entity}"
+    "copyright": "© {year} {entity}",
+    "cookiePolicy": "Cookie policy"
   },
   "TrustBand": {
     "eyebrow": "Practice areas the office publishes",
@@ -253,7 +254,9 @@
     "emailLabel": "Email",
     "mapTitle": "{short} office location",
     "ctaLawyers": "The Lawyers",
-    "ctaContact": "Contact"
+    "ctaContact": "Contact",
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "The map is loaded from Google. If you show it, Google receives your IP address and may place cookies on your device."
   },
   "ContactPage": {
     "metadata": {
@@ -267,34 +270,6 @@
     "neoBody": "NEO is an orientation assistant grounded in this site's approved knowledge base. It does not give legal advice or create an attorney-client relationship. Use it to organise context before contacting the office.",
     "openNeo": "Open NEO assistant →",
     "privacyLink": "Privacy policy"
-  },
-  "PrivacyPage": {
-    "metadata": {
-      "title": "Privacy policy",
-      "description": "GDPR / AVG summary for Orechdin, controller, DPO, rights, retention; link to the official privacy page."
-    },
-    "eyebrow": "GDPR / AVG",
-    "headline": "Privacy statement",
-    "subdisplay": "Law firm Nir Zeltzer - Orechdin (ORECHDIN)",
-    "intro": "This page summarises how the firm describes the processing of personal data under Regulation (EU) 2016/679 (GDPR / AVG). It reflects the published statement (version dated 24/05/2018). For the authoritative wording on the live site, see the",
-    "officialPolicy": "official privacy policy",
-    "controllerHeading": "Data controller",
-    "controllerBody1": "Law firm Nir Zeltzer - Orechdin (ORECHDIN) is the data controller. ORECHDIN is a civil company (private limited liability form), registered under KBO number {kbo}, {court}, with its registered office at {street}, {postal} {city}.",
-    "controllerBody2": "The data protection officer is {name}, reachable at the same address, by email",
-    "controllerBody3": ", or by phone at {phone}.",
-    "processedHeading": "Categories of data",
-    "processedBody": "The firm states that it processes personal data because you use its legal services and/or because you provide data yourself. Examples given include: name; gender; date and place of birth; address; telephone and email; bank account; company and VAT numbers; documents required under anti-money laundering rules; application forms; and, where relevant, special categories such as criminal data or data of persons under 16 (only with consent, guardian involvement, or necessity to protect minors' rights).",
-    "purposesHeading": "Purposes and legal bases",
-    "purposesBody": "Processing is described as limited to what is necessary for professional obligations, for example: legal advice and other requested services; handling information requests; legal compliance; client communication; billing; and applications. Legal bases under Article 6(1) GDPR mentioned include consent, contract performance, legal obligation, vital interests, and legitimate interests in the context of legal practice.",
-    "retentionHeading": "Retention and sharing",
-    "retentionBody": "Personal data are retained for the period required by law, the public statement refers, where applicable, to retention up to five years after termination of the client agreement. Data are shared with third parties only when necessary for legal obligations or the agreement (courts, bailiffs, notaries, other lawyers, accountants, etc.) or with processors under appropriate measures. Transfers outside the EEA are limited to what the statement describes for international filings.",
-    "rightsHeading": "Your rights",
-    "rightsBody1": "You may exercise rights of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent where applicable. Requests may be sent to ORECHDIN via",
-    "rightsBody2": ". You may lodge a complaint with the Belgian Data Protection Authority.",
-    "marketingHeading": "Direct marketing",
-    "marketingBody": "Given professional secrecy, the firm states that it does not process clients' personal data for direct marketing in the manner described on the official statement.",
-    "supportNote": "This summary supports orientation only. It does not replace the full legal text published by the firm.",
-    "ctaContact": "Contact the office"
   },
   "NotFound": {
     "eyebrow": "Page not found",
@@ -445,5 +420,252 @@
     "channel_copy": "Copy to clipboard",
     "channel_native-share": "Share…",
     "channelCopied": "Copied!"
+  },
+  "Consent": {
+    "settingsLink": "Cookie settings",
+    "banner": {
+      "eyebrow": "Cookies",
+      "title": "Cookies on this website",
+      "body": "We place only what is strictly necessary for this website to work, unless you allow more. The optional part is the Google Maps frame on our office page, and visitor statistics should we ever add them. Refusing costs you nothing: every page works exactly the same either way.",
+      "acceptAll": "Accept all",
+      "refuseAll": "Refuse all",
+      "managePreferences": "Manage preferences",
+      "cookiePolicy": "Cookie policy",
+      "privacyPolicy": "Privacy statement"
+    },
+    "prefs": {
+      "eyebrow": "Cookie preferences",
+      "title": "Choose what you allow",
+      "intro": "Necessary items keep the site working and cannot be switched off. Everything else stays off until you switch it on, and you can change your mind at any time through the footer of any page.",
+      "save": "Save my choice",
+      "acceptAll": "Accept all",
+      "refuseAll": "Refuse all",
+      "toggleLabel": "Allow {category}",
+      "footnote": "Every item, its purpose and its lifetime are listed in the",
+      "cookiePolicy": "cookie policy"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strictly necessary",
+        "purpose": "Needed for the website to function: remembering the cookie choice you make here, keeping you signed in to the client area, and holding the answers you type into the intake assistant while you are using it. None of these track you.",
+        "duration": "Session to 6 months",
+        "always": "Always active"
+      },
+      "functional": {
+        "name": "External content",
+        "purpose": "Content embedded from another company at your request. Today this is only the Google Maps frame on the office page. Allowing it means Google receives your IP address and can place its own cookies.",
+        "duration": "Determined by Google, see Google policy"
+      },
+      "statistics": {
+        "name": "Visitor statistics",
+        "purpose": "Anonymous measurement of how the website is used, so the office can see which pages help people. No such tool runs on this website today. The choice is offered so that none can be added later without your permission.",
+        "duration": "Not applicable, no tool in use"
+      }
+    },
+    "gate": {
+      "eyebrow": "External content",
+      "load": "Show the map",
+      "cookiePolicy": "Read the cookie policy"
+    },
+    "controls": {
+      "heading": "Your current choice",
+      "body": "This is the consent recorded in your browser right now. You can change or withdraw it at any moment, and withdrawing is as easy as giving it.",
+      "granted": "Allowed",
+      "refused": "Refused",
+      "recordedOn": "Recorded on",
+      "noDecision": "No choice recorded yet",
+      "change": "Change my choice",
+      "withdraw": "Withdraw consent",
+      "limitation": "Withdrawing stops this website from loading external content again and deletes our own consent cookie. It cannot delete cookies another company has already placed in your browser. Those you remove through your browser settings."
+    }
+  },
+  "CookiePage": {
+    "metadata": {
+      "title": "Cookie policy",
+      "description": "Which cookies orechdin.be places, why, how long they last, and how to refuse or withdraw your consent."
+    },
+    "eyebrow": "Cookies",
+    "headline": "Cookie policy",
+    "intro": "This policy explains what is stored on your device when you visit this website, why, and how you keep control of it. It applies to www.orechdin.be and follows Article 129 of the Belgian Electronic Communications Act together with the General Data Protection Regulation.",
+    "version": "Version {version}, last updated {date}",
+    "whatHeading": "What counts as a cookie",
+    "whatBody1": "A cookie is a small file a website asks your browser to keep. The law is broader than the word suggests: it covers any storing or reading of information on your device. The register below therefore also lists the two other techniques this website uses, local storage and session storage, and treats them by the same rules.",
+    "whatBody2": "Items placed by orechdin.be itself are first party. Items placed by another company through content we embed are third party, and that company decides what it does with them.",
+    "basisHeading": "When we ask permission",
+    "basisBody1": "Storage that is strictly necessary for a service you asked for does not require consent, and switching it off would break the site. Everything else requires your prior, free and specific permission.",
+    "basisBody2": "So we ask before placing anything optional, never in advance, and we never treat continued browsing as agreement. Refusing takes one click, exactly like accepting, and has no effect on your access to any part of this website. Your answer is kept for six months, after which we ask again.",
+    "registerHeading": "Register of what is stored",
+    "registerIntro": "Everything this website can store on your device, with its purpose, who can read it and how long it lasts.",
+    "noConsentNeeded": "No consent required",
+    "consentNeeded": "Only after your consent",
+    "emptyCategory": "Nothing in this category is in use on this website at the moment. If that changes, it will be listed here and will load only after you have allowed it.",
+    "table": {
+      "name": "Name",
+      "provider": "Set by",
+      "purpose": "Purpose",
+      "duration": "Lifetime"
+    },
+    "kind": {
+      "cookie": "Cookie",
+      "localStorage": "Local storage",
+      "sessionStorage": "Session storage"
+    },
+    "entries": {
+      "consent": {
+        "purpose": "Stores the cookie choice you made, so we do not ask again on every page and can show what you agreed to.",
+        "duration": "6 months"
+      },
+      "sessionToken": {
+        "purpose": "Keeps you signed in if you create an account for the client area. Set only after you sign in.",
+        "duration": "Until you sign out"
+      },
+      "sessionData": {
+        "purpose": "Holds a short lived copy of your session so signed in pages load without a database call on every request.",
+        "duration": "Until you sign out"
+      },
+      "dontRemember": {
+        "purpose": "Records that you asked not to stay signed in, so the session ends when you close the browser.",
+        "duration": "Until you sign out"
+      },
+      "neoSessionState": {
+        "purpose": "Holds the answers you have typed into the intake assistant so far, so a reload does not lose them. It stays in your browser tab and is discarded when you close it.",
+        "duration": "Until you close the tab"
+      },
+      "neoSidebar": {
+        "purpose": "Remembers whether you had the assistant panel open.",
+        "duration": "Until you clear your browser storage"
+      },
+      "neoPanelWidth": {
+        "purpose": "Remembers how wide you dragged the assistant panel.",
+        "duration": "Until you clear your browser storage"
+      },
+      "googleMaps": {
+        "purpose": "Placed by Google when you choose to load the map on the office page. Google receives your IP address and uses these cookies for its own purposes, including security and, depending on your Google settings, personalisation.",
+        "duration": "Determined by Google, see Google policy"
+      },
+      "locale": {
+        "purpose": "Remembers which language you are reading the site in, so every page stays in that language.",
+        "duration": "1 year"
+      }
+    },
+    "thirdPartyHeading": "The one third party",
+    "thirdPartyBody1": "Google Maps is the only external service this website can contact, only on the office page, and only after you have allowed it. Until then the map is replaced by a placeholder and no request reaches Google. If you never allow it, Google is never told that you visited this site.",
+    "thirdPartyBody2": "What Google does with the data it receives is governed by its own policy:",
+    "thirdPartyGoogleLink": "Google privacy policy",
+    "secrecyHeading": "Cookies and professional secrecy",
+    "secrecyBody": "As an advocate this firm is bound by professional secrecy under Article 458 of the Criminal Code. None of the items above touch the substance of a case: no cookie on this website records who you are, what you are seeking advice about, or anything you write to us. That duty of confidence is why this site carries no advertising, no social media pixels and no third party analytics.",
+    "browserHeading": "Controlling cookies in your browser",
+    "browserBody": "Independently of the choice you make here, your browser can block or delete cookies for every site you visit. You will find the controls in its settings, usually under privacy or data protection. Blocking strictly necessary items may stop parts of this website from working, in particular the client area.",
+    "complaintHeading": "Questions and complaints",
+    "complaintBody1": "Questions about this policy go to {name}, at",
+    "complaintBody2": "If our answer does not satisfy you, you may complain to the Belgian Data Protection Authority at",
+    "closing": "This policy is republished with a new version number whenever the register above changes, and earlier versions are kept, so it stays possible to establish what applied on a given date.",
+    "ctaPrivacy": "Read the privacy statement",
+    "ctaContact": "Contact the office"
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "Privacy statement",
+      "description": "How Orechdin handles personal data: purposes, legal bases, recipients, retention, your rights, and how professional secrecy affects them."
+    },
+    "eyebrow": "GDPR",
+    "headline": "Privacy statement",
+    "intro": "This statement sets out what personal data the office processes through this website, why, on what legal basis, and what you can ask of us. It follows Articles 13 and 14 of the General Data Protection Regulation.",
+    "scope": "It covers this website. The general privacy statement for client matters is published separately on the",
+    "officialPolicy": "general privacy statement of the office",
+    "version": "Version {version}, last updated {date}",
+    "controllerHeading": "Who is responsible",
+    "controllerBody1": "The controller is the office, at {street}, {postal} {city}, Belgium, registered under company number {kbo} and entered in the {court}.",
+    "controllerBody2": "For anything concerning personal data you can contact {name} directly, at",
+    "controllerBody3": " or on {phone}.",
+    "secrecyHeading": "Professional secrecy comes first",
+    "secrecyBody1": "An advocate is bound by professional secrecy under Article 458 of the Criminal Code. What a client or a prospective client tells the office is confidential, and that duty does not end when the file closes.",
+    "secrecyBody2": "This shapes your data protection rights. Where answering a request would reveal information covered by professional secrecy, in particular information belonging to another person involved in a case, the office must decline to disclose it. In that situation we tell you that the request has been limited, and explain why as far as secrecy allows.",
+    "dataHeading": "What data we process",
+    "dataIntro": "Through this website, the following:",
+    "dataVisitLabel": "Visiting the site.",
+    "dataVisitBody": "Your IP address and technical request data, processed by our hosting provider to deliver the pages and keep the service secure. We keep no visitor analytics.",
+    "dataContactLabel": "Contacting us.",
+    "dataContactBody": "The name, email address, telephone number and description of your matter that you choose to send through the contact form or by email.",
+    "dataAssistantLabel": "The online assistant.",
+    "dataAssistantBody": "The text you type into the intake assistant and the summary it produces.",
+    "dataAccountLabel": "The client area.",
+    "dataAccountBody": "If you create an account: your email address, your password in hashed form, and the times you signed in.",
+    "dataClientLabel": "Becoming a client.",
+    "dataClientBody": "If a matter proceeds, the office processes what it needs to act for you, including data about opposing parties and third parties. Those operations are described in the general privacy statement rather than here.",
+    "purposesHeading": "Why, and on what legal basis",
+    "purposesIntro": "Each purpose rests on one of the grounds in Article 6 GDPR:",
+    "basisContractLabel": "Performing our engagement, Article 6(1)(b).",
+    "basisContractBody": "Answering your enquiry, assessing whether we can act for you, and carrying out the work once we do.",
+    "basisLegalLabel": "Legal obligations, Article 6(1)(c).",
+    "basisLegalBody": "Identification and record keeping under the anti money laundering rules, accounting and tax duties, and the professional rules of the Bar.",
+    "basisInterestLabel": "Legitimate interests, Article 6(1)(f).",
+    "basisInterestBody": "Keeping the website secure and available, checking for conflicts of interest, and establishing or defending legal claims, including our own.",
+    "basisConsentLabel": "Consent, Article 6(1)(a).",
+    "basisConsentBody": "Optional cookies, and any newsletter. You may withdraw consent at any time, without affecting what was done before.",
+    "basisSpecialLabel": "Special categories and criminal data, Articles 9 and 10.",
+    "basisSpecialBody": "A file may contain health data, or data about offences and convictions. The office processes these where necessary for the establishment, exercise or defence of legal claims, the ground Article 9(2)(f) provides for legal work.",
+    "assistantHeading": "Please keep confidential details out of the assistant",
+    "assistantBody1": "The intake assistant on this website is a convenience for describing in general terms what you need. It is not a secure channel, and using it does not make you a client of the office.",
+    "assistantBody2": "To produce its replies, the assistant sends the text you type to an external AI service outside the office. Please do not enter names of other parties, case numbers, health information, or anything else you would not want leaving your own hands. Send confidential material by email or bring it to the office instead.",
+    "assistantBody3": "No advocate client relationship arises until the office confirms in writing that it accepts your matter. What you tell us beforehand is still treated as confidential by the office. The assistant itself is simply not a confidential channel, which is why we ask you to keep case details out of it.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "This website stores only what is necessary unless you allow more. What is stored, why, and how to withdraw permission is set out in the",
+    "cookiesLink": "cookie policy",
+    "recipientsHeading": "Who receives your data",
+    "recipientsBody1": "The office does not sell personal data and does not share it for anyone else's marketing. Data goes only to:",
+    "recipientHostingLabel": "Our hosting and database provider.",
+    "recipientHostingBody": "Which stores the website and its data on our instructions, as a processor.",
+    "recipientMailLabel": "Our email provider.",
+    "recipientMailBody": "Which carries messages sent from and to the office.",
+    "recipientAiLabel": "The AI service behind the online assistant.",
+    "recipientAiBody": "Which receives the text typed into the assistant, as described above.",
+    "recipientCounterpartLabel": "Parties to your case.",
+    "recipientCounterpartBody": "Courts, opposing counsel, bailiffs, experts and public authorities, where acting for you requires it.",
+    "recipientsBody2": "Processors act only on our instructions and under a written agreement. Disclosure to anyone else happens only with your consent, or where the law requires it.",
+    "transfersHeading": "Transfers outside Europe",
+    "transfersBody": "The office keeps personal data within the European Economic Area wherever it can. Some services used by this website, in particular the Google Maps frame and the AI service behind the assistant, may process data outside the EEA. Where that happens it takes place under the safeguards Chapter V GDPR requires, such as an adequacy decision or standard contractual clauses. It is one more reason to keep confidential details out of the assistant.",
+    "retentionHeading": "How long we keep it",
+    "retentionIntro": "Personal data is kept no longer than its purpose requires. In practice:",
+    "retentionFilesLabel": "Case files.",
+    "retentionFilesBody": "At least five years after the file closes, following Article 2276bis of the Civil Code, and in practice up to ten years, because claims connected to the matter can still be brought in that period.",
+    "retentionAccountingLabel": "Accounting and identification records.",
+    "retentionAccountingBody": "For the periods the accounting, tax and anti money laundering rules impose.",
+    "retentionEnquiryLabel": "Enquiries that do not become a matter.",
+    "retentionEnquiryBody": "Up to one year, so we can recognise a conflict of interest if you return, then deleted.",
+    "retentionConsentLabel": "Cookie consent.",
+    "retentionConsentBody": "Six months, after which we ask again.",
+    "securityHeading": "Security",
+    "securityBody": "The website is served over an encrypted connection, client area passwords are stored only in hashed form, and access to office systems is limited to those who need it. No system is perfect. If a breach ever puts your rights at serious risk, we will inform you and the Data Protection Authority as the GDPR requires.",
+    "automatedHeading": "Automated decisions",
+    "automatedBody": "The office takes no decision about you by automated means alone. The online assistant summarises what you describe. Whether the office can act for you, and any advice you receive, is decided by an advocate.",
+    "rightsHeading": "Your rights",
+    "rightsIntro": "Under the GDPR you can ask us to:",
+    "rightAccessLabel": "Access.",
+    "rightAccessBody": "Tell you whether we hold data about you, and give you a copy.",
+    "rightRectifyLabel": "Rectification.",
+    "rightRectifyBody": "Correct data that is wrong or incomplete.",
+    "rightEraseLabel": "Erasure.",
+    "rightEraseBody": "Delete data, where no legal duty and no legal claim requires us to keep it.",
+    "rightRestrictLabel": "Restriction.",
+    "rightRestrictBody": "Pause the use of data while a dispute about it is resolved.",
+    "rightPortabilityLabel": "Portability.",
+    "rightPortabilityBody": "Hand over, in a machine readable form, the data you gave us on the basis of consent or a contract.",
+    "rightObjectLabel": "Objection.",
+    "rightObjectBody": "Stop processing based on our legitimate interests, unless compelling grounds override your objection.",
+    "rightWithdrawLabel": "Withdrawal of consent.",
+    "rightWithdrawBody": "Take back consent you gave, at any time.",
+    "rightsHow": "Send your request to",
+    "rightsHowSuffix": ". We answer within one month, and may first ask for proof of identity so that we do not hand your data to someone else.",
+    "rightsLimit": "These rights are not absolute. Professional secrecy, a legal retention duty, or the rights of another person can require us to limit a request, and where a case file is concerned that limit is the rule rather than the exception. We always explain what we can.",
+    "complaintsHeading": "Complaints",
+    "complaintsBody1": "If you believe your data is not being handled properly, tell us first so we can put it right. You also have the right to complain to the supervisory authority:",
+    "dpaName": "Data Protection Authority",
+    "complaintsBody2": "Complaints about the conduct of an advocate can also be addressed to the President of the Bar of the judicial district of Antwerp.",
+    "changesHeading": "Changes",
+    "changesBody": "This statement carries a version number and a date. When it changes materially we publish the new version here, and where the change concerns something you consented to, we ask for your consent again.",
+    "supportNote": "This statement is written for the website. If you are a client, the terms of engagement and the general privacy statement also apply to your file.",
+    "ctaContact": "Contact the office",
+    "ctaCookies": "Cookie policy"
   }
 }

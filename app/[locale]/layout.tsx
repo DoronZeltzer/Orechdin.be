@@ -7,6 +7,8 @@ import { OrganizationJsonLd } from "@/components/layout/organization-json-ld";
 import { WebsiteJsonLd } from "@/components/layout/website-json-ld";
 import { NeoProvider } from "@/components/neo/neo-context";
 import { NeoShell } from "@/components/neo/neo-shell";
+import { ConsentProvider } from "@/components/consent/consent-provider";
+import { CookieBanner } from "@/components/consent/cookie-banner";
 import { SITE } from "@/lib/site";
 import "../globals.css";
 
@@ -81,6 +83,9 @@ export default async function RootLayout({
           <LegalServiceJsonLd />
           <OrganizationJsonLd />
           <WebsiteJsonLd />
+          {/* Consent wraps the whole tree: the footer's "cookie settings"
+              control and the gated Google Maps embed both read from it. */}
+          <ConsentProvider>
           <NeoProvider>
             <a
               href="#main-content"
@@ -95,6 +100,8 @@ export default async function RootLayout({
             </div>
             <NeoShell />
           </NeoProvider>
+          <CookieBanner />
+          </ConsentProvider>
         </NextIntlClientProvider>
 
       </body>

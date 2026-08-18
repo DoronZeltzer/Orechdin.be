@@ -35,9 +35,10 @@
     "contactHeading": "Contact",
     "legalHeading": "Mentions légales",
     "privacyPolicy": "Politique de confidentialité",
-    "officialPrivacyLive": "Page de confidentialité officielle (site live)",
+    "officialPrivacyLive": "Déclaration générale du cabinet",
     "builtFor": "Réalisé pour",
-    "copyright": "© {year} {entity}"
+    "copyright": "© {year} {entity}",
+    "cookiePolicy": "Politique cookies"
   },
   "TrustBand": {
     "eyebrow": "Domaines de pratique publiés par le cabinet",
@@ -253,7 +254,9 @@
     "emailLabel": "Email",
     "mapTitle": "Implantation du cabinet {short}",
     "ctaLawyers": "Les Avocats",
-    "ctaContact": "Contact"
+    "ctaContact": "Contact",
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "La carte est chargée chez Google. Si vous l'affichez, Google reçoit votre adresse IP et peut déposer des cookies sur votre appareil."
   },
   "ContactPage": {
     "metadata": {
@@ -267,34 +270,6 @@
     "neoBody": "NEO est un assistant d'orientation ancré dans la base de connaissances approuvée de ce site. Il ne fournit pas d'avis juridique et ne crée aucune relation avocat-client. Utilisez-le pour structurer votre contexte avant de contacter le cabinet.",
     "openNeo": "Ouvrir l'assistant NEO →",
     "privacyLink": "Politique de confidentialité"
-  },
-  "PrivacyPage": {
-    "metadata": {
-      "title": "Politique de confidentialité",
-      "description": "Résumé GDPR / AVG pour Orechdin, responsable du traitement, DPO, droits, conservation ; lien vers la page de confidentialité officielle."
-    },
-    "eyebrow": "GDPR / AVG",
-    "headline": "Déclaration de confidentialité",
-    "subdisplay": "Cabinet d'avocats Nir Zeltzer - Orechdin (ORECHDIN)",
-    "intro": "Cette page résume la manière dont le cabinet décrit le traitement des données personnelles au titre du Règlement (UE) 2016/679 (GDPR / AVG). Elle reflète la déclaration publiée (version du 24/05/2018). Pour le texte de référence sur le site live, voir la",
-    "officialPolicy": "politique de confidentialité officielle",
-    "controllerHeading": "Responsable du traitement",
-    "controllerBody1": "Le cabinet d'avocats Nir Zeltzer - Orechdin (ORECHDIN) est le responsable du traitement. ORECHDIN est une société civile (forme SRL), inscrite sous le numéro BCE {kbo}, {court}, dont le siège social est situé {street}, {postal} {city}.",
-    "controllerBody2": "Le délégué à la protection des données est {name}, joignable à la même adresse, par email",
-    "controllerBody3": ", ou par téléphone au {phone}.",
-    "processedHeading": "Catégories de données",
-    "processedBody": "Le cabinet déclare traiter des données personnelles parce que vous utilisez ses services juridiques et/ou parce que vous lui fournissez des données. Les exemples cités incluent : nom ; sexe ; date et lieu de naissance ; adresse ; téléphone et email ; compte bancaire ; numéros d'entreprise et de TVA ; documents requis par la législation anti-blanchiment ; formulaires de demande ; et, le cas échéant, des catégories particulières comme les données pénales ou les données de personnes de moins de 16 ans (uniquement avec consentement, intervention du tuteur, ou nécessité de protéger les droits des mineurs).",
-    "purposesHeading": "Finalités et bases légales",
-    "purposesBody": "Le traitement est décrit comme limité à ce qui est nécessaire aux obligations professionnelles, par exemple : conseil juridique et autres services demandés ; traitement des demandes d'information ; conformité légale ; communication client ; facturation ; et candidatures. Les bases légales mentionnées au titre de l'article 6(1) du GDPR comprennent le consentement, l'exécution du contrat, l'obligation légale, les intérêts vitaux et les intérêts légitimes dans le cadre de la pratique du droit.",
-    "retentionHeading": "Conservation et partage",
-    "retentionBody": "Les données personnelles sont conservées pendant la période exigée par la loi, la déclaration publique mentionne, le cas échéant, une conservation jusqu'à cinq ans après la fin de la convention client. Les données ne sont partagées avec des tiers que si nécessaire aux obligations légales ou à la convention (juridictions, huissiers, notaires, autres avocats, comptables, etc.) ou avec des sous-traitants moyennant les mesures appropriées. Les transferts hors EEE sont limités à ce que la déclaration décrit pour les dossiers internationaux.",
-    "rightsHeading": "Vos droits",
-    "rightsBody1": "Vous pouvez exercer les droits d'accès, de rectification, d'effacement, de limitation, de portabilité, d'opposition et de retrait du consentement lorsque cela s'applique. Les demandes peuvent être adressées à ORECHDIN via",
-    "rightsBody2": ". Vous pouvez introduire une plainte auprès de l'Autorité belge de protection des données.",
-    "marketingHeading": "Marketing direct",
-    "marketingBody": "Compte tenu du secret professionnel, le cabinet déclare ne pas traiter les données personnelles des clients à des fins de marketing direct selon les modalités décrites dans la déclaration officielle.",
-    "supportNote": "Ce résumé soutient l'orientation uniquement. Il ne remplace pas le texte juridique complet publié par le cabinet.",
-    "ctaContact": "Contacter le cabinet"
   },
   "NotFound": {
     "eyebrow": "Page introuvable",
@@ -445,5 +420,252 @@
     "channel_copy": "Copier dans le presse-papiers",
     "channel_native-share": "Partager…",
     "channelCopied": "Copié !"
+  },
+  "Consent": {
+    "settingsLink": "Paramètres des cookies",
+    "banner": {
+      "eyebrow": "Cookies",
+      "title": "Cookies sur ce site",
+      "body": "Nous ne déposons que ce qui est strictement nécessaire au fonctionnement du site, sauf si vous autorisez davantage. La partie facultative se limite au cadre Google Maps de notre page cabinet, et aux statistiques de visite si nous devions en ajouter. Refuser ne vous coûte rien: chaque page fonctionne exactement de la même manière.",
+      "acceptAll": "Tout accepter",
+      "refuseAll": "Tout refuser",
+      "managePreferences": "Gérer les préférences",
+      "cookiePolicy": "Politique cookies",
+      "privacyPolicy": "Déclaration de confidentialité"
+    },
+    "prefs": {
+      "eyebrow": "Préférences cookies",
+      "title": "Choisissez ce que vous autorisez",
+      "intro": "Les éléments nécessaires font fonctionner le site et ne peuvent pas être désactivés. Tout le reste reste désactivé jusqu'à ce que vous l'activiez, et vous pouvez revenir sur votre choix à tout moment via le pied de page.",
+      "save": "Enregistrer mon choix",
+      "acceptAll": "Tout accepter",
+      "refuseAll": "Tout refuser",
+      "toggleLabel": "Autoriser {category}",
+      "footnote": "Chaque élément, sa finalité et sa durée figurent dans la",
+      "cookiePolicy": "politique cookies"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strictement nécessaires",
+        "purpose": "Nécessaires au fonctionnement du site: retenir le choix que vous faites ici, vous maintenir connecté à l'espace client, et conserver les réponses que vous saisissez dans l'assistant tant que vous l'utilisez. Aucun ne vous suit.",
+        "duration": "Session à 6 mois",
+        "always": "Toujours actifs"
+      },
+      "functional": {
+        "name": "Contenu externe",
+        "purpose": "Contenu intégré d'une autre société à votre demande. Aujourd'hui il s'agit uniquement du cadre Google Maps sur la page cabinet. L'autoriser signifie que Google reçoit votre adresse IP et peut déposer ses propres cookies.",
+        "duration": "Déterminée par Google, voir la politique de Google"
+      },
+      "statistics": {
+        "name": "Statistiques de visite",
+        "purpose": "Mesure anonyme de l'usage du site, afin que le cabinet voie quelles pages aident les visiteurs. Aucun outil de ce type ne fonctionne sur ce site aujourd'hui. Le choix est proposé pour qu'aucun ne puisse être ajouté plus tard sans votre autorisation.",
+        "duration": "Sans objet, aucun outil en service"
+      }
+    },
+    "gate": {
+      "eyebrow": "Contenu externe",
+      "load": "Afficher la carte",
+      "cookiePolicy": "Lire la politique cookies"
+    },
+    "controls": {
+      "heading": "Votre choix actuel",
+      "body": "Voici le consentement enregistré dans votre navigateur en ce moment. Vous pouvez le modifier ou le retirer à tout instant, et le retirer est aussi simple que de le donner.",
+      "granted": "Autorisé",
+      "refused": "Refusé",
+      "recordedOn": "Enregistré le",
+      "noDecision": "Aucun choix enregistré",
+      "change": "Modifier mon choix",
+      "withdraw": "Retirer le consentement",
+      "limitation": "Le retrait empêche ce site de recharger du contenu externe et supprime notre propre cookie de consentement. Il ne peut pas supprimer les cookies qu'une autre société a déjà déposés dans votre navigateur. Ceux-là se retirent via les paramètres de votre navigateur."
+    }
+  },
+  "CookiePage": {
+    "metadata": {
+      "title": "Politique cookies",
+      "description": "Quels cookies orechdin.be dépose, pourquoi, combien de temps ils durent, et comment refuser ou retirer votre consentement."
+    },
+    "eyebrow": "Cookies",
+    "headline": "Politique cookies",
+    "intro": "Cette politique explique ce qui est conservé sur votre appareil lorsque vous visitez ce site, pourquoi, et comment vous en gardez la maîtrise. Elle s'applique à www.orechdin.be et suit l'article 129 de la loi relative aux communications électroniques ainsi que le Règlement général sur la protection des données.",
+    "version": "Version {version}, dernière mise à jour le {date}",
+    "whatHeading": "Ce qui compte comme cookie",
+    "whatBody1": "Un cookie est un petit fichier qu'un site fait conserver par votre navigateur. La loi va plus loin que le mot ne le suggère: elle vise tout stockage ou toute lecture d'informations sur votre appareil. Le registre ci-dessous mentionne donc aussi les deux autres techniques utilisées par ce site, le local storage et le session storage, et les traite selon les mêmes règles.",
+    "whatBody2": "Ce que dépose orechdin.be relève de la première partie. Ce qu'une autre société dépose via un contenu intégré relève de la tierce partie, et c'est elle qui décide de l'usage qu'elle en fait.",
+    "basisHeading": "Quand nous demandons votre autorisation",
+    "basisBody1": "Le stockage strictement nécessaire à un service que vous avez demandé ne requiert pas de consentement, et le désactiver casserait le site. Tout le reste requiert votre autorisation préalable, libre et spécifique.",
+    "basisBody2": "Nous demandons donc avant de déposer quoi que ce soit de facultatif, jamais à l'avance, et nous ne considérons jamais la poursuite de la navigation comme un accord. Refuser prend un clic, exactement comme accepter, et n'a aucun effet sur votre accès à la moindre partie du site. Votre réponse est conservée six mois, après quoi nous reposons la question.",
+    "registerHeading": "Registre de ce qui est conservé",
+    "registerIntro": "Tout ce que ce site peut conserver sur votre appareil, avec sa finalité, qui peut le lire et sa durée.",
+    "noConsentNeeded": "Aucun consentement requis",
+    "consentNeeded": "Uniquement après votre consentement",
+    "emptyCategory": "Rien dans cette catégorie n'est utilisé sur ce site actuellement. Si cela change, l'élément sera repris ici et ne se chargera qu'après votre autorisation.",
+    "table": {
+      "name": "Nom",
+      "provider": "Déposé par",
+      "purpose": "Finalité",
+      "duration": "Durée"
+    },
+    "kind": {
+      "cookie": "Cookie",
+      "localStorage": "Local storage",
+      "sessionStorage": "Session storage"
+    },
+    "entries": {
+      "consent": {
+        "purpose": "Conserve le choix que vous avez fait, pour ne pas reposer la question à chaque page et pouvoir montrer ce que vous avez accepté.",
+        "duration": "6 mois"
+      },
+      "locale": {
+        "purpose": "Retient la langue dans laquelle vous consultez le site, afin que chaque page reste dans cette langue.",
+        "duration": "1 an"
+      },
+      "sessionToken": {
+        "purpose": "Vous maintient connecté si vous créez un compte pour l'espace client. Déposé uniquement après connexion.",
+        "duration": "Jusqu'à votre déconnexion"
+      },
+      "sessionData": {
+        "purpose": "Contient une copie de courte durée de votre session pour que les pages connectées se chargent sans interroger la base à chaque requête.",
+        "duration": "Jusqu'à votre déconnexion"
+      },
+      "dontRemember": {
+        "purpose": "Note que vous avez demandé à ne pas rester connecté, afin que la session se termine à la fermeture du navigateur.",
+        "duration": "Jusqu'à votre déconnexion"
+      },
+      "neoSessionState": {
+        "purpose": "Conserve les réponses déjà saisies dans l'assistant, afin qu'un rechargement ne les perde pas. Elles restent dans votre onglet et disparaissent à sa fermeture.",
+        "duration": "Jusqu'à la fermeture de l'onglet"
+      },
+      "neoSidebar": {
+        "purpose": "Retient si le panneau de l'assistant était ouvert.",
+        "duration": "Jusqu'à l'effacement du stockage du navigateur"
+      },
+      "neoPanelWidth": {
+        "purpose": "Retient la largeur que vous avez donnée au panneau de l'assistant.",
+        "duration": "Jusqu'à l'effacement du stockage du navigateur"
+      },
+      "googleMaps": {
+        "purpose": "Déposé par Google lorsque vous choisissez de charger la carte sur la page cabinet. Google reçoit votre adresse IP et utilise ces cookies à ses propres fins, dont la sécurité et, selon vos paramètres Google, la personnalisation.",
+        "duration": "Déterminée par Google, voir la politique de Google"
+      }
+    },
+    "thirdPartyHeading": "L'unique tiers",
+    "thirdPartyBody1": "Google Maps est le seul service externe que ce site peut contacter, uniquement sur la page cabinet, et uniquement après votre autorisation. Jusque-là, la carte est remplacée par un substitut et aucune requête n'atteint Google. Si vous ne l'autorisez jamais, Google n'apprend jamais que vous avez visité ce site.",
+    "thirdPartyBody2": "Ce que Google fait des données qu'il reçoit relève de sa propre politique:",
+    "thirdPartyGoogleLink": "politique de confidentialité de Google",
+    "secrecyHeading": "Cookies et secret professionnel",
+    "secrecyBody": "En tant qu'avocat, le cabinet est tenu au secret professionnel en vertu de l'article 458 du Code pénal. Aucun des éléments ci-dessus ne touche au fond d'un dossier: aucun cookie de ce site n'enregistre qui vous êtes, sur quoi vous cherchez conseil, ni ce que vous nous écrivez. C'est cette obligation de confidentialité qui explique l'absence totale de publicité, de pixels de réseaux sociaux et d'outils d'analyse tiers.",
+    "browserHeading": "Gérer les cookies dans votre navigateur",
+    "browserBody": "Indépendamment du choix fait ici, votre navigateur peut bloquer ou supprimer les cookies de tous les sites. Les réglages se trouvent en général sous confidentialité ou protection des données. Bloquer les éléments strictement nécessaires peut empêcher certaines parties du site de fonctionner, en particulier l'espace client.",
+    "complaintHeading": "Questions et plaintes",
+    "complaintBody1": "Les questions sur cette politique s'adressent à {name}, via",
+    "complaintBody2": "Si notre réponse ne vous satisfait pas, vous pouvez introduire une plainte auprès de l'Autorité de protection des données via",
+    "closing": "Cette politique est republiée sous un nouveau numéro de version chaque fois que le registre ci-dessus change, et les versions antérieures sont conservées, de sorte qu'il reste possible d'établir ce qui s'appliquait à une date donnée.",
+    "ctaPrivacy": "Lire la déclaration de confidentialité",
+    "ctaContact": "Contacter le cabinet"
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "Déclaration de confidentialité",
+      "description": "Comment Orechdin traite les données à caractère personnel: finalités, bases légales, destinataires, conservation, vos droits, et l'incidence du secret professionnel."
+    },
+    "eyebrow": "RGPD",
+    "headline": "Déclaration de confidentialité",
+    "intro": "Cette déclaration expose quelles données à caractère personnel le cabinet traite via ce site, pourquoi, sur quelle base légale, et ce que vous pouvez nous demander. Elle suit les articles 13 et 14 du Règlement général sur la protection des données.",
+    "scope": "Elle concerne ce site. La déclaration générale relative aux dossiers clients est publiée séparément sur la",
+    "officialPolicy": "déclaration générale du cabinet",
+    "version": "Version {version}, dernière mise à jour le {date}",
+    "controllerHeading": "Qui est responsable",
+    "controllerBody1": "Le responsable du traitement est le cabinet, établi {street}, {postal} {city}, Belgique, sous le numéro d'entreprise {kbo} et inscrit au {court}.",
+    "controllerBody2": "Pour tout ce qui concerne les données à caractère personnel, vous pouvez contacter directement {name}, via",
+    "controllerBody3": " ou au {phone}.",
+    "secrecyHeading": "Le secret professionnel prime",
+    "secrecyBody1": "Un avocat est tenu au secret professionnel en vertu de l'article 458 du Code pénal. Ce qu'un client ou un client potentiel confie au cabinet est confidentiel, et cette obligation ne prend pas fin à la clôture du dossier.",
+    "secrecyBody2": "Cela façonne vos droits en matière de protection des données. Lorsque répondre à une demande révélerait des informations couvertes par le secret professionnel, en particulier des informations appartenant à une autre personne impliquée dans un dossier, le cabinet doit refuser de les communiquer. Dans ce cas, nous vous indiquons que la demande a été limitée et en expliquons la raison dans la mesure où le secret le permet.",
+    "dataHeading": "Quelles données nous traitons",
+    "dataIntro": "Via ce site, les suivantes:",
+    "dataVisitLabel": "La visite du site.",
+    "dataVisitBody": "Votre adresse IP et les données techniques de la requête, traitées par notre hébergeur pour livrer les pages et sécuriser le service. Nous ne conservons aucune statistique de visite.",
+    "dataContactLabel": "La prise de contact.",
+    "dataContactBody": "Le nom, l'adresse e-mail, le numéro de téléphone et la description de votre affaire que vous choisissez de nous transmettre via le formulaire ou par e-mail.",
+    "dataAssistantLabel": "L'assistant en ligne.",
+    "dataAssistantBody": "Le texte que vous saisissez dans l'assistant et le résumé qui en résulte.",
+    "dataAccountLabel": "L'espace client.",
+    "dataAccountBody": "Si vous créez un compte: votre adresse e-mail, votre mot de passe sous forme hachée, et les moments de vos connexions.",
+    "dataClientLabel": "Devenir client.",
+    "dataClientBody": "Si une affaire se poursuit, le cabinet traite ce qui est nécessaire pour agir pour vous, y compris des données relatives aux parties adverses et à des tiers. Ces traitements sont décrits dans la déclaration générale et non ici.",
+    "purposesHeading": "Pourquoi, et sur quelle base légale",
+    "purposesIntro": "Chaque finalité repose sur l'un des fondements de l'article 6 RGPD:",
+    "basisContractLabel": "Exécution de notre mission, article 6, 1, b.",
+    "basisContractBody": "Répondre à votre demande, vérifier si nous pouvons agir pour vous, et exécuter le travail le cas échéant.",
+    "basisLegalLabel": "Obligations légales, article 6, 1, c.",
+    "basisLegalBody": "Identification et conservation au titre de la législation anti blanchiment, obligations comptables et fiscales, et règles déontologiques du barreau.",
+    "basisInterestLabel": "Intérêts légitimes, article 6, 1, f.",
+    "basisInterestBody": "Maintenir le site sûr et disponible, vérifier les conflits d'intérêts, et constater ou défendre des droits en justice, y compris les nôtres.",
+    "basisConsentLabel": "Consentement, article 6, 1, a.",
+    "basisConsentBody": "Cookies facultatifs et éventuelle lettre d'information. Vous pouvez retirer votre consentement à tout moment, sans effet sur ce qui a précédé.",
+    "basisSpecialLabel": "Catégories particulières et données pénales, articles 9 et 10.",
+    "basisSpecialBody": "Un dossier peut contenir des données de santé, ou des données relatives à des infractions et condamnations. Le cabinet les traite lorsque cela est nécessaire à la constatation, l'exercice ou la défense d'un droit en justice, fondement que l'article 9, 2, f prévoit pour le travail juridique.",
+    "assistantHeading": "N'introduisez pas d'éléments confidentiels dans l'assistant",
+    "assistantBody1": "L'assistant de ce site sert à décrire en termes généraux ce dont vous avez besoin. Ce n'est pas un canal sécurisé, et son utilisation ne fait pas de vous un client du cabinet.",
+    "assistantBody2": "Pour formuler ses réponses, l'assistant envoie le texte que vous saisissez à un service d'IA externe au cabinet. N'y introduisez donc pas de noms de parties adverses, de numéros de dossier, de données de santé, ni rien d'autre que vous ne voudriez pas voir quitter vos mains. Transmettez les pièces confidentielles par e-mail ou apportez-les au cabinet.",
+    "assistantBody3": "Aucune relation avocat client ne naît avant que le cabinet ne confirme par écrit qu'il accepte votre affaire. Ce que vous nous confiez auparavant est néanmoins traité comme confidentiel par le cabinet. L'assistant lui-même n'est simplement pas un canal confidentiel, raison pour laquelle nous vous demandons d'en tenir les éléments du dossier à l'écart.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "Ce site ne conserve que le nécessaire, sauf si vous autorisez davantage. Ce qui est conservé, pourquoi, et comment retirer votre autorisation figurent dans la",
+    "cookiesLink": "politique cookies",
+    "recipientsHeading": "Qui reçoit vos données",
+    "recipientsBody1": "Le cabinet ne vend pas de données à caractère personnel et ne les partage pas pour le marketing de tiers. Les données ne vont qu'aux destinataires suivants:",
+    "recipientHostingLabel": "Notre hébergeur et fournisseur de base de données.",
+    "recipientHostingBody": "Qui conserve le site et ses données sur nos instructions, en qualité de sous-traitant.",
+    "recipientMailLabel": "Notre fournisseur de messagerie.",
+    "recipientMailBody": "Qui achemine les messages en provenance et à destination du cabinet.",
+    "recipientAiLabel": "Le service d'IA derrière l'assistant en ligne.",
+    "recipientAiBody": "Qui reçoit le texte saisi dans l'assistant, comme décrit ci-dessus.",
+    "recipientCounterpartLabel": "Les parties à votre affaire.",
+    "recipientCounterpartBody": "Juridictions, conseils adverses, huissiers, experts et autorités publiques, lorsque agir pour vous l'exige.",
+    "recipientsBody2": "Les sous-traitants n'agissent que sur nos instructions et sous contrat écrit. Toute autre communication n'a lieu qu'avec votre consentement ou lorsque la loi l'impose.",
+    "transfersHeading": "Transferts hors d'Europe",
+    "transfersBody": "Le cabinet conserve les données dans l'Espace économique européen chaque fois qu'il le peut. Certains services de ce site, en particulier le cadre Google Maps et le service d'IA derrière l'assistant, peuvent traiter des données hors EEE. Lorsque c'est le cas, cela se fait sous les garanties exigées par le chapitre V du RGPD, telles qu'une décision d'adéquation ou des clauses contractuelles types. C'est une raison de plus de tenir les éléments confidentiels à l'écart de l'assistant.",
+    "retentionHeading": "Combien de temps nous conservons",
+    "retentionIntro": "Les données ne sont pas conservées plus longtemps que la finalité ne l'exige. En pratique:",
+    "retentionFilesLabel": "Dossiers.",
+    "retentionFilesBody": "Au moins cinq ans après la clôture du dossier, conformément à l'article 2276bis du Code civil, et en pratique jusqu'à dix ans, des actions liées à l'affaire pouvant encore être introduites durant cette période.",
+    "retentionAccountingLabel": "Pièces comptables et d'identification.",
+    "retentionAccountingBody": "Pendant les durées imposées par les règles comptables, fiscales et anti blanchiment.",
+    "retentionEnquiryLabel": "Demandes sans suite.",
+    "retentionEnquiryBody": "Jusqu'à un an, afin de reconnaître un conflit d'intérêts si vous revenez, puis supprimées.",
+    "retentionConsentLabel": "Consentement aux cookies.",
+    "retentionConsentBody": "Six mois, après quoi nous reposons la question.",
+    "securityHeading": "Sécurité",
+    "securityBody": "Le site est servi via une connexion chiffrée, les mots de passe de l'espace client ne sont conservés que sous forme hachée, et l'accès aux systèmes du cabinet est limité à ceux qui en ont besoin. Aucun système n'est parfait. Si une violation devait mettre sérieusement vos droits en péril, nous vous en informerons ainsi que l'Autorité de protection des données, comme le RGPD l'exige.",
+    "automatedHeading": "Décisions automatisées",
+    "automatedBody": "Le cabinet ne prend aucune décision vous concernant sur le seul fondement d'un traitement automatisé. L'assistant résume ce que vous décrivez. La question de savoir si le cabinet peut agir pour vous, et tout conseil que vous recevez, relève d'un avocat.",
+    "rightsHeading": "Vos droits",
+    "rightsIntro": "En vertu du RGPD, vous pouvez nous demander de:",
+    "rightAccessLabel": "Accès.",
+    "rightAccessBody": "Vous dire si nous traitons des données vous concernant, et vous en remettre une copie.",
+    "rightRectifyLabel": "Rectification.",
+    "rightRectifyBody": "Corriger des données inexactes ou incomplètes.",
+    "rightEraseLabel": "Effacement.",
+    "rightEraseBody": "Supprimer des données, lorsqu'aucune obligation légale ni aucun droit en justice ne nous impose de les conserver.",
+    "rightRestrictLabel": "Limitation.",
+    "rightRestrictBody": "Suspendre l'utilisation de données le temps qu'une contestation à leur sujet soit tranchée.",
+    "rightPortabilityLabel": "Portabilité.",
+    "rightPortabilityBody": "Transmettre, dans un format lisible par machine, les données que vous nous avez fournies sur la base du consentement ou d'un contrat.",
+    "rightObjectLabel": "Opposition.",
+    "rightObjectBody": "Cesser un traitement fondé sur nos intérêts légitimes, sauf motifs impérieux qui prévalent sur votre opposition.",
+    "rightWithdrawLabel": "Retrait du consentement.",
+    "rightWithdrawBody": "Retirer à tout moment un consentement donné.",
+    "rightsHow": "Adressez votre demande à",
+    "rightsHowSuffix": ". Nous répondons dans le mois, et pouvons d'abord demander une preuve d'identité afin de ne pas remettre vos données à un tiers.",
+    "rightsLimit": "Ces droits ne sont pas absolus. Le secret professionnel, une obligation légale de conservation ou les droits d'un tiers peuvent nous obliger à limiter une demande, et s'agissant d'un dossier, cette limite est la règle plutôt que l'exception. Nous expliquons toujours ce que nous pouvons faire.",
+    "complaintsHeading": "Plaintes",
+    "complaintsBody1": "Si vous estimez que vos données ne sont pas traitées correctement, dites-le nous d'abord afin que nous puissions y remédier. Vous avez également le droit d'introduire une plainte auprès de l'autorité de contrôle:",
+    "dpaName": "Autorité de protection des données",
+    "complaintsBody2": "Les plaintes relatives au comportement d'un avocat peuvent en outre être adressées au bâtonnier du barreau de l'arrondissement judiciaire d'Anvers.",
+    "changesHeading": "Modifications",
+    "changesBody": "Cette déclaration porte un numéro de version et une date. En cas de modification substantielle, nous publions la nouvelle version ici, et lorsque la modification porte sur un point que vous aviez accepté, nous redemandons votre consentement.",
+    "supportNote": "Cette déclaration est écrite pour le site. Si vous êtes client, les conditions de mission et la déclaration générale s'appliquent en outre à votre dossier.",
+    "ctaContact": "Contacter le cabinet",
+    "ctaCookies": "Politique cookies"
   }
 }

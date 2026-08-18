@@ -35,9 +35,10 @@
     "contactHeading": "Contact",
     "legalHeading": "Juridisch",
     "privacyPolicy": "Privacybeleid",
-    "officialPrivacyLive": "Officiële privacypagina (live)",
+    "officialPrivacyLive": "Algemene privacyverklaring van het kantoor",
     "builtFor": "Gebouwd voor",
-    "copyright": "© {year} {entity}"
+    "copyright": "© {year} {entity}",
+    "cookiePolicy": "Cookiebeleid"
   },
   "TrustBand": {
     "eyebrow": "Praktijkgebieden gepubliceerd door het kantoor",
@@ -253,7 +254,9 @@
     "emailLabel": "E-mail",
     "mapTitle": "{short} kantoorlocatie",
     "ctaLawyers": "De Advocaten",
-    "ctaContact": "Contact"
+    "ctaContact": "Contact",
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "De kaart wordt geladen bij Google. Als u ze toont, ontvangt Google uw IP-adres en kan Google cookies op uw toestel plaatsen."
   },
   "ContactPage": {
     "metadata": {
@@ -267,34 +270,6 @@
     "neoBody": "NEO is een oriëntatie-assistent gegrond in de goedgekeurde kennisbank van deze site. NEO geeft geen juridisch advies en creëert geen advocaat-cliëntrelatie. Gebruik NEO om context te ordenen vóór u contact opneemt met het kantoor.",
     "openNeo": "Open NEO assistent →",
     "privacyLink": "Privacybeleid"
-  },
-  "PrivacyPage": {
-    "metadata": {
-      "title": "Privacybeleid",
-      "description": "GDPR / AVG-samenvatting voor Orechdin, verwerkingsverantwoordelijke, FG, rechten, bewaring; link naar de officiële privacypagina."
-    },
-    "eyebrow": "GDPR / AVG",
-    "headline": "Privacyverklaring",
-    "subdisplay": "Advocatenkantoor Nir Zeltzer - Orechdin (ORECHDIN)",
-    "intro": "Deze pagina vat samen hoe het kantoor de verwerking van persoonsgegevens beschrijft onder Verordening (EU) 2016/679 (GDPR / AVG). Het weerspiegelt de gepubliceerde verklaring (versie van 24/05/2018). Voor de gezaghebbende tekst op de live site, zie het",
-    "officialPolicy": "officiële privacybeleid",
-    "controllerHeading": "Verwerkingsverantwoordelijke",
-    "controllerBody1": "Advocatenkantoor Nir Zeltzer - Orechdin (ORECHDIN) is de verwerkingsverantwoordelijke. ORECHDIN is een burgerlijke vennootschap (BV-vorm), ingeschreven onder KBO-nummer {kbo}, {court}, met maatschappelijke zetel te {street}, {postal} {city}.",
-    "controllerBody2": "De functionaris voor gegevensbescherming is {name}, bereikbaar op hetzelfde adres, per e-mail",
-    "controllerBody3": ", of telefonisch op {phone}.",
-    "processedHeading": "Categorieën van gegevens",
-    "processedBody": "Het kantoor verklaart persoonsgegevens te verwerken omdat u zijn juridische diensten gebruikt en/of omdat u gegevens zelf verstrekt. Voorbeelden zijn: naam; geslacht; geboortedatum en -plaats; adres; telefoon en e-mail; bankrekening; ondernemings- en btw-nummers; documenten vereist onder anti-witwasregels; aanvraagformulieren; en, waar relevant, bijzondere categorieën zoals gerechtelijke gegevens of gegevens van personen jonger dan 16 (alleen met toestemming, betrokkenheid van de voogd, of noodzaak ter bescherming van de rechten van minderjarigen).",
-    "purposesHeading": "Doelen en rechtsgronden",
-    "purposesBody": "De verwerking is beschreven als beperkt tot wat noodzakelijk is voor professionele verplichtingen, bijvoorbeeld: juridisch advies en andere gevraagde diensten; behandeling van informatieverzoeken; wettelijke naleving; cliëntcommunicatie; facturatie; en aanvragen. Vermelde rechtsgronden onder Artikel 6(1) GDPR zijn toestemming, uitvoering van een overeenkomst, wettelijke verplichting, vitale belangen, en gerechtvaardigde belangen in de context van de advocatenpraktijk.",
-    "retentionHeading": "Bewaring en delen",
-    "retentionBody": "Persoonsgegevens worden bewaard gedurende de wettelijk vereiste periode, de publieke verklaring verwijst, waar van toepassing, naar bewaring tot vijf jaar na beëindiging van de cliëntovereenkomst. Gegevens worden alleen met derden gedeeld wanneer noodzakelijk voor wettelijke verplichtingen of de overeenkomst (rechtbanken, gerechtsdeurwaarders, notarissen, andere advocaten, accountants, enz.) of met verwerkers onder passende maatregelen. Doorgiften buiten de EER zijn beperkt tot wat de verklaring beschrijft voor internationale dossiers.",
-    "rightsHeading": "Uw rechten",
-    "rightsBody1": "U kunt rechten van toegang, rectificatie, wissing, beperking, overdraagbaarheid, bezwaar en intrekking van toestemming uitoefenen waar van toepassing. Verzoeken kunnen worden gericht aan ORECHDIN via",
-    "rightsBody2": ". U kunt een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit.",
-    "marketingHeading": "Direct marketing",
-    "marketingBody": "Gezien het beroepsgeheim verklaart het kantoor persoonsgegevens van cliënten niet te verwerken voor direct marketing op de manier beschreven in de officiële verklaring.",
-    "supportNote": "Deze samenvatting ondersteunt enkel oriëntatie. Zij vervangt niet de volledige juridische tekst gepubliceerd door het kantoor.",
-    "ctaContact": "Contacteer het kantoor"
   },
   "NotFound": {
     "eyebrow": "Pagina niet gevonden",
@@ -445,5 +420,252 @@
     "channel_copy": "Kopiëren naar klembord",
     "channel_native-share": "Delen…",
     "channelCopied": "Gekopieerd!"
+  },
+  "Consent": {
+    "settingsLink": "Cookie-instellingen",
+    "banner": {
+      "eyebrow": "Cookies",
+      "title": "Cookies op deze website",
+      "body": "Wij plaatsen enkel wat strikt noodzakelijk is om deze website te laten werken, tenzij u meer toestaat. Het optionele deel is het Google Maps-kader op onze kantoorpagina, en bezoekersstatistieken mochten wij die ooit toevoegen. Weigeren kost u niets: elke pagina werkt precies hetzelfde.",
+      "acceptAll": "Alles aanvaarden",
+      "refuseAll": "Alles weigeren",
+      "managePreferences": "Voorkeuren beheren",
+      "cookiePolicy": "Cookiebeleid",
+      "privacyPolicy": "Privacyverklaring"
+    },
+    "prefs": {
+      "eyebrow": "Cookievoorkeuren",
+      "title": "Kies wat u toestaat",
+      "intro": "Noodzakelijke onderdelen houden de site werkend en kunnen niet worden uitgeschakeld. Al de rest blijft uit tot u ze aanzet, en u kunt uw keuze op elk moment wijzigen via de voettekst van elke pagina.",
+      "save": "Mijn keuze bewaren",
+      "acceptAll": "Alles aanvaarden",
+      "refuseAll": "Alles weigeren",
+      "toggleLabel": "{category} toestaan",
+      "footnote": "Elk onderdeel, het doel en de bewaartermijn staan in het",
+      "cookiePolicy": "cookiebeleid"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strikt noodzakelijk",
+        "purpose": "Nodig om de website te laten werken: het onthouden van de cookiekeuze die u hier maakt, u aangemeld houden in het cliëntgedeelte, en de antwoorden bewaren die u in de intake-assistent typt zolang u ze gebruikt. Geen daarvan volgt u.",
+        "duration": "Sessie tot 6 maanden",
+        "always": "Altijd actief"
+      },
+      "functional": {
+        "name": "Externe inhoud",
+        "purpose": "Inhoud die op uw vraag wordt ingesloten van een ander bedrijf. Vandaag is dat enkel het Google Maps-kader op de kantoorpagina. Toestaan betekent dat Google uw IP-adres ontvangt en eigen cookies kan plaatsen.",
+        "duration": "Bepaald door Google, zie het beleid van Google"
+      },
+      "statistics": {
+        "name": "Bezoekersstatistieken",
+        "purpose": "Anonieme meting van het gebruik van de website, zodat het kantoor ziet welke pagina's mensen helpen. Op deze website draait vandaag geen enkel meetinstrument. De keuze wordt aangeboden zodat er later geen kan worden toegevoegd zonder uw toestemming.",
+        "duration": "Niet van toepassing, geen instrument in gebruik"
+      }
+    },
+    "gate": {
+      "eyebrow": "Externe inhoud",
+      "load": "Kaart tonen",
+      "cookiePolicy": "Lees het cookiebeleid"
+    },
+    "controls": {
+      "heading": "Uw huidige keuze",
+      "body": "Dit is de toestemming die nu in uw browser is opgeslagen. U kunt ze op elk moment wijzigen of intrekken, en intrekken gaat even eenvoudig als geven.",
+      "granted": "Toegestaan",
+      "refused": "Geweigerd",
+      "recordedOn": "Geregistreerd op",
+      "noDecision": "Nog geen keuze geregistreerd",
+      "change": "Mijn keuze wijzigen",
+      "withdraw": "Toestemming intrekken",
+      "limitation": "Intrekken zorgt ervoor dat deze website geen externe inhoud meer laadt en wist onze eigen toestemmingscookie. Het kan geen cookies wissen die een ander bedrijf al in uw browser heeft geplaatst. Die verwijdert u via de instellingen van uw browser."
+    }
+  },
+  "CookiePage": {
+    "metadata": {
+      "title": "Cookiebeleid",
+      "description": "Welke cookies orechdin.be plaatst, waarom, hoelang ze blijven, en hoe u weigert of uw toestemming intrekt."
+    },
+    "eyebrow": "Cookies",
+    "headline": "Cookiebeleid",
+    "intro": "Dit beleid legt uit wat er op uw toestel wordt bewaard wanneer u deze website bezoekt, waarom, en hoe u er controle over houdt. Het geldt voor www.orechdin.be en volgt artikel 129 van de Wet betreffende de elektronische communicatie samen met de Algemene Verordening Gegevensbescherming.",
+    "version": "Versie {version}, laatst bijgewerkt op {date}",
+    "whatHeading": "Wat als cookie geldt",
+    "whatBody1": "Een cookie is een klein bestand dat een website door uw browser laat bewaren. De wet reikt verder dan het woord doet vermoeden: ze dekt elk opslaan of uitlezen van informatie op uw toestel. Het register hieronder vermeldt daarom ook de twee andere technieken die deze website gebruikt, local storage en session storage, en behandelt ze volgens dezelfde regels.",
+    "whatBody2": "Wat door orechdin.be zelf wordt geplaatst, is eerste partij. Wat door een ander bedrijf wordt geplaatst via ingesloten inhoud, is derde partij, en dat bedrijf beslist wat het ermee doet.",
+    "basisHeading": "Wanneer wij toestemming vragen",
+    "basisBody1": "Opslag die strikt noodzakelijk is voor een dienst die u zelf heeft gevraagd, vereist geen toestemming, en uitschakelen zou de site breken. Al de rest vereist uw voorafgaande, vrije en specifieke toestemming.",
+    "basisBody2": "Wij vragen dus voordat wij iets optioneels plaatsen, nooit vooraf, en wij beschouwen verder surfen nooit als een akkoord. Weigeren is een klik, net als aanvaarden, en heeft geen enkel gevolg voor uw toegang tot welk deel van deze website ook. Uw antwoord wordt zes maanden bewaard, daarna vragen wij het opnieuw.",
+    "registerHeading": "Register van wat wordt bewaard",
+    "registerIntro": "Alles wat deze website op uw toestel kan bewaren, met het doel, wie het kan lezen en hoelang het blijft.",
+    "noConsentNeeded": "Geen toestemming vereist",
+    "consentNeeded": "Enkel na uw toestemming",
+    "emptyCategory": "In deze categorie wordt op deze website momenteel niets gebruikt. Verandert dat, dan wordt het hier vermeld en laadt het pas nadat u het heeft toegestaan.",
+    "table": {
+      "name": "Naam",
+      "provider": "Geplaatst door",
+      "purpose": "Doel",
+      "duration": "Bewaartermijn"
+    },
+    "kind": {
+      "cookie": "Cookie",
+      "localStorage": "Local storage",
+      "sessionStorage": "Session storage"
+    },
+    "entries": {
+      "consent": {
+        "purpose": "Bewaart de cookiekeuze die u heeft gemaakt, zodat wij het niet op elke pagina opnieuw vragen en kunnen aantonen waarmee u akkoord ging.",
+        "duration": "6 maanden"
+      },
+      "sessionToken": {
+        "purpose": "Houdt u aangemeld als u een account aanmaakt voor het cliëntgedeelte. Wordt pas geplaatst nadat u zich aanmeldt.",
+        "duration": "Tot u zich afmeldt"
+      },
+      "sessionData": {
+        "purpose": "Bevat een kortstondige kopie van uw sessie zodat aangemelde pagina's laden zonder bij elke aanvraag de databank te raadplegen.",
+        "duration": "Tot u zich afmeldt"
+      },
+      "dontRemember": {
+        "purpose": "Noteert dat u niet aangemeld wenst te blijven, zodat de sessie eindigt wanneer u de browser sluit.",
+        "duration": "Tot u zich afmeldt"
+      },
+      "neoSessionState": {
+        "purpose": "Bewaart de antwoorden die u tot nu toe in de intake-assistent typte, zodat een herlaadbeurt ze niet wist. Het blijft in uw browsertabblad en verdwijnt wanneer u dat sluit.",
+        "duration": "Tot u het tabblad sluit"
+      },
+      "neoSidebar": {
+        "purpose": "Onthoudt of u het assistentpaneel open had staan.",
+        "duration": "Tot u uw browseropslag wist"
+      },
+      "neoPanelWidth": {
+        "purpose": "Onthoudt hoe breed u het assistentpaneel heeft gesleept.",
+        "duration": "Tot u uw browseropslag wist"
+      },
+      "googleMaps": {
+        "purpose": "Geplaatst door Google wanneer u ervoor kiest de kaart op de kantoorpagina te laden. Google ontvangt uw IP-adres en gebruikt deze cookies voor eigen doeleinden, waaronder beveiliging en, afhankelijk van uw Google-instellingen, personalisatie.",
+        "duration": "Bepaald door Google, zie het beleid van Google"
+      },
+      "locale": {
+        "purpose": "Onthoudt in welke taal u de site bekijkt, zodat u bij elke pagina in dezelfde taal blijft.",
+        "duration": "1 jaar"
+      }
+    },
+    "thirdPartyHeading": "De enige derde partij",
+    "thirdPartyBody1": "Google Maps is de enige externe dienst die deze website kan aanspreken, enkel op de kantoorpagina, en enkel nadat u dat heeft toegestaan. Tot dan wordt de kaart vervangen door een tijdelijke weergave en bereikt geen enkele aanvraag Google. Staat u het nooit toe, dan verneemt Google nooit dat u deze site bezocht.",
+    "thirdPartyBody2": "Wat Google doet met de gegevens die het ontvangt, valt onder het eigen beleid van Google:",
+    "thirdPartyGoogleLink": "privacybeleid van Google",
+    "secrecyHeading": "Cookies en beroepsgeheim",
+    "secrecyBody": "Als advocaat is dit kantoor gebonden door het beroepsgeheim krachtens artikel 458 van het Strafwetboek. Geen van de bovenstaande onderdelen raakt de inhoud van een dossier: geen enkele cookie op deze website registreert wie u bent, waarover u advies zoekt, of wat u ons schrijft. Die geheimhoudingsplicht is precies de reden waarom deze site geen reclame, geen socialemediapixels en geen externe analysetools draagt.",
+    "browserHeading": "Cookies beheren in uw browser",
+    "browserBody": "Los van de keuze die u hier maakt, kan uw browser cookies blokkeren of wissen voor elke site die u bezoekt. U vindt die instellingen doorgaans onder privacy of gegevensbescherming. Het blokkeren van strikt noodzakelijke onderdelen kan delen van deze website onbruikbaar maken, in het bijzonder het cliëntgedeelte.",
+    "complaintHeading": "Vragen en klachten",
+    "complaintBody1": "Vragen over dit beleid richt u aan {name}, via",
+    "complaintBody2": "Bent u niet tevreden met ons antwoord, dan kunt u klacht indienen bij de Gegevensbeschermingsautoriteit via",
+    "closing": "Dit beleid wordt met een nieuw versienummer opnieuw gepubliceerd telkens het register hierboven wijzigt, en eerdere versies worden bewaard, zodat steeds kan worden vastgesteld wat op een bepaalde datum gold.",
+    "ctaPrivacy": "Lees de privacyverklaring",
+    "ctaContact": "Contacteer het kantoor"
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "Privacyverklaring",
+      "description": "Hoe Orechdin omgaat met persoonsgegevens: doeleinden, rechtsgronden, ontvangers, bewaartermijnen, uw rechten, en de invloed van het beroepsgeheim daarop."
+    },
+    "eyebrow": "GDPR / AVG",
+    "headline": "Privacyverklaring",
+    "intro": "Deze verklaring zet uiteen welke persoonsgegevens het kantoor via deze website verwerkt, waarom, op welke rechtsgrond, en wat u van ons kunt vragen. Zij volgt de artikelen 13 en 14 van de Algemene Verordening Gegevensbescherming.",
+    "scope": "Zij geldt voor deze website. De algemene privacyverklaring voor cliëntendossiers wordt afzonderlijk gepubliceerd op de",
+    "officialPolicy": "algemene privacyverklaring van het kantoor",
+    "version": "Versie {version}, laatst bijgewerkt op {date}",
+    "controllerHeading": "Wie is verantwoordelijk",
+    "controllerBody1": "De verwerkingsverantwoordelijke is het kantoor, gevestigd te {street}, {postal} {city}, België, met ondernemingsnummer {kbo} en ingeschreven bij de {court}.",
+    "controllerBody2": "Voor alles wat persoonsgegevens betreft, kunt u rechtstreeks contact opnemen met {name}, via",
+    "controllerBody3": " of op {phone}.",
+    "secrecyHeading": "Het beroepsgeheim gaat voor",
+    "secrecyBody1": "Een advocaat is gebonden door het beroepsgeheim krachtens artikel 458 van het Strafwetboek. Wat een cliënt of een kandidaat-cliënt het kantoor toevertrouwt, is vertrouwelijk, en die plicht eindigt niet wanneer het dossier wordt afgesloten.",
+    "secrecyBody2": "Dat bepaalt mee uw rechten inzake gegevensbescherming. Wanneer het beantwoorden van een verzoek informatie zou prijsgeven die door het beroepsgeheim wordt gedekt, in het bijzonder informatie die toebehoort aan een andere persoon in een dossier, moet het kantoor die mededeling weigeren. In dat geval laten wij u weten dat het verzoek werd beperkt, en leggen wij uit waarom voor zover het geheim dat toelaat.",
+    "dataHeading": "Welke gegevens wij verwerken",
+    "dataIntro": "Via deze website de volgende:",
+    "dataVisitLabel": "Bezoek aan de site.",
+    "dataVisitBody": "Uw IP-adres en technische aanvraaggegevens, verwerkt door onze hostingpartner om de pagina's te leveren en de dienst veilig te houden. Wij houden geen bezoekersstatistieken bij.",
+    "dataContactLabel": "Contact opnemen.",
+    "dataContactBody": "De naam, het e-mailadres, het telefoonnummer en de omschrijving van uw zaak die u ons via het contactformulier of per e-mail bezorgt.",
+    "dataAssistantLabel": "De online assistent.",
+    "dataAssistantBody": "De tekst die u in de intake-assistent typt en de samenvatting die daaruit volgt.",
+    "dataAccountLabel": "Het cliëntgedeelte.",
+    "dataAccountBody": "Als u een account aanmaakt: uw e-mailadres, uw wachtwoord in gehashte vorm, en de tijdstippen waarop u zich aanmeldde.",
+    "dataClientLabel": "Cliënt worden.",
+    "dataClientBody": "Gaat een zaak door, dan verwerkt het kantoor wat nodig is om voor u op te treden, met inbegrip van gegevens over tegenpartijen en derden. Die verwerkingen worden beschreven in de algemene privacyverklaring en niet hier.",
+    "purposesHeading": "Waarom, en op welke rechtsgrond",
+    "purposesIntro": "Elk doel steunt op een van de gronden van artikel 6 AVG:",
+    "basisContractLabel": "Uitvoering van onze opdracht, artikel 6, lid 1, b.",
+    "basisContractBody": "Uw vraag beantwoorden, nagaan of wij voor u kunnen optreden, en het werk uitvoeren zodra dat het geval is.",
+    "basisLegalLabel": "Wettelijke verplichtingen, artikel 6, lid 1, c.",
+    "basisLegalBody": "Identificatie en bewaring krachtens de antiwitwasregels, boekhoudkundige en fiscale verplichtingen, en de deontologische regels van de balie.",
+    "basisInterestLabel": "Gerechtvaardigde belangen, artikel 6, lid 1, f.",
+    "basisInterestBody": "De website veilig en beschikbaar houden, belangenconflicten nagaan, en rechtsvorderingen instellen of verdedigen, ook de onze.",
+    "basisConsentLabel": "Toestemming, artikel 6, lid 1, a.",
+    "basisConsentBody": "Optionele cookies, en een eventuele nieuwsbrief. U kunt uw toestemming op elk moment intrekken, zonder gevolg voor wat voordien gebeurde.",
+    "basisSpecialLabel": "Bijzondere categorieën en strafrechtelijke gegevens, artikelen 9 en 10.",
+    "basisSpecialBody": "Een dossier kan gezondheidsgegevens bevatten, of gegevens over strafbare feiten en veroordelingen. Het kantoor verwerkt die wanneer dat nodig is voor de instelling, uitoefening of onderbouwing van een rechtsvordering, de grond die artikel 9, lid 2, f voorziet voor juridisch werk.",
+    "assistantHeading": "Geef geen vertrouwelijke gegevens in aan de assistent",
+    "assistantBody1": "De intake-assistent op deze website is een hulpmiddel om in algemene bewoordingen te beschrijven wat u nodig heeft. Het is geen beveiligd kanaal, en het gebruik ervan maakt u geen cliënt van het kantoor.",
+    "assistantBody2": "Om antwoorden te vormen, stuurt de assistent de tekst die u typt naar een externe AI-dienst buiten het kantoor. Geef er dus geen namen van tegenpartijen, dossiernummers, gezondheidsgegevens of ander materiaal in dat u niet uit handen wil geven. Bezorg vertrouwelijke stukken per e-mail of breng ze naar het kantoor.",
+    "assistantBody3": "Er ontstaat pas een verhouding advocaat cliënt wanneer het kantoor schriftelijk bevestigt dat het uw zaak aanneemt. Wat u ons voordien meedeelt, behandelt het kantoor niettemin als vertrouwelijk. De assistent zelf is eenvoudigweg geen vertrouwelijk kanaal, en daarom vragen wij u dossiergegevens erbuiten te houden.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "Deze website bewaart enkel wat noodzakelijk is, tenzij u meer toestaat. Wat er wordt bewaard, waarom, en hoe u uw toestemming intrekt, staat in het",
+    "cookiesLink": "cookiebeleid",
+    "recipientsHeading": "Wie uw gegevens ontvangt",
+    "recipientsBody1": "Het kantoor verkoopt geen persoonsgegevens en deelt ze niet voor de marketing van derden. Gegevens gaan enkel naar:",
+    "recipientHostingLabel": "Onze hosting- en databankpartner.",
+    "recipientHostingBody": "Die de website en de gegevens ervan op onze instructie bewaart, als verwerker.",
+    "recipientMailLabel": "Onze e-mailprovider.",
+    "recipientMailBody": "Die berichten van en naar het kantoor vervoert.",
+    "recipientAiLabel": "De AI-dienst achter de online assistent.",
+    "recipientAiBody": "Die de tekst ontvangt die in de assistent wordt getypt, zoals hierboven beschreven.",
+    "recipientCounterpartLabel": "Partijen in uw zaak.",
+    "recipientCounterpartBody": "Rechtbanken, raadslieden van tegenpartijen, gerechtsdeurwaarders, deskundigen en overheden, wanneer het optreden voor u dat vereist.",
+    "recipientsBody2": "Verwerkers handelen enkel op onze instructie en onder een schriftelijke overeenkomst. Mededeling aan wie dan ook gebeurt enkel met uw toestemming, of wanneer de wet dat oplegt.",
+    "transfersHeading": "Doorgifte buiten Europa",
+    "transfersBody": "Het kantoor houdt persoonsgegevens binnen de Europese Economische Ruimte waar het kan. Sommige diensten van deze website, in het bijzonder het Google Maps-kader en de AI-dienst achter de assistent, kunnen gegevens buiten de EER verwerken. Gebeurt dat, dan gebeurt het onder de waarborgen die hoofdstuk V AVG vereist, zoals een adequaatheidsbesluit of standaardbepalingen inzake gegevensbescherming. Het is een reden te meer om vertrouwelijke gegevens buiten de assistent te houden.",
+    "retentionHeading": "Hoelang wij gegevens bewaren",
+    "retentionIntro": "Persoonsgegevens worden niet langer bewaard dan het doel vereist. In de praktijk:",
+    "retentionFilesLabel": "Dossiers.",
+    "retentionFilesBody": "Minstens vijf jaar na afsluiting van het dossier, overeenkomstig artikel 2276bis van het Burgerlijk Wetboek, en in de praktijk tot tien jaar, omdat vorderingen die met de zaak samenhangen in die periode nog kunnen worden ingesteld.",
+    "retentionAccountingLabel": "Boekhoudkundige en identificatiegegevens.",
+    "retentionAccountingBody": "Gedurende de termijnen die de boekhoud-, fiscale en antiwitwasregels opleggen.",
+    "retentionEnquiryLabel": "Vragen die niet tot een dossier leiden.",
+    "retentionEnquiryBody": "Tot een jaar, zodat wij een belangenconflict herkennen mocht u terugkeren, daarna gewist.",
+    "retentionConsentLabel": "Cookietoestemming.",
+    "retentionConsentBody": "Zes maanden, daarna vragen wij het opnieuw.",
+    "securityHeading": "Beveiliging",
+    "securityBody": "De website wordt over een versleutelde verbinding aangeboden, wachtwoorden van het cliëntgedeelte worden enkel gehasht bewaard, en de toegang tot kantoorsystemen is beperkt tot wie ze nodig heeft. Geen enkel systeem is perfect. Mocht een inbreuk ooit uw rechten ernstig in gevaar brengen, dan brengen wij u en de Gegevensbeschermingsautoriteit op de hoogte zoals de AVG vereist.",
+    "automatedHeading": "Geautomatiseerde besluiten",
+    "automatedBody": "Het kantoor neemt geen enkel besluit over u op basis van uitsluitend geautomatiseerde verwerking. De online assistent vat samen wat u beschrijft. Of het kantoor voor u kan optreden, en welk advies u krijgt, beslist een advocaat.",
+    "rightsHeading": "Uw rechten",
+    "rightsIntro": "Op grond van de AVG kunt u ons vragen om:",
+    "rightAccessLabel": "Inzage.",
+    "rightAccessBody": "U te zeggen of wij gegevens over u verwerken, en u daarvan een kopie te bezorgen.",
+    "rightRectifyLabel": "Verbetering.",
+    "rightRectifyBody": "Gegevens recht te zetten die onjuist of onvolledig zijn.",
+    "rightEraseLabel": "Wissing.",
+    "rightEraseBody": "Gegevens te wissen, wanneer geen wettelijke plicht en geen rechtsvordering ons verplicht ze te bewaren.",
+    "rightRestrictLabel": "Beperking.",
+    "rightRestrictBody": "Het gebruik van gegevens op te schorten zolang een betwisting daarover loopt.",
+    "rightPortabilityLabel": "Overdraagbaarheid.",
+    "rightPortabilityBody": "De gegevens die u ons gaf op grond van toestemming of een overeenkomst, in een machineleesbare vorm over te dragen.",
+    "rightObjectLabel": "Bezwaar.",
+    "rightObjectBody": "Een verwerking op grond van onze gerechtvaardigde belangen stop te zetten, tenzij dwingende gronden uw bezwaar overstijgen.",
+    "rightWithdrawLabel": "Intrekking van toestemming.",
+    "rightWithdrawBody": "Een gegeven toestemming op elk moment in te trekken.",
+    "rightsHow": "Richt uw verzoek aan",
+    "rightsHowSuffix": ". Wij antwoorden binnen een maand, en kunnen eerst een identiteitsbewijs vragen zodat wij uw gegevens niet aan iemand anders bezorgen.",
+    "rightsLimit": "Deze rechten zijn niet absoluut. Het beroepsgeheim, een wettelijke bewaarplicht of de rechten van een ander kunnen ons verplichten een verzoek te beperken, en waar het om een dossier gaat, is die beperking eerder regel dan uitzondering. Wij leggen steeds uit wat wij wel kunnen.",
+    "complaintsHeading": "Klachten",
+    "complaintsBody1": "Meent u dat met uw gegevens niet correct wordt omgegaan, laat het ons dan eerst weten zodat wij het kunnen rechtzetten. U heeft ook het recht klacht in te dienen bij de toezichthoudende autoriteit:",
+    "dpaName": "Gegevensbeschermingsautoriteit",
+    "complaintsBody2": "Klachten over het optreden van een advocaat kunnen daarnaast worden gericht aan de stafhouder van de balie van het gerechtelijk arrondissement Antwerpen.",
+    "changesHeading": "Wijzigingen",
+    "changesBody": "Deze verklaring draagt een versienummer en een datum. Wijzigt zij wezenlijk, dan publiceren wij de nieuwe versie hier, en betreft de wijziging iets waarvoor u toestemming gaf, dan vragen wij die opnieuw.",
+    "supportNote": "Deze verklaring is geschreven voor de website. Bent u cliënt, dan gelden daarnaast de opdrachtvoorwaarden en de algemene privacyverklaring voor uw dossier.",
+    "ctaContact": "Contacteer het kantoor",
+    "ctaCookies": "Cookiebeleid"
   }
 }

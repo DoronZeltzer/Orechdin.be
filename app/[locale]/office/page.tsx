@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
+import { ConsentGate } from "@/components/consent/consent-gate";
 
 export async function generateMetadata({
   params,
@@ -116,7 +117,16 @@ export default function OfficePage() {
           </ul>
         </div>
 
+        {/* The map is third-party content: loading the frame hands the
+            visitor's IP and a Google cookie to Google before they have said
+            anything. It therefore stays behind a consent gate, which renders
+            a placeholder until the `functional` category is granted. */}
         <div className="mt-8 rounded-2xl overflow-hidden border border-orech-line shadow-sm h-[300px]">
+          <ConsentGate
+            category="functional"
+            title={t("mapConsentTitle")}
+            description={t("mapConsentBody")}
+          >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5!2d4.4228!3d51.2118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f5c5b5e5e5%3A0x0!2sLange%20Herentalsestraat%20122%2C%202018%20Antwerpen!5e0!3m2!1sen!2sbe!4v1"
             width="100%"
@@ -127,6 +137,7 @@ export default function OfficePage() {
             referrerPolicy="no-referrer-when-downgrade"
             title={t("mapTitle", { short: SITE.shortName })}
           />
+          </ConsentGate>
         </div>
       </section>
 

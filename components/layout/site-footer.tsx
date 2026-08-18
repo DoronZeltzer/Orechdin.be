@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
+import { CookieSettingsButton } from "@/components/consent/cookie-settings-button";
 
 /**
  * `SiteFooter` — editorial close to every marketing page.
@@ -73,6 +74,20 @@ export function SiteFooter() {
                 >
                   {t("privacyPolicy")}
                 </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookies"
+                  className="hover:text-orech-bronze transition-colors"
+                >
+                  {t("cookiePolicy")}
+                </Link>
+              </li>
+              <li>
+                {/* Withdrawal has to be as easy as consent was, so the way
+                    back into the dialog sits on every page, not just the
+                    policy. */}
+                <CookieSettingsButton />
               </li>
               <li>
                 <a
