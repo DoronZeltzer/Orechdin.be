@@ -37,7 +37,7 @@ This architecture is optimized for 1-click Replit import:
 If you cloned this locally:
 ```bash
 git add .
-git commit -m "feat: implement advanced neo intake blueprint"
+git commit -m "feat: update website"
 git remote add origin https://github.com/YourUsername/NIR-WEBSITE.git
 git push -u origin master
 ```

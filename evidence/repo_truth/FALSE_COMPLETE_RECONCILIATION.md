@@ -53,7 +53,6 @@
 
 ## Files Inspected
 - `i18n/routing.ts`
-- `components/neo/neo-shell.tsx`
 - `messages/nl.json`
 - `messages/en.json`
 - `messages/fr.json`
