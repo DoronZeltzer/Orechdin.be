@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useConsent } from "@/components/consent/consent-provider";
+import { Button } from "@/components/ui/button";
 
 /**
  * The withdrawal panel on the cookie policy.
@@ -17,7 +18,7 @@ export function ConsentControls() {
   const { ready, record, openPrefs, withdraw } = useConsent();
 
   return (
-    <div className="rounded-2xl border border-orech-line bg-orech-slate/50 p-8 shadow-sm">
+    <div className="border border-brand-black/15 bg-brand-wash p-8">
       <h2 className="font-display text-2xl text-orech-ink md:text-3xl">
         {t("controls.heading")}
       </h2>
@@ -25,7 +26,7 @@ export function ConsentControls() {
         {t("controls.body")}
       </p>
 
-      <dl className="mt-6 space-y-2 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-orech-mist">
+      <dl className="mt-6 space-y-2 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-brand-black-80">
         <div className="flex flex-wrap gap-x-3">
           <dt>{t("categories.functional.name")}:</dt>
           <dd>
@@ -57,24 +58,15 @@ export function ConsentControls() {
       </dl>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <button
-          type="button"
-          onClick={openPrefs}
-          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-orech-ink px-6 py-2.5 text-sm font-semibold text-orech-paper transition-colors hover:bg-orech-bronzeMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted"
-        >
+        <Button variant="dark" onClick={openPrefs}>
           {t("controls.change")}
-        </button>
-        <button
-          type="button"
-          onClick={withdraw}
-          disabled={!ready || record === null}
-          className="inline-flex min-h-11 items-center justify-center rounded-lg border border-orech-ink px-6 py-2.5 text-sm font-semibold text-orech-ink transition-colors hover:bg-orech-slate focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted disabled:cursor-not-allowed disabled:opacity-40"
-        >
+        </Button>
+        <Button variant="outline" onClick={withdraw} disabled={!ready || record === null}>
           {t("controls.withdraw")}
-        </button>
+        </Button>
       </div>
 
-      <p className="mt-5 text-[0.8rem] leading-relaxed text-orech-mist">
+      <p className="mt-5 text-[0.8rem] leading-relaxed text-brand-black-80">
         {t("controls.limitation")}
       </p>
     </div>

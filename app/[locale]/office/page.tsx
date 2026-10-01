@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { ConsentGate } from "@/components/consent/consent-gate";
+import { SectionShell } from "@/components/design-system/section-shell";
+import { Button } from "@/components/ui/button";
+import { PageHeading, SectionHeading } from "@/components/ui/headings";
 
 export async function generateMetadata({
   params,
@@ -24,137 +27,117 @@ export async function generateMetadata({
 export default function OfficePage() {
   const t = useTranslations("OfficePage");
   const bulletsRaw = t.raw("bullets");
-  const bullets = (Array.isArray(bulletsRaw) ? bulletsRaw : (typeof bulletsRaw === 'object' && bulletsRaw !== null ? Object.values(bulletsRaw) : [])) as string[];
+  const bullets = (
+    Array.isArray(bulletsRaw)
+      ? bulletsRaw
+      : typeof bulletsRaw === "object" && bulletsRaw !== null
+        ? Object.values(bulletsRaw)
+        : []
+  ) as string[];
+
+  const link =
+    "font-bold underline decoration-brand-white decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue hover:text-brand-black";
 
   return (
-    <main id="main-content" className="pb-24 pt-12 md:pt-20 bg-orech-paper min-h-screen text-orech-ink selection:bg-orech-bronze/30">
-      <div className="mx-auto max-w-4xl px-4 md:px-6">
-        <p className="eyebrow">{t("eyebrow")}</p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl text-orech-ink md:text-5xl">
-          {t("headline")}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-orech-mist font-light">
-          {t("lead")}
-        </p>
-      </div>
+    <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
+      <SectionShell background="wash" className="py-14 lg:py-20">
+        <PageHeading eyebrow={t("eyebrow")} title={t("headline")} lead={t("lead")} />
+      </SectionShell>
 
-      <section
-        className="mx-auto mt-16 max-w-4xl px-4 md:px-6"
-        aria-labelledby="approach-heading"
-      >
-        <h2
-          id="approach-heading"
-          className="font-display text-2xl text-orech-ink md:text-3xl"
-        >
-          {t("approachHeading")}
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-orech-ink/80">
-          {t("approachLead")}
-        </p>
-        <ul className="mt-6 max-w-2xl list-disc space-y-2 pl-5 text-orech-ink/80">
-          {bullets.map((b) => (
-            <li key={b.slice(0, 32)}>{b}</li>
-          ))}
-        </ul>
-        <p className="mt-6">
-          <Link
-            href="/services"
-            className="inline-flex items-center text-sm font-medium text-orech-bronze underline-offset-4 hover:underline"
-          >
-            {t("publishedAreasLink")}
-          </Link>
-        </p>
-      </section>
+      <SectionShell background="default">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <section className="lg:col-span-7" aria-labelledby="approach-heading">
+            <SectionHeading title={t("approachHeading")} lead={t("approachLead")} />
+            <ul className="mt-8 max-w-2xl space-y-4 text-lg">
+              {bullets.map((b) => (
+                <li key={b.slice(0, 32)} className="flex items-start gap-4 text-brand-black-80">
+                  <span aria-hidden className="mt-[0.6em] h-2 w-2 shrink-0 bg-brand-blue" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Button href="/services" variant="outline" arrow>
+                {t("publishedAreasLink").replace(/\s*→\s*$/, "")}
+              </Button>
+            </div>
+          </section>
 
-      <section
-        className="mx-auto mt-16 max-w-4xl px-4 md:px-6"
-        aria-labelledby="visit-heading"
-      >
-        <h2
-          id="visit-heading"
-          className="font-display text-2xl text-orech-ink md:text-3xl"
-        >
-          {t("visitHeading")}
-        </h2>
-        <div className="mt-8 rounded-2xl border border-orech-line bg-orech-slate/50 p-8 shadow-sm backdrop-blur-sm">
-          <address className="not-italic leading-relaxed text-orech-ink/85">
-            <p className="font-display text-lg text-orech-ink">{SITE.shortName}</p>
-            <p className="mt-4">
-              {SITE.address.street}
-              <br />
-              {SITE.address.postal} {SITE.address.city}, {SITE.address.country}
-            </p>
-          </address>
-          <ul className="mt-6 space-y-3 text-orech-ink/90">
-            <li>
-              <span className="font-mono text-[0.65rem] uppercase tracking-wider text-orech-mist">
-                {t("phoneLabel")}
-              </span>
-              <br />
-              <a
-                href={`tel:${SITE.phoneTel}`}
-                className="text-lg font-medium text-orech-bronze underline-offset-2 hover:text-orech-bronzeMuted transition-colors"
-              >
-                {SITE.phoneDisplay}
-              </a>
-            </li>
-            <li>
-              <span className="font-mono text-[0.65rem] uppercase tracking-wider text-orech-mist">
-                {t("emailLabel")}
-              </span>
-              <br />
-              <a
-                href={`mailto:${SITE.email}`}
-                className="font-medium text-orech-bronze underline-offset-2 hover:text-orech-bronzeMuted transition-colors"
-              >
-                {SITE.email}
-              </a>
-            </li>
-            <li className="pt-2 text-sm text-orech-mist">
-              {SITE.copyrightEntity} · KBO {SITE.kbo} · {SITE.court}
-            </li>
-          </ul>
+          <section className="lg:col-span-5" aria-labelledby="visit-heading">
+            <div className="bg-brand-black p-8 text-brand-white sm:p-10">
+              <h2 id="visit-heading" className="text-2xl">
+                {t("visitHeading")}
+              </h2>
+              <address className="mt-6 flex items-start gap-4 not-italic leading-relaxed text-brand-white/90">
+                <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                <div>
+                  <p className="font-bold text-brand-white">{SITE.shortName}</p>
+                  <p className="mt-1">
+                    {SITE.address.street}
+                    <br />
+                    {SITE.address.postal} {SITE.address.city}, {SITE.address.country}
+                  </p>
+                </div>
+              </address>
+              <ul className="mt-6 space-y-5">
+                <li className="flex items-start gap-4">
+                  <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                  <div>
+                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-white/70">
+                      {t("phoneLabel")}
+                    </p>
+                    <a href={`tel:${SITE.phoneTel}`} className={`text-lg ${link}`}>
+                      {SITE.phoneDisplay}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                  <div>
+                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-white/70">
+                      {t("emailLabel")}
+                    </p>
+                    <a href={`mailto:${SITE.email}`} className={`text-lg ${link}`}>
+                      {SITE.email}
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <p className="mt-8 border-t border-brand-white/25 pt-5 text-xs uppercase tracking-[0.14em] text-brand-white/70">
+                {SITE.copyrightEntity} · KBO {SITE.kbo} · {SITE.court}
+              </p>
+            </div>
+          </section>
         </div>
 
         {/* The map is third-party content: loading the frame hands the
             visitor's IP and a Google cookie to Google before they have said
             anything. It therefore stays behind a consent gate, which renders
             a placeholder until the `functional` category is granted. */}
-        <div className="mt-8 rounded-2xl overflow-hidden border border-orech-line shadow-sm h-[300px]">
-          <ConsentGate
-            category="functional"
-            title={t("mapConsentTitle")}
-            description={t("mapConsentBody")}
-          >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5!2d4.4228!3d51.2118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f5c5b5e5e5%3A0x0!2sLange%20Herentalsestraat%20122%2C%202018%20Antwerpen!5e0!3m2!1sen!2sbe!4v1"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={t("mapTitle", { short: SITE.shortName })}
-          />
+        <div className="mt-14 h-[360px] overflow-hidden border border-brand-black/15 sm:h-[420px]">
+          <ConsentGate category="functional" title={t("mapConsentTitle")} description={t("mapConsentBody")}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5!2d4.4228!3d51.2118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f5c5b5e5e5%3A0x0!2sLange%20Herentalsestraat%20122%2C%202018%20Antwerpen!5e0!3m2!1sen!2sbe!4v1"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={t("mapTitle", { short: SITE.shortName })}
+            />
           </ConsentGate>
         </div>
-      </section>
 
-      <div className="mx-auto mt-12 flex max-w-4xl flex-wrap gap-4 px-4 md:px-6">
-        <Link
-          href="/lawyers"
-          className="inline-flex min-h-11 items-center rounded-lg bg-orech-bronze px-8 py-3 text-sm font-medium uppercase tracking-wider text-white hover:bg-orech-bronzeMuted transition"
-        >
-          {t("ctaLawyers")}
-        </Link>
-        <Link
-          href="/contact"
-          className="inline-flex min-h-11 items-center rounded-lg border border-orech-line px-8 py-3 text-sm font-medium uppercase tracking-wider text-orech-ink hover:border-orech-bronze transition"
-        >
-          {t("ctaContact")}
-        </Link>
-      </div>
-
+        <div className="mt-12 flex flex-wrap gap-4">
+          <Button href="/lawyers" variant="dark" arrow>
+            {t("ctaLawyers")}
+          </Button>
+          <Button href="/contact" variant="outline">
+            {t("ctaContact")}
+          </Button>
+        </div>
+      </SectionShell>
     </main>
   );
 }

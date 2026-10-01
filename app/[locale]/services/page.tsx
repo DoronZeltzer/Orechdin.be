@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { ArrowRight, Globe, ShieldAlert, Scale } from "lucide-react";
+import { Globe, ShieldAlert, Scale } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
+import { Button } from "@/components/ui/button";
+import { PageHeading } from "@/components/ui/headings";
+import { IconTile } from "@/components/ui/icon-tile";
 
 const GROUP_ICONS = [Scale, Globe, ShieldAlert] as const;
 
@@ -24,90 +26,65 @@ export async function generateMetadata({
   });
 }
 
+/** Some translation entries arrive as arrays, some as keyed objects; accept both. */
+function asList<T>(raw: unknown): T[] {
+  if (Array.isArray(raw)) return raw as T[];
+  if (raw && typeof raw === "object") return Object.values(raw) as T[];
+  return [];
+}
+
 export default function ServicesPage() {
   const t = useTranslations("ServicesPage");
-  const groupsRaw = t.raw("groups");
-  const groups = (Array.isArray(groupsRaw) ? groupsRaw : (typeof groupsRaw === 'object' && groupsRaw !== null ? Object.values(groupsRaw) : [])) as Array<{
-    title: string;
-    intro: string;
-    items: string[];
-  }>;
+  const groups = asList<{ title: string; intro: string; items: string[] }>(t.raw("groups"));
 
   return (
-    <main id="main-content" className="bg-orech-paper min-h-screen text-orech-ink selection:bg-orech-bronze/30">
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 container relative z-10 text-center">
-          <p className="eyebrow mb-6">{t("eyebrow")}</p>
-          <h1 className="text-4xl lg:text-6xl font-display font-light tracking-tight text-orech-ink mb-8">
-            {t("headline")}
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-orech-mist font-light">
-            {t("lead", { short: SITE.shortName })}
-          </p>
-        </div>
-      </section>
+    <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
+      <SectionShell background="wash" className="py-14 lg:py-20">
+        <PageHeading eyebrow={t("eyebrow")} title={t("headline")} lead={t("lead", { short: SITE.shortName })} />
+      </SectionShell>
 
-      <SectionShell background="default" className="pt-0 lg:pt-0">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {groups.map((g, idx) => {
-            const Icon = GROUP_ICONS[idx] ?? Scale;
-            return (
-              <div
-                key={g.title}
-                className="p-8 rounded-2xl bg-orech-slate/50 border border-orech-line relative overflow-hidden backdrop-blur-md flex flex-col items-start hover:border-orech-bronze/40 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-xl bg-orech-paper border border-orech-line flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-orech-bronze" aria-hidden />
-                </div>
-                <h3 className="text-xl font-medium text-orech-ink mb-3 group-hover:text-orech-bronze transition-colors">
-                  {g.title}
-                </h3>
-                <p className="text-orech-mist text-sm leading-relaxed flex-1 mb-8">
-                  {g.intro}
-                </p>
-                <ul className="space-y-3 w-full border-t border-orech-line pt-6">
-                  {((Array.isArray(g.items) ? g.items : (typeof g.items === 'object' && g.items !== null ? Object.values(g.items) : [])) as string[]).map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-sm text-orech-ink/80"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-orech-bronze/50" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+      {/* The same card as the homepage's practice areas, so the two read as one. */}
+      <SectionShell background="default">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {groups.map((g, i) => (
+            <article
+              key={g.title}
+              className="flex flex-col border border-brand-black/15 bg-brand-white p-8 transition-colors duration-200 hover:border-brand-black"
+            >
+              <IconTile icon={GROUP_ICONS[i] ?? Scale} />
+              <h2 className="mt-6 text-2xl leading-snug">{g.title}</h2>
+              <p className="mt-3 flex-1 leading-relaxed text-brand-black-80">{g.intro}</p>
+              <ul className="mt-7 space-y-3 border-t border-brand-black/15 pt-6">
+                {asList<string>(g.items).map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[0.95rem]">
+                    <span aria-hidden className="mt-[0.5em] h-2 w-2 shrink-0 bg-brand-blue" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </SectionShell>
 
-      <SectionShell background="default" className="border-t border-brand-black/15">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-3xl font-display font-light text-orech-ink mb-6">
-            {t("intlHeading")}
-          </h2>
-          <p className="text-orech-mist text-lg leading-relaxed font-light mb-8 max-w-3xl mx-auto">
-            {t("intlBody")}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
-            <Link
-              href="/contact"
-              className="px-8 py-3 rounded-lg bg-orech-bronze hover:bg-orech-bronzeMuted text-white text-sm font-medium transition shadow-lg inline-flex items-center gap-2"
-            >
-              {t("ctaContact")} <ArrowRight className="w-4 h-4" aria-hidden />
-            </Link>
-            <Link
-              href="/lawyers"
-              className="px-8 py-3 rounded-lg bg-transparent border border-orech-line hover:border-orech-bronze/50 text-orech-ink text-sm font-medium transition"
-            >
-              {t("ctaLawyerProfiles")}
-            </Link>
+      {/* A black panel on a white section: the page ends white so the footer's
+          fade has white to start from. */}
+      <SectionShell background="default" className="pt-0 lg:pt-0">
+        <div className="bg-brand-black p-8 text-brand-white sm:p-12 lg:p-16">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl sm:text-3xl">{t("intlHeading")}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-brand-white/80">{t("intlBody")}</p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact" arrow>
+                {t("ctaContact")}
+              </Button>
+              <Button href="/lawyers" variant="outline-light">
+                {t("ctaLawyerProfiles")}
+              </Button>
+            </div>
           </div>
         </div>
       </SectionShell>
-
     </main>
   );
 }

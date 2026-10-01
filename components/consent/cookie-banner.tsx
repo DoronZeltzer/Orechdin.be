@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { Button } from "@/components/ui/button";
 import { useConsent } from "@/components/consent/consent-provider";
 import {
   DENY_ALL,
@@ -42,7 +43,7 @@ export function CookieBanner() {
           role="dialog"
           aria-labelledby="cookie-banner-title"
           aria-describedby="cookie-banner-body"
-          className="fixed inset-x-0 bottom-0 z-[90] border-t border-orech-line bg-orech-paper/95 shadow-[0_-8px_30px_rgba(10,10,10,0.08)] backdrop-blur-sm"
+          className="fixed inset-x-0 bottom-0 z-[90] border-t-4 border-brand-black bg-brand-white shadow-[0_-12px_40px_rgba(0,0,0,0.12)]"
         >
           <div className="mx-auto max-w-wide px-6 py-6 lg:px-10">
             <p className="eyebrow">{t("banner.eyebrow")}</p>
@@ -54,7 +55,7 @@ export function CookieBanner() {
             </h2>
             <p
               id="cookie-banner-body"
-              className="mt-3 max-w-3xl text-[0.9rem] leading-relaxed text-orech-mist"
+              className="mt-3 max-w-3xl text-[0.9rem] leading-relaxed text-brand-black-80"
             >
               {t("banner.body")}
             </p>
@@ -70,23 +71,23 @@ export function CookieBanner() {
               <button
                 type="button"
                 onClick={openPrefs}
-                className="inline-flex min-h-11 items-center justify-center px-2 text-sm font-medium text-orech-bronzeMuted underline underline-offset-4 transition-colors hover:text-orech-ink"
+                className="inline-flex min-h-11 items-center justify-center px-2 text-sm font-medium text-brand-black underline underline-offset-4 transition-colors hover:text-orech-ink"
               >
                 {t("banner.managePreferences")}
               </button>
             </div>
 
-            <p className="mt-4 text-[0.78rem] text-orech-mist">
+            <p className="mt-4 text-[0.78rem] text-brand-black-80">
               <Link
                 href="/cookies"
-                className="underline underline-offset-2 hover:text-orech-bronzeMuted"
+                className="underline underline-offset-2 hover:text-brand-black"
               >
                 {t("banner.cookiePolicy")}
               </Link>
               <span aria-hidden="true"> · </span>
               <Link
                 href="/privacy"
-                className="underline underline-offset-2 hover:text-orech-bronzeMuted"
+                className="underline underline-offset-2 hover:text-brand-black"
               >
                 {t("banner.privacyPolicy")}
               </Link>
@@ -112,13 +113,9 @@ function ConsentButton({
   children: React.ReactNode;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-orech-ink px-6 py-2.5 text-sm font-semibold text-orech-paper transition-colors hover:bg-orech-bronzeMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted sm:w-auto sm:min-w-[11rem]"
-    >
+    <Button variant="dark" onClick={onClick} className="w-full sm:w-auto sm:min-w-[11rem]">
       {children}
-    </button>
+    </Button>
   );
 }
 
@@ -154,7 +151,7 @@ function PreferencesDialog() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl border border-orech-line bg-orech-paper p-6 shadow-xl sm:rounded-2xl sm:p-8"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto border-2 border-brand-black bg-brand-white p-6 shadow-xl sm:p-8"
       >
         <p className="eyebrow">{t("prefs.eyebrow")}</p>
         <h2
@@ -165,7 +162,7 @@ function PreferencesDialog() {
         >
           {t("prefs.title")}
         </h2>
-        <p className="mt-3 text-[0.9rem] leading-relaxed text-orech-mist">
+        <p className="mt-3 text-[0.9rem] leading-relaxed text-brand-black-80">
           {t("prefs.intro")}
         </p>
 
@@ -206,27 +203,23 @@ function PreferencesDialog() {
           />
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-orech-line pt-6 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col gap-3 border-t border-brand-black/15 pt-6 sm:flex-row sm:items-center">
           <ConsentButton onClick={refuseAll}>
             {t("prefs.refuseAll")}
           </ConsentButton>
           <ConsentButton onClick={acceptAll}>
             {t("prefs.acceptAll")}
           </ConsentButton>
-          <button
-            type="button"
-            onClick={() => save(draft)}
-            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-orech-ink px-6 py-2.5 text-sm font-semibold text-orech-ink transition-colors hover:bg-orech-slate focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted"
-          >
+          <Button variant="outline" onClick={() => save(draft)} className="w-full sm:w-auto">
             {t("prefs.save")}
-          </button>
+          </Button>
         </div>
 
-        <p className="mt-6 text-[0.78rem] leading-relaxed text-orech-mist">
+        <p className="mt-6 text-[0.78rem] leading-relaxed text-brand-black-80">
           {t("prefs.footnote")}{" "}
           <Link
             href="/cookies"
-            className="underline underline-offset-2 hover:text-orech-bronzeMuted"
+            className="underline underline-offset-2 hover:text-brand-black"
           >
             {t("prefs.cookiePolicy")}
           </Link>
@@ -257,20 +250,20 @@ function CategoryRow({
   toggleLabel?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-orech-line bg-orech-slate/30 p-5">
+    <div className="border border-brand-black/15 bg-brand-wash/50 p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="font-display text-lg text-orech-ink">{name}</h3>
-          <p className="mt-1.5 text-[0.85rem] leading-relaxed text-orech-mist">
+          <p className="mt-1.5 text-[0.85rem] leading-relaxed text-brand-black-80">
             {purpose}
           </p>
-          <p className="mt-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-orech-mist">
+          <p className="mt-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-black-80">
             {duration}
           </p>
         </div>
 
         {locked ? (
-          <span className="shrink-0 rounded-full bg-orech-slate px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-orech-mist">
+          <span className="shrink-0 rounded-[3px] bg-brand-wash px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-brand-black-80">
             {lockedLabel}
           </span>
         ) : (
@@ -281,14 +274,14 @@ function CategoryRow({
             aria-label={toggleLabel}
             onClick={onToggle}
             className={
-              "relative h-7 w-12 shrink-0 rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted " +
-              (checked ? "bg-orech-bronzeMuted" : "bg-orech-mist/40")
+              "relative h-7 w-12 shrink-0 rounded-[3px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted " +
+              (checked ? "bg-brand-black" : "bg-brand-black-40")
             }
           >
             <span
               aria-hidden="true"
               className={
-                "absolute top-1 h-5 w-5 rounded-full bg-orech-paper shadow transition-all " +
+                "absolute top-1 h-5 w-5 rounded-[2px] bg-brand-white shadow transition-all " +
                 (checked ? "left-6" : "left-1")
               }
             />

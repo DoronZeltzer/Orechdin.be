@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { Button } from "@/components/ui/button";
 import { useConsent } from "@/components/consent/consent-provider";
 import { DENY_ALL, type OptionalCategory } from "@/lib/consent";
 
@@ -38,15 +39,15 @@ export function ConsentGate({
   if (allows(category)) return <>{children}</>;
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-orech-slate/40 p-8 text-center">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-brand-wash p-8 text-center">
       <p className="eyebrow">{t("gate.eyebrow")}</p>
       <h3 className="font-display text-lg text-orech-ink">{title}</h3>
-      <p className="max-w-md text-[0.85rem] leading-relaxed text-orech-mist">
+      <p className="max-w-md text-[0.85rem] leading-relaxed text-brand-black-80">
         {description}
       </p>
 
-      <button
-        type="button"
+      <Button
+        variant="dark"
         // Disabled only for the instant before the cookie has been read, so
         // that a visitor who already consented never sees a live "load" button
         // flash before their existing choice is applied.
@@ -57,15 +58,14 @@ export function ConsentGate({
             [category]: true,
           })
         }
-        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-orech-ink px-6 py-2.5 text-sm font-semibold text-orech-paper transition-colors hover:bg-orech-bronzeMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted disabled:opacity-50"
       >
         {t("gate.load")}
-      </button>
+      </Button>
 
-      <p className="text-[0.75rem] text-orech-mist">
+      <p className="text-[0.75rem] text-brand-black-80">
         <Link
           href="/cookies"
-          className="underline underline-offset-2 hover:text-orech-bronzeMuted"
+          className="underline underline-offset-2 hover:text-brand-black"
         >
           {t("gate.cookiePolicy")}
         </Link>

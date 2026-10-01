@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Building2, Mail, MapPin, Phone, Scale, Users } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { LAWYERS, MEDIA, SITE } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
-
-/* ------------------------------------------------------------------ */
-/*  Static-params: tell Next which locales exist                       */
-/* ------------------------------------------------------------------ */
+import { Button } from "@/components/ui/button";
+import { PageHeading, SectionHeading } from "@/components/ui/headings";
+import { IconTile } from "@/components/ui/icon-tile";
 
 export async function generateMetadata({
   params,
@@ -28,292 +27,262 @@ export async function generateMetadata({
   });
 }
 
-/* ------------------------------------------------------------------ */
-/*  Page                                                               */
-/* ------------------------------------------------------------------ */
+/** Icons for the three practice groups, in the order they are published. */
+const GROUP_ICONS = [Scale, Users, Building2] as const;
+
+/** Some translation entries arrive as arrays, some as keyed objects; accept both. */
+function asList<T>(raw: unknown): T[] {
+  if (Array.isArray(raw)) return raw as T[];
+  if (raw && typeof raw === "object") return Object.values(raw) as T[];
+  return [];
+}
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
-  const tCommon = useTranslations("Common");
 
-  /* ── Practice groups ─────────────────────────────────────────────── */
-  const groupsRaw = t.raw("practice.groups");
-  const groups = (
-    Array.isArray(groupsRaw) ? groupsRaw : typeof groupsRaw === "object" && groupsRaw !== null ? Object.values(groupsRaw) : []
-  ) as Array<{ kicker: string; title: string; body: string; items: string[] }>;
+  const groups = asList<{ kicker: string; title: string; body: string; items: string[] }>(t.raw("practice.groups"));
+  const pillars = asList<{ title: string; body: string }>(t.raw("pillars.items"));
+  const reasons = asList<{ roman: string; title: string; body: string }>(t.raw("reasons.items"));
 
-  /* ── Pillar items ────────────────────────────────────────────────── */
-  const pillarsRaw = t.raw("pillars.items");
-  const pillars = (
-    Array.isArray(pillarsRaw) ? pillarsRaw : typeof pillarsRaw === "object" && pillarsRaw !== null ? Object.values(pillarsRaw) : []
-  ) as Array<{ title: string; body: string }>;
-
-  /* ── Reasons items ───────────────────────────────────────────────── */
-  const reasonsRaw = t.raw("reasons.items");
-  const reasons = (
-    Array.isArray(reasonsRaw) ? reasonsRaw : typeof reasonsRaw === "object" && reasonsRaw !== null ? Object.values(reasonsRaw) : []
-  ) as Array<{ roman: string; title: string; body: string }>;
+  const contactLink =
+    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-black hover:text-brand-white";
 
   return (
-    <main id="main-content" className="bg-orech-paper text-orech-ink selection:bg-orech-bronze/30">
+    <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
+      {/* ═════════════════════════════ HERO ═════════════════════════════
+          A split: the message on clean white, the photograph beside it.
+          The photograph used to sit under three white washes and was almost
+          invisible. Per the brand guidelines (06.1) background images may be
+          slightly washed out or carry an overlay in the accent blue, so it is
+          lightly desaturated and tinted blue, and otherwise left to be seen. */}
+      <section className="grid min-h-[min(84vh,800px)] lg:grid-cols-2">
+        <div className="flex items-center px-6 py-14 sm:px-10 lg:py-24 lg:pl-16 lg:pr-12 xl:pl-[max(4rem,calc((100vw-78rem)/2+4rem))]">
+          <div className="reveal max-w-xl">
+            <PageHeading
+              eyebrow={t("hero.eyebrow", { city: SITE.address.city })}
+              title={
+                <>
+                  {t("hero.h1Line1")}
+                  <br />
+                  <em>{t("hero.h1Italic")}</em>
+                </>
+              }
+              lead={t("hero.lead", { short: SITE.shortName })}
+              // The hero heading shares the screen with the photograph, so it is
+              // sized to its half-width column; "vertegenwoordiging," is the
+              // longest word and must fit on one line.
+              // tailwind-merge drops `leading-*` when a later `text-*` size is given (a size
+              // class normally carries its own line-height), so it is restated here.
+              titleClassName="text-[length:clamp(2rem,3.4vw,2.9rem)] sm:text-[length:clamp(2rem,3.4vw,2.9rem)] lg:text-[length:clamp(2rem,3.4vw,2.9rem)] leading-[1.1]"
+              className="max-w-none"
+            />
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/contact" arrow>
+                {t("hero.primaryCta")}
+              </Button>
+              <Button href="/services" variant="outline">
+                {t("hero.secondaryCta")}
+              </Button>
+            </div>
+          </div>
+        </div>
 
-      {/* ═══════════════════════════════ HERO ═══════════════════════════════ */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
+        <div className="relative min-h-[320px] bg-brand-wash lg:min-h-0">
           <Image
             src={MEDIA.heroBg}
             alt={t("hero.imageAlt")}
             fill
             priority
-            quality={90}
-            className="object-cover object-center [filter:saturate(0.62)_brightness(1.05)]"
-            sizes="100vw"
+            quality={85}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover object-[62%_50%] [filter:saturate(0.78)]"
           />
-          {/* Brand mood: cool the image with a wash in the primary accent
-              blue (per the guidelines' image-overlay treatment). */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orech-bronze/40 via-orech-bronze/12 to-transparent mix-blend-multiply" />
-          {/* White legibility gradients so black hero text stays readable. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-orech-paper/95 via-orech-paper/80 to-orech-paper/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-orech-paper via-transparent to-transparent" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-wide w-full px-6 sm:px-10 lg:px-16 py-32 lg:py-40">
-          <div className="max-w-2xl reveal">
-            <p className="eyebrow mb-6 reveal reveal-delay-1">
-              {t("hero.eyebrow", { city: SITE.address.city })}
-            </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light tracking-tight text-orech-ink leading-[1.1] reveal reveal-delay-2">
-              {t("hero.h1Line1")}
-              <br />
-              <em className="italic-display">{t("hero.h1Italic")}</em>
-            </h1>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-orech-ink/80 font-light reveal reveal-delay-3">
-              {t("hero.lead", { short: SITE.shortName })}
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 reveal reveal-delay-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-orech-ink shadow-lg transition hover:bg-orech-bronzeMuted hover:text-white hover:shadow-xl"
-              >
-                {t("hero.primaryCta")} <ArrowRight className="w-4 h-4" aria-hidden />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 rounded-lg border border-orech-line bg-orech-paper/60 px-8 py-3.5 text-sm font-medium uppercase tracking-wider text-orech-ink backdrop-blur-sm transition hover:border-orech-bronze/50 hover:bg-orech-paper"
-              >
-                {t("hero.secondaryCta")}
-              </Link>
-            </div>
-          </div>
-
-          {/* Stamp */}
-          <div className="absolute right-10 bottom-16 hidden lg:flex flex-col items-end gap-1 text-right reveal reveal-delay-5">
-            <span className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-orech-mist">
-              {t("hero.captionStamp")}
-            </span>
-            <span className="font-display text-[3rem] font-light text-orech-bronze/20 leading-none">
-              1999
-            </span>
+          <div aria-hidden className="absolute inset-0 bg-brand-blue/20 mix-blend-multiply" />
+          {/* A solid field for the caption, as the guidelines show for text over
+              photographs (06.2). */}
+          <div className="absolute bottom-0 left-0 bg-brand-blue px-7 py-5 text-brand-black">
+            <p className="text-[0.72rem] font-bold uppercase tracking-[0.2em]">{t("hero.captionStamp")}</p>
+            <p className="mt-1 text-5xl font-extrabold leading-none">1999</p>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════ PILLARS ════════════════════════════════ */}
-      <SectionShell background="elevated" id="pillars">
-        <div className="text-center mb-16">
-          <p className="eyebrow mb-4">{t("pillars.eyebrow")}</p>
-          <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
-            {t("pillars.headlinePart1")}{" "}
-            <em className="italic-display">{t("pillars.headlineItalic")}</em>{" "}
-            {t("pillars.headlinePart2")}
-          </h2>
-          <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed text-orech-mist font-light">
-            {t("pillars.lead")}
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* ═══════════════════════════ PILLARS ═══════════════════════════ */}
+      <SectionShell background="wash" id="pillars">
+        <SectionHeading
+          eyebrow={t("pillars.eyebrow")}
+          title={
+            <>
+              {t("pillars.headlinePart1")} <em>{t("pillars.headlineItalic")}</em> {t("pillars.headlinePart2")}
+            </>
+          }
+          lead={t("pillars.lead")}
+          className="max-w-4xl"
+        />
+        <div className="mt-12 grid gap-px bg-brand-black/15 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p, i) => (
-            <div
-              key={p.title}
-              className="plate p-8 flex flex-col items-start card-lift"
-            >
-              <span className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.22em] text-orech-bronze mb-4">
-                0{i + 1}
-              </span>
-              <h3 className="text-lg font-medium text-orech-ink mb-3">
-                {p.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-orech-mist flex-1">
-                {p.body}
-              </p>
+            <div key={p.title} className="bg-brand-white p-8">
+              <p className="text-sm font-extrabold tracking-[0.18em]">{String(i + 1).padStart(2, "0")}</p>
+              <h3 className="mt-5 text-xl leading-snug">{p.title}</h3>
+              <p className="mt-3 leading-relaxed text-brand-black-80">{p.body}</p>
             </div>
           ))}
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ PRACTICE ═══════════════════════════════ */}
+      {/* ═══════════════════════════ PRACTICE ══════════════════════════ */}
       <SectionShell background="default" id="practice">
-        <div className="mb-16">
-          <p className="eyebrow mb-4">{t("practice.eyebrow")}</p>
-          <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink max-w-3xl">
-            {t("practice.headlinePart1")}{" "}
-            <em className="italic-display">{t("practice.headlineItalic")}</em>
-          </h2>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-orech-mist font-light">
-            {t("practice.lead")}
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {groups.map((g) => (
-            <div
+        <SectionHeading
+          eyebrow={t("practice.eyebrow")}
+          title={
+            <>
+              {t("practice.headlinePart1")} <em>{t("practice.headlineItalic")}</em>
+            </>
+          }
+          lead={t("practice.lead")}
+          className="max-w-4xl"
+        />
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {groups.map((g, i) => (
+            <article
               key={g.title}
-              className="p-8 rounded-2xl bg-orech-slate/50 border border-orech-line relative overflow-hidden backdrop-blur-md flex flex-col items-start hover:border-orech-bronze/40 transition-colors card-lift"
+              className="flex flex-col border border-brand-black/15 bg-brand-white p-8 transition-colors duration-200 hover:border-brand-black"
             >
-              <span className="eyebrow mb-4">{g.kicker}</span>
-              <h3 className="text-xl font-medium text-orech-ink mb-3">
-                {g.title}
-              </h3>
-              <p className="text-orech-mist text-sm leading-relaxed flex-1 mb-8">
-                {g.body}
-              </p>
-              <ul className="space-y-3 w-full border-t border-orech-line pt-6">
-                {((Array.isArray(g.items) ? g.items : typeof g.items === "object" && g.items !== null ? Object.values(g.items) : []) as string[]).map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-sm text-orech-ink/80"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-orech-bronze/50" />
+              <IconTile icon={GROUP_ICONS[i] ?? Scale} />
+              <p className="mt-6 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{g.kicker}</p>
+              <h3 className="mt-2 text-2xl leading-snug">{g.title}</h3>
+              <p className="mt-3 flex-1 leading-relaxed text-brand-black-80">{g.body}</p>
+              <ul className="mt-7 space-y-3 border-t border-brand-black/15 pt-6">
+                {asList<string>(g.items).map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[0.95rem]">
+                    <span aria-hidden className="mt-[0.5em] h-2 w-2 shrink-0 bg-brand-blue" />
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-sm font-medium text-orech-bronze hover:text-orech-bronzeMuted transition-colors"
-          >
-            {t("practice.openServices")} <ArrowRight className="w-4 h-4" aria-hidden />
-          </Link>
+        <div className="mt-10">
+          <Button href="/services" variant="outline" arrow>
+            {t("practice.openServices")}
+          </Button>
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ REASONS ════════════════════════════════ */}
-      <SectionShell background="accent" id="reasons">
-        <div className="text-center mb-16">
-          <p className="eyebrow mb-4">{t("reasons.eyebrow")}</p>
-          <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
-            {t("reasons.headlinePart1")}{" "}
-            <em className="italic-display">{t("reasons.headlineItalic")}</em>{" "}
-            {t("reasons.headlinePart2")}
-          </h2>
-          <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed text-orech-mist font-light">
-            {t("reasons.lead")}
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
+      {/* ═══════════════════════════ REASONS ═══════════════════════════
+          A black band: the one dark moment on the page, in the way the
+          guidelines' slogan pages are black with white and blue type. */}
+      <SectionShell background="dark" id="reasons">
+        <SectionHeading
+          tone="dark"
+          eyebrow={t("reasons.eyebrow")}
+          title={
+            <>
+              {t("reasons.headlinePart1")} <em>{t("reasons.headlineItalic")}</em> {t("reasons.headlinePart2")}
+            </>
+          }
+          lead={t("reasons.lead")}
+          className="max-w-4xl"
+        />
+        <div className="mt-14 grid gap-x-14 gap-y-12 sm:grid-cols-2">
           {reasons.map((r) => (
-            <div key={r.roman} className="flex gap-5">
-              <span className="font-display text-3xl font-light text-orech-bronze/40 leading-none mt-1 shrink-0 w-12 text-right">
-                {r.roman}
-              </span>
-              <div>
-                <h3 className="text-lg font-medium text-orech-ink mb-2">{r.title}</h3>
-                <p className="text-sm leading-relaxed text-orech-mist">{r.body}</p>
-              </div>
+            <div key={r.roman} className="border-t border-brand-white/25 pt-6">
+              <p className="text-4xl font-extrabold leading-none text-brand-blue">{r.roman}</p>
+              <h3 className="mt-5 text-xl text-brand-white">{r.title}</h3>
+              <p className="mt-3 leading-relaxed text-brand-white/80">{r.body}</p>
             </div>
           ))}
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ LAWYERS ════════════════════════════════ */}
+      {/* ═══════════════════════════ LAWYERS ═══════════════════════════ */}
       <SectionShell background="wash" id="lawyers">
-        <div className="text-center mb-16">
-          <p className="eyebrow mb-4">{t("lawyers.eyebrow")}</p>
-          <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
-            {t("lawyers.headlinePart1")}{" "}
-            <em className="italic-display">{t("lawyers.headlineItalic")}</em>
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <SectionHeading
+          eyebrow={t("lawyers.eyebrow")}
+          title={
+            <>
+              {t("lawyers.headlinePart1")} <em>{t("lawyers.headlineItalic")}</em>
+            </>
+          }
+        />
+        <div className="mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
           {LAWYERS.map((lawyer, i) => (
             <Link
               key={lawyer.slug}
               href={`/lawyers#${lawyer.slug}`}
-              className="group plate p-6 flex flex-col items-center text-center card-lift"
+              className="group block bg-brand-white transition-shadow duration-200 hover:shadow-plate"
             >
-              <div className="relative h-40 w-40 overflow-hidden rounded-2xl border border-orech-line mb-6">
+              <div className="relative aspect-[4/5] overflow-hidden bg-brand-wash">
                 <Image
                   src={i === 0 ? MEDIA.nirPhoto : MEDIA.deborahPhoto}
                   alt={lawyer.name}
                   fill
-                  quality={92}
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="160px"
+                  quality={90}
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  sizes="(min-width: 640px) 380px, 100vw"
                 />
               </div>
-              <h3 className="font-display text-2xl text-orech-ink group-hover:text-orech-bronze transition-colors">
-                {lawyer.name}
-              </h3>
-              <p className="mt-1 text-sm text-orech-bronze">{lawyer.role}</p>
+              <div className="p-6">
+                <h3 className="text-2xl">{lawyer.name}</h3>
+                <p className="mt-1 text-brand-black-80">{lawyer.role}</p>
+              </div>
             </Link>
           ))}
         </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            href="/lawyers"
-            className="inline-flex items-center gap-2 text-sm font-medium text-orech-bronze hover:text-orech-bronzeMuted transition-colors"
-          >
-            {t("lawyers.allProfiles")} <ArrowRight className="w-4 h-4" aria-hidden />
-          </Link>
+        <div className="mt-10">
+          <Button href="/lawyers" variant="dark" arrow>
+            {t("lawyers.allProfiles")}
+          </Button>
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ CONTACT CTA ═══════════════════════════ */}
+      {/* ═══════════════════════════ CONTACT ═══════════════════════════
+          The page ends on white (the footer fades from white into its blue),
+          with the call to action as a blue panel on it. */}
       <SectionShell background="default" id="contact-cta">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">{t("contact.eyebrow")}</p>
-          <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
-            {t("contact.headlinePart1")}{" "}
-            <em className="italic-display">{t("contact.headlineItalic")}</em>
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-orech-mist font-light max-w-2xl mx-auto">
-            {t("contact.lead")}
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-orech-bronze px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-orech-ink shadow-lg transition hover:bg-orech-bronzeMuted hover:text-white hover:shadow-xl"
-            >
-              {t("contact.primaryCta")} <ArrowRight className="w-4 h-4" aria-hidden />
-            </Link>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-orech-line/50">
-            <p className="eyebrow mb-3">{t("contact.asideEyebrow")}</p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-orech-mist">
-              <a href={`tel:${SITE.phoneTel}`} className="hover:text-orech-bronze transition-colors">
-                {SITE.phoneDisplay}
-              </a>
-              <a href={`mailto:${SITE.email}`} className="hover:text-orech-bronze transition-colors">
-                {SITE.email}
-              </a>
-              <span>{SITE.address.singleLine}</span>
+        <div className="grid gap-12 bg-brand-blue p-8 sm:p-12 lg:grid-cols-5 lg:gap-16 lg:p-16">
+          <div className="lg:col-span-3">
+            <SectionHeading
+              tone="blue"
+              eyebrow={t("contact.eyebrow")}
+              title={
+                <>
+                  {t("contact.headlinePart1")} <em>{t("contact.headlineItalic")}</em>
+                </>
+              }
+              lead={t("contact.lead")}
+            />
+            <div className="mt-8">
+              <Button href="/contact" variant="dark" arrow>
+                {t("contact.primaryCta")}
+              </Button>
             </div>
           </div>
+
+          <div className="lg:col-span-2">
+            <p className="eyebrow text-brand-black before:bg-brand-black">{t("contact.asideEyebrow")}</p>
+            <ul className="mt-6 space-y-5 text-lg">
+              <li className="flex items-start gap-4">
+                <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                <a href={`tel:${SITE.phoneTel}`} className={contactLink}>
+                  {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li className="flex items-start gap-4">
+                <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                <a href={`mailto:${SITE.email}`} className={contactLink}>
+                  {SITE.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-4">
+                <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
+                <span>{SITE.address.singleLine}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </SectionShell>
-
     </main>
   );
 }
