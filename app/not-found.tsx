@@ -24,7 +24,6 @@ export default function GlobalNotFound() {
             <h1 className="display-headline text-4xl md:text-5xl">
               Pagina niet gevonden
             </h1>
-            <div className="rule-gold" aria-hidden />
             <p className="lead max-w-prose text-lg text-orech-ink/80">
               De pagina die u zoekt bestaat niet of is verplaatst. Keer terug
               naar de startpagina of neem contact op met het kantoor.

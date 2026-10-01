@@ -23,7 +23,6 @@ export async function generateMetadata({
 
 export default function OfficePage() {
   const t = useTranslations("OfficePage");
-  const tDisclaimer = useTranslations("Disclaimer");
   const bulletsRaw = t.raw("bullets");
   const bullets = (Array.isArray(bulletsRaw) ? bulletsRaw : (typeof bulletsRaw === 'object' && bulletsRaw !== null ? Object.values(bulletsRaw) : [])) as string[];
 
@@ -156,9 +155,6 @@ export default function OfficePage() {
         </Link>
       </div>
 
-      <p className="mx-auto mt-16 max-w-4xl px-4 text-sm text-orech-mist/65 md:px-6">
-        {tDisclaimer("body")}
-      </p>
     </main>
   );
 }

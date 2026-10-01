@@ -15,7 +15,6 @@ export default async function LocaleNotFound() {
       <div className="mx-auto flex max-w-editorial flex-col gap-10 px-6 py-24 lg:px-10 lg:py-32">
         <p className="eyebrow">{t("eyebrow")}</p>
         <h1 className="display-headline text-4xl md:text-5xl">{t("title")}</h1>
-        <div className="rule-gold" aria-hidden />
         <p className="lead max-w-prose text-lg text-orech-ink/80">{t("lead")}</p>
 
         <div className="flex flex-wrap gap-4 pt-4">

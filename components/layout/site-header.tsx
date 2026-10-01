@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { MEDIA, SITE } from "@/lib/site";
@@ -79,19 +78,11 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={`relative rounded-md px-3 py-2 text-[0.82rem] font-medium tracking-wide transition hover:text-orech-ink focus-visible:outline-none focus-visible:bg-orech-bronze/10 ${
-                  active ? "text-orech-ink" : "text-orech-mist"
+                  active ? "font-bold text-orech-ink" : "text-orech-ink/70"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
                 <span className="font-sans">{tNav(item.key)}</span>
-                {active && (
-                  <motion.div
-                    layoutId="activeNavIndicator"
-                    className="absolute bottom-1 left-3 right-3 h-px bg-orech-bronze"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    aria-hidden
-                  />
-                )}
               </Link>
             );
           })}
@@ -110,8 +101,8 @@ export function SiteHeader() {
                   translate="no"
                   className={`transition-colors ${
                     l.code === locale
-                      ? "text-orech-ink underline decoration-orech-bronze underline-offset-4"
-                      : "text-orech-mist hover:text-orech-bronze"
+                      ? "font-bold text-orech-ink"
+                      : "text-orech-ink/70 hover:text-orech-ink"
                   }`}
                   aria-current={l.code === locale ? "true" : undefined}
                 >
@@ -152,7 +143,7 @@ export function SiteHeader() {
                 hrefLang={l.code}
                 translate="no"
                 onClick={() => setMenuOpen(false)}
-                className={l.code === locale ? "text-orech-ink underline decoration-orech-bronze underline-offset-4" : ""}
+                className={l.code === locale ? "font-bold text-orech-ink" : ""}
               >
                 {l.label}
               </a>

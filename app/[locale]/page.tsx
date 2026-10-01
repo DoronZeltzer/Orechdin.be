@@ -35,7 +35,6 @@ export async function generateMetadata({
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const tCommon = useTranslations("Common");
-  const tDisclaimer = useTranslations("Disclaimer");
 
   /* ── Practice groups ─────────────────────────────────────────────── */
   const groupsRaw = t.raw("practice.groups");
@@ -235,7 +234,7 @@ export default function HomePage() {
       </SectionShell>
 
       {/* ═══════════════════════════ LAWYERS ════════════════════════════════ */}
-      <SectionShell background="default" id="lawyers">
+      <SectionShell background="wash" id="lawyers">
         <div className="text-center mb-16">
           <p className="eyebrow mb-4">{t("lawyers.eyebrow")}</p>
           <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
@@ -280,7 +279,7 @@ export default function HomePage() {
       </SectionShell>
 
       {/* ═══════════════════════════ CONTACT CTA ═══════════════════════════ */}
-      <SectionShell background="elevated" id="contact-cta">
+      <SectionShell background="default" id="contact-cta">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">{t("contact.eyebrow")}</p>
           <h2 className="text-3xl lg:text-5xl font-display font-light tracking-tight text-orech-ink">
@@ -315,12 +314,6 @@ export default function HomePage() {
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ DISCLAIMER ═════════════════════════════ */}
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <p className="text-xs leading-relaxed text-orech-mist/60 text-center">
-          {tDisclaimer("body")}
-        </p>
-      </div>
     </main>
   );
 }

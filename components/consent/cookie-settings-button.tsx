@@ -28,7 +28,7 @@ export function CookieSettingsButton({
       onClick={openPrefs}
       className={
         className ??
-        "text-left transition-colors hover:text-orech-bronze"
+        "text-left transition-colors hover:underline hover:decoration-1 hover:underline-offset-4"
       }
     >
       {t("settingsLink")}

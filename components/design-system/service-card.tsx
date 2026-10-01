@@ -60,8 +60,6 @@ export function ServiceCard({
           {title}
         </h4>
 
-        <span aria-hidden className="rule-gold mb-5" />
-
         <p className="text-[0.95rem] leading-relaxed text-orech-mist">
           {description}
         </p>

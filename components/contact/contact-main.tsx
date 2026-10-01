@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { PageHeading } from "@/components/ui/headings";
@@ -10,14 +9,14 @@ import { ContactForm } from "@/components/contact/contact-form";
  *
  * The details sit on a black card so the page has one clear second focal point
  * next to the form. Every piece of content from the earlier page is kept: the
- * address, phone, email, company number, the disclaimer and the privacy link.
+ * address, phone, email and company number. The disclaimer now lives in the
+ * footer on every page, so it is no longer repeated here.
  */
 export function ContactMain() {
   const t = useTranslations("ContactPage");
-  const tDisclaimer = useTranslations("Disclaimer");
 
   const link =
-    "font-bold underline decoration-brand-blue decoration-2 underline-offset-4 transition-colors hover:bg-brand-blue hover:text-brand-black";
+    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue hover:text-brand-black";
 
   return (
     <>
@@ -60,13 +59,6 @@ export function ContactMain() {
               </p>
             </div>
 
-            <p className="mt-6 text-sm leading-relaxed text-brand-black-60">
-              {tDisclaimer("body")}{" "}
-              <Link href="/privacy" className="font-bold text-brand-black underline decoration-brand-blue decoration-2 underline-offset-4 hover:bg-brand-blue">
-                {t("privacyLink")}
-              </Link>
-              .
-            </p>
           </aside>
         </div>
       </SectionShell>

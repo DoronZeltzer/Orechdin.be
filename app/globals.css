@@ -37,24 +37,17 @@
     font-weight: 800 !important;
   }
 
-  /* Emphasis inside a heading. The brand font has no italic, and the
-     guidelines never use one, so emphasis is a marker highlight instead: black
-     text over a band of the accent blue (black on #95b6df is about 9:1, where
-     blue text on white would fail). Also exposed as `.italic-display`. */
+  /* Emphasis inside a heading. The brand font has no italic and the guidelines
+     use none, so an <em> is simply set in the heading's own bold. There is
+     deliberately no underline, marker or colour: the site carries no blue line
+     under words. Also exposed as `.italic-display` for older markup. */
   h1 em,
   h2 em,
   h3 em,
   .italic-display {
     font-style: normal;
-    font-weight: 800;
+    font-weight: inherit;
     color: inherit;
-    background-image: linear-gradient(
-      to top,
-      theme("colors.brand.blue") 0.34em,
-      transparent 0.34em
-    );
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 
   /* Focus must be visible against white. The accent blue is only about 2.1:1
@@ -107,18 +100,6 @@
   .lead {
     @apply font-prose text-lg leading-relaxed text-orech-ink/85;
     font-feature-settings: "kern", "liga", "onum";
-  }
-
-  /* Hairline rule used under H2s as an editorial accent. */
-  /* Short brand accent bar in #95b6df — echoes the blue marker used before
-     each section header in the brand guidelines. */
-  .rule-gold {
-    display: block;
-    width: 2.75rem;
-    height: 3px;
-    background-color: theme("colors.orech.bronze");
-    opacity: 1;
-    margin-top: 1rem;
   }
 
   /* Hairline-bordered plate. Replaces 1px borders on premium cards. */

@@ -26,7 +26,6 @@ export async function generateMetadata({
 
 export default function ServicesPage() {
   const t = useTranslations("ServicesPage");
-  const tDisclaimer = useTranslations("Disclaimer");
   const groupsRaw = t.raw("groups");
   const groups = (Array.isArray(groupsRaw) ? groupsRaw : (typeof groupsRaw === 'object' && groupsRaw !== null ? Object.values(groupsRaw) : [])) as Array<{
     title: string;
@@ -83,7 +82,7 @@ export default function ServicesPage() {
         </div>
       </SectionShell>
 
-      <SectionShell background="elevated">
+      <SectionShell background="default" className="border-t border-brand-black/15">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl lg:text-3xl font-display font-light text-orech-ink mb-6">
             {t("intlHeading")}
@@ -109,11 +108,6 @@ export default function ServicesPage() {
         </div>
       </SectionShell>
 
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <p className="text-xs leading-relaxed text-orech-mist/60 text-center">
-          {tDisclaimer("body")}
-        </p>
-      </div>
     </main>
   );
 }

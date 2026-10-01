@@ -24,7 +24,6 @@ export async function generateMetadata({
 export default function LawyersPage() {
   const t = useTranslations("LawyersPage");
   const tCommon = useTranslations("Common");
-  const tDisclaimer = useTranslations("Disclaimer");
 
   return (
     <main id="main-content" className="pb-24 pt-12 md:pt-20 bg-orech-mist/5">
@@ -153,9 +152,6 @@ export default function LawyersPage() {
         </Link>
       </div>
 
-      <p className="mx-auto mt-12 max-w-4xl px-4 text-sm text-orech-ink/65 md:px-6">
-        {tDisclaimer("body")}
-      </p>
     </main>
   );
 }
