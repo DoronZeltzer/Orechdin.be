@@ -1,19 +1,40 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 /**
- * `SectionShell` — the canonical full-width section wrapper.
+ * `SectionShell`: the full-width wrapper every page section sits in.
  *
- * Geometry (the entire site reads to one rhythm):
- *   - vertical: `py-24 lg:py-36` editorial breathing room
- *   - container: 78rem `max-w-wide` — generous on desktop, balanced on tablet
- *   - gutters: 1.5rem → 4rem at lg, mirroring a printed monograph
+ * Rhythm: the old shell used `py-24 lg:py-36` on every section, which made the
+ * homepage very long with nothing standing out. `py-16 lg:py-24` keeps the air
+ * but lets the page breathe at a reading pace. Sections now alternate between
+ * surfaces so the eye can tell where one idea ends and the next begins.
  *
- * Backgrounds:
- *   - `default`  — paper, no chrome
- *   - `elevated` — warm ivory plate with a hairline rule top + bottom
- *   - `accent`   — paper with a single soft bronze gradient wash, used at
- *                  most twice per page so it never reads as decoration
+ * Surfaces are the brand's own colours (guidelines section 03):
+ *   - `default`  white
+ *   - `wash`     #d0e1ee, which the guidelines reserve for backgrounds
+ *   - `dark`     black, text in white
+ *   - `blue`     the accent #95b6df, text in black
+ *
+ * `elevated` and `accent` are the old names. They are kept so pages not yet
+ * redesigned keep rendering, and map to `wash` and `default`.
  */
+type Background = "default" | "wash" | "dark" | "blue" | "elevated" | "accent";
+
+const SURFACE: Record<Background, string> = {
+  default: "bg-brand-white text-brand-black",
+  wash: "bg-brand-wash text-brand-black",
+  dark: "bg-brand-black text-brand-white",
+  blue: "bg-brand-blue text-brand-black",
+  elevated: "bg-brand-wash text-brand-black",
+  accent: "bg-brand-white text-brand-black",
+};
+
+const WIDTH = {
+  editorial: "max-w-editorial",
+  wide: "max-w-wide",
+  narrow: "max-w-narrow",
+} as const;
+
 export function SectionShell({
   children,
   className = "",
@@ -24,41 +45,16 @@ export function SectionShell({
   children: React.ReactNode;
   className?: string;
   id?: string;
-  background?: "default" | "elevated" | "accent";
+  background?: Background;
   /** `editorial` (66rem) for prose-heavy content, `wide` (78rem) for layouts. */
-  width?: "editorial" | "wide" | "narrow";
+  width?: keyof typeof WIDTH;
 }) {
-  const bgClasses = {
-    default: "bg-orech-paper",
-    elevated:
-      "bg-orech-slate/70 [background-image:linear-gradient(to_bottom,transparent,transparent)] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-orech-line/80 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-orech-line/80",
-    accent: "bg-orech-paper relative overflow-hidden",
-  } as const;
-
-  const widthClasses = {
-    editorial: "max-w-editorial",
-    wide: "max-w-wide",
-    narrow: "max-w-narrow",
-  } as const;
-
   return (
     <section
       id={id}
-      className={`relative w-full py-24 lg:py-36 ${bgClasses[background]} ${className}`}
+      className={cn("relative w-full py-16 lg:py-24", SURFACE[background], className)}
     >
-      {background === "accent" && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-30"
-        >
-          <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-orech-bronze/8 to-transparent blur-3xl" />
-        </div>
-      )}
-      <div
-        className={`relative z-10 mx-auto px-6 sm:px-10 lg:px-16 ${widthClasses[width]}`}
-      >
-        {children}
-      </div>
+      <div className={cn("mx-auto px-6 sm:px-10 lg:px-16", WIDTH[width])}>{children}</div>
     </section>
   );
 }

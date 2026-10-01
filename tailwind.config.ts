@@ -1,31 +1,28 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Orechdin design tokens.
+ * Orechdin design tokens, taken from the Brand Guidelines PDF and nothing else.
  *
- * The palette and type stack are tuned for an Antwerp law firm — closer to a
- * museum monograph than a marketing site. Rules of the system:
+ *   1. Colour (guidelines section 03)
+ *      - White `#ffffff` and black `#000000`, with black tints at 80/60/40/20%.
+ *      - Accent blue `#95b6df`: "the main colour", usable for any element or
+ *        background. On white it is too pale to carry text (about 2.1:1), so it
+ *        is used for fills, bars and rules, and black carries the text. Black
+ *        on the blue is about 9:1.
+ *      - Wash blue `#d0e1ee`: "only for the overlays and backgrounds".
+ *      Nothing outside this set may be added. The previous palette had drifted:
+ *      a near-black, a different pale blue, a cool grey and two extra blues.
  *
- *   1. Type
- *      - `font-display`        → Playfair Display, light/regular weights, headlines.
- *      - `font-display-italic` → Cormorant Garamond Italic, used for the
- *                                  firm's signature italic pulls (eyebrows, em
- *                                  in headlines, pull quotes).
- *      - `font-prose`          → Source Serif 4, all long-form body copy.
- *      - `font-sans`           → Inter, UI chrome only (nav, buttons, labels).
- *      - `font-mono`           → JetBrains Mono, monospaced eyebrows/numerics.
- *
- *   2. Colour
- *      - Ink, paper, mist, slate, line, bronze.
- *      - Bronze is the accent, NEVER a brand surface. Use it for one element
- *        per viewport at most.
+ *   2. Type (section 02)
+ *      One family, Egyptian Slate Pro, stood in for here by Roboto Slab (see
+ *      app/[locale]/layout.tsx for how it was chosen). Regular for text, Bold
+ *      for headings. The guidelines' Copperplate is for the logo only.
  *
  *   3. Geometry
- *      - Container widths capped at `editorial` (66rem) for prose-heavy work
- *        and `wide` (78rem) for two-column layouts.
- *      - Hairline borders (`hairline` shadow) carry more authority than a
- *        1px border in this palette.
+ *      - `editorial` (66rem) for prose-heavy pages, `wide` (78rem) for layouts.
  */
+const slab = ["var(--font-slab)", "Rockwell", "Georgia", "serif"];
+
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -34,42 +31,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette (per Orechdin Brand Guidelines): white + black base,
-        // with the #95b6df blue as the single accent and #d0e1ee as the light
-        // overlay/surface tint. Token NAMES are kept (bronze/slate/etc.) so the
-        // whole component tree adopts the new palette without edits — only the
-        // VALUES change.
+        // The brand palette under its own names. New code should use these.
+        brand: {
+          white: "#FFFFFF",
+          black: "#000000",
+          blue: "#95B6DF", // accent: fills, bars, rules, highlights
+          wash: "#D0E1EE", // overlays and backgrounds only
+          "black-80": "#333333",
+          "black-60": "#666666",
+          "black-40": "#999999",
+          "black-20": "#CCCCCC",
+        },
+        // Older token names, mapped onto the palette above so pages that have
+        // not been redesigned yet already render in brand colours.
         orech: {
-          ink: "#0A0A0A", // brand black — text & logo
-          slate: "#DCE8F5", // light blue surface (from the #d0e1ee family)
-          mist: "#5C6674", // cool neutral grey for muted/secondary text
-          paper: "#FFFFFF", // brand white — the base surface
-          bronze: "#95B6DF", // brand accent blue — bars, rules, focus, fills
-          bronzeMuted: "#3E6DA6", // deeper blue for accent TEXT/links (legible on white)
-          gold: "#6E97C9", // secondary blue for subtle highlights
-          line: "#DCE6F1", // hairline: soft blue-grey
-          lineSoft: "rgba(10,10,10,0.08)", // hairline-on-white at low alpha
+          ink: "#000000", // brand black: text and logo
+          paper: "#FFFFFF", // brand white: the base surface
+          bronze: "#95B6DF", // brand accent blue
+          slate: "#D0E1EE", // brand wash blue: backgrounds
+          mist: "#666666", // black at 60%: secondary text (5.7:1 on white)
+          line: "#CCCCCC", // black at 20%: hairlines
+          lineSoft: "rgba(0,0,0,0.08)",
+          bronzeMuted: "#000000", // was a non-brand blue for text; text is black now
+          gold: "#95B6DF", // was a non-brand blue; folded into the accent
         },
       },
       fontFamily: {
-        // Composed, light-weight headline serif.
-        display: ["var(--font-display)", "Georgia", "serif"],
-        // The firm's italic — used surgically (em in h1/h2, eyebrow italics).
-        "display-italic": [
-          "var(--font-display-italic)",
-          "Georgia",
-          "serif",
-        ],
-        // Academic body face for long-form prose (lead paragraphs onward).
-        prose: [
-          "var(--font-prose)",
-          "Charter",
-          "Iowan Old Style",
-          "Georgia",
-          "serif",
-        ],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        // One family for every role; the names stay so existing classes work.
+        display: slab,
+        "display-italic": slab,
+        prose: slab,
+        sans: slab,
+        mono: slab,
       },
       maxWidth: {
         editorial: "66rem", // canonical reading column for prose pages
@@ -77,22 +70,22 @@ const config: Config = {
         narrow: "42rem", // a single ideal-measure column
       },
       letterSpacing: {
-        editorial: "-0.022em", // headline tightening for Playfair
-        eyebrow: "0.18em", // monospace label tracking
+        editorial: "-0.012em", // light headline tightening
+        eyebrow: "0.16em", // uppercase label tracking
       },
       lineHeight: {
         editorial: "1.7", // body prose
-        headline: "1.05", // hero
+        headline: "1.1", // hero
       },
       boxShadow: {
-        // Hairline-on-paper, used in place of a 1px border on premium cards.
-        hairline: "0 0 0 1px rgba(24,20,18,0.08)",
+        // Hairline, used in place of a 1px border on cards.
+        hairline: "0 0 0 1px rgba(0,0,0,0.10)",
         // Lifted hairline for hover states.
         hairlineLift:
-          "0 0 0 1px rgba(24,20,18,0.10), 0 18px 40px -24px rgba(24,20,18,0.18)",
-        // Editorial portrait/photo shadow.
+          "0 0 0 1px rgba(0,0,0,0.14), 0 18px 40px -24px rgba(0,0,0,0.28)",
+        // Portrait/photo shadow.
         plate:
-          "0 1px 1px rgba(24,20,18,0.04), 0 28px 60px -24px rgba(24,20,18,0.30)",
+          "0 1px 1px rgba(0,0,0,0.04), 0 28px 60px -24px rgba(0,0,0,0.32)",
       },
       transitionTimingFunction: {
         editorial: "cubic-bezier(0.16, 1, 0.3, 1)",

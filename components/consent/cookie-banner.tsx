@@ -161,7 +161,7 @@ function PreferencesDialog() {
           id="cookie-prefs-title"
           ref={headingRef}
           tabIndex={-1}
-          className="mt-2 font-display text-2xl text-orech-ink outline-none md:text-3xl"
+          className="mt-2 font-display text-2xl text-orech-ink outline-none focus-visible:ring-0 focus-visible:ring-offset-0 md:text-3xl"
         >
           {t("prefs.title")}
         </h2>

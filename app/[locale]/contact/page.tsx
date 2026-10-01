@@ -20,7 +20,7 @@ export async function generateMetadata({
 
 export default function ContactPage() {
   return (
-    <main id="main-content" className="pb-24 pt-12 md:pt-20">
+    <main id="main-content">
       <ContactMain />
     </main>
   );

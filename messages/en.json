@@ -262,7 +262,31 @@
     "eyebrow": "Get in touch",
     "headline": "Contact",
     "lead": "For new instructions and confidential matters, please call the office or send an email to the address below.",
-    "privacyLink": "Privacy policy"
+    "privacyLink": "Privacy policy",
+    "form": {
+      "title": "Send a message",
+      "intro": "Prefer to write? Leave your details and a short description and the office will get back to you.",
+      "name": "Name",
+      "email": "Email address",
+      "phone": "Phone",
+      "optional": "Optional",
+      "message": "Your message",
+      "messageHint": "Only include what is needed for a first contact.",
+      "notice": "Your details are used only to answer your message. See the <privacy>privacy statement</privacy> for more.",
+      "submit": "Send",
+      "sending": "Sending…",
+      "successTitle": "Thank you, your message has been sent.",
+      "successBody": "The office will read your message and get back to you.",
+      "errors": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email address.",
+        "phone": "Use only digits, spaces and + ( ) - . in the phone number.",
+        "message": "Please write a message of at least 10 characters.",
+        "send": "The message could not be sent.",
+        "rateLimited": "Too many attempts in a row. Please try again later."
+      },
+      "fallback": "Please try again later, or contact the office directly:"
+    }
   },
   "NotFound": {
     "eyebrow": "Page not found",

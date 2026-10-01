@@ -262,7 +262,31 @@
     "eyebrow": "Neem contact op",
     "headline": "Contact",
     "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor of stuurt u een e-mail naar het onderstaande adres.",
-    "privacyLink": "Privacybeleid"
+    "privacyLink": "Privacybeleid",
+    "form": {
+      "title": "Stuur een bericht",
+      "intro": "Liever schriftelijk? Laat uw gegevens en een korte omschrijving achter, dan neemt het kantoor contact met u op.",
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoon",
+      "optional": "Optioneel",
+      "message": "Uw bericht",
+      "messageHint": "Vul enkel in wat nodig is voor een eerste contact.",
+      "notice": "Uw gegevens worden enkel gebruikt om uw bericht te beantwoorden. Lees de <privacy>privacyverklaring</privacy> voor meer informatie.",
+      "submit": "Verzenden",
+      "sending": "Bezig met verzenden…",
+      "successTitle": "Bedankt, uw bericht is verzonden.",
+      "successBody": "Het kantoor leest uw bericht en neemt contact met u op.",
+      "errors": {
+        "name": "Vul uw naam in.",
+        "email": "Vul een geldig e-mailadres in.",
+        "phone": "Gebruik enkel cijfers, spaties en + ( ) - . in het telefoonnummer.",
+        "message": "Schrijf een bericht van minstens 10 tekens.",
+        "send": "Het bericht kon niet worden verzonden.",
+        "rateLimited": "Te veel pogingen na elkaar. Probeer het later opnieuw."
+      },
+      "fallback": "Probeer het later opnieuw of neem rechtstreeks contact op met het kantoor:"
+    }
   },
   "NotFound": {
     "eyebrow": "Pagina niet gevonden",

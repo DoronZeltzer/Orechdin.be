@@ -9,12 +9,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 
-    /* Brand type: one humanist sans (Slate → Source Sans 3) drives every
-       role. The historical per-role vars now all alias --font-sans so the
-       component tree needs no changes. */
-    --font-display: var(--font-sans);
-    --font-prose: var(--font-sans);
-    --font-display-italic: var(--font-sans);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -28,42 +22,45 @@
     }
   }
 
+  /* One family everywhere (Roboto Slab standing in for Egyptian Slate Pro).
+     Regular for text. */
   body {
-    @apply bg-orech-paper text-orech-ink antialiased;
-    font-feature-settings: "kern", "liga", "calt", "ss01";
+    @apply bg-orech-paper font-sans text-orech-ink antialiased;
+    font-weight: 400;
+    font-feature-settings: "kern", "liga";
   }
 
-  /* Long-form copy adopts the academic prose face by default. UI chrome
-     (nav, buttons, form controls, monospaced eyebrows) explicitly opts out
-     by setting `font-sans` or `font-mono` on its container. */
-  p,
-  blockquote,
-  li,
-  dd,
-  address,
-  figcaption {
-    font-family: var(--font-prose), system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-feature-settings: "kern", "liga", "calt";
+  /* Brand rule 02.3: "Headers ... should be used in Bold font weight every
+     time." Roboto Slab matches the brand Bold best at 800. `!important` so a
+     stray `font-light` on a heading cannot undo the brand. */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800 !important;
   }
 
-  /* Headline italic — replaces Playfair's italic with a true editorial
-     italic (Cormorant Garamond). Applied to <em> inside display headings,
-     and exposed as the `.italic-display` utility for pull text. */
+  /* Emphasis inside a heading. The brand font has no italic, and the
+     guidelines never use one, so emphasis is a marker highlight instead: black
+     text over a band of the accent blue (black on #95b6df is about 9:1, where
+     blue text on white would fail). Also exposed as `.italic-display`. */
   h1 em,
   h2 em,
   h3 em,
   .italic-display {
-    font-family: var(--font-display-italic), system-ui, sans-serif;
-    font-style: italic;
-    font-weight: 600;
-    color: theme("colors.orech.bronzeMuted");
-    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 800;
+    color: inherit;
+    background-image: linear-gradient(
+      to top,
+      theme("colors.brand.blue") 0.34em,
+      transparent 0.34em
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
-  /* When the visitor pulls focus, render a calm hairline outline using the
-     bronze accent on the cream paper. */
+  /* Focus must be visible against white. The accent blue is only about 2.1:1
+     on white, below the 3:1 WCAG asks of a focus indicator, so focus is black. */
   :focus-visible {
-    @apply outline-none ring-2 ring-orech-bronze ring-offset-2 ring-offset-orech-paper;
+    @apply outline-none ring-2 ring-orech-ink ring-offset-2 ring-offset-orech-paper;
   }
 
   ::selection {
@@ -81,17 +78,27 @@
 @layer components {
   /* ─── Editorial primitives ─── */
 
-  /* Monospace eyebrow above section titles. Used everywhere from the
-     hero to the dossier so the visitor's eye learns one rhythm. */
+  /* Label above a section title, led by the short blue bar the brand
+     guidelines place before every section header. */
   .eyebrow {
-    @apply font-mono text-[0.7rem] font-semibold uppercase text-orech-bronzeMuted;
+    @apply font-sans text-[0.78rem] font-bold uppercase text-orech-ink;
     letter-spacing: theme("letterSpacing.eyebrow");
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    background-color: theme("colors.brand.blue");
+    flex: none;
   }
 
-  /* Display headline tuned for Playfair: light weight, tight tracking, and
-     `text-balance` so two-line headlines never orphan a single word. */
+  /* Display headline: Bold, light tightening, and `text-balance` so two-line
+     headlines never orphan a single word. */
   .display-headline {
-    @apply font-display font-light text-balance text-orech-ink;
+    @apply font-display font-extrabold text-balance text-orech-ink;
     letter-spacing: theme("letterSpacing.editorial");
     line-height: theme("lineHeight.headline");
   }

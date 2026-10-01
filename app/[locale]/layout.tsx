@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Source_Sans_3 } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { LegalServiceJsonLd } from "@/components/layout/json-ld";
@@ -10,22 +10,23 @@ import { CookieBanner } from "@/components/consent/cookie-banner";
 import { SITE } from "@/lib/site";
 import "../globals.css";
 
-// Brand web typeface. The guidelines specify Slate for all website text;
-// Source Sans 3 is the closest freely-licensed humanist sans and stands in for
-// it. A single family drives every role (display, prose, UI) — the per-role
-// CSS vars (--font-display / --font-prose / --font-display-italic) alias
-// --font-sans in globals.css, so the whole site renders in one clean sans.
-const sans = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "600", "700", "900"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+// Brand web typeface. The brand guidelines (section 02.2) name Egyptian Slate
+// Pro, a commercial slab serif, as "the font that should be used for websites".
+// Roboto Slab is the closest freely licensed match: every candidate was scored
+// against the real glyphs embedded in the guidelines PDF (letter-shape overlap
+// at matched x-height, width and stroke weight) and it came out first, ahead of
+// Arvo, Zilla Slab and Bitter. The site's previous stand-in, a plain sans, was
+// among the worst matches.
+//
+// It is a variable font, so one file serves every weight. The brand uses two:
+// Regular for text and Bold for headings. The brand Bold is very heavy, and
+// Roboto Slab matched it best at 800 (89% of its ink; the usual 700 is 83%), so
+// headings use 800. Light (300) is kept for the large slogan lines, as in the
+// guidelines. Roboto Slab has no italic; the brand does not use one either.
+const slab = Roboto_Slab({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-slab",
+  weight: "variable",
   display: "swap",
 });
 
@@ -74,7 +75,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${sans.variable} ${mono.variable}`}
+      className={slab.variable}
     >
       <body className="min-h-screen font-prose bg-orech-paper text-orech-ink selection:bg-orech-bronze/30">
         <NextIntlClientProvider messages={messages}>

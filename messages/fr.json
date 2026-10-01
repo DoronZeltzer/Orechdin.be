@@ -262,7 +262,31 @@
     "eyebrow": "Prendre contact",
     "headline": "Contact",
     "lead": "Pour les nouvelles missions et les matières confidentielles, appelez le cabinet ou envoyez un email à l'adresse ci-dessous.",
-    "privacyLink": "Politique de confidentialité"
+    "privacyLink": "Politique de confidentialité",
+    "form": {
+      "title": "Envoyer un message",
+      "intro": "Vous préférez écrire? Laissez vos coordonnées et une courte description, le cabinet vous recontactera.",
+      "name": "Nom",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "optional": "Facultatif",
+      "message": "Votre message",
+      "messageHint": "N'indiquez que ce qui est nécessaire pour un premier contact.",
+      "notice": "Vos données ne servent qu'à répondre à votre message. Consultez la <privacy>déclaration de confidentialité</privacy> pour en savoir plus.",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours…",
+      "successTitle": "Merci, votre message a été envoyé.",
+      "successBody": "Le cabinet lira votre message et vous recontactera.",
+      "errors": {
+        "name": "Indiquez votre nom.",
+        "email": "Indiquez une adresse e-mail valide.",
+        "phone": "N'utilisez que des chiffres, espaces et + ( ) - . dans le numéro.",
+        "message": "Écrivez un message d'au moins 10 caractères.",
+        "send": "Le message n'a pas pu être envoyé.",
+        "rateLimited": "Trop de tentatives d'affilée. Réessayez plus tard."
+      },
+      "fallback": "Réessayez plus tard, ou contactez directement le cabinet:"
+    }
   },
   "NotFound": {
     "eyebrow": "Page introuvable",
