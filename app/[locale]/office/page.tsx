@@ -36,7 +36,7 @@ export default function OfficePage() {
   ) as string[];
 
   const link =
-    "font-bold underline decoration-brand-white decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue hover:text-brand-black";
+    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-white";
 
   return (
     <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
@@ -51,7 +51,7 @@ export default function OfficePage() {
             <ul className="mt-8 max-w-2xl space-y-4 text-lg">
               {bullets.map((b) => (
                 <li key={b.slice(0, 32)} className="flex items-start gap-4 text-brand-black-80">
-                  <span aria-hidden className="mt-[0.6em] h-2 w-2 shrink-0 bg-brand-blue" />
+                  <span aria-hidden className="mt-[0.6em] h-2 w-2 shrink-0 rounded-full bg-brand-blue" />
                   {b}
                 </li>
               ))}
@@ -64,14 +64,14 @@ export default function OfficePage() {
           </section>
 
           <section className="lg:col-span-5" aria-labelledby="visit-heading">
-            <div className="bg-brand-black p-8 text-brand-white sm:p-10">
+            <div className="rounded-2xl bg-brand-blue p-8 text-brand-black sm:p-10">
               <h2 id="visit-heading" className="text-2xl">
                 {t("visitHeading")}
               </h2>
-              <address className="mt-6 flex items-start gap-4 not-italic leading-relaxed text-brand-white/90">
+              <address className="mt-6 flex items-start gap-4 not-italic leading-relaxed text-brand-black-80">
                 <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                 <div>
-                  <p className="font-bold text-brand-white">{SITE.shortName}</p>
+                  <p className="font-bold text-brand-black">{SITE.shortName}</p>
                   <p className="mt-1">
                     {SITE.address.street}
                     <br />
@@ -83,7 +83,7 @@ export default function OfficePage() {
                 <li className="flex items-start gap-4">
                   <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                   <div>
-                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-white/70">
+                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-black-80">
                       {t("phoneLabel")}
                     </p>
                     <a href={`tel:${SITE.phoneTel}`} className={`text-lg ${link}`}>
@@ -94,7 +94,7 @@ export default function OfficePage() {
                 <li className="flex items-start gap-4">
                   <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                   <div>
-                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-white/70">
+                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.16em] text-brand-black-80">
                       {t("emailLabel")}
                     </p>
                     <a href={`mailto:${SITE.email}`} className={`text-lg ${link}`}>
@@ -103,7 +103,7 @@ export default function OfficePage() {
                   </div>
                 </li>
               </ul>
-              <p className="mt-8 border-t border-brand-white/25 pt-5 text-xs uppercase tracking-[0.14em] text-brand-white/70">
+              <p className="mt-8 border-t border-brand-black/20 pt-5 text-xs uppercase tracking-[0.14em] text-brand-black-80">
                 {SITE.copyrightEntity} · KBO {SITE.kbo} · {SITE.court}
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function OfficePage() {
             visitor's IP and a Google cookie to Google before they have said
             anything. It therefore stays behind a consent gate, which renders
             a placeholder until the `functional` category is granted. */}
-        <div className="mt-14 h-[360px] overflow-hidden border border-brand-black/15 sm:h-[420px]">
+        <div className="mt-14 h-[360px] overflow-hidden rounded-2xl border border-brand-black/10 shadow-hairline sm:h-[420px]">
           <ConsentGate category="functional" title={t("mapConsentTitle")} description={t("mapConsentBody")}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5!2d4.4228!3d51.2118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f5c5b5e5e5%3A0x0!2sLange%20Herentalsestraat%20122%2C%202018%20Antwerpen!5e0!3m2!1sen!2sbe!4v1"
@@ -130,7 +130,7 @@ export default function OfficePage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <Button href="/lawyers" variant="dark" arrow>
+          <Button href="/lawyers" arrow>
             {t("ctaLawyers")}
           </Button>
           <Button href="/contact" variant="outline">

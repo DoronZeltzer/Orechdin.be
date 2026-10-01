@@ -43,7 +43,7 @@ export function CookieBanner() {
           role="dialog"
           aria-labelledby="cookie-banner-title"
           aria-describedby="cookie-banner-body"
-          className="fixed inset-x-0 bottom-0 z-[90] border-t-4 border-brand-black bg-brand-white shadow-[0_-12px_40px_rgba(0,0,0,0.12)]"
+          className="fixed inset-x-0 bottom-0 z-[90] rounded-t-2xl border-t border-brand-black/10 bg-brand-white shadow-[0_-12px_40px_rgba(0,0,0,0.12)]"
         >
           <div className="mx-auto max-w-wide px-6 py-6 lg:px-10">
             <p className="eyebrow">{t("banner.eyebrow")}</p>
@@ -113,7 +113,7 @@ function ConsentButton({
   children: React.ReactNode;
 }) {
   return (
-    <Button variant="dark" onClick={onClick} className="w-full sm:w-auto sm:min-w-[11rem]">
+    <Button onClick={onClick} className="w-full sm:w-auto sm:min-w-[11rem]">
       {children}
     </Button>
   );
@@ -151,7 +151,7 @@ function PreferencesDialog() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto border-2 border-brand-black bg-brand-white p-6 shadow-xl sm:p-8"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl border border-brand-black/10 bg-brand-white p-6 shadow-xl sm:rounded-2xl sm:p-8"
       >
         <p className="eyebrow">{t("prefs.eyebrow")}</p>
         <h2
@@ -250,7 +250,7 @@ function CategoryRow({
   toggleLabel?: string;
 }) {
   return (
-    <div className="border border-brand-black/15 bg-brand-wash/50 p-5">
+    <div className="rounded-2xl bg-brand-wash/60 p-5">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="font-display text-lg text-orech-ink">{name}</h3>
@@ -263,7 +263,7 @@ function CategoryRow({
         </div>
 
         {locked ? (
-          <span className="shrink-0 rounded-[3px] bg-brand-wash px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-brand-black-80">
+          <span className="shrink-0 rounded-full bg-brand-wash px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-brand-black-80">
             {lockedLabel}
           </span>
         ) : (
@@ -274,14 +274,14 @@ function CategoryRow({
             aria-label={toggleLabel}
             onClick={onToggle}
             className={
-              "relative h-7 w-12 shrink-0 rounded-[3px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted " +
-              (checked ? "bg-brand-black" : "bg-brand-black-40")
+              "relative h-7 w-12 shrink-0 rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orech-bronzeMuted " +
+              (checked ? "bg-brand-blue" : "bg-brand-black-40")
             }
           >
             <span
               aria-hidden="true"
               className={
-                "absolute top-1 h-5 w-5 rounded-[2px] bg-brand-white shadow transition-all " +
+                "absolute top-1 h-5 w-5 rounded-full bg-brand-white shadow transition-all " +
                 (checked ? "left-6" : "left-1")
               }
             />

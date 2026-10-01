@@ -49,15 +49,15 @@ export default function ServicesPage() {
           {groups.map((g, i) => (
             <article
               key={g.title}
-              className="flex flex-col border border-brand-black/15 bg-brand-white p-8 transition-colors duration-200 hover:border-brand-black"
+              className="flex flex-col rounded-2xl border border-brand-black/10 bg-brand-wash/50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-hairlineLift"
             >
               <IconTile icon={GROUP_ICONS[i] ?? Scale} />
               <h2 className="mt-6 text-2xl leading-snug">{g.title}</h2>
               <p className="mt-3 flex-1 leading-relaxed text-brand-black-80">{g.intro}</p>
-              <ul className="mt-7 space-y-3 border-t border-brand-black/15 pt-6">
+              <ul className="mt-7 space-y-3 border-t border-brand-black/10 pt-6">
                 {asList<string>(g.items).map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.95rem]">
-                    <span aria-hidden className="mt-[0.5em] h-2 w-2 shrink-0 bg-brand-blue" />
+                    <span aria-hidden className="mt-[0.55em] h-2 w-2 shrink-0 rounded-full bg-brand-blue" />
                     {item}
                   </li>
                 ))}
@@ -67,18 +67,18 @@ export default function ServicesPage() {
         </div>
       </SectionShell>
 
-      {/* A black panel on a white section: the page ends white so the footer's
+      {/* A blue panel on a white section: the page ends white so the footer's
           fade has white to start from. */}
       <SectionShell background="default" className="pt-0 lg:pt-0">
-        <div className="bg-brand-black p-8 text-brand-white sm:p-12 lg:p-16">
+        <div className="rounded-3xl bg-brand-blue p-8 text-brand-black sm:p-12 lg:p-16">
           <div className="max-w-3xl">
             <h2 className="text-2xl sm:text-3xl">{t("intlHeading")}</h2>
-            <p className="mt-5 text-lg leading-relaxed text-brand-white/80">{t("intlBody")}</p>
+            <p className="mt-5 text-lg leading-relaxed text-brand-black-80">{t("intlBody")}</p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button href="/contact" arrow>
+              <Button href="/contact" variant="white" arrow>
                 {t("ctaContact")}
               </Button>
-              <Button href="/lawyers" variant="outline-light">
+              <Button href="/lawyers" variant="outline">
                 {t("ctaLawyerProfiles")}
               </Button>
             </div>

@@ -9,31 +9,30 @@ import { cn } from "@/lib/utils";
  * Before this, the site had at least four primary-button styles, with
  * different padding and, worse, different text colours: dark text on the
  * accent blue on the homepage, but white text on it elsewhere, which is about
- * 2.1:1 and unreadable. Here the pairings are fixed to ones that pass:
+ * 2.1:1 and unreadable. Here the pairings are fixed to ones that pass, and the
+ * corners are soft, as the site had before the first redesign.
  *
- *   primary        black on the accent blue (about 9:1), black on hover
- *   dark           white on black, blue on hover
- *   outline        black on white with a black border
- *   outline-light  white on black with a white border, for dark sections
+ * Black is kept for text and never used as a fill, so the page does not turn
+ * heavy:
  *
- * Corners are square, like the icon tiles and colour fields in the brand
- * guidelines.
+ *   primary   black on the accent blue (about 9:1)
+ *   white     black on white, for use on blue panels
+ *   outline   black on transparent with a grey-black border, fills with the
+ *             wash blue on hover
  */
-type Variant = "primary" | "dark" | "outline" | "outline-light";
+type Variant = "primary" | "white" | "outline";
 
 const VARIANT: Record<Variant, string> = {
   primary:
-    "bg-brand-blue text-brand-black border-2 border-brand-blue hover:bg-brand-black hover:border-brand-black hover:text-brand-white",
-  dark:
-    "bg-brand-black text-brand-white border-2 border-brand-black hover:bg-brand-blue hover:border-brand-blue hover:text-brand-black",
+    "bg-brand-blue text-brand-black border-2 border-brand-blue shadow-sm hover:-translate-y-px hover:shadow-md",
+  white:
+    "bg-brand-white text-brand-black border-2 border-brand-white shadow-sm hover:-translate-y-px hover:shadow-md",
   outline:
-    "bg-transparent text-brand-black border-2 border-brand-black hover:bg-brand-black hover:text-brand-white",
-  "outline-light":
-    "bg-transparent text-brand-white border-2 border-brand-white hover:bg-brand-white hover:text-brand-black",
+    "bg-transparent text-brand-black border-2 border-brand-black-60 hover:border-brand-black hover:bg-brand-wash",
 };
 
 const BASE =
-  "inline-flex min-h-12 items-center justify-center gap-2.5 rounded-[3px] px-7 py-3 text-[0.82rem] font-bold uppercase tracking-[0.12em] transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex min-h-12 items-center justify-center gap-2.5 rounded-lg px-7 py-3 text-[0.82rem] font-bold uppercase tracking-[0.12em] transition duration-200 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-sm";
 
 type Common = {
   variant?: Variant;

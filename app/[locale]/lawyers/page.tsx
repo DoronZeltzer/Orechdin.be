@@ -29,7 +29,7 @@ export default function LawyersPage() {
   const tCommon = useTranslations("Common");
 
   const link =
-    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-black hover:text-brand-white";
+    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue";
 
   return (
     <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
@@ -45,10 +45,10 @@ export default function LawyersPage() {
             <article
               key={lawyer.slug}
               id={lawyer.slug}
-              className="grid scroll-mt-28 gap-10 border-t border-brand-black/15 pt-14 first:border-t-0 first:pt-0 lg:grid-cols-12 lg:gap-14"
+              className="grid scroll-mt-28 gap-10 border-t border-brand-black/10 pt-14 first:border-t-0 first:pt-0 lg:grid-cols-12 lg:gap-14"
             >
               <div className="lg:col-span-4">
-                <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden bg-brand-wash lg:max-w-none">
+                <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-brand-wash shadow-hairline lg:max-w-none">
                   <Image
                     src={i === 0 ? MEDIA.nirPhoto : MEDIA.deborahPhoto}
                     alt={lawyer.name}
@@ -74,7 +74,7 @@ export default function LawyersPage() {
                   ))}
                 </div>
 
-                <dl className="mt-8 grid max-w-3xl gap-6 bg-brand-wash p-6 sm:grid-cols-2 sm:p-8">
+                <dl className="mt-8 grid max-w-3xl gap-6 rounded-2xl bg-brand-wash p-6 sm:grid-cols-2 sm:p-8">
                   <div className="flex items-start gap-4">
                     <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                     <div>
@@ -117,7 +117,7 @@ export default function LawyersPage() {
         </div>
 
         <div className="mt-20 flex flex-wrap gap-4 border-t border-brand-black/15 pt-12">
-          <Button href="/contact" variant="dark" arrow>
+          <Button href="/contact" arrow>
             {t("footerCtaContact")}
           </Button>
           <Button href="/office" variant="outline">

@@ -2,17 +2,17 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * Form controls in the brand's rectilinear style: square corners, a black
- * 2px border, and a black focus ring (the accent blue is too pale on white to
- * be a visible focus indicator).
+ * Form controls with soft corners and a thin, dark-grey border (black at 60%,
+ * 5.7:1 on white, so the field edge is easy to see). Focus is a black ring: the
+ * accent blue is too pale on white to be a visible focus indicator.
  *
  * The brand has no error colour, and inventing one would break the palette, so
- * an invalid field is marked by more than colour: a thick black underline, an
+ * an invalid field is marked by more than colour: a heavier black border, an
  * icon and a written message tied to the field with `aria-describedby`. That
  * also means it does not depend on telling red from black.
  */
 const CONTROL =
-  "block w-full rounded-[3px] border-2 border-brand-black bg-brand-white px-4 py-3 text-base text-brand-black placeholder:text-brand-black-40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-black focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 aria-[invalid=true]:border-b-[6px]";
+  "block w-full rounded-lg border border-brand-black-60 bg-brand-white px-4 py-3 text-base text-brand-black placeholder:text-brand-black-40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-black focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 aria-[invalid=true]:border-2 aria-[invalid=true]:border-brand-black";
 
 export function Field({
   id,
@@ -47,7 +47,7 @@ export function Field({
       )}
       {error && (
         <p id={`${id}-error`} role="alert" className="flex items-start gap-2 text-sm font-bold text-brand-black">
-          <span aria-hidden className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center bg-brand-black text-[0.7rem] leading-none text-brand-white">
+          <span aria-hidden className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-black text-[0.7rem] leading-none text-brand-white">
             !
           </span>
           {error}

@@ -115,7 +115,6 @@ export function SiteHeader() {
           </div>
           <Button
             href="/contact"
-            variant={isActive("/contact") ? "dark" : "primary"}
             className="min-h-10 px-5 py-2 text-[0.75rem]"
             aria-current={isActive("/contact") ? "page" : undefined}
           >
@@ -125,7 +124,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="flex h-12 w-12 flex-col items-center justify-center gap-[5px] border-2 border-brand-black md:hidden"
+          className="flex h-12 w-12 flex-col items-center justify-center gap-[5px] rounded-lg border border-brand-black-60 md:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
           aria-label={menuOpen ? tNav("closeMenu") : tNav("openMenu")}

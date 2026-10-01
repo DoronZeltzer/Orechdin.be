@@ -16,7 +16,7 @@ export function ContactMain() {
   const t = useTranslations("ContactPage");
 
   const link =
-    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue hover:text-brand-black";
+    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-white";
 
   return (
     <>
@@ -33,10 +33,10 @@ export function ContactMain() {
           </div>
 
           <aside className="lg:col-span-2">
-            <div className="border-t-[6px] border-brand-blue bg-brand-black p-8 text-brand-white sm:p-10">
+            <div className="rounded-2xl bg-brand-blue p-8 text-brand-black sm:p-10">
               <address className="not-italic">
                 <p className="text-xl font-extrabold">{SITE.shortName}</p>
-                <p className="mt-4 leading-relaxed text-brand-white/85">
+                <p className="mt-4 leading-relaxed text-brand-black-80">
                   {SITE.address.street}
                   <br />
                   {SITE.address.postal} {SITE.address.city}
@@ -54,7 +54,7 @@ export function ContactMain() {
                   </a>
                 </p>
               </address>
-              <p className="mt-8 border-t border-brand-white/25 pt-5 text-xs uppercase tracking-[0.14em] text-brand-white/60">
+              <p className="mt-8 border-t border-brand-black/20 pt-5 text-xs uppercase tracking-[0.14em] text-brand-black-80">
                 {SITE.copyrightEntity} · KBO {SITE.kbo}
               </p>
             </div>

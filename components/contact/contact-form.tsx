@@ -93,7 +93,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div role="status" className="border-2 border-brand-black bg-brand-blue p-8 sm:p-10">
+      <div role="status" className="rounded-2xl bg-brand-blue p-8 sm:p-10">
         <h2 ref={headingRef} tabIndex={-1} className="text-2xl leading-tight outline-none focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-3xl">
           {t("successTitle")}
         </h2>
@@ -190,9 +190,9 @@ export function ContactForm() {
 
       <div aria-live="polite">
         {status === "failed" && (
-          <div className="mb-6 border-2 border-brand-black p-5">
+          <div className="mb-6 rounded-xl border border-brand-black-60 bg-brand-wash p-5">
             <p className="flex items-start gap-2 font-bold">
-              <span aria-hidden className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-brand-black text-xs leading-none text-brand-white">
+              <span aria-hidden className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-black text-xs leading-none text-brand-white">
                 !
               </span>
               {serverError === "rate_limited" ? t("errors.rateLimited") : t("errors.send")}
@@ -211,7 +211,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Button type="submit" variant="dark" arrow disabled={sending}>
+        <Button type="submit" arrow disabled={sending}>
           {sending ? t("sending") : t("submit")}
         </Button>
       </div>

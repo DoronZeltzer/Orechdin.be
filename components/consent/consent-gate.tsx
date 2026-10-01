@@ -47,8 +47,7 @@ export function ConsentGate({
       </p>
 
       <Button
-        variant="dark"
-        // Disabled only for the instant before the cookie has been read, so
+                // Disabled only for the instant before the cookie has been read, so
         // that a visitor who already consented never sees a live "load" button
         // flash before their existing choice is applied.
         disabled={!ready}

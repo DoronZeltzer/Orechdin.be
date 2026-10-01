@@ -18,7 +18,7 @@ export function ConsentControls() {
   const { ready, record, openPrefs, withdraw } = useConsent();
 
   return (
-    <div className="border border-brand-black/15 bg-brand-wash p-8">
+    <div className="rounded-2xl bg-brand-wash p-8">
       <h2 className="font-display text-2xl text-orech-ink md:text-3xl">
         {t("controls.heading")}
       </h2>
@@ -58,7 +58,7 @@ export function ConsentControls() {
       </dl>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button variant="dark" onClick={openPrefs}>
+        <Button onClick={openPrefs}>
           {t("controls.change")}
         </Button>
         <Button variant="outline" onClick={withdraw} disabled={!ready || record === null}>
