@@ -198,6 +198,7 @@ export default function HomePage() {
       {/* ═══════════════════════════ LAWYERS ═══════════════════════════ */}
       <SectionShell background="wash" id="lawyers">
         <SectionHeading
+          align="center"
           eyebrow={t("lawyers.eyebrow")}
           title={
             <>
@@ -205,7 +206,8 @@ export default function HomePage() {
             </>
           }
         />
-        <div className="mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
+        {/* Two compact, centred cards: the portraits were too large at full column width. */}
+        <div className="mx-auto mt-12 grid max-w-xl gap-6 sm:grid-cols-2">
           {LAWYERS.map((lawyer, i) => (
             <Link
               key={lawyer.slug}
@@ -219,17 +221,17 @@ export default function HomePage() {
                   fill
                   quality={90}
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(min-width: 640px) 440px, 100vw"
+                  sizes="(min-width: 640px) 280px, 100vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl">{lawyer.name}</h3>
+              <div className="p-5 text-center">
+                <h3 className="text-xl">{lawyer.name}</h3>
                 <p className="mt-1 text-brand-black-80">{lawyer.role}</p>
               </div>
             </Link>
           ))}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center">
           <Button href="/lawyers" arrow>
             {t("lawyers.allProfiles")}
           </Button>
