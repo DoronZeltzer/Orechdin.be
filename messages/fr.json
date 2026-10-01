@@ -5,10 +5,6 @@
     "services": "Domaines",
     "office": "Cabinet",
     "contact": "Contact",
-    "privacy": "Confidentialité",
-    "consultNeo": "Consulter",
-    "consultNeoSuffix": "NEO",
-    "consultNeoMobile": "Consulter l'assistant NEO",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "localeSwitcher": "Sélecteur de langue",
@@ -61,7 +57,7 @@
       "eyebrow": "{city} · Avocats & Advocaten",
       "h1Line1": "Conseil et représentation,",
       "h1Italic": "ancrés dans ce que nous publions.",
-      "lead": "{short} conseille les entreprises, les particuliers et les indépendants dans les matières que le cabinet publie, droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation. Toute mission commence par un entretien direct ; l'intake proposé sur ce site constitue une orientation générale, et non un avis juridique.",
+      "lead": "{short} conseille les entreprises, les particuliers et les indépendants dans les matières que le cabinet publie, droit commercial, civil, pénal, familial, du travail, immobilier et de la circulation. Toute mission commence par un entretien direct.",
       "primaryCta": "Contacter le cabinet",
       "secondaryCta": "Domaines publiés",
       "captionStamp": "est. Anvers",
@@ -170,7 +166,7 @@
       "eyebrow": "Prendre contact",
       "headlinePart1": "Prêt à parler",
       "headlineItalic": "à un avocat ?",
-      "lead": "Pour les nouvelles missions et les matières confidentielles, appelez le cabinet directement ou utilisez la page contact. NEO peut vous aider à formuler votre question d'abord ; il ne fournit pas d'avis juridique et ne crée aucune représentation.",
+      "lead": "Pour les nouvelles missions et les matières confidentielles, appelez le cabinet directement ou utilisez la page contact.",
       "primaryCta": "Ouvrir la page contact",
       "asideEyebrow": "Coordonnées du cabinet"
     }
@@ -265,10 +261,7 @@
     },
     "eyebrow": "Prendre contact",
     "headline": "Contact",
-    "lead": "Pour les nouvelles missions et les matières confidentielles, appelez le cabinet ou envoyez un email à l'adresse ci-dessous. NEO peut vous aider à formuler votre question d'abord ; il ne fournit pas d'avis juridique et ne crée aucune représentation.",
-    "neoTitle": "Formulez votre question avec NEO",
-    "neoBody": "NEO est un assistant d'orientation ancré dans la base de connaissances approuvée de ce site. Il ne fournit pas d'avis juridique et ne crée aucune relation avocat-client. Utilisez-le pour structurer votre contexte avant de contacter le cabinet.",
-    "openNeo": "Ouvrir l'assistant NEO →",
+    "lead": "Pour les nouvelles missions et les matières confidentielles, appelez le cabinet ou envoyez un email à l'adresse ci-dessous.",
     "privacyLink": "Politique de confidentialité"
   },
   "NotFound": {
@@ -287,139 +280,6 @@
   },
   "Disclaimer": {
     "body": "Avis de non-responsabilité : Le cabinet d'avocats Orechdin ne peut s'engager sur un résultat spécifique, mais mettra tout en œuvre pour obtenir la meilleure issue possible."
-  },
-  "NeoChat": {
-    "composerPlaceholder": "Écrivez un message…",
-    "quickPrompts": {
-      "cases": "Quels types de dossiers le cabinet traite-t-il ?",
-      "lawyers": "Qui sont les avocats ?",
-      "reach": "Comment puis-je contacter le cabinet ?"
-    },
-    "attach": {
-      "drop": "Déposez des documents ici",
-      "executableBlocked": "Les fichiers exécutables ne sont pas autorisés.",
-      "fileTooLarge": "Le fichier dépasse la limite de {maxSize} Mo.",
-      "alreadyAttached": "Ce fichier a déjà été joint.",
-      "maxFiles": "Maximum {maxFiles} fichiers par dossier.",
-      "ariaLabel": "Joindre un document ({count} sur {maxFiles} joints)",
-      "title": "Joindre un document",
-      "remove": "Supprimer {file}"
-    },
-    "paste": {
-      "openTitle": "Coller une preuve sous forme de texte",
-      "title": "Coller une preuve sous forme de texte",
-      "subtitle": "Devient la pièce",
-      "placeholder": "Collez un e-mail, une clause, une discussion WhatsApp… NEO l'indexera et le communiquera à l'avocat.",
-      "characters": "{length} / 8000 caractères",
-      "cancel": "Annuler",
-      "add": "Ajouter comme preuve",
-      "errorShort": "Collez au moins 30 caractères (ex. un e-mail, une clause, un fil de discussion).",
-      "prefix": "[Preuve collée {filename}]"
-    },
-    "dictation": {
-      "start": "Dicter un message",
-      "stop": "Arrêter la dictée",
-      "title": "Dicter (voix vers texte)",
-      "listening": "À l'écoute, parlez maintenant. Cliquez à nouveau pour arrêter.",
-      "blocked": "Accès au micro refusé. Autorisez-le dans votre navigateur pour dicter.",
-      "ariaLabel": "Dicté vocalement",
-      "titleLabel": "Dicté"
-    },
-    "empty": {
-      "greetingParams": {
-        "hello": "Bonjour",
-        "morning": "Bonjour",
-        "afternoon": "Bonjour",
-        "evening": "Bonsoir"
-      },
-      "introTitle": "{greeting}, Je suis NEO.",
-      "introWorkspace": "Expliquez-moi votre situation, et je vous aiderai à réunir ce qu'un avocat de notre cabinet doit examiner. Prenez votre temps. Vous pouvez écrire, dicter ou déposer un document dans le chat.",
-      "introPanel": "Posez-moi n'importe quelle question sur Orechdin. Vous pouvez écrire, dicter ou déposer un document."
-    },
-    "typing": {
-      "thinking": "Réflexion…",
-      "readingFile": "Lecture de votre fichier…",
-      "readingMessage": "Lecture de votre message…",
-      "puttingTogether": "Synthèse en cours…",
-      "writingBack": "Rédaction de la réponse…"
-    },
-    "message": {
-      "copy": "Copier",
-      "send": "Envoyer"
-    }
-  },
-  "NeoCaseFile": {
-    "panelTitle": "Dossier en direct",
-    "panelEmpty": "Rien pour l'instant",
-    "panelBuilding": "Construction du dossier",
-    "panelSubtitle": "Aligné OVB · chaque fait a une source détaillée",
-    "panelFooter": "Ce fichier est construit à partir de vos propres messages. Rien n'est partagé avec le cabinet avant que vous appuyiez sur Soumettre.",
-    "panelSubmitted": ", Soumis.",
-    "emptyIntro": "Pendant que vous discutez avec NEO, ce panneau se remplit avec ce qu'un avocat d'Anvers voudrait voir, parties, chronologie, questions juridiques, documents de support et contrôle de conflit. Tout inclut une référence vers vos propres mots.",
-    "emptyWarning": "Rien n'est partagé avec le cabinet tant que vous ne soumettez pas.",
-    "cryptoHeading": "Sécurité Cryptographique",
-    "cryptoSafetyText": "Cette session est sécurisée par le chiffrement de bout en bout TLS 1.3. Le traitement strict des données du dossier adhère aux principes de minimisation du RGPD de l'UE et de l'AI Act de l'UE (Art. 13).",
-    "cover": "Aperçu",
-    "nextDeadline": "Prochaine échéance:",
-    "completeness": "Complétude",
-    "execSummary": "Résumé",
-    "execSummarySubtitle": "≤ 300 mots",
-    "riskGate": "Vérification des conflits et risques",
-    "riskNoSignal": "aucun signal",
-    "riskReviewReq": "révision requise",
-    "riskEmpty": "Aucune alerte automatique généré. L'avocat devra toujours exécuter un contrôle de conflit formel.",
-    "preEngagement": "Contrôles préalables ({count})",
-    "parties": "Parties",
-    "partiesEmpty": "Personne n'a encore été nommé.",
-    "chronology": "Chronologie",
-    "chronologyEvent": "{count} événement",
-    "chronologyEvents": "{count} événements",
-    "chronologyEmpty": "Aucun événement daté pour l'instant.",
-    "issues": "Questions juridiques et théorie",
-    "issuesEmpty": "Aucune problématique déduite.",
-    "openQuestions": "Questions ouvertes ({count})",
-    "caseTheory": "Théorie du cas (Cadre NITA, hypothèse d'admission uniquement)",
-    "legalTheory": "Théorie juridique.",
-    "factualTheory": "Théorie factuelle.",
-    "persuasiveTheory": "Théorie persuasive.",
-    "evidence": "Index des preuves",
-    "evidenceExhibit": "{count} annexe",
-    "evidenceExhibits": "{count} annexes",
-    "evidenceEmpty": "Glissez des documents dans le messager pour les voir ici, indexés.",
-    "procedural": "Position procédurale",
-    "proceduralEmpty": "Aucune échéance, ni événement trouvé.",
-    "proceduralDaysIn": "dans {count} jour",
-    "proceduralDaysIn_plural": "dans {count} jours",
-    "proceduralDaysAgo": "il y a {count} jour",
-    "proceduralDaysAgo_plural": "il y a {count} jours",
-    "damages": "Dommages / quantum",
-    "damagesTotal": "total ≈ {total}",
-    "damagesEmpty": "Aucun enjeu financier mentionné.",
-    "openQuestionsLawyer": "Questions ouvertes pour l'avocat",
-    "handoff": "Transfert à l’avocat",
-    "exportDesc": "Le dossier est généré côté serveur au format PDF ou Word, tout comme l'original. Cette mise en page conforme à la grille de traitement OVB permet de l'archiver directement.",
-    "btnWord": "Télécharger Word",
-    "btnWordWorking": "…Word",
-    "btnPdf": "Télécharger PDF",
-    "btnPdfWorking": "…PDF",
-    "btnSend": "Envoyer à Orechdin",
-    "btnSendWorking": "…Envoi",
-    "notSentNote": "Rien ne sera envoyé au cabinet avant d'appuyer sur le bouton d'envoi.",
-    "disabledNote": "Le téléchargement est réservé à un usage privé. L'envoi vers le cabinet est actuellement désactivé dans cet environnement.",
-    "btnDeliver": "Envoyer le dossier via…",
-    "btnDeliverAgain": "Renvoyer via…",
-    "deliverEyebrow": "Canal de livraison",
-    "deliverTitle": "Choisissez comment envoyer",
-    "deliverDesc": "Sélectionnez un canal ci-dessous. Votre dossier, y compris la synthèse complète, la chronologie et l'index des preuves, sera composé et ouvert dans l'application choisie. Vous pouvez relire avant l'envoi.",
-    "deliverFooter": "Les documents PDF et Word complets peuvent être téléchargés séparément via les boutons ci-dessus. Le texte envoyé par ces canaux est un résumé ; joignez le PDF pour le dossier complet.",
-    "deliveredSuccess": "Dossier envoyé ! Le cabinet examinera votre soumission.",
-    "channel_gmail": "Gmail",
-    "channel_outlook": "Microsoft Outlook",
-    "channel_whatsapp": "WhatsApp",
-    "channel_linkedin": "LinkedIn",
-    "channel_copy": "Copier dans le presse-papiers",
-    "channel_native-share": "Partager…",
-    "channelCopied": "Copié !"
   },
   "Consent": {
     "settingsLink": "Paramètres des cookies",
@@ -447,8 +307,8 @@
     "categories": {
       "necessary": {
         "name": "Strictement nécessaires",
-        "purpose": "Nécessaires au fonctionnement du site: retenir le choix que vous faites ici, vous maintenir connecté à l'espace client, et conserver les réponses que vous saisissez dans l'assistant tant que vous l'utilisez. Aucun ne vous suit.",
-        "duration": "Session à 6 mois",
+        "purpose": "Nécessaires au fonctionnement du site: retenir le choix que vous faites ici et la langue que vous avez choisie. Aucun ne vous suit.",
+        "duration": "Jusqu'à 1 an",
         "always": "Toujours actifs"
       },
       "functional": {
@@ -489,7 +349,7 @@
     "intro": "Cette politique explique ce qui est conservé sur votre appareil lorsque vous visitez ce site, pourquoi, et comment vous en gardez la maîtrise. Elle s'applique à www.orechdin.be et suit l'article 129 de la loi relative aux communications électroniques ainsi que le Règlement général sur la protection des données.",
     "version": "Version {version}, dernière mise à jour le {date}",
     "whatHeading": "Ce qui compte comme cookie",
-    "whatBody1": "Un cookie est un petit fichier qu'un site fait conserver par votre navigateur. La loi va plus loin que le mot ne le suggère: elle vise tout stockage ou toute lecture d'informations sur votre appareil. Le registre ci-dessous mentionne donc aussi les deux autres techniques utilisées par ce site, le local storage et le session storage, et les traite selon les mêmes règles.",
+    "whatBody1": "Un cookie est un petit fichier qu'un site fait conserver par votre navigateur. La loi va plus loin que le mot ne le suggère: elle vise tout stockage ou toute lecture d'informations sur votre appareil. Le local storage et le session storage relèvent donc des mêmes règles. Ce site n'utilise ni l'un ni l'autre.",
     "whatBody2": "Ce que dépose orechdin.be relève de la première partie. Ce qu'une autre société dépose via un contenu intégré relève de la tierce partie, et c'est elle qui décide de l'usage qu'elle en fait.",
     "basisHeading": "Quand nous demandons votre autorisation",
     "basisBody1": "Le stockage strictement nécessaire à un service que vous avez demandé ne requiert pas de consentement, et le désactiver casserait le site. Tout le reste requiert votre autorisation préalable, libre et spécifique.",
@@ -519,30 +379,6 @@
         "purpose": "Retient la langue dans laquelle vous consultez le site, afin que chaque page reste dans cette langue.",
         "duration": "1 an"
       },
-      "sessionToken": {
-        "purpose": "Vous maintient connecté si vous créez un compte pour l'espace client. Déposé uniquement après connexion.",
-        "duration": "Jusqu'à votre déconnexion"
-      },
-      "sessionData": {
-        "purpose": "Contient une copie de courte durée de votre session pour que les pages connectées se chargent sans interroger la base à chaque requête.",
-        "duration": "Jusqu'à votre déconnexion"
-      },
-      "dontRemember": {
-        "purpose": "Note que vous avez demandé à ne pas rester connecté, afin que la session se termine à la fermeture du navigateur.",
-        "duration": "Jusqu'à votre déconnexion"
-      },
-      "neoSessionState": {
-        "purpose": "Conserve les réponses déjà saisies dans l'assistant, afin qu'un rechargement ne les perde pas. Elles restent dans votre onglet et disparaissent à sa fermeture.",
-        "duration": "Jusqu'à la fermeture de l'onglet"
-      },
-      "neoSidebar": {
-        "purpose": "Retient si le panneau de l'assistant était ouvert.",
-        "duration": "Jusqu'à l'effacement du stockage du navigateur"
-      },
-      "neoPanelWidth": {
-        "purpose": "Retient la largeur que vous avez donnée au panneau de l'assistant.",
-        "duration": "Jusqu'à l'effacement du stockage du navigateur"
-      },
       "googleMaps": {
         "purpose": "Déposé par Google lorsque vous choisissez de charger la carte sur la page cabinet. Google reçoit votre adresse IP et utilise ces cookies à ses propres fins, dont la sécurité et, selon vos paramètres Google, la personnalisation.",
         "duration": "Déterminée par Google, voir la politique de Google"
@@ -555,7 +391,7 @@
     "secrecyHeading": "Cookies et secret professionnel",
     "secrecyBody": "En tant qu'avocat, le cabinet est tenu au secret professionnel en vertu de l'article 458 du Code pénal. Aucun des éléments ci-dessus ne touche au fond d'un dossier: aucun cookie de ce site n'enregistre qui vous êtes, sur quoi vous cherchez conseil, ni ce que vous nous écrivez. C'est cette obligation de confidentialité qui explique l'absence totale de publicité, de pixels de réseaux sociaux et d'outils d'analyse tiers.",
     "browserHeading": "Gérer les cookies dans votre navigateur",
-    "browserBody": "Indépendamment du choix fait ici, votre navigateur peut bloquer ou supprimer les cookies de tous les sites. Les réglages se trouvent en général sous confidentialité ou protection des données. Bloquer les éléments strictement nécessaires peut empêcher certaines parties du site de fonctionner, en particulier l'espace client.",
+    "browserBody": "Indépendamment du choix fait ici, votre navigateur peut bloquer ou supprimer les cookies de tous les sites. Les réglages se trouvent en général sous confidentialité ou protection des données. Bloquer les éléments strictement nécessaires peut empêcher certaines parties du site de fonctionner.",
     "complaintHeading": "Questions et plaintes",
     "complaintBody1": "Les questions sur cette politique s'adressent à {name}, via",
     "complaintBody2": "Si notre réponse ne vous satisfait pas, vous pouvez introduire une plainte auprès de l'Autorité de protection des données via",
@@ -587,10 +423,6 @@
     "dataVisitBody": "Votre adresse IP et les données techniques de la requête, traitées par notre hébergeur pour livrer les pages et sécuriser le service. Nous ne conservons aucune statistique de visite.",
     "dataContactLabel": "La prise de contact.",
     "dataContactBody": "Le nom, l'adresse e-mail, le numéro de téléphone et la description de votre affaire que vous choisissez de nous transmettre via le formulaire ou par e-mail.",
-    "dataAssistantLabel": "L'assistant en ligne.",
-    "dataAssistantBody": "Le texte que vous saisissez dans l'assistant et le résumé qui en résulte.",
-    "dataAccountLabel": "L'espace client.",
-    "dataAccountBody": "Si vous créez un compte: votre adresse e-mail, votre mot de passe sous forme hachée, et les moments de vos connexions.",
     "dataClientLabel": "Devenir client.",
     "dataClientBody": "Si une affaire se poursuit, le cabinet traite ce qui est nécessaire pour agir pour vous, y compris des données relatives aux parties adverses et à des tiers. Ces traitements sont décrits dans la déclaration générale et non ici.",
     "purposesHeading": "Pourquoi, et sur quelle base légale",
@@ -605,10 +437,6 @@
     "basisConsentBody": "Cookies facultatifs et éventuelle lettre d'information. Vous pouvez retirer votre consentement à tout moment, sans effet sur ce qui a précédé.",
     "basisSpecialLabel": "Catégories particulières et données pénales, articles 9 et 10.",
     "basisSpecialBody": "Un dossier peut contenir des données de santé, ou des données relatives à des infractions et condamnations. Le cabinet les traite lorsque cela est nécessaire à la constatation, l'exercice ou la défense d'un droit en justice, fondement que l'article 9, 2, f prévoit pour le travail juridique.",
-    "assistantHeading": "N'introduisez pas d'éléments confidentiels dans l'assistant",
-    "assistantBody1": "L'assistant de ce site sert à décrire en termes généraux ce dont vous avez besoin. Ce n'est pas un canal sécurisé, et son utilisation ne fait pas de vous un client du cabinet.",
-    "assistantBody2": "Pour formuler ses réponses, l'assistant envoie le texte que vous saisissez à un service d'IA externe au cabinet. N'y introduisez donc pas de noms de parties adverses, de numéros de dossier, de données de santé, ni rien d'autre que vous ne voudriez pas voir quitter vos mains. Transmettez les pièces confidentielles par e-mail ou apportez-les au cabinet.",
-    "assistantBody3": "Aucune relation avocat client ne naît avant que le cabinet ne confirme par écrit qu'il accepte votre affaire. Ce que vous nous confiez auparavant est néanmoins traité comme confidentiel par le cabinet. L'assistant lui-même n'est simplement pas un canal confidentiel, raison pour laquelle nous vous demandons d'en tenir les éléments du dossier à l'écart.",
     "cookiesHeading": "Cookies",
     "cookiesBody": "Ce site ne conserve que le nécessaire, sauf si vous autorisez davantage. Ce qui est conservé, pourquoi, et comment retirer votre autorisation figurent dans la",
     "cookiesLink": "politique cookies",
@@ -618,13 +446,11 @@
     "recipientHostingBody": "Qui conserve le site et ses données sur nos instructions, en qualité de sous-traitant.",
     "recipientMailLabel": "Notre fournisseur de messagerie.",
     "recipientMailBody": "Qui achemine les messages en provenance et à destination du cabinet.",
-    "recipientAiLabel": "Le service d'IA derrière l'assistant en ligne.",
-    "recipientAiBody": "Qui reçoit le texte saisi dans l'assistant, comme décrit ci-dessus.",
     "recipientCounterpartLabel": "Les parties à votre affaire.",
     "recipientCounterpartBody": "Juridictions, conseils adverses, huissiers, experts et autorités publiques, lorsque agir pour vous l'exige.",
     "recipientsBody2": "Les sous-traitants n'agissent que sur nos instructions et sous contrat écrit. Toute autre communication n'a lieu qu'avec votre consentement ou lorsque la loi l'impose.",
     "transfersHeading": "Transferts hors d'Europe",
-    "transfersBody": "Le cabinet conserve les données dans l'Espace économique européen chaque fois qu'il le peut. Certains services de ce site, en particulier le cadre Google Maps et le service d'IA derrière l'assistant, peuvent traiter des données hors EEE. Lorsque c'est le cas, cela se fait sous les garanties exigées par le chapitre V du RGPD, telles qu'une décision d'adéquation ou des clauses contractuelles types. C'est une raison de plus de tenir les éléments confidentiels à l'écart de l'assistant.",
+    "transfersBody": "Le cabinet conserve les données dans l'Espace économique européen chaque fois qu'il le peut. Certains services de ce site, en particulier le cadre Google Maps, peuvent traiter des données hors EEE. Lorsque c'est le cas, cela se fait sous les garanties exigées par le chapitre V du RGPD, telles qu'une décision d'adéquation ou des clauses contractuelles types.",
     "retentionHeading": "Combien de temps nous conservons",
     "retentionIntro": "Les données ne sont pas conservées plus longtemps que la finalité ne l'exige. En pratique:",
     "retentionFilesLabel": "Dossiers.",
@@ -636,9 +462,9 @@
     "retentionConsentLabel": "Consentement aux cookies.",
     "retentionConsentBody": "Six mois, après quoi nous reposons la question.",
     "securityHeading": "Sécurité",
-    "securityBody": "Le site est servi via une connexion chiffrée, les mots de passe de l'espace client ne sont conservés que sous forme hachée, et l'accès aux systèmes du cabinet est limité à ceux qui en ont besoin. Aucun système n'est parfait. Si une violation devait mettre sérieusement vos droits en péril, nous vous en informerons ainsi que l'Autorité de protection des données, comme le RGPD l'exige.",
+    "securityBody": "Le site est servi via une connexion chiffrée et l'accès aux systèmes du cabinet est limité à ceux qui en ont besoin. Aucun système n'est parfait. Si une violation devait mettre sérieusement vos droits en péril, nous vous en informerons ainsi que l'Autorité de protection des données, comme le RGPD l'exige.",
     "automatedHeading": "Décisions automatisées",
-    "automatedBody": "Le cabinet ne prend aucune décision vous concernant sur le seul fondement d'un traitement automatisé. L'assistant résume ce que vous décrivez. La question de savoir si le cabinet peut agir pour vous, et tout conseil que vous recevez, relève d'un avocat.",
+    "automatedBody": "Le cabinet ne prend aucune décision vous concernant sur le seul fondement d'un traitement automatisé. La question de savoir si le cabinet peut agir pour vous, et tout conseil que vous recevez, relève d'un avocat.",
     "rightsHeading": "Vos droits",
     "rightsIntro": "En vertu du RGPD, vous pouvez nous demander de:",
     "rightAccessLabel": "Accès.",

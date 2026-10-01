@@ -5,7 +5,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { useNeo } from "@/components/neo/neo-context";
 import { MEDIA, SITE } from "@/lib/site";
 import { LogoWordmark } from "@/components/ui/logo-wordmark";
 
@@ -15,7 +14,6 @@ const NAV_KEYS = [
   { href: "/services" as const, key: "services" },
   { href: "/office" as const, key: "office" },
   { href: "/contact" as const, key: "contact" },
-  { href: "/privacy" as const, key: "privacy" },
 ] as const;
 
 const LOCALES = [
@@ -27,7 +25,6 @@ const LOCALES = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { setOpen: setNeoOpen } = useNeo();
   const tNav = useTranslations("Nav");
   const tCommon = useTranslations("Common");
   const locale = useLocale();
@@ -126,21 +123,6 @@ export function SiteHeader() {
               </span>
             ))}
           </div>
-
-          <Link
-            href="/case"
-            aria-label={tNav("consultNeoMobile")}
-            className="group inline-flex items-center gap-2 rounded-full border border-orech-ink/80 bg-transparent px-5 py-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-orech-ink transition hover:border-orech-bronze hover:bg-orech-bronze hover:text-orech-ink focus-visible:ring-2 focus-visible:ring-orech-bronze/50"
-          >
-            <span
-              aria-hidden
-              className="h-1.5 w-1.5 rounded-full bg-orech-bronze transition group-hover:bg-white"
-            />
-            {tNav("consultNeo")}{" "}
-            <span className="italic-display normal-case tracking-tight text-orech-bronze group-hover:text-white">
-              {tNav("consultNeoSuffix")}
-            </span>
-          </Link>
         </div>
       </div>
 
@@ -175,15 +157,6 @@ export function SiteHeader() {
                 {l.label}
               </a>
             ))}
-          </li>
-          <li className="mt-2">
-            <Link
-              href="/case"
-              className="mt-1 block w-full rounded-full border border-orech-ink/80 bg-orech-paper px-4 py-2.5 text-left font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-orech-ink transition hover:bg-orech-ink hover:text-orech-paper"
-              onClick={() => setMenuOpen(false)}
-            >
-              {tNav("consultNeoMobile")}
-            </Link>
           </li>
         </ul>
       </div>

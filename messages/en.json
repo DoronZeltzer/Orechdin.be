@@ -5,10 +5,6 @@
     "services": "Services",
     "office": "Office",
     "contact": "Contact",
-    "privacy": "Privacy",
-    "consultNeo": "Consult",
-    "consultNeoSuffix": "NEO",
-    "consultNeoMobile": "Consult NEO assistant",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "localeSwitcher": "Locale switcher",
@@ -61,7 +57,7 @@
       "eyebrow": "{city} · Avocats & Advocaten",
       "h1Line1": "Counsel and representation,",
       "h1Italic": "grounded in what we publish.",
-      "lead": "{short} advises companies, private clients and the self-employed across the matter types the firm publishes, commercial, civil, criminal, family, employment, real estate and traffic. Engagement begins with a direct conversation; the intake offered on this site is general orientation, not advice.",
+      "lead": "{short} advises companies, private clients and the self-employed across the matter types the firm publishes, commercial, civil, criminal, family, employment, real estate and traffic. Engagement begins with a direct conversation.",
       "primaryCta": "Contact the office",
       "secondaryCta": "Published practice areas",
       "captionStamp": "est. Antwerp",
@@ -170,7 +166,7 @@
       "eyebrow": "Get in touch",
       "headlinePart1": "Ready to speak",
       "headlineItalic": "with a lawyer?",
-      "lead": "For new instructions and confidential matters, please call the office directly or use the contact page. NEO can help you frame your question first; it does not provide legal advice and does not create representation.",
+      "lead": "For new instructions and confidential matters, please call the office directly or use the contact page.",
       "primaryCta": "Open the contact page",
       "asideEyebrow": "Firm details"
     }
@@ -265,10 +261,7 @@
     },
     "eyebrow": "Get in touch",
     "headline": "Contact",
-    "lead": "For new instructions and confidential matters, please call the office or send an email to the address below. NEO can help you frame your question first; it does not provide legal advice or create representation.",
-    "neoTitle": "Frame your question with NEO",
-    "neoBody": "NEO is an orientation assistant grounded in this site's approved knowledge base. It does not give legal advice or create an attorney-client relationship. Use it to organise context before contacting the office.",
-    "openNeo": "Open NEO assistant →",
+    "lead": "For new instructions and confidential matters, please call the office or send an email to the address below.",
     "privacyLink": "Privacy policy"
   },
   "NotFound": {
@@ -287,139 +280,6 @@
   },
   "Disclaimer": {
     "body": "Disclaimer: Orechdin Law Office cannot commit to any specific result, but will make every effort to achieve the best possible outcome."
-  },
-  "NeoChat": {
-    "composerPlaceholder": "Write a message…",
-    "quickPrompts": {
-      "cases": "What kind of cases does the office handle?",
-      "lawyers": "Who are the lawyers?",
-      "reach": "How do I reach the office?"
-    },
-    "attach": {
-      "drop": "Drop documents to attach",
-      "executableBlocked": "Executable files are not permitted.",
-      "fileTooLarge": "File exceeds {maxSize}MB limit.",
-      "alreadyAttached": "This file has already been attached.",
-      "maxFiles": "Maximum {maxFiles} files per intake.",
-      "ariaLabel": "Attach a document ({count} of {maxFiles} attached)",
-      "title": "Attach document",
-      "remove": "Remove {file}"
-    },
-    "paste": {
-      "openTitle": "Paste evidence text",
-      "title": "Paste evidence as text",
-      "subtitle": "Becomes exhibit",
-      "placeholder": "Paste an email, a clause, a WhatsApp thread… NEO will index it and cite it back to the lawyer.",
-      "characters": "{length} / 8000 characters",
-      "cancel": "Cancel",
-      "add": "Add as evidence",
-      "errorShort": "Paste at least 30 characters of evidence (e.g. an email, a clause, a chat thread).",
-      "prefix": "[Pasted evidence {filename}]"
-    },
-    "dictation": {
-      "start": "Dictate a message",
-      "stop": "Stop dictation",
-      "title": "Dictate (speech-to-text)",
-      "listening": "Listening, speak now. Click the mic again to stop.",
-      "blocked": "Microphone access blocked. Allow it in your browser settings to dictate.",
-      "ariaLabel": "Dictated by voice",
-      "titleLabel": "Dictated"
-    },
-    "empty": {
-      "greetingParams": {
-        "hello": "Hello",
-        "morning": "Good morning",
-        "afternoon": "Good afternoon",
-        "evening": "Good evening"
-      },
-      "introTitle": "{greeting}, I'm NEO.",
-      "introWorkspace": "Tell me what's going on, and I'll help you put together everything a lawyer here would need to look at it. Take your time. You can type, dictate, or drop a document straight into the chat.",
-      "introPanel": "Ask me anything about Orechdin and I'll point you to the right place. You can type, tap the mic to speak, or drop a document to start a file."
-    },
-    "typing": {
-      "thinking": "Thinking…",
-      "readingFile": "Reading your file…",
-      "readingMessage": "Reading your message…",
-      "puttingTogether": "Putting that together…",
-      "writingBack": "Writing back…"
-    },
-    "message": {
-      "copy": "Copy",
-      "send": "Send"
-    }
-  },
-  "NeoCaseFile": {
-    "panelTitle": "Live case file",
-    "panelEmpty": "Nothing yet",
-    "panelBuilding": "Building your file",
-    "panelSubtitle": "OVB-aligned · every fact carries a source pointer",
-    "panelFooter": "This file is built from your own messages. Nothing is shared with the office until you press Submit.",
-    "panelSubmitted": ", Submitted.",
-    "emptyIntro": "As you and NEO chat, the panel on the right fills in with what an Antwerp lawyer would want to see, parties, chronology, the legal issue, supporting documents, and a conflict gate. Everything carries a source pointer back to your own words.",
-    "emptyWarning": "Nothing is shared with the office until you press Submit.",
-    "cryptoHeading": "Cryptographic Safety",
-    "cryptoSafetyText": "This session is secured with TLS 1.3 End-to-End Encryption. Case data processing strictly adheres to the EU GDPR minimization principles and the EU AI Act (Art. 13) transparency requirements.",
-    "cover": "Cover",
-    "nextDeadline": "Next deadline:",
-    "completeness": "Completeness",
-    "execSummary": "Executive summary",
-    "execSummarySubtitle": "≤ 300 words",
-    "riskGate": "Risk & conflict gate",
-    "riskNoSignal": "no auto-signal",
-    "riskReviewReq": "review required",
-    "riskEmpty": "No automatic risk signal raised. Lawyer must still run a formal conflict check.",
-    "preEngagement": "Pre-engagement checks ({count})",
-    "parties": "Parties",
-    "partiesEmpty": "Nobody named yet.",
-    "chronology": "Chronology",
-    "chronologyEvent": "{count} event",
-    "chronologyEvents": "{count} events",
-    "chronologyEmpty": "No dated events extracted yet.",
-    "issues": "Legal issues & theory",
-    "issuesEmpty": "No issue inferred yet.",
-    "openQuestions": "Open questions ({count})",
-    "caseTheory": "Case theory (NITA framework, intake hypothesis only)",
-    "legalTheory": "Legal theory.",
-    "factualTheory": "Factual theory.",
-    "persuasiveTheory": "Persuasive theory.",
-    "evidence": "Evidence index",
-    "evidenceExhibit": "{count} exhibit",
-    "evidenceExhibits": "{count} exhibits",
-    "evidenceEmpty": "Drop documents into the chat, they show up here, indexed.",
-    "procedural": "Procedural posture",
-    "proceduralEmpty": "No deadlines or procedural events extracted yet.",
-    "proceduralDaysIn": "in {count} day",
-    "proceduralDaysIn_plural": "in {count} days",
-    "proceduralDaysAgo": "{count} day ago",
-    "proceduralDaysAgo_plural": "{count} days ago",
-    "damages": "Damages / quantum",
-    "damagesTotal": "total ≈ {total}",
-    "damagesEmpty": "No monetary stakes mentioned yet.",
-    "openQuestionsLawyer": "Open questions for the lawyer",
-    "handoff": "Hand-off to lawyer",
-    "exportDesc": "The brief is generated server-side as a real PDF or Word document, same artefact the office receives. The layout follows the OVB Behandeling-dossier indeling so the lawyer can drop it straight into a matter folder.",
-    "btnWord": "Download Word",
-    "btnWordWorking": "…Word",
-    "btnPdf": "Download PDF",
-    "btnPdfWorking": "…PDF",
-    "btnSend": "Send brief to Orechdin",
-    "btnSendWorking": "…Sending",
-    "notSentNote": "Nothing reaches the office until you press Send brief.",
-    "disabledNote": "Downloads are for your own records, sending to the office is currently disabled in this environment.",
-    "btnDeliver": "Deliver case file via…",
-    "btnDeliverAgain": "Deliver again via…",
-    "deliverEyebrow": "Delivery channel",
-    "deliverTitle": "Choose how to deliver",
-    "deliverDesc": "Select a channel below. Your case file, including the full dossier, timeline, and evidence index, will be composed and opened in your chosen app. You can review before sending.",
-    "deliverFooter": "The full PDF and Word documents can be downloaded separately using the buttons above. The text delivered via these channels is a summary; attach the PDF for the complete record.",
-    "deliveredSuccess": "Case file delivered! The office will review your submission.",
-    "channel_gmail": "Gmail",
-    "channel_outlook": "Microsoft Outlook",
-    "channel_whatsapp": "WhatsApp",
-    "channel_linkedin": "LinkedIn",
-    "channel_copy": "Copy to clipboard",
-    "channel_native-share": "Share…",
-    "channelCopied": "Copied!"
   },
   "Consent": {
     "settingsLink": "Cookie settings",
@@ -447,8 +307,8 @@
     "categories": {
       "necessary": {
         "name": "Strictly necessary",
-        "purpose": "Needed for the website to function: remembering the cookie choice you make here, keeping you signed in to the client area, and holding the answers you type into the intake assistant while you are using it. None of these track you.",
-        "duration": "Session to 6 months",
+        "purpose": "Needed for the website to function: remembering the cookie choice you make here and the language you chose. None of these track you.",
+        "duration": "Up to 1 year",
         "always": "Always active"
       },
       "functional": {
@@ -489,7 +349,7 @@
     "intro": "This policy explains what is stored on your device when you visit this website, why, and how you keep control of it. It applies to www.orechdin.be and follows Article 129 of the Belgian Electronic Communications Act together with the General Data Protection Regulation.",
     "version": "Version {version}, last updated {date}",
     "whatHeading": "What counts as a cookie",
-    "whatBody1": "A cookie is a small file a website asks your browser to keep. The law is broader than the word suggests: it covers any storing or reading of information on your device. The register below therefore also lists the two other techniques this website uses, local storage and session storage, and treats them by the same rules.",
+    "whatBody1": "A cookie is a small file a website asks your browser to keep. The law is broader than the word suggests: it covers any storing or reading of information on your device. Local storage and session storage are therefore covered by the same rules. This website uses neither.",
     "whatBody2": "Items placed by orechdin.be itself are first party. Items placed by another company through content we embed are third party, and that company decides what it does with them.",
     "basisHeading": "When we ask permission",
     "basisBody1": "Storage that is strictly necessary for a service you asked for does not require consent, and switching it off would break the site. Everything else requires your prior, free and specific permission.",
@@ -515,30 +375,6 @@
         "purpose": "Stores the cookie choice you made, so we do not ask again on every page and can show what you agreed to.",
         "duration": "6 months"
       },
-      "sessionToken": {
-        "purpose": "Keeps you signed in if you create an account for the client area. Set only after you sign in.",
-        "duration": "Until you sign out"
-      },
-      "sessionData": {
-        "purpose": "Holds a short lived copy of your session so signed in pages load without a database call on every request.",
-        "duration": "Until you sign out"
-      },
-      "dontRemember": {
-        "purpose": "Records that you asked not to stay signed in, so the session ends when you close the browser.",
-        "duration": "Until you sign out"
-      },
-      "neoSessionState": {
-        "purpose": "Holds the answers you have typed into the intake assistant so far, so a reload does not lose them. It stays in your browser tab and is discarded when you close it.",
-        "duration": "Until you close the tab"
-      },
-      "neoSidebar": {
-        "purpose": "Remembers whether you had the assistant panel open.",
-        "duration": "Until you clear your browser storage"
-      },
-      "neoPanelWidth": {
-        "purpose": "Remembers how wide you dragged the assistant panel.",
-        "duration": "Until you clear your browser storage"
-      },
       "googleMaps": {
         "purpose": "Placed by Google when you choose to load the map on the office page. Google receives your IP address and uses these cookies for its own purposes, including security and, depending on your Google settings, personalisation.",
         "duration": "Determined by Google, see Google policy"
@@ -555,7 +391,7 @@
     "secrecyHeading": "Cookies and professional secrecy",
     "secrecyBody": "As an advocate this firm is bound by professional secrecy under Article 458 of the Criminal Code. None of the items above touch the substance of a case: no cookie on this website records who you are, what you are seeking advice about, or anything you write to us. That duty of confidence is why this site carries no advertising, no social media pixels and no third party analytics.",
     "browserHeading": "Controlling cookies in your browser",
-    "browserBody": "Independently of the choice you make here, your browser can block or delete cookies for every site you visit. You will find the controls in its settings, usually under privacy or data protection. Blocking strictly necessary items may stop parts of this website from working, in particular the client area.",
+    "browserBody": "Independently of the choice you make here, your browser can block or delete cookies for every site you visit. You will find the controls in its settings, usually under privacy or data protection. Blocking strictly necessary items may stop parts of this website from working.",
     "complaintHeading": "Questions and complaints",
     "complaintBody1": "Questions about this policy go to {name}, at",
     "complaintBody2": "If our answer does not satisfy you, you may complain to the Belgian Data Protection Authority at",
@@ -587,10 +423,6 @@
     "dataVisitBody": "Your IP address and technical request data, processed by our hosting provider to deliver the pages and keep the service secure. We keep no visitor analytics.",
     "dataContactLabel": "Contacting us.",
     "dataContactBody": "The name, email address, telephone number and description of your matter that you choose to send through the contact form or by email.",
-    "dataAssistantLabel": "The online assistant.",
-    "dataAssistantBody": "The text you type into the intake assistant and the summary it produces.",
-    "dataAccountLabel": "The client area.",
-    "dataAccountBody": "If you create an account: your email address, your password in hashed form, and the times you signed in.",
     "dataClientLabel": "Becoming a client.",
     "dataClientBody": "If a matter proceeds, the office processes what it needs to act for you, including data about opposing parties and third parties. Those operations are described in the general privacy statement rather than here.",
     "purposesHeading": "Why, and on what legal basis",
@@ -605,10 +437,6 @@
     "basisConsentBody": "Optional cookies, and any newsletter. You may withdraw consent at any time, without affecting what was done before.",
     "basisSpecialLabel": "Special categories and criminal data, Articles 9 and 10.",
     "basisSpecialBody": "A file may contain health data, or data about offences and convictions. The office processes these where necessary for the establishment, exercise or defence of legal claims, the ground Article 9(2)(f) provides for legal work.",
-    "assistantHeading": "Please keep confidential details out of the assistant",
-    "assistantBody1": "The intake assistant on this website is a convenience for describing in general terms what you need. It is not a secure channel, and using it does not make you a client of the office.",
-    "assistantBody2": "To produce its replies, the assistant sends the text you type to an external AI service outside the office. Please do not enter names of other parties, case numbers, health information, or anything else you would not want leaving your own hands. Send confidential material by email or bring it to the office instead.",
-    "assistantBody3": "No advocate client relationship arises until the office confirms in writing that it accepts your matter. What you tell us beforehand is still treated as confidential by the office. The assistant itself is simply not a confidential channel, which is why we ask you to keep case details out of it.",
     "cookiesHeading": "Cookies",
     "cookiesBody": "This website stores only what is necessary unless you allow more. What is stored, why, and how to withdraw permission is set out in the",
     "cookiesLink": "cookie policy",
@@ -618,13 +446,11 @@
     "recipientHostingBody": "Which stores the website and its data on our instructions, as a processor.",
     "recipientMailLabel": "Our email provider.",
     "recipientMailBody": "Which carries messages sent from and to the office.",
-    "recipientAiLabel": "The AI service behind the online assistant.",
-    "recipientAiBody": "Which receives the text typed into the assistant, as described above.",
     "recipientCounterpartLabel": "Parties to your case.",
     "recipientCounterpartBody": "Courts, opposing counsel, bailiffs, experts and public authorities, where acting for you requires it.",
     "recipientsBody2": "Processors act only on our instructions and under a written agreement. Disclosure to anyone else happens only with your consent, or where the law requires it.",
     "transfersHeading": "Transfers outside Europe",
-    "transfersBody": "The office keeps personal data within the European Economic Area wherever it can. Some services used by this website, in particular the Google Maps frame and the AI service behind the assistant, may process data outside the EEA. Where that happens it takes place under the safeguards Chapter V GDPR requires, such as an adequacy decision or standard contractual clauses. It is one more reason to keep confidential details out of the assistant.",
+    "transfersBody": "The office keeps personal data within the European Economic Area wherever it can. Some services used by this website, in particular the Google Maps frame, may process data outside the EEA. Where that happens it takes place under the safeguards Chapter V GDPR requires, such as an adequacy decision or standard contractual clauses.",
     "retentionHeading": "How long we keep it",
     "retentionIntro": "Personal data is kept no longer than its purpose requires. In practice:",
     "retentionFilesLabel": "Case files.",
@@ -636,9 +462,9 @@
     "retentionConsentLabel": "Cookie consent.",
     "retentionConsentBody": "Six months, after which we ask again.",
     "securityHeading": "Security",
-    "securityBody": "The website is served over an encrypted connection, client area passwords are stored only in hashed form, and access to office systems is limited to those who need it. No system is perfect. If a breach ever puts your rights at serious risk, we will inform you and the Data Protection Authority as the GDPR requires.",
+    "securityBody": "The website is served over an encrypted connection and access to office systems is limited to those who need it. No system is perfect. If a breach ever puts your rights at serious risk, we will inform you and the Data Protection Authority as the GDPR requires.",
     "automatedHeading": "Automated decisions",
-    "automatedBody": "The office takes no decision about you by automated means alone. The online assistant summarises what you describe. Whether the office can act for you, and any advice you receive, is decided by an advocate.",
+    "automatedBody": "The office takes no decision about you by automated means alone. Whether the office can act for you, and any advice you receive, is decided by an advocate.",
     "rightsHeading": "Your rights",
     "rightsIntro": "Under the GDPR you can ask us to:",
     "rightAccessLabel": "Access.",

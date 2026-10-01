@@ -2,11 +2,9 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { useNeo } from "@/components/neo/neo-context";
 import { SITE } from "@/lib/site";
 
 export function ContactMain() {
-  const { setOpen: setNeoOpen } = useNeo();
   const t = useTranslations("ContactPage");
   const tDisclaimer = useTranslations("Disclaimer");
 
@@ -54,19 +52,6 @@ export function ContactMain() {
         </address>
 
         <div className="flex flex-col gap-6 p-8 bg-orech-slate/50 border border-orech-line rounded-2xl items-start justify-center backdrop-blur-sm shadow-sm transition hover:border-orech-bronze/40">
-          <div>
-            <h2 className="text-xl font-display text-orech-ink font-light tracking-tight mb-2">
-              {t("neoTitle")}
-            </h2>
-            <p className="text-sm text-orech-mist max-w-md">{t("neoBody")}</p>
-          </div>
-          <button
-            type="button"
-            onClick={() => setNeoOpen(true)}
-            className="mt-2 inline-flex items-center rounded-xl border border-orech-line bg-orech-paper px-6 py-3 text-sm font-medium text-orech-ink transition hover:border-orech-bronze/60 hover:text-orech-bronze"
-          >
-            {t("openNeo")}
-          </button>
           <p className="text-xs leading-relaxed text-orech-ink/55 mt-2">
             {tDisclaimer("body")}{" "}
             <Link

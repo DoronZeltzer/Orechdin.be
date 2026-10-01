@@ -121,10 +121,6 @@ export default function PrivacyPage() {
             <ul className="mt-4 space-y-3 leading-relaxed text-orech-ink/80">
               <Item label={t("dataVisitLabel")}>{t("dataVisitBody")}</Item>
               <Item label={t("dataContactLabel")}>{t("dataContactBody")}</Item>
-              <Item label={t("dataAssistantLabel")}>
-                {t("dataAssistantBody")}
-              </Item>
-              <Item label={t("dataAccountLabel")}>{t("dataAccountBody")}</Item>
               <Item label={t("dataClientLabel")}>{t("dataClientBody")}</Item>
             </ul>
           </Section>
@@ -150,21 +146,6 @@ export default function PrivacyPage() {
             </ul>
           </Section>
 
-          {/* An intake chat on a lawyer's site invites exactly the disclosure
-              it is least equipped to receive, so the warning is stated here
-              rather than buried in terms of use. */}
-          <Highlight heading={t("assistantHeading")}>
-            <p className="leading-relaxed text-orech-ink/80">
-              {t("assistantBody1")}
-            </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
-              {t("assistantBody2")}
-            </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
-              {t("assistantBody3")}
-            </p>
-          </Highlight>
-
           <Section id="cookies" heading={t("cookiesHeading")}>
             <p className="leading-relaxed text-orech-ink/80">
               {t("cookiesBody")}{" "}
@@ -189,7 +170,6 @@ export default function PrivacyPage() {
               <Item label={t("recipientMailLabel")}>
                 {t("recipientMailBody")}
               </Item>
-              <Item label={t("recipientAiLabel")}>{t("recipientAiBody")}</Item>
               <Item label={t("recipientCounterpartLabel")}>
                 {t("recipientCounterpartBody")}
               </Item>

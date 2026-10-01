@@ -5,8 +5,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { LegalServiceJsonLd } from "@/components/layout/json-ld";
 import { OrganizationJsonLd } from "@/components/layout/organization-json-ld";
 import { WebsiteJsonLd } from "@/components/layout/website-json-ld";
-import { NeoProvider } from "@/components/neo/neo-context";
-import { NeoShell } from "@/components/neo/neo-shell";
 import { ConsentProvider } from "@/components/consent/consent-provider";
 import { CookieBanner } from "@/components/consent/cookie-banner";
 import { SITE } from "@/lib/site";
@@ -86,7 +84,6 @@ export default async function RootLayout({
           {/* Consent wraps the whole tree: the footer's "cookie settings"
               control and the gated Google Maps embed both read from it. */}
           <ConsentProvider>
-          <NeoProvider>
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-orech-ink focus:px-4 focus:py-2 focus:text-orech-paper"
@@ -98,8 +95,6 @@ export default async function RootLayout({
               {children}
               <SiteFooter />
             </div>
-            <NeoShell />
-          </NeoProvider>
           <CookieBanner />
           </ConsentProvider>
         </NextIntlClientProvider>

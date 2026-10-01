@@ -5,10 +5,6 @@
     "services": "Praktijkgebieden",
     "office": "Kantoor",
     "contact": "Contact",
-    "privacy": "Privacy",
-    "consultNeo": "Consult",
-    "consultNeoSuffix": "NEO",
-    "consultNeoMobile": "NEO assistent raadplegen",
     "openMenu": "Menu openen",
     "closeMenu": "Menu sluiten",
     "localeSwitcher": "Taal kiezen",
@@ -61,7 +57,7 @@
       "eyebrow": "{city} · Advocaten & Avocats",
       "h1Line1": "Advies en vertegenwoordiging,",
       "h1Italic": "geworteld in wat wij publiceren.",
-      "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen in de zaaktypes die het kantoor publiceert, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht. Een opdracht begint met een rechtstreeks gesprek; de intake op deze site is algemene oriëntatie, geen juridisch advies.",
+      "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen in de zaaktypes die het kantoor publiceert, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht. Een opdracht begint met een rechtstreeks gesprek.",
       "primaryCta": "Contacteer het kantoor",
       "secondaryCta": "Gepubliceerde praktijkgebieden",
       "captionStamp": "est. Antwerpen",
@@ -170,7 +166,7 @@
       "eyebrow": "Neem contact op",
       "headlinePart1": "Klaar om te spreken",
       "headlineItalic": "met een advocaat?",
-      "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor rechtstreeks of gebruikt u de contactpagina. NEO kan u helpen uw vraag te formuleren; NEO geeft geen juridisch advies en creëert geen vertegenwoordiging.",
+      "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor rechtstreeks of gebruikt u de contactpagina.",
       "primaryCta": "Open de contactpagina",
       "asideEyebrow": "Kantoorgegevens"
     }
@@ -265,10 +261,7 @@
     },
     "eyebrow": "Neem contact op",
     "headline": "Contact",
-    "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor of stuurt u een e-mail naar het onderstaande adres. NEO kan u helpen uw vraag eerst te formuleren; NEO geeft geen juridisch advies en creëert geen vertegenwoordiging.",
-    "neoTitle": "Formuleer uw vraag met NEO",
-    "neoBody": "NEO is een oriëntatie-assistent gegrond in de goedgekeurde kennisbank van deze site. NEO geeft geen juridisch advies en creëert geen advocaat-cliëntrelatie. Gebruik NEO om context te ordenen vóór u contact opneemt met het kantoor.",
-    "openNeo": "Open NEO assistent →",
+    "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor of stuurt u een e-mail naar het onderstaande adres.",
     "privacyLink": "Privacybeleid"
   },
   "NotFound": {
@@ -287,139 +280,6 @@
   },
   "Disclaimer": {
     "body": "Disclaimer: Advocatenkantoor Orechdin kan geen specifiek resultaat garanderen, maar zal alles in het werk stellen om het best mogelijke resultaat te behalen."
-  },
-  "NeoChat": {
-    "composerPlaceholder": "Schrijf een bericht…",
-    "quickPrompts": {
-      "cases": "Welke zaken behandelt het kantoor?",
-      "lawyers": "Wie zijn de advocaten?",
-      "reach": "Hoe bereik ik het kantoor?"
-    },
-    "attach": {
-      "drop": "Sleep documenten hiernaartoe om toe te voegen",
-      "executableBlocked": "Uitvoerbare bestanden zijn niet toegestaan.",
-      "fileTooLarge": "Bestand overschrijdt de limiet van {maxSize}MB.",
-      "alreadyAttached": "Dit bestand is al toegevoegd.",
-      "maxFiles": "Maximaal {maxFiles} bestanden per dossier.",
-      "ariaLabel": "Voeg een document toe ({count} van {maxFiles} bijgevoegd)",
-      "title": "Document bijvoegen",
-      "remove": "Verwijder {file}"
-    },
-    "paste": {
-      "openTitle": "Plak bewijs als tekst",
-      "title": "Zet bewijs in als tekst",
-      "subtitle": "Wordt bewijsstuk",
-      "placeholder": "Plak een e-mail, een clausule, een WhatsApp gesprek… NEO indexeert dit en verwijst ernaar voor de advocaat.",
-      "characters": "{length} / 8000 tekens",
-      "cancel": "Annuleren",
-      "add": "Voeg toe als bewijs",
-      "errorShort": "Zet minimaal 30 tekens bewijs in (bijv. een e-mail, een clausule, een chat).",
-      "prefix": "[Geplakt bewijs {filename}]"
-    },
-    "dictation": {
-      "start": "Spreek een bericht in",
-      "stop": "Stop dicteren",
-      "title": "Dicteren (spraak-naar-tekst)",
-      "listening": "Luistert, spreek nu in. Klik nogmaals op de microfoon om te stoppen.",
-      "blocked": "Microfoontoegang geblokkeerd. Sta dit toe in de browserinstellingen om te dicteren.",
-      "ariaLabel": "Gedicteerd via spraak",
-      "titleLabel": "Gedicteerd"
-    },
-    "empty": {
-      "greetingParams": {
-        "hello": "Hallo",
-        "morning": "Goedemorgen",
-        "afternoon": "Goedemiddag",
-        "evening": "Goedenavond"
-      },
-      "introTitle": "{greeting}, Ik ben NEO.",
-      "introWorkspace": "Vertel me wat de situatie is, en ik help u de informatie te verzamelen die een advocaat nodig heeft. Neem uw tijd. U kunt typen, dicteren of een document direct in de chat slepen.",
-      "introPanel": "Vraag me alles over Orechdin en ik help u op weg. U kunt typen, op de microfoon klikken om te praten, of een document slepen om een dossier te starten."
-    },
-    "typing": {
-      "thinking": "Denkt na…",
-      "readingFile": "Leest uw bestand…",
-      "readingMessage": "Leest uw bericht…",
-      "puttingTogether": "Zet het op een rij…",
-      "writingBack": "Schrijft terug…"
-    },
-    "message": {
-      "copy": "Kopiëren",
-      "send": "Versturen"
-    }
-  },
-  "NeoCaseFile": {
-    "panelTitle": "Live dossier",
-    "panelEmpty": "Nog niets",
-    "panelBuilding": "We bouwen uw dossier op",
-    "panelSubtitle": "OVB-conform · elk feit bevat een bronverwijzing",
-    "panelFooter": "Dit dossier wordt opgebouwd uit uw eigen berichten. Niets wordt gedeeld met het kantoor totdat u op Verzenden drukt.",
-    "panelSubmitted": ", Verzonden.",
-    "emptyIntro": "Terwijl u en NEO chatten, wordt het paneel rechts aangevuld met wat een Antwerpse advocaat zou willen zien, partijen, chronologie, het juridische vraagstuk, bewijsstukken en een conflictcontrole. Alles bevat een bronverwijzing naar uw eigen woorden.",
-    "emptyWarning": "Niets wordt gedeeld met het kantoor totdat u op Verzenden drukt.",
-    "cryptoHeading": "Cryptografische veiligheid",
-    "cryptoSafetyText": "Deze sessie is beveiligd met TLS 1.3 End-to-End Encryption. De gegevensverwerking van de zaak voldoet strikt aan de EU GDPR-minimalisatieprincipes en de EU AI Act (Art. 13) transparantievereisten.",
-    "cover": "Omslag",
-    "nextDeadline": "Volgende deadline:",
-    "completeness": "Volledigheid",
-    "execSummary": "Samenvatting",
-    "execSummarySubtitle": "≤ 300 woorden",
-    "riskGate": "Risico- & conflictcontrole",
-    "riskNoSignal": "geen auto-signaal",
-    "riskReviewReq": "vereist beoordeling",
-    "riskEmpty": "Geen automatisch risicosignaal verhoogd. De advocaat moet nog steeds een formele conflictcontrole uitvoeren.",
-    "preEngagement": "Pre-engagement controles ({count})",
-    "parties": "Partijen",
-    "partiesEmpty": "Nog niemand genoemd.",
-    "chronology": "Chronologie",
-    "chronologyEvent": "{count} gebeurtenis",
-    "chronologyEvents": "{count} gebeurtenissen",
-    "chronologyEmpty": "Nog geen gedateerde gebeurtenissen geëxtraheerd.",
-    "issues": "Juridische kwesties & theorie",
-    "issuesEmpty": "Nog geen probleem afgeleid.",
-    "openQuestions": "Open vragen ({count})",
-    "caseTheory": "Pleit-theorie (NITA structuur, enkel intake hypothese)",
-    "legalTheory": "Juridische theorie.",
-    "factualTheory": "Feitelijke theorie.",
-    "persuasiveTheory": "Overtuigende theorie.",
-    "evidence": "Bewijsindex",
-    "evidenceExhibit": "{count} bijlage",
-    "evidenceExhibits": "{count} bijlagen",
-    "evidenceEmpty": "Plaats hier documenten - ze verschijnen hier, geïndexeerd.",
-    "procedural": "Procedurele positie",
-    "proceduralEmpty": "Nog geen deadlines of procedurele evenementen.",
-    "proceduralDaysIn": "binnen {count} dag",
-    "proceduralDaysIn_plural": "binnen {count} dagen",
-    "proceduralDaysAgo": "{count} dag geleden",
-    "proceduralDaysAgo_plural": "{count} dagen geleden",
-    "damages": "Schadebedrag / quantum",
-    "damagesTotal": "totaal ≈ {total}",
-    "damagesEmpty": "Geen financiële belangen genoemd.",
-    "openQuestionsLawyer": "Open vragen voor de advocaat",
-    "handoff": "Overdracht aan de advocaat",
-    "exportDesc": "De briefing wordt hier als een echte PDF of Word document gegenereerd, hetzelfde object krijgt het kantoor. De opmaak is volgens de OVB Behandeling-dossier indeling zodat de advocaat dit meteen kan opslaan.",
-    "btnWord": "Download Word",
-    "btnWordWorking": "…Word",
-    "btnPdf": "Download PDF",
-    "btnPdfWorking": "…PDF",
-    "btnSend": "Stuur file naar Orechdin",
-    "btnSendWorking": "…Verzenden",
-    "notSentNote": "Niets bereikt het kantoor totdat u de briefing verzendt.",
-    "disabledNote": "Downloads zijn voor uw eigen administratie. Verzenden naar het kantoor is momenteel uitgeschakeld in deze omgeving.",
-    "btnDeliver": "Dossier verzenden via…",
-    "btnDeliverAgain": "Opnieuw verzenden via…",
-    "deliverEyebrow": "Verzendkanaal",
-    "deliverTitle": "Kies hoe u wilt verzenden",
-    "deliverDesc": "Selecteer een kanaal hieronder. Uw dossier, inclusief de volledige briefing, tijdlijn en bewijsindex, wordt samengesteld en geopend in de gekozen app. U kunt alles nakijken vóór verzending.",
-    "deliverFooter": "De volledige PDF- en Word-documenten kunt u apart downloaden via de knoppen hierboven. De tekst die via deze kanalen wordt verstuurd is een samenvatting; voeg de PDF toe voor het volledige dossier.",
-    "deliveredSuccess": "Dossier verzonden! Het kantoor zal uw inzending beoordelen.",
-    "channel_gmail": "Gmail",
-    "channel_outlook": "Microsoft Outlook",
-    "channel_whatsapp": "WhatsApp",
-    "channel_linkedin": "LinkedIn",
-    "channel_copy": "Kopiëren naar klembord",
-    "channel_native-share": "Delen…",
-    "channelCopied": "Gekopieerd!"
   },
   "Consent": {
     "settingsLink": "Cookie-instellingen",
@@ -447,8 +307,8 @@
     "categories": {
       "necessary": {
         "name": "Strikt noodzakelijk",
-        "purpose": "Nodig om de website te laten werken: het onthouden van de cookiekeuze die u hier maakt, u aangemeld houden in het cliëntgedeelte, en de antwoorden bewaren die u in de intake-assistent typt zolang u ze gebruikt. Geen daarvan volgt u.",
-        "duration": "Sessie tot 6 maanden",
+        "purpose": "Nodig om de website te laten werken: het onthouden van de cookiekeuze die u hier maakt en van de taal die u koos. Geen daarvan volgt u.",
+        "duration": "Tot 1 jaar",
         "always": "Altijd actief"
       },
       "functional": {
@@ -489,7 +349,7 @@
     "intro": "Dit beleid legt uit wat er op uw toestel wordt bewaard wanneer u deze website bezoekt, waarom, en hoe u er controle over houdt. Het geldt voor www.orechdin.be en volgt artikel 129 van de Wet betreffende de elektronische communicatie samen met de Algemene Verordening Gegevensbescherming.",
     "version": "Versie {version}, laatst bijgewerkt op {date}",
     "whatHeading": "Wat als cookie geldt",
-    "whatBody1": "Een cookie is een klein bestand dat een website door uw browser laat bewaren. De wet reikt verder dan het woord doet vermoeden: ze dekt elk opslaan of uitlezen van informatie op uw toestel. Het register hieronder vermeldt daarom ook de twee andere technieken die deze website gebruikt, local storage en session storage, en behandelt ze volgens dezelfde regels.",
+    "whatBody1": "Een cookie is een klein bestand dat een website door uw browser laat bewaren. De wet reikt verder dan het woord doet vermoeden: ze dekt elk opslaan of uitlezen van informatie op uw toestel. Daarom vallen ook local storage en session storage onder dezelfde regels. Deze website gebruikt geen van beide.",
     "whatBody2": "Wat door orechdin.be zelf wordt geplaatst, is eerste partij. Wat door een ander bedrijf wordt geplaatst via ingesloten inhoud, is derde partij, en dat bedrijf beslist wat het ermee doet.",
     "basisHeading": "Wanneer wij toestemming vragen",
     "basisBody1": "Opslag die strikt noodzakelijk is voor een dienst die u zelf heeft gevraagd, vereist geen toestemming, en uitschakelen zou de site breken. Al de rest vereist uw voorafgaande, vrije en specifieke toestemming.",
@@ -515,30 +375,6 @@
         "purpose": "Bewaart de cookiekeuze die u heeft gemaakt, zodat wij het niet op elke pagina opnieuw vragen en kunnen aantonen waarmee u akkoord ging.",
         "duration": "6 maanden"
       },
-      "sessionToken": {
-        "purpose": "Houdt u aangemeld als u een account aanmaakt voor het cliëntgedeelte. Wordt pas geplaatst nadat u zich aanmeldt.",
-        "duration": "Tot u zich afmeldt"
-      },
-      "sessionData": {
-        "purpose": "Bevat een kortstondige kopie van uw sessie zodat aangemelde pagina's laden zonder bij elke aanvraag de databank te raadplegen.",
-        "duration": "Tot u zich afmeldt"
-      },
-      "dontRemember": {
-        "purpose": "Noteert dat u niet aangemeld wenst te blijven, zodat de sessie eindigt wanneer u de browser sluit.",
-        "duration": "Tot u zich afmeldt"
-      },
-      "neoSessionState": {
-        "purpose": "Bewaart de antwoorden die u tot nu toe in de intake-assistent typte, zodat een herlaadbeurt ze niet wist. Het blijft in uw browsertabblad en verdwijnt wanneer u dat sluit.",
-        "duration": "Tot u het tabblad sluit"
-      },
-      "neoSidebar": {
-        "purpose": "Onthoudt of u het assistentpaneel open had staan.",
-        "duration": "Tot u uw browseropslag wist"
-      },
-      "neoPanelWidth": {
-        "purpose": "Onthoudt hoe breed u het assistentpaneel heeft gesleept.",
-        "duration": "Tot u uw browseropslag wist"
-      },
       "googleMaps": {
         "purpose": "Geplaatst door Google wanneer u ervoor kiest de kaart op de kantoorpagina te laden. Google ontvangt uw IP-adres en gebruikt deze cookies voor eigen doeleinden, waaronder beveiliging en, afhankelijk van uw Google-instellingen, personalisatie.",
         "duration": "Bepaald door Google, zie het beleid van Google"
@@ -555,7 +391,7 @@
     "secrecyHeading": "Cookies en beroepsgeheim",
     "secrecyBody": "Als advocaat is dit kantoor gebonden door het beroepsgeheim krachtens artikel 458 van het Strafwetboek. Geen van de bovenstaande onderdelen raakt de inhoud van een dossier: geen enkele cookie op deze website registreert wie u bent, waarover u advies zoekt, of wat u ons schrijft. Die geheimhoudingsplicht is precies de reden waarom deze site geen reclame, geen socialemediapixels en geen externe analysetools draagt.",
     "browserHeading": "Cookies beheren in uw browser",
-    "browserBody": "Los van de keuze die u hier maakt, kan uw browser cookies blokkeren of wissen voor elke site die u bezoekt. U vindt die instellingen doorgaans onder privacy of gegevensbescherming. Het blokkeren van strikt noodzakelijke onderdelen kan delen van deze website onbruikbaar maken, in het bijzonder het cliëntgedeelte.",
+    "browserBody": "Los van de keuze die u hier maakt, kan uw browser cookies blokkeren of wissen voor elke site die u bezoekt. U vindt die instellingen doorgaans onder privacy of gegevensbescherming. Het blokkeren van strikt noodzakelijke onderdelen kan delen van deze website onbruikbaar maken.",
     "complaintHeading": "Vragen en klachten",
     "complaintBody1": "Vragen over dit beleid richt u aan {name}, via",
     "complaintBody2": "Bent u niet tevreden met ons antwoord, dan kunt u klacht indienen bij de Gegevensbeschermingsautoriteit via",
@@ -587,10 +423,6 @@
     "dataVisitBody": "Uw IP-adres en technische aanvraaggegevens, verwerkt door onze hostingpartner om de pagina's te leveren en de dienst veilig te houden. Wij houden geen bezoekersstatistieken bij.",
     "dataContactLabel": "Contact opnemen.",
     "dataContactBody": "De naam, het e-mailadres, het telefoonnummer en de omschrijving van uw zaak die u ons via het contactformulier of per e-mail bezorgt.",
-    "dataAssistantLabel": "De online assistent.",
-    "dataAssistantBody": "De tekst die u in de intake-assistent typt en de samenvatting die daaruit volgt.",
-    "dataAccountLabel": "Het cliëntgedeelte.",
-    "dataAccountBody": "Als u een account aanmaakt: uw e-mailadres, uw wachtwoord in gehashte vorm, en de tijdstippen waarop u zich aanmeldde.",
     "dataClientLabel": "Cliënt worden.",
     "dataClientBody": "Gaat een zaak door, dan verwerkt het kantoor wat nodig is om voor u op te treden, met inbegrip van gegevens over tegenpartijen en derden. Die verwerkingen worden beschreven in de algemene privacyverklaring en niet hier.",
     "purposesHeading": "Waarom, en op welke rechtsgrond",
@@ -605,10 +437,6 @@
     "basisConsentBody": "Optionele cookies, en een eventuele nieuwsbrief. U kunt uw toestemming op elk moment intrekken, zonder gevolg voor wat voordien gebeurde.",
     "basisSpecialLabel": "Bijzondere categorieën en strafrechtelijke gegevens, artikelen 9 en 10.",
     "basisSpecialBody": "Een dossier kan gezondheidsgegevens bevatten, of gegevens over strafbare feiten en veroordelingen. Het kantoor verwerkt die wanneer dat nodig is voor de instelling, uitoefening of onderbouwing van een rechtsvordering, de grond die artikel 9, lid 2, f voorziet voor juridisch werk.",
-    "assistantHeading": "Geef geen vertrouwelijke gegevens in aan de assistent",
-    "assistantBody1": "De intake-assistent op deze website is een hulpmiddel om in algemene bewoordingen te beschrijven wat u nodig heeft. Het is geen beveiligd kanaal, en het gebruik ervan maakt u geen cliënt van het kantoor.",
-    "assistantBody2": "Om antwoorden te vormen, stuurt de assistent de tekst die u typt naar een externe AI-dienst buiten het kantoor. Geef er dus geen namen van tegenpartijen, dossiernummers, gezondheidsgegevens of ander materiaal in dat u niet uit handen wil geven. Bezorg vertrouwelijke stukken per e-mail of breng ze naar het kantoor.",
-    "assistantBody3": "Er ontstaat pas een verhouding advocaat cliënt wanneer het kantoor schriftelijk bevestigt dat het uw zaak aanneemt. Wat u ons voordien meedeelt, behandelt het kantoor niettemin als vertrouwelijk. De assistent zelf is eenvoudigweg geen vertrouwelijk kanaal, en daarom vragen wij u dossiergegevens erbuiten te houden.",
     "cookiesHeading": "Cookies",
     "cookiesBody": "Deze website bewaart enkel wat noodzakelijk is, tenzij u meer toestaat. Wat er wordt bewaard, waarom, en hoe u uw toestemming intrekt, staat in het",
     "cookiesLink": "cookiebeleid",
@@ -618,13 +446,11 @@
     "recipientHostingBody": "Die de website en de gegevens ervan op onze instructie bewaart, als verwerker.",
     "recipientMailLabel": "Onze e-mailprovider.",
     "recipientMailBody": "Die berichten van en naar het kantoor vervoert.",
-    "recipientAiLabel": "De AI-dienst achter de online assistent.",
-    "recipientAiBody": "Die de tekst ontvangt die in de assistent wordt getypt, zoals hierboven beschreven.",
     "recipientCounterpartLabel": "Partijen in uw zaak.",
     "recipientCounterpartBody": "Rechtbanken, raadslieden van tegenpartijen, gerechtsdeurwaarders, deskundigen en overheden, wanneer het optreden voor u dat vereist.",
     "recipientsBody2": "Verwerkers handelen enkel op onze instructie en onder een schriftelijke overeenkomst. Mededeling aan wie dan ook gebeurt enkel met uw toestemming, of wanneer de wet dat oplegt.",
     "transfersHeading": "Doorgifte buiten Europa",
-    "transfersBody": "Het kantoor houdt persoonsgegevens binnen de Europese Economische Ruimte waar het kan. Sommige diensten van deze website, in het bijzonder het Google Maps-kader en de AI-dienst achter de assistent, kunnen gegevens buiten de EER verwerken. Gebeurt dat, dan gebeurt het onder de waarborgen die hoofdstuk V AVG vereist, zoals een adequaatheidsbesluit of standaardbepalingen inzake gegevensbescherming. Het is een reden te meer om vertrouwelijke gegevens buiten de assistent te houden.",
+    "transfersBody": "Het kantoor houdt persoonsgegevens binnen de Europese Economische Ruimte waar het kan. Sommige diensten van deze website, in het bijzonder het Google Maps-kader, kunnen gegevens buiten de EER verwerken. Gebeurt dat, dan gebeurt het onder de waarborgen die hoofdstuk V AVG vereist, zoals een adequaatheidsbesluit of standaardbepalingen inzake gegevensbescherming.",
     "retentionHeading": "Hoelang wij gegevens bewaren",
     "retentionIntro": "Persoonsgegevens worden niet langer bewaard dan het doel vereist. In de praktijk:",
     "retentionFilesLabel": "Dossiers.",
@@ -636,9 +462,9 @@
     "retentionConsentLabel": "Cookietoestemming.",
     "retentionConsentBody": "Zes maanden, daarna vragen wij het opnieuw.",
     "securityHeading": "Beveiliging",
-    "securityBody": "De website wordt over een versleutelde verbinding aangeboden, wachtwoorden van het cliëntgedeelte worden enkel gehasht bewaard, en de toegang tot kantoorsystemen is beperkt tot wie ze nodig heeft. Geen enkel systeem is perfect. Mocht een inbreuk ooit uw rechten ernstig in gevaar brengen, dan brengen wij u en de Gegevensbeschermingsautoriteit op de hoogte zoals de AVG vereist.",
+    "securityBody": "De website wordt over een versleutelde verbinding aangeboden en de toegang tot kantoorsystemen is beperkt tot wie ze nodig heeft. Geen enkel systeem is perfect. Mocht een inbreuk ooit uw rechten ernstig in gevaar brengen, dan brengen wij u en de Gegevensbeschermingsautoriteit op de hoogte zoals de AVG vereist.",
     "automatedHeading": "Geautomatiseerde besluiten",
-    "automatedBody": "Het kantoor neemt geen enkel besluit over u op basis van uitsluitend geautomatiseerde verwerking. De online assistent vat samen wat u beschrijft. Of het kantoor voor u kan optreden, en welk advies u krijgt, beslist een advocaat.",
+    "automatedBody": "Het kantoor neemt geen enkel besluit over u op basis van uitsluitend geautomatiseerde verwerking. Of het kantoor voor u kan optreden, en welk advies u krijgt, beslist een advocaat.",
     "rightsHeading": "Uw rechten",
     "rightsIntro": "Op grond van de AVG kunt u ons vragen om:",
     "rightAccessLabel": "Inzage.",

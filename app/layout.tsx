@@ -9,7 +9,7 @@ import "./globals.css";
 /**
  * Root layout — intentionally a passthrough.
  *
- * The real <html>/<body> shell (fonts, theme, header, footer, NEO) lives in
+ * The real <html>/<body> shell (fonts, theme, header, footer) lives in
  * `app/[locale]/layout.tsx`, which every user-facing route flows through. This
  * root exists only so Next.js has a place to hang app-wide metadata — chiefly
  * `metadataBase`, so that social-image and canonical URLs on the locale-less

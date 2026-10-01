@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
  * ruled line above and below, monospaced eyebrow, italic display set in
  * Cormorant Garamond, separated by hairline interpuncts.
  *
- * Single source of truth: `lib/site.ts` and `data/neo-kb.json`.
+ * Single source of truth: `lib/site.ts`.
  */
 const AREA_KEYS = [
   "commercial",

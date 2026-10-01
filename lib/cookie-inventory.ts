@@ -9,16 +9,17 @@ import type { OptionalCategory } from "@/lib/consent";
  * register here rather than in the page body means the published table and
  * the code that actually sets the cookies can be checked against each other.
  *
- * Every entry below was read off this codebase, not copied from a template:
+ * Every entry below was read off this codebase and checked against a live
+ * browser, not copied from a template:
  *   - `orechdin_consent` is written by `lib/consent.ts`.
- *   - The `better-auth.*` cookies are the documented defaults of the
- *     better-auth package used in `lib/auth.ts`, and only exist for visitors
- *     who create an account in the client area.
- *   - The `neo_*` entries are browser storage, not cookies. They are listed
- *     anyway: Article 129 governs storing or reading ANY information on the
- *     visitor's terminal equipment, so localStorage and sessionStorage fall
- *     under the same rule and belong in the same register.
+ *   - `NEXT_LOCALE` is written by the next-intl middleware. Nothing in this
+ *     repo sets it explicitly, so it only turned up by inspecting
+ *     document.cookie on a running page.
  *   - Google Maps is the only third party the site can contact at all.
+ *
+ * Article 129 governs storing or reading ANY information on the visitor's
+ * terminal equipment, so localStorage and sessionStorage belong in this
+ * register too. The site currently uses neither; if that changes, list it.
  *
  * When this list changes, bump `CONSENT_VERSION` in `lib/consent.ts` if the
  * change affects an optional category, and bump the policy version below.
@@ -65,42 +66,6 @@ export const COOKIE_GROUPS: readonly CookieGroup[] = [
         provider: "orechdin.be",
         kind: "cookie",
       },
-      {
-        id: "sessionToken",
-        name: "better-auth.session_token",
-        provider: "orechdin.be",
-        kind: "cookie",
-      },
-      {
-        id: "sessionData",
-        name: "better-auth.session_data",
-        provider: "orechdin.be",
-        kind: "cookie",
-      },
-      {
-        id: "dontRemember",
-        name: "better-auth.dont_remember",
-        provider: "orechdin.be",
-        kind: "cookie",
-      },
-      {
-        id: "neoSessionState",
-        name: "neo_session_state",
-        provider: "orechdin.be",
-        kind: "sessionStorage",
-      },
-      {
-        id: "neoSidebar",
-        name: "neo_sidebar_open_v1",
-        provider: "orechdin.be",
-        kind: "localStorage",
-      },
-      {
-        id: "neoPanelWidth",
-        name: "neo_panel_width_v1",
-        provider: "orechdin.be",
-        kind: "localStorage",
-      },
     ],
   },
   {
@@ -131,5 +96,5 @@ export const COOKIE_GROUPS: readonly CookieGroup[] = [
 ] as const;
 
 /** Shown on the policy and bumped whenever the register above changes. */
-export const COOKIE_POLICY_VERSION = "1.0";
-export const COOKIE_POLICY_UPDATED = "2026-08-18";
+export const COOKIE_POLICY_VERSION = "1.1";
+export const COOKIE_POLICY_UPDATED = "2026-10-01";

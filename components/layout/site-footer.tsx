@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
@@ -15,14 +14,8 @@ import { CookieSettingsButton } from "@/components/consent/cookie-settings-butto
  * a printed monograph.
  */
 export function SiteFooter() {
-  const pathname = usePathname();
-  const pathWithoutLocale = pathname.replace(/^\/(en|nl|fr)/, "") || "/";
   const t = useTranslations("Footer");
   const tDisclaimer = useTranslations("Disclaimer");
-
-  if (pathWithoutLocale === "/case" || pathWithoutLocale.startsWith("/case/")) {
-    return null;
-  }
 
   return (
     <footer

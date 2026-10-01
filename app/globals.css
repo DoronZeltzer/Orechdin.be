@@ -76,22 +76,6 @@
     background-color: #FFFFFF;
   }
 
-  @media (min-width: 1024px) {
-    body.neo-hub-open {
-      padding-right: 420px;
-    }
-  }
-
-  /* Case Room: full-screen NEO workspace; hide marketing chrome and the
-     floating side panel rail so the visitor has a focused two-pane surface. */
-  body.neo-case-room footer[data-site-footer],
-  body.neo-case-room aside[aria-label="NEO assistant"],
-  body.neo-case-room button[aria-label="Open NEO assistant"] {
-    display: none !important;
-  }
-  body.neo-case-room {
-    overflow: hidden;
-  }
 }
 
 @layer components {
@@ -271,77 +255,5 @@
   ::view-transition-old(*),
   ::view-transition-new(*) {
     animation: none !important;
-  }
-}
-
-/* ─── PRINT STYLESHEET ────────────────────────────────────────────────────
- *
- * Lets the lawyer (or visitor) print just the case-file dossier as a clean
- * A4 document, without the chrome around it. Anything outside the
- * `.case-file-printable` subtree is hidden when printing. Inside it, colours
- * collapse to black on white and links print their href so a paper copy
- * is still actionable.
- */
-@media print {
-  @page {
-    size: A4;
-    margin: 18mm 16mm 20mm 16mm;
-  }
-
-  html,
-  body {
-    background: #ffffff !important;
-    color: #111111 !important;
-    font-size: 10.5pt;
-    line-height: 1.45;
-  }
-
-  body * {
-    visibility: hidden !important;
-  }
-
-  .case-file-printable,
-  .case-file-printable * {
-    visibility: visible !important;
-  }
-
-  .case-file-printable {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #ffffff !important;
-    color: #111111 !important;
-    box-shadow: none !important;
-  }
-
-  .case-file-printable section {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    border: 0 !important;
-    background: transparent !important;
-  }
-
-  .case-file-printable h1,
-  .case-file-printable h2,
-  .case-file-printable h3 {
-    color: #111111 !important;
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  .case-file-printable a[href]::after {
-    content: " (" attr(href) ")";
-    font-size: 8pt;
-    color: #555555;
-  }
-
-  .print\:hidden,
-  header[role="banner"],
-  nav,
-  footer:not(.case-file-printable footer),
-  aside:not(.case-file-printable aside) {
-    display: none !important;
   }
 }

@@ -50,13 +50,6 @@ const config: Config = {
           line: "#DCE6F1", // hairline: soft blue-grey
           lineSoft: "rgba(10,10,10,0.08)", // hairline-on-white at low alpha
         },
-        neo: {
-          panel: "#0A0A0A", // brand black panel
-          surface: "#161616",
-          border: "#2A2A2A",
-          accent: "#95B6DF", // brand accent on dark
-          muted: "rgba(255,255,255,0.6)",
-        },
       },
       fontFamily: {
         // Composed, light-weight headline serif.
@@ -100,16 +93,9 @@ const config: Config = {
         // Editorial portrait/photo shadow.
         plate:
           "0 1px 1px rgba(24,20,18,0.04), 0 28px 60px -24px rgba(24,20,18,0.30)",
-        neo: "0 0 0 1px rgba(255,255,255,0.06), -12px 0 48px rgba(0,0,0,0.35)",
-        "neo-glass":
-          "-12px 0 40px rgba(0,0,0,0.04), inset 0 0 0 1px rgba(255,255,255,0.4)",
       },
       transitionTimingFunction: {
-        neo: "cubic-bezier(0.19, 1, 0.22, 1)",
         editorial: "cubic-bezier(0.16, 1, 0.3, 1)",
-      },
-      transitionDuration: {
-        neo: "280ms",
       },
     },
   },
