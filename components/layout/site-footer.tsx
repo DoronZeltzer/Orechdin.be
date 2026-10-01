@@ -31,7 +31,7 @@ export function SiteFooter() {
       <div aria-hidden className="h-16 bg-gradient-to-b from-brand-white to-brand-wash" />
 
       <div className="mx-auto max-w-wide px-6 pb-14 lg:px-10">
-        <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-brand-black-80 sm:text-lg">
+        <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-brand-black-80 sm:text-[0.95rem]">
           {tDisclaimer("body")}
         </p>
       </div>
