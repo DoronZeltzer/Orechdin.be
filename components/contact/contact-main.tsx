@@ -97,7 +97,7 @@ export function ContactMain() {
         <div className="mt-10 h-[340px] overflow-hidden rounded-2xl border border-brand-black/10 shadow-hairline sm:h-[420px]">
           <ConsentGate category="functional" title={t("mapConsentTitle")} description={t("mapConsentBody")}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5!2d4.4228!3d51.2118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f5c5b5e5e5%3A0x0!2sLange%20Herentalsestraat%20122%2C%202018%20Antwerpen!5e0!3m2!1sen!2sbe!4v1"
+              src="https://www.google.com/maps?q=Lange+Herentalsestraat+122,+2018+Antwerp,+Belgium&hl=en&z=16&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

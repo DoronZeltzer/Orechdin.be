@@ -15,7 +15,7 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
-    frame-src https://www.google.com/maps/embed;
+    frame-src https://www.google.com/maps;
 `;
 
 const nextConfig: NextConfig = {
