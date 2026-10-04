@@ -15,6 +15,7 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
+    frame-src https://www.google.com/maps/embed;
 `;
 
 const nextConfig: NextConfig = {
@@ -49,7 +50,19 @@ const nextConfig: NextConfig = {
     optimizeCss: false, // requires critters - leave off unless installed
   },
 
-// Headers for security and caching
+// The old Wix site's addresses, forwarded for good (308) to their new pages, so links
+  // that people saved or that search engines hold keep working once the domain moves.
+  async redirects() {
+    return [
+      { source: "/the-office", destination: "/en/office", permanent: true },
+      { source: "/services", destination: "/en/services", permanent: true },
+      { source: "/contact-8", destination: "/en/contact", permanent: true },
+      { source: "/privacy-policy", destination: "/en/privacy", permanent: true },
+      { source: "/cookies", destination: "/en/cookies", permanent: true },
+    ];
+  },
+
+  // Headers for security and caching
   async headers() {
     return [
       {
@@ -63,7 +76,7 @@ const nextConfig: NextConfig = {
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
           { key: 'Cross-Origin-Resource-Policy', value: 'same-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(self), geolocation=(), interest-cohort=()', },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()', },
           // HSTS: only meaningful over HTTPS in production. 2 years +
           // includeSubDomains + preload eligible.
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },

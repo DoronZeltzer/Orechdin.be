@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0A0A0A"/>
+  <rect width="32" height="32" rx="6" fill="#000000"/>
   <text x="14" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">O</text>
   <line x1="19.5" y1="25.5" x2="25.5" y2="6.5" stroke="#95B6DF" stroke-width="2.6" stroke-linecap="round"/>
 </svg>

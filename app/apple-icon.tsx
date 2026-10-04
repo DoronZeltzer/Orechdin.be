@@ -6,9 +6,9 @@ export const size = { width: 180, height: 180 } as const;
 export const contentType = "image/png";
 
 /**
- * Apple touch icon — a single italic "O" on the editorial paper
- * background, framed by a thin bronze hairline. Generated at the edge
- * so we never ship a binary.
+ * Apple touch icon: a black "O" on the brand accent blue (#95b6df), with the
+ * wordmark's diagonal slash. Brand colours only. Generated at the edge so no
+ * binary has to be shipped.
  */
 export default function AppleIcon() {
   return new ImageResponse(
@@ -20,17 +20,28 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1a1814",
-          color: "#f5efe6",
+          position: "relative",
+          background: "#95b6df",
+          color: "#000000",
           fontFamily: "Georgia, 'Times New Roman', serif",
-          fontStyle: "italic",
-          fontWeight: 600,
-          fontSize: 130,
-          letterSpacing: -4,
+          fontWeight: 700,
+          fontSize: 120,
           borderRadius: 36,
         }}
       >
         O
+        <div
+          style={{
+            position: "absolute",
+            left: 112,
+            top: 22,
+            width: 8,
+            height: 136,
+            background: "#000000",
+            transform: "rotate(16deg)",
+            borderRadius: 4,
+          }}
+        />
       </div>
     ),
     { ...size },

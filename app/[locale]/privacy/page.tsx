@@ -47,21 +47,21 @@ export default function PrivacyPage() {
   return (
     <main
       id="main-content"
-      className="min-h-screen bg-orech-paper pb-24 pt-12 text-orech-ink selection:bg-orech-bronze/30 md:pt-20"
+      className="min-h-screen bg-brand-white pb-24 text-brand-black selection:bg-brand-blue/40"
     >
-      <article className="mx-auto max-w-4xl px-4 md:px-6">
-        <header className="max-w-3xl border-b border-orech-line pb-10">
+      <article>
+        <header className="bg-brand-wash"><div className="mx-auto max-w-4xl px-6 py-12 md:py-16"><div className="max-w-3xl">
           <p className="eyebrow">{t("eyebrow")}</p>
           <h1 className="mt-3 font-display text-4xl leading-tight text-orech-ink md:text-5xl">
             {t("headline")}
           </h1>
-          <p className="mt-2 font-display text-xl text-orech-mist">
+          <p className="mt-2 font-display text-xl text-brand-black-80">
             {SITE.legalName}
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-orech-mist">
+          <p className="mt-6 text-sm leading-relaxed text-brand-black-80">
             {t("intro")}
           </p>
-          <p className="mt-4 text-sm leading-relaxed text-orech-mist">
+          <p className="mt-4 text-sm leading-relaxed text-brand-black-80">
             {t("scope")}{" "}
             <a
               href={SITE.livePrivacyUrl}
@@ -72,15 +72,15 @@ export default function PrivacyPage() {
             </a>
             .
           </p>
-          <p className="mt-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-orech-mist">
+          <p className="mt-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-brand-black-80">
             {t("version", {
               version: COOKIE_POLICY_VERSION,
               date: COOKIE_POLICY_UPDATED,
             })}
           </p>
-        </header>
+        </div></div></header>
 
-        <div className="mt-12 space-y-12">
+        <div className="mx-auto mt-14 max-w-4xl space-y-12 px-6">
           <Section id="controller" heading={t("controllerHeading")}>
             <p className="leading-relaxed text-orech-ink/80">
               {t("controllerBody1", {
@@ -284,20 +284,20 @@ export default function PrivacyPage() {
           </Section>
         </div>
 
-        <footer className="mt-16 border-t border-orech-line pt-10">
-          <p className="text-sm leading-relaxed text-orech-mist">
+        <footer className="mx-auto mt-16 max-w-4xl border-t border-brand-black/10 px-6 pt-10">
+          <p className="text-sm leading-relaxed text-brand-black-80">
             {t("supportNote")}
           </p>
           <p className="mt-6 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex min-h-11 items-center rounded-lg bg-orech-ink px-6 py-2.5 text-sm font-medium text-orech-paper transition hover:bg-orech-bronzeMuted"
+              className="inline-flex min-h-12 items-center rounded-lg border-2 border-brand-blue bg-brand-blue px-7 py-3 text-[0.82rem] font-bold uppercase tracking-[0.12em] text-brand-black shadow-sm transition hover:-translate-y-px hover:shadow-md"
             >
               {t("ctaContact")}
             </Link>
             <Link
               href="/cookies"
-              className="inline-flex min-h-11 items-center rounded-lg border border-orech-ink px-6 py-2.5 text-sm font-medium text-orech-ink transition hover:bg-orech-slate"
+              className="inline-flex min-h-12 items-center rounded-lg border-2 border-brand-black-60 px-7 py-3 text-[0.82rem] font-bold uppercase tracking-[0.12em] text-brand-black transition hover:border-brand-black hover:bg-brand-wash"
             >
               {t("ctaCookies")}
             </Link>
@@ -339,7 +339,7 @@ function Highlight({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-orech-line bg-orech-slate/50 p-8 shadow-sm">
+    <section className="rounded-2xl bg-brand-wash p-8">
       <h2 className="font-display text-2xl text-orech-ink md:text-3xl">
         {heading}
       </h2>
