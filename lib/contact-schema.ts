@@ -30,7 +30,7 @@ export const contactSchema = z.object({
     .optional(),
   message: z.string().trim().min(CONTACT_LIMITS.messageMin).max(CONTACT_LIMITS.messageMax),
   /** Language of the page the visitor wrote from, so the office can reply in it. */
-  locale: z.enum(["nl", "en", "fr"]),
+  locale: z.enum(["en", "nl", "he"]),
   /** Honeypot. */
   website: z.string().optional(),
   /** Milliseconds the form was open. Bots submit within a blink. */

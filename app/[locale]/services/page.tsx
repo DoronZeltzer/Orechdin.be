@@ -1,88 +1,60 @@
 import type { Metadata } from "next";
-import { Globe, ShieldAlert, Scale } from "lucide-react";
+import { Briefcase, Building2, Gavel, Scale, Users } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { pageMetadata } from "@/lib/seo";
-import { SITE } from "@/lib/site";
+import type { Locale } from "@/i18n/routing";
 import { SectionShell } from "@/components/design-system/section-shell";
-import { Button } from "@/components/ui/button";
 import { PageHeading } from "@/components/ui/headings";
 import { IconTile } from "@/components/ui/icon-tile";
 
-const GROUP_ICONS = [Scale, Globe, ShieldAlert] as const;
+const AREA_ICONS = [Briefcase, Building2, Gavel, Scale, Users] as const;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "ServicesPage.metadata" });
-  return pageMetadata({
-    title: t("title"),
-    description: t("description"),
-    path: "/services",
-    locale: locale as "nl" | "en" | "fr",
-  });
-}
-
-/** Some translation entries arrive as arrays, some as keyed objects; accept both. */
-function asList<T>(raw: unknown): T[] {
-  if (Array.isArray(raw)) return raw as T[];
-  if (raw && typeof raw === "object") return Object.values(raw) as T[];
-  return [];
+  return pageMetadata({ title: t("title"), description: t("description"), path: "/services", locale: locale as Locale });
 }
 
 export default function ServicesPage() {
   const t = useTranslations("ServicesPage");
-  const groups = asList<{ title: string; intro: string; items: string[] }>(t.raw("groups"));
+  const areas = t.raw("areas") as { title: string; p1: string; p2: string }[];
 
   return (
     <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
-      <SectionShell background="wash" className="py-14 lg:py-20">
-        <PageHeading eyebrow={t("eyebrow")} title={t("headline")} lead={t("lead", { short: SITE.shortName })} />
+      <SectionShell background="wash" className="py-12 sm:py-14 lg:py-20">
+        <PageHeading title={t("title")} lead={t("intro.p1")} />
       </SectionShell>
 
-      {/* The same card as the homepage's practice areas, so the two read as one. */}
-      <SectionShell background="default">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {groups.map((g, i) => (
-            <article
-              key={g.title}
-              className="flex flex-col rounded-2xl border border-brand-black/10 bg-brand-wash/50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-hairlineLift"
-            >
-              <IconTile icon={GROUP_ICONS[i] ?? Scale} />
-              <h2 className="mt-6 text-2xl leading-snug">{g.title}</h2>
-              <p className="mt-3 flex-1 leading-relaxed text-brand-black-80">{g.intro}</p>
-              <ul className="mt-7 space-y-3 border-t border-brand-black/10 pt-6">
-                {asList<string>(g.items).map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[0.95rem]">
-                    <span aria-hidden className="mt-[0.55em] h-2 w-2 shrink-0 rounded-full bg-brand-blue" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+      <SectionShell background="default" className="pb-4 lg:pb-6">
+        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+          <p>{t("intro.p2")}</p>
+          <p>{t("intro.p3")}</p>
         </div>
       </SectionShell>
 
-      {/* A blue panel on a white section: the page ends white so the footer's
-          fade has white to start from. */}
-      <SectionShell background="default" className="pt-0 lg:pt-0">
-        <div className="rounded-3xl bg-brand-blue p-8 text-brand-black sm:p-12 lg:p-16">
-          <div className="max-w-3xl">
-            <h2 className="text-2xl sm:text-3xl">{t("intlHeading")}</h2>
-            <p className="mt-5 text-lg leading-relaxed text-brand-black-80">{t("intlBody")}</p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Button href="/contact" variant="white" arrow>
-                {t("ctaContact")}
-              </Button>
-              <Button href="/lawyers" variant="outline">
-                {t("ctaLawyerProfiles")}
-              </Button>
-            </div>
-          </div>
+      {/* The five areas stack vertically, one under the other, on every screen. */}
+      <SectionShell background="default" className="pt-8 lg:pt-10">
+        <div className="space-y-6">
+          {areas.map((a, i) => (
+            <article key={a.title} className="rounded-2xl border border-brand-black/10 bg-brand-wash/50 p-6 sm:p-8 lg:p-10">
+              <div className="grid gap-6 lg:grid-cols-12 lg:gap-12">
+                <div className="lg:col-span-4">
+                  <IconTile icon={AREA_ICONS[i] ?? Scale} />
+                  <h2 className="mt-5 text-2xl leading-snug">{a.title}</h2>
+                </div>
+                <div className="space-y-4 leading-relaxed text-brand-black-80 lg:col-span-8">
+                  <p className="text-lg text-brand-black">{a.p1}</p>
+                  <p>{a.p2}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* The general statement closes the page, on the accent blue. */}
+        <div className="mt-8 rounded-3xl bg-brand-blue p-8 sm:p-12">
+          <p className="max-w-3xl text-xl font-bold leading-snug sm:text-2xl">{t("litigation")}</p>
         </div>
       </SectionShell>
     </main>

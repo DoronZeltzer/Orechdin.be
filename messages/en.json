@@ -1,13 +1,13 @@
 {
   "Nav": {
     "home": "Home",
-    "lawyers": "The Lawyers",
-    "services": "Services",
-    "office": "Office",
+    "services": "Practice Areas",
+    "lawyers": "Our Lawyers",
+    "office": "The Office",
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "localeSwitcher": "Locale switcher",
+    "localeSwitcher": "Language",
     "skipToContent": "Skip to main content"
   },
   "Common": {
@@ -29,243 +29,249 @@
   },
   "Footer": {
     "contactHeading": "Contact",
+    "navHeading": "Navigation",
+    "languagesHeading": "Languages",
     "legalHeading": "Legal",
-    "privacyPolicy": "Privacy policy",
-    "officialPrivacyLive": "General privacy statement of the office",
-    "builtFor": "Built for",
-    "copyright": "© {year} {entity}",
-    "cookiePolicy": "Cookie policy"
-  },
-  "TrustBand": {
-    "eyebrow": "Practice areas the office publishes",
-    "areas": {
-      "commercial": "Commercial",
-      "civil": "Civil",
-      "criminal": "Criminal",
-      "family": "Family",
-      "employment": "Employment",
-      "realEstate": "Real estate",
-      "traffic": "Traffic"
-    }
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "legalNotice": "Legal notice",
+    "phoneLetter": "T",
+    "emailLetter": "E"
   },
   "HomePage": {
     "metadata": {
-      "title": "Counsel and representation in Antwerp",
-      "description": "Orechdin Law Office, published practice areas across commercial, civil, criminal, family, employment, real estate and traffic, supervised by Nir Zeltzer and Deborah Johnson."
+      "title": "ORECH/DIN | Boutique Law Office in Antwerp, Belgium",
+      "description": "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad. English, Dutch and Hebrew."
     },
     "hero": {
-      "eyebrow": "{city} · Avocats & Advocaten",
-      "h1Line1": "Counsel and representation,",
-      "h1Italic": "grounded in what we publish.",
-      "lead": "{short} advises companies, private clients and the self-employed across the matter types the firm publishes, commercial, civil, criminal, family, employment, real estate and traffic. Engagement begins with a direct conversation.",
-      "primaryCta": "Contact the office",
-      "secondaryCta": "Published practice areas",
-      "captionStamp": "est. Antwerp",
-      "imageAlt": "Belgian chambers interior, bookcase, antique desk lamp and a view onto the Antwerp Grote Markt"
+      "kicker": "Boutique Law Office · Antwerp, Belgium",
+      "title": "Legal assistance when it matters the most.",
+      "intro": "ORECH/DIN advises and represents individuals, entrepreneurs and businesses in legal matters in Belgium. With more than 25 years of experience each, our lawyers combine broad legal knowledge with personal involvement, clear communication and a focused approach.",
+      "supporting": "When your rights or interests are at stake, we stand by you and act with determination.",
+      "imageAlt": "Belgian chambers interior, bookcase, antique desk lamp and a view onto the Antwerp Grote Markt",
+      "stamp": "est. Antwerp"
     },
-    "pillars": {
-      "eyebrow": "The practice",
-      "headlinePart1": "Counsel you can",
-      "headlineItalic": "rely on,",
-      "headlinePart2": "kept to what is written.",
-      "lead": "Each commitment below is traceable to material the firm publishes about itself. There are no league tables, no awards furniture, no case-outcome metrics, only the discipline the office maintains for every file it accepts.",
+    "personal": {
+      "eyebrow": "Personal approach",
+      "title": "Personal attention, backed by experience.",
+      "p1": "Every legal matter starts with listening. We take the time to understand and analyse your situation, what matters to you and what you want to achieve.",
+      "p2": "Your matter is handled by either Nir Zeltzer or Deborah Johnson, both with more than 25 years of experience. That experience is combined with continuous professional training and a broad legal knowledge base.",
+      "p3": "Where additional expertise is useful, we can rely on a broad professional network."
+    },
+    "whatWeDo": {
       "items": [
         {
-          "title": "Antwerp practice",
-          "body": "The office is based in the heart of Antwerp and serves companies, private clients and self-employed individuals."
+          "title": "Business & Commercial Matters",
+          "body": "Advice and representation in business and commercial matters, including contracts, debt recovery and unpaid invoices."
         },
         {
-          "title": "Court and counsel",
-          "body": "Published materials describe both legal advice and representation before the courts."
+          "title": "Property, Construction & Rental Matters",
+          "body": "Legal assistance concerning property, construction and rental matters."
         },
         {
-          "title": "Named supervision",
-          "body": "Files are supervised by Nir Zeltzer (senior partner) and Deborah Johnson, with outside specialists when a matter requires."
+          "title": "Criminal & Traffic Matters",
+          "body": "Assistance and representation in criminal and traffic matters."
         },
         {
-          "title": "Transparent on results",
-          "body": "The firm publishes its own disclaimer on outcomes, reproduced on this site in full."
+          "title": "Civil Matters & Liability",
+          "body": "Civil matters and disputes, including liability, insurance matters and accidents."
+        },
+        {
+          "title": "Private & Family Matters",
+          "body": "Assistance with private and family matters, including divorce."
         }
-      ]
+      ],
+      "cta": "Explore our practice areas",
+      "title": "What we do"
     },
-    "practice": {
-      "eyebrow": "Practice",
-      "headlinePart1": "The matter types the firm",
-      "headlineItalic": "publishes.",
-      "lead": "Listings here mirror the office's public website verbatim. Whether a specific file fits a given group is settled in direct conversation with a lawyer, never inferred from the words on a landing page.",
-      "openServices": "Open the full services page",
-      "groups": [
-        {
-          "kicker": "disputes",
-          "title": "Commercial, criminal & civil disputes",
-          "body": "Matter types the office lists for companies and individuals.",
-          "items": [
-            "Commercial cases",
-            "Criminal cases",
-            "Civil cases"
-          ]
-        },
-        {
-          "kicker": "people · work",
-          "title": "People, family & employment",
-          "body": "Support across the personal-life and workplace areas published by the firm.",
-          "items": [
-            "Private and family law",
-            "Employment law",
-            "Traffic law"
-          ]
-        },
-        {
-          "kicker": "property · recovery",
-          "title": "Property, liability & recovery",
-          "body": "Published property work and enforcement-type matters, without guaranteeing a particular outcome.",
-          "items": [
-            "Real estate and building cases",
-            "Right of abode, civil liability and resolving conflicts",
-            "Rental cases, the collection of unpaid bills and debts"
-          ]
-        }
-      ]
+    "advice": {
+      "title": "Advice, negotiation and representation",
+      "p1": "Not every legal problem needs to end in court. We assess the legal position and the practical options, discuss the strategy with you and act accordingly.",
+      "p2": "Where a settlement can appropriately resolve the matter, we will seek to achieve it. Where proceedings are necessary, we prepare the case carefully and represent your interests firmly."
     },
-    "reasons": {
-      "eyebrow": "Why instruct this office",
-      "headlinePart1": "Short,",
-      "headlineItalic": "factual",
-      "headlinePart2": "reasons.",
-      "lead": "Drawn from what Orechdin publishes about itself, not rankings, awards, or outcome promises. Each line below could be read aloud in court without amendment.",
-      "items": [
-        {
-          "roman": "I.",
-          "title": "Central Antwerp",
-          "body": "Located in the heart of the city, serving companies and private clients."
-        },
-        {
-          "roman": "II.",
-          "title": "Court and counsel",
-          "body": "Published materials describe both legal advice and representation before the courts."
-        },
-        {
-          "roman": "III.",
-          "title": "Named lawyers",
-          "body": "Nir Zeltzer and Deborah Johnson supervise files, calling on outside specialists when a matter requires it."
-        },
-        {
-          "roman": "IV.",
-          "title": "Clear on outcomes",
-          "body": "The firm publishes its own disclaimer on results, reproduced on this site in full."
-        }
-      ]
-    },
-    "lawyers": {
-      "eyebrow": "The lawyers",
-      "headlinePart1": "People you can",
-      "headlineItalic": "reach.",
-      "allProfiles": "All lawyer profiles"
+    "abroad": {
+      "eyebrow": "Clients abroad",
+      "title": "Legal matters in Belgium, also for clients abroad.",
+      "p1": "ORECH/DIN focuses on legal matters in Belgium. We also assist clients living or operating abroad who need legal assistance or a reliable legal contact in Belgium.",
+      "p2": "Meetings can take place at our office in Antwerp or online."
     },
     "contact": {
-      "eyebrow": "Get in touch",
-      "headlinePart1": "Ready to speak",
-      "headlineItalic": "with a lawyer?",
-      "lead": "For new instructions and confidential matters, please call the office directly or use the contact page.",
-      "primaryCta": "Open the contact page",
-      "asideEyebrow": "Firm details"
+      "title": "Speak to us.",
+      "p1": "If you have a legal question or are facing a dispute, you can contact ORECH/DIN directly.",
+      "p2": "Call the office, send us an email or send us a short enquiry.",
+      "p3": "Consultations can take place in Antwerp or online."
     }
   },
   "LawyersPage": {
     "metadata": {
-      "title": "The lawyers",
-      "description": "Nir Zeltzer and Deborah Johnson, roles, published bios, and contact for Orechdin Law Office, Antwerp."
+      "title": "Our Lawyers",
+      "description": "Adv. Nir Zeltzer and Adv. Deborah Johnson each bring more than 25 years of legal experience and a personal, practical approach to ORECH/DIN in Antwerp."
     },
-    "eyebrow": "The team",
-    "headline": "Lawyers you can reach",
-    "lead": "Orechdin advises corporate clients and private individuals and represents clients before the courts. The office describes itself as dynamic and growing, with each matter supervised by the senior partner and his colleague, supported by external specialists when a file requires it.",
-    "profilesHeading": "Lawyer profiles",
-    "profilesIntro": "Names, roles, and biographical text below are taken from the firm's public materials. They are not legal advice and do not list every matter either lawyer may handle.",
-    "biographyNote": "The biography below is published by the firm in English and is reproduced verbatim.",
-    "ctaContactOffice": "Contact the office",
-    "ctaPracticeAreas": "Practice areas",
-    "footerCtaContact": "Contact",
-    "footerCtaOffice": "Office"
+    "eyebrow": "Our Lawyers",
+    "title": "Two experienced lawyers. One personal approach.",
+    "intro": {
+      "p1": "Adv. Nir Zeltzer and Adv. Deborah Johnson each bring more than 25 years of legal experience and their own areas of expertise to ORECH/DIN.",
+      "p2": "Their work is built on trust, personal involvement, practical thinking and a clear understanding of what is important to the client.",
+      "p3": "Continuous professional training ensures that this experience is supported by up-to-date legal knowledge."
+    },
+    "blocks": {
+      "education": "Education / qualifications",
+      "languages": "Languages",
+      "areas": "Areas of practice"
+    },
+    "nir": {
+      "name": "Adv. Nir Zeltzer",
+      "role": "Lawyer",
+      "paragraphs": [
+        "With more than 25 years of legal experience, Adv. Nir Zeltzer combines broad legal knowledge with a personal, practical and solution-focused approach.",
+        "His legal background is complemented by a diploma in Real Estate Expertise, providing additional technical insight in property-related matters, as well as a Master in Business Law from the University of Antwerp.",
+        "He approaches matters analytically and with a strong focus on the client’s objectives. Careful analysis and trust are central to the way he works. Where a matter calls for more than a standard legal answer, he is prepared to think outside the box and draw on a broad range of legal sources, professional contacts and networks to identify a practical way forward.",
+        "He has extensive experience in negotiation and conflict resolution, including complex matters and situations requiring decisions under pressure. Depending on the circumstances, this may involve advising behind the scenes, negotiating towards a workable solution or taking a firm position in court when necessary.",
+        "He remains closely involved throughout the matter, explains the available options and helps the client make informed decisions with a clear focus on the result to be achieved."
+      ],
+      "education": [
+        "Diploma in law, Antwerp University",
+        "Comprehensive studies in Real Estate",
+        "Diploma in Real Estate Expertise",
+        "Master in Business Law, Antwerp University"
+      ]
+    },
+    "deborah": {
+      "name": "Adv. Deborah Johnson",
+      "role": "Lawyer",
+      "paragraphs": [
+        "Adv. Deborah Johnson is an experienced litigator who combines firm representation in court with a calm, structured and carefully prepared approach.",
+        "With more than 25 years of legal experience, she knows that clients often need more than a legal answer: they need to understand what is happening, what the options are and what to expect next. She keeps matters organised, explains the process clearly and remains closely involved throughout the case.",
+        "She has also completed a specialised training in cassation proceedings in criminal cases (bijzondere opleiding cassatieprocedure in strafzaken).",
+        "Deborah approaches each matter with depth and insight, while maintaining a professional and human approach that clients value highly.",
+        "Trust, thorough preparation and a clear sense of direction are central to the way she works, both in negotiations and in court."
+      ],
+      "education": [
+        "Diploma in law, Antwerp University",
+        "Specialised training in cassation proceedings in criminal cases (bijzondere opleiding cassatieprocedure in strafzaken)"
+      ],
+      "areas": [
+        "Family law",
+        "Criminal law",
+        "Traffic cases"
+      ]
+    }
   },
   "ServicesPage": {
     "metadata": {
-      "title": "Practice Areas & Frameworks",
-      "description": "Enterprise legal structuring, defense, and international frameworks published by Orechdin Law Office in Antwerp."
+      "title": "Practice Areas",
+      "description": "ORECH/DIN assists private clients, business owners and companies with legal matters in Belgium: business and commercial, property and construction, criminal and traffic, civil and liability, and private and family matters."
     },
-    "eyebrow": "Disciplined Practice Areas",
-    "headline": "Practice areas the office publishes",
-    "lead": "{short} advises companies, private individuals and the self-employed. The groups below mirror what the firm publishes about its work. Inclusion in a group does not constitute legal advice or an offer of representation.",
-    "intlHeading": "International and specialist files",
-    "intlBody": "The office states it engages specialist lawyers for foreign files and matters with an international aspect. Clients are involved in major procedural decisions, as described in the firm's public materials.",
-    "ctaContact": "Contact the office",
-    "ctaLawyerProfiles": "Lawyer profiles",
-    "groups": [
+    "title": "Practice Areas",
+    "intro": {
+      "p1": "ORECH/DIN assists private clients, business owners and companies with legal matters in Belgium.",
+      "p2": "Whether the issue concerns a contract, a commercial dispute, property, liability, a family matter or proceedings before a court, we first take the time to understand and analyse the situation, explain the available options and determine the appropriate way forward.",
+      "p3": "Our lawyers each bring more than 25 years of legal experience, combined with a practical and personal approach and close attention to what is at stake for the client."
+    },
+    "areas": [
       {
-        "title": "Commercial, criminal & civil cases",
-        "intro": "Matter types the office publishes for both companies and private individuals. Fit for a specific file is always confirmed in direct conversation with a lawyer.",
-        "items": [
-          "Commercial cases",
-          "Criminal cases",
-          "Civil cases"
-        ]
+        "title": "Business & Commercial Matters",
+        "p1": "Legal issues can quickly become a distraction from running a business. We assist with contracts, commercial disputes, unpaid invoices and debt recovery, and help clients find a clear way forward.",
+        "p2": "We also step in when a client’s business interests, contractual rights or financial position are being challenged. Where possible, we work towards a practical solution. Whether proceedings are necessary or the client is summoned to court, we prepare thoroughly to pursue the client’s rights and defend the client’s interests firmly before the courts."
       },
       {
-        "title": "People, family & employment",
-        "intro": "Personal-life and workplace areas published by the firm, handled with the office's stated care and clarity.",
-        "items": [
-          "Private and family law",
-          "Employment law",
-          "Traffic law"
-        ]
+        "title": "Property, Construction & Rental Matters",
+        "p1": "Property, construction and rental matters can quickly become complex, particularly where contractual, technical and financial issues overlap. We assist clients in understanding their position, addressing disputes and finding a practical way forward.",
+        "p2": "Our work includes property and construction disputes, rental matters and other conflicts relating to real estate, with attention to both the legal position and the practical consequences for the client. Where court proceedings are required, we provide firm representation and protect the client’s interests throughout the process."
       },
       {
-        "title": "Property, liability & recovery",
-        "intro": "Published property work and enforcement-type matters, without guaranteeing a particular outcome.",
-        "items": [
-          "Real estate and building cases",
-          "Right of abode, civil liability and resolving conflicts",
-          "Rental cases, the collection of unpaid bills and debts"
-        ]
+        "title": "Criminal & Traffic Matters",
+        "p1": "Criminal and traffic matters can leave people feeling overwhelmed, uncertain or unsure how to respond. We stand by our clients, explain the situation and the procedure clearly, and help them understand the choices that need to be made.",
+        "p2": "We remain closely involved throughout the matter, while keeping the client informed and involved in the decisions. Where representation is required, we defend the client’s interests firmly before the police, prosecution authorities and courts, with attention to both the legal position and the practical consequences."
+      },
+      {
+        "title": "Civil Matters & Liability",
+        "p1": "Accidents, liability issues and insurance disputes can have an immediate impact on a person’s daily life, finances or business. We help clients understand where they stand, what can reasonably be claimed or defended, and which steps are available.",
+        "p2": "We assist with civil disputes, liability claims, insurance matters and accidents, keeping the client informed and involved throughout the process. Where court proceedings are required, we pursue the client’s rights or defend the client’s interests firmly and carefully."
+      },
+      {
+        "title": "Private & Family Matters",
+        "p1": "Private and family matters can be frustrating, emotionally demanding and difficult to navigate, especially when important personal decisions, practical consequences and sometimes children are involved. We help clients understand their legal position and the available options, while keeping the process clear and manageable.",
+        "p2": "We assist with divorce and other private or family-related matters, with attention to both the legal and personal impact of the situation. Our role is to provide clear guidance, protect the client’s position and help them move through what can be a deeply difficult or even traumatic period with as much certainty and control as possible."
       }
-    ]
+    ],
+    "litigation": "When a matter cannot be resolved outside court, we are prepared to act. Whether proceedings are necessary or the client is summoned to court, we prepare thoroughly to pursue the client’s rights and defend the client’s interests firmly before the courts."
   },
   "OfficePage": {
     "metadata": {
-      "title": "Office",
-      "description": "{short}, location in {city}, how the office presents its approach, and published contact details."
+      "title": "The Office",
+      "description": "ORECH/DIN is a boutique law office in Antwerp. We assist private clients, business owners and companies with legal matters in Belgium, through advice, negotiation and firm representation when needed."
     },
-    "eyebrow": "About the firm",
-    "headline": "Antwerp, close to clients",
-    "lead": "Orechdin provides legal advice to companies and individuals and handles representation in court. The office presents itself as dynamic and fast-growing, with matters supervised directly by the senior partner and Deborah Johnson, alongside a network of external specialists when a file demands deeper expertise.",
-    "approachHeading": "How the office presents its work",
-    "approachLead": "The public site emphasises accessible counsel, direct contact with named lawyers, and bringing in outside expertise when a matter requires it, without promising a particular result.",
-    "bullets": [
-      "Advice and litigation for companies and private individuals.",
-      "Supervision by the senior partner and Deborah Johnson, with external specialists when appropriate.",
-      "Clients are involved in major procedural decisions, as described in the firm's published materials."
-    ],
-    "publishedAreasLink": "Published practice areas →",
-    "visitHeading": "Visit and general contact",
-    "phoneLabel": "Phone",
-    "emailLabel": "Email",
-    "mapTitle": "{short} office location",
-    "ctaLawyers": "The Lawyers",
-    "ctaContact": "Contact",
-    "mapConsentTitle": "Google Maps",
-    "mapConsentBody": "The map is loaded from Google. If you show it, Google receives your IP address and may place cookies on your device."
+    "title": "Boutique Law Office in Antwerp",
+    "intro": {
+      "p1": "Legal issues can quickly become frustrating, overwhelming or difficult to assess. Sometimes what is needed first is clear, reliable advice and a sense of what the next step should be.",
+      "p2": "At ORECH/DIN, we start by understanding the situation, what is at stake and what the client wants to achieve. From there, we determine the appropriate legal and practical approach.",
+      "p3": "As a boutique law office based in Antwerp, we assist private clients, business owners and companies with legal matters in Belgium. Our lawyers each bring more than 25 years of experience, combined with personal involvement, trust and a practical way of working.",
+      "p4": "We help clients assert and protect their rights through advice, negotiation and settlement where appropriate, and through firm representation before the courts when proceedings are necessary.",
+      "p5": "Where additional expertise is useful, we can rely on a broad professional network."
+    },
+    "values": {
+      "eyebrow": "Values and working method",
+      "items": [
+        {
+          "title": "Trust and involvement",
+          "body": "We take the time to understand the matter and remain personally involved."
+        },
+        {
+          "title": "Experience and perspective",
+          "body": "More than 25 years of legal experience help us assess both the legal position and the practical consequences."
+        },
+        {
+          "title": "Practical direction",
+          "body": "We explain the available options and help determine a realistic way forward."
+        },
+        {
+          "title": "Determination when needed",
+          "body": "We seek solutions where possible and act firmly when the client’s rights or interests need to be pursued or defended."
+        }
+      ]
+    },
+    "direct": {
+      "title": "Direct contact, clear next steps",
+      "p1": "Legal matters are easier to manage when the options are clear, the strategy is well planned and the next steps are known.",
+      "p2": "For private clients, business owners and companies alike, we focus on clear legal advice and consultation, efficient handling and practical decisions that protect what matters.",
+      "p3": "Meetings can take place at our office in Antwerp or online."
+    }
   },
   "ContactPage": {
     "metadata": {
       "title": "Contact",
-      "description": "Contact Orechdin Law Office in Antwerp, phone, email, and office address."
+      "description": "Contact ORECH/DIN, a boutique law office in Antwerp. Call or email the office, or send a short enquiry. Meetings in Antwerp or online."
     },
-    "eyebrow": "Get in touch",
-    "headline": "Contact",
-    "lead": "For new instructions and confidential matters, please call the office or send an email to the address below.",
-    "privacyLink": "Privacy policy",
+    "title": "Contact ORECH/DIN",
+    "intro": {
+      "p1": "If you have a legal question, are facing a dispute or simply need to understand your position, you can contact us directly.",
+      "p2": "You can call or WhatsApp the office, send us an email or send a short enquiry through the website.",
+      "p3": "Meetings can take place at our office in Antwerp or online."
+    },
+    "details": {
+      "eyebrow": "Contact details"
+    },
+    "visits": {
+      "eyebrow": "Office visits",
+      "title": "Meet us at our office in Antwerp",
+      "body": "Meetings at our Antwerp office are by appointment.",
+      "directions": "Get directions"
+    },
+    "closing": "Not sure where to start? Contact us and we will help you identify the right next step.",
+    "enquiry": {
+      "title": "Tell us briefly about your matter",
+      "intro": "This short intake helps you organise the key information for your first contact with ORECH/DIN and helps us assess whether and how we may be able to assist.",
+      "review": "Please review the information before submitting it.",
+      "notAccepted": "Submitting this enquiry does <not>not</not> mean that ORECH/DIN has accepted your matter or agreed to act on your behalf.",
+      "documents": "Relevant or confidential documents may be sent separately to <mail>info@orechdin.be</mail>.",
+      "urgentTitle": "Urgent matters and deadlines",
+      "urgent": "If your matter is urgent or subject to a deadline, contact the office by telephone and speak directly with a lawyer. Do not rely on the enquiry form for urgent matters or time-sensitive deadlines."
+    },
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "The map is loaded from Google. If you show it, Google receives your IP address and may place cookies on your device.",
+    "mapTitle": "Map of the ORECH/DIN office in Antwerp",
     "form": {
-      "title": "Send a message",
-      "intro": "Prefer to write? Leave your details and a short description and the office will get back to you.",
       "name": "Name",
       "email": "Email address",
       "phone": "Phone",
@@ -273,7 +279,7 @@
       "message": "Your message",
       "messageHint": "Only include what is needed for a first contact.",
       "notice": "Your details are used only to answer your message. See the <privacy>privacy statement</privacy> for more.",
-      "submit": "Send",
+      "submit": "Send enquiry",
       "sending": "Sending…",
       "successTitle": "Thank you, your message has been sent.",
       "successBody": "The office will read your message and get back to you.",
@@ -310,7 +316,7 @@
     "banner": {
       "eyebrow": "Cookies",
       "title": "Cookies on this website",
-      "body": "We place only what is strictly necessary for this website to work, unless you allow more. The optional part is the Google Maps frame on our office page, and visitor statistics should we ever add them. Refusing costs you nothing: every page works exactly the same either way.",
+      "body": "We place only what is strictly necessary for this website to work, unless you allow more. The optional part is the Google Maps frame on our contact page, and visitor statistics should we ever add them. Refusing costs you nothing: every page works exactly the same either way.",
       "acceptAll": "Accept all",
       "refuseAll": "Refuse all",
       "managePreferences": "Manage preferences",
@@ -337,7 +343,7 @@
       },
       "functional": {
         "name": "External content",
-        "purpose": "Content embedded from another company at your request. Today this is only the Google Maps frame on the office page. Allowing it means Google receives your IP address and can place its own cookies.",
+        "purpose": "Content embedded from another company at your request. Today this is only the Google Maps frame on the contact page. Allowing it means Google receives your IP address and can place its own cookies.",
         "duration": "Determined by Google, see Google policy"
       },
       "statistics": {
@@ -400,7 +406,7 @@
         "duration": "6 months"
       },
       "googleMaps": {
-        "purpose": "Placed by Google when you choose to load the map on the office page. Google receives your IP address and uses these cookies for its own purposes, including security and, depending on your Google settings, personalisation.",
+        "purpose": "Placed by Google when you choose to load the map on the contact page. Google receives your IP address and uses these cookies for its own purposes, including security and, depending on your Google settings, personalisation.",
         "duration": "Determined by Google, see Google policy"
       },
       "locale": {
@@ -409,7 +415,7 @@
       }
     },
     "thirdPartyHeading": "The one third party",
-    "thirdPartyBody1": "Google Maps is the only external service this website can contact, only on the office page, and only after you have allowed it. Until then the map is replaced by a placeholder and no request reaches Google. If you never allow it, Google is never told that you visited this site.",
+    "thirdPartyBody1": "Google Maps is the only external service this website can contact, only on the contact page, and only after you have allowed it. Until then the map is replaced by a placeholder and no request reaches Google. If you never allow it, Google is never told that you visited this site.",
     "thirdPartyBody2": "What Google does with the data it receives is governed by its own policy:",
     "thirdPartyGoogleLink": "Google privacy policy",
     "secrecyHeading": "Cookies and professional secrecy",
@@ -517,5 +523,25 @@
     "supportNote": "This statement is written for the website. If you are a client, the terms of engagement and the general privacy statement also apply to your file.",
     "ctaContact": "Contact the office",
     "ctaCookies": "Cookie policy"
+  },
+  "Actions": {
+    "call": "Call us",
+    "email": "Email us",
+    "whatsapp": "WhatsApp",
+    "enquiry": "Send enquiry"
+  },
+  "LegalNotice": {
+    "metadata": {
+      "title": "Legal notice",
+      "description": "Company details of ORECH/DIN, Boutique Law Office, Antwerp."
+    },
+    "title": "Legal notice",
+    "company": "Company",
+    "companyNumber": "Company number (KBO)",
+    "court": "Registered with",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Telephone",
+    "website": "Website"
   }
 }

@@ -1,58 +1,50 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Building2, Mail, MapPin, Phone, Scale, Users } from "lucide-react";
+import { Briefcase, Building2, Gavel, Scale, Users } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, type Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { LAWYERS, MEDIA, SITE } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { Button } from "@/components/ui/button";
+import { ContactActions } from "@/components/ui/contact-actions";
 import { PageHeading, SectionHeading } from "@/components/ui/headings";
 import { IconTile } from "@/components/ui/icon-tile";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "HomePage.metadata" });
   return pageMetadata({
     title: t("title"),
     description: t("description"),
-    locale: locale as "nl" | "en" | "fr",
+    locale: locale as Locale,
     path: "",
+    absoluteTitle: true,
   });
 }
 
-/** Icons for the three practice groups, in the order they are published. */
-const GROUP_ICONS = [Scale, Users, Building2] as const;
-
-/** Some translation entries arrive as arrays, some as keyed objects; accept both. */
-function asList<T>(raw: unknown): T[] {
-  if (Array.isArray(raw)) return raw as T[];
-  if (raw && typeof raw === "object") return Object.values(raw) as T[];
-  return [];
-}
+/** One icon per area, in the order the areas are listed. */
+const AREA_ICONS = [Briefcase, Building2, Gavel, Scale, Users] as const;
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+  const tLawyers = useTranslations("LawyersPage");
 
-  const groups = asList<{ kicker: string; title: string; body: string; items: string[] }>(t.raw("practice.groups"));
-  const pillars = asList<{ title: string; body: string }>(t.raw("pillars.items"));
-  const reasons = asList<{ roman: string; title: string; body: string }>(t.raw("reasons.items"));
-
-  const contactLink =
-    "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-blue";
+  const areas = t.raw("whatWeDo.items") as { title: string; body: string }[];
+  const lawyerCards = [
+    { ...LAWYERS[0], name: tLawyers("nir.name"), role: tLawyers("nir.role"), photo: MEDIA.nirPhoto },
+    { ...LAWYERS[1], name: tLawyers("deborah.name"), role: tLawyers("deborah.role"), photo: MEDIA.deborahPhoto },
+  ];
 
   return (
     <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
       {/* ═════════════════════════════ HERO ═════════════════════════════
-          The full-width photograph under a soft white-and-blue wash, as it was
-          before the redesign; it was liked, so it is restored as it was. */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+          Mobile first: logo (in the header), "Boutique Law Office", the headline,
+          the short introduction and the contact buttons all sit on the first
+          screen of a phone. The photograph and its soft wash are as before. */}
+      <section className="relative flex items-center overflow-hidden sm:min-h-[90vh]">
         <div className="absolute inset-0 z-0">
           <Image
             src={MEDIA.heroBg}
@@ -63,42 +55,26 @@ export default function HomePage() {
             className="object-cover object-center [filter:saturate(0.62)_brightness(1.05)]"
             sizes="100vw"
           />
-          {/* Brand mood: cool the image with a wash in the accent blue (guidelines 06.1). */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/40 via-brand-blue/10 to-transparent mix-blend-multiply" />
-          {/* White legibility gradients so the black hero text stays readable. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-white/95 via-brand-white/80 to-brand-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-white/95 via-brand-white/88 to-brand-white/75 sm:via-brand-white/80 sm:to-brand-white/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-white via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-wide px-6 py-32 sm:px-10 lg:px-16 lg:py-40">
+        <div className="relative z-10 mx-auto w-full max-w-wide px-6 py-10 sm:px-10 sm:py-24 lg:px-16 lg:py-36">
           <div className="reveal max-w-2xl">
             <PageHeading
-              eyebrow={t("hero.eyebrow", { city: SITE.address.city })}
-              title={
-                <>
-                  {t("hero.h1Line1")}
-                  <br />
-                  <em>{t("hero.h1Italic")}</em>
-                </>
-              }
-              lead={t("hero.lead", { short: SITE.shortName })}
+              eyebrow={t("hero.kicker")}
+              title={t("hero.title")}
+              lead={t("hero.intro")}
               className="max-w-none"
             />
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Button href="/contact" arrow>
-                {t("hero.primaryCta")}
-              </Button>
-              <Button href="/services" variant="outline">
-                {t("hero.secondaryCta")}
-              </Button>
-            </div>
+            <ContactActions className="mt-8" />
+            <p className="mt-7 max-w-xl text-lg font-bold leading-snug">{t("hero.supporting")}</p>
           </div>
 
-          {/* The stamp, exactly as before: a small caption over a very faint "1999". */}
+          {/* The stamp, as before: a small caption over a very faint year. */}
           <div className="reveal reveal-delay-5 absolute bottom-16 right-10 hidden flex-col items-end gap-1 text-right lg:flex">
-            <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-black-60">
-              {t("hero.captionStamp")}
-            </span>
+            <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-black-60">{t("hero.stamp")}</span>
             <span aria-hidden className="text-[3rem] font-light leading-none text-brand-blue/20">
               1999
             </span>
@@ -106,181 +82,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════ PILLARS ═══════════════════════════ */}
-      <SectionShell background="wash" id="pillars">
-        <SectionHeading
-          eyebrow={t("pillars.eyebrow")}
-          title={
-            <>
-              {t("pillars.headlinePart1")} <em>{t("pillars.headlineItalic")}</em> {t("pillars.headlinePart2")}
-            </>
-          }
-          lead={t("pillars.lead")}
-          className="max-w-4xl"
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((p, i) => (
-            <div key={p.title} className="rounded-2xl bg-brand-white p-8 shadow-hairline">
-              <p className="text-sm font-extrabold tracking-[0.18em]">{String(i + 1).padStart(2, "0")}</p>
-              <h3 className="mt-5 text-xl leading-snug">{p.title}</h3>
-              <p className="mt-3 leading-relaxed text-brand-black-80">{p.body}</p>
+      {/* ═══════════════════════════ PERSONAL APPROACH ═══════════════════════════ */}
+      <SectionShell background="default" id="personal">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <SectionHeading eyebrow={t("personal.eyebrow")} title={t("personal.title")} />
+            <div className="mt-6 space-y-5 text-lg leading-relaxed text-brand-black-80">
+              <p>{t("personal.p1")}</p>
+              <p>{t("personal.p2")}</p>
+              <p>{t("personal.p3")}</p>
             </div>
-          ))}
+          </div>
+
+          <ul className="space-y-4 lg:col-span-5">
+            {lawyerCards.map((l) => (
+              <li key={l.slug}>
+                <Link
+                  href={`/lawyers#${l.slug}`}
+                  className="group flex items-center gap-5 rounded-2xl bg-brand-wash/60 p-4 transition duration-300 hover:-translate-y-0.5 hover:shadow-hairlineLift"
+                >
+                  <span className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-brand-wash">
+                    <Image src={l.photo} alt="" fill quality={90} className="object-cover object-top" sizes="96px" />
+                  </span>
+                  <span>
+                    <span className="block text-xl font-extrabold">{l.name}</span>
+                    <span className="mt-0.5 block text-brand-black-80">{l.role}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ PRACTICE ══════════════════════════ */}
-      <SectionShell background="default" id="practice">
-        <SectionHeading
-          eyebrow={t("practice.eyebrow")}
-          title={
-            <>
-              {t("practice.headlinePart1")} <em>{t("practice.headlineItalic")}</em>
-            </>
-          }
-          lead={t("practice.lead")}
-          className="max-w-4xl"
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {groups.map((g, i) => (
-            <article
-              key={g.title}
-              className="flex flex-col rounded-2xl border border-brand-black/10 bg-brand-wash/50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-hairlineLift"
-            >
-              <IconTile icon={GROUP_ICONS[i] ?? Scale} />
-              <p className="mt-6 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{g.kicker}</p>
-              <h3 className="mt-2 text-2xl leading-snug">{g.title}</h3>
-              <p className="mt-3 flex-1 leading-relaxed text-brand-black-80">{g.body}</p>
-              <ul className="mt-7 space-y-3 border-t border-brand-black/10 pt-6">
-                {asList<string>(g.items).map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[0.95rem]">
-                    <span aria-hidden className="mt-[0.55em] h-2 w-2 shrink-0 rounded-full bg-brand-blue" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+      {/* ═══════════════════════════ WHAT WE DO ═══════════════════════════ */}
+      <SectionShell background="wash" id="what-we-do">
+        <SectionHeading title={t("whatWeDo.title")} />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {areas.map((a, i) => (
+            <article key={a.title} className="rounded-2xl bg-brand-white p-8 shadow-hairline">
+              <IconTile icon={AREA_ICONS[i] ?? Scale} />
+              <h3 className="mt-6 text-xl leading-snug">{a.title}</h3>
+              <p className="mt-3 leading-relaxed text-brand-black-80">{a.body}</p>
             </article>
           ))}
         </div>
         <div className="mt-10">
-          <Button href="/services" variant="outline" arrow>
-            {t("practice.openServices")}
+          <Button href="/services" arrow className="w-full sm:w-auto">
+            {t("whatWeDo.cta")}
           </Button>
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ REASONS ═══════════════════════════
-          The accent blue as a full band: the strong moment on the page, in the
-          brand's main colour rather than black. */}
-      <SectionShell background="blue" id="reasons">
-        <SectionHeading
-          tone="blue"
-          eyebrow={t("reasons.eyebrow")}
-          title={
-            <>
-              {t("reasons.headlinePart1")} <em>{t("reasons.headlineItalic")}</em> {t("reasons.headlinePart2")}
-            </>
-          }
-          lead={t("reasons.lead")}
-          className="max-w-4xl"
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {reasons.map((r) => (
-            <div key={r.roman} className="rounded-2xl bg-brand-white/60 p-8">
-              <p className="text-4xl font-extrabold leading-none">{r.roman}</p>
-              <h3 className="mt-5 text-xl">{r.title}</h3>
-              <p className="mt-3 leading-relaxed text-brand-black-80">{r.body}</p>
-            </div>
-          ))}
+      {/* ═══════════════════════════ ADVICE ═══════════════════════════ */}
+      <SectionShell background="default" id="advice">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading title={t("advice.title")} />
+          </div>
+          <div className="space-y-5 text-lg leading-relaxed text-brand-black-80 lg:col-span-7">
+            <p>{t("advice.p1")}</p>
+            <p>{t("advice.p2")}</p>
+          </div>
         </div>
       </SectionShell>
 
-      {/* ═══════════════════════════ LAWYERS ═══════════════════════════ */}
-      <SectionShell background="wash" id="lawyers">
-        <SectionHeading
-          align="center"
-          eyebrow={t("lawyers.eyebrow")}
-          title={
-            <>
-              {t("lawyers.headlinePart1")} <em>{t("lawyers.headlineItalic")}</em>
-            </>
-          }
-        />
-        {/* Two compact, centred cards: the portraits were too large at full column width. */}
-        <div className="mx-auto mt-12 grid max-w-xl gap-6 sm:grid-cols-2">
-          {LAWYERS.map((lawyer, i) => (
-            <Link
-              key={lawyer.slug}
-              href={`/lawyers#${lawyer.slug}`}
-              className="group block overflow-hidden rounded-2xl bg-brand-white shadow-hairline transition duration-300 hover:-translate-y-1 hover:shadow-hairlineLift"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden bg-brand-wash">
-                <Image
-                  src={i === 0 ? MEDIA.nirPhoto : MEDIA.deborahPhoto}
-                  alt={lawyer.name}
-                  fill
-                  quality={90}
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(min-width: 640px) 280px, 100vw"
-                />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="text-xl">{lawyer.name}</h3>
-                <p className="mt-1 text-brand-black-80">{lawyer.role}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-10 flex justify-center">
-          <Button href="/lawyers" arrow>
-            {t("lawyers.allProfiles")}
-          </Button>
+      {/* ═══════════════════════════ CLIENTS ABROAD ═══════════════════════════ */}
+      <SectionShell background="blue" id="abroad">
+        <SectionHeading tone="blue" eyebrow={t("abroad.eyebrow")} title={t("abroad.title")} className="max-w-4xl" />
+        <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+          <p>{t("abroad.p1")}</p>
+          <p className="font-bold text-brand-black">{t("abroad.p2")}</p>
         </div>
       </SectionShell>
 
       {/* ═══════════════════════════ CONTACT ═══════════════════════════
-          The page ends on white (the footer fades from white into its blue),
-          with the call to action as a soft panel on it. */}
+          The page ends on white (the footer fades from white into its blue). */}
       <SectionShell background="default" id="contact-cta">
-        <div className="grid gap-12 rounded-3xl bg-brand-wash p-8 sm:p-12 lg:grid-cols-5 lg:gap-16 lg:p-16">
-          <div className="lg:col-span-3">
-            <SectionHeading
-              eyebrow={t("contact.eyebrow")}
-              title={
-                <>
-                  {t("contact.headlinePart1")} <em>{t("contact.headlineItalic")}</em>
-                </>
-              }
-              lead={t("contact.lead")}
-            />
-            <div className="mt-8">
-              <Button href="/contact" arrow>
-                {t("contact.primaryCta")}
-              </Button>
-            </div>
+        <div className="rounded-3xl bg-brand-wash p-8 sm:p-12 lg:p-16">
+          <h2 className="text-3xl leading-tight sm:text-4xl lg:text-[2.6rem]">{t("contact.title")}</h2>
+          <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-brand-black-80">
+            <p>{t("contact.p1")}</p>
+            <p>{t("contact.p2")}</p>
+            <p>{t("contact.p3")}</p>
           </div>
-
-          <div className="lg:col-span-2">
-            <p className="eyebrow">{t("contact.asideEyebrow")}</p>
-            <ul className="mt-6 space-y-5 text-lg">
-              <li className="flex items-start gap-4">
-                <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                <a href={`tel:${SITE.phoneTel}`} className={contactLink}>
-                  {SITE.phoneDisplay}
-                </a>
-              </li>
-              <li className="flex items-start gap-4">
-                <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                <a href={`mailto:${SITE.email}`} className={contactLink}>
-                  {SITE.email}
-                </a>
-              </li>
-              <li className="flex items-start gap-4">
-                <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                <span>{SITE.address.singleLine}</span>
-              </li>
-            </ul>
-          </div>
+          <ContactActions className="mt-9" />
         </div>
       </SectionShell>
     </main>

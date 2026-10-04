@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, type Locale } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Field, Input, Textarea } from "@/components/ui/field";
 import { contactSchema, type ContactError } from "@/lib/contact-schema";
@@ -25,7 +25,8 @@ type Status = "idle" | "sending" | "sent" | "failed";
  */
 export function ContactForm() {
   const t = useTranslations("ContactPage.form");
-  const locale = useLocale() as "nl" | "en" | "fr";
+  const tc = useTranslations("ContactPage");
+  const locale = useLocale() as Locale;
 
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
@@ -208,6 +209,29 @@ export function ContactForm() {
             </p>
           </div>
         )}
+      </div>
+
+      {/* The notices from the brief, shown before the visitor submits. */}
+      <div className="space-y-3 rounded-2xl bg-brand-wash p-6 text-[0.95rem] leading-relaxed">
+        <p className="font-bold">{tc("enquiry.review")}</p>
+        <p>
+          {tc.rich("enquiry.notAccepted", {
+            not: (chunks) => <u>{chunks}</u>,
+          })}
+        </p>
+        <p>
+          {tc.rich("enquiry.documents", {
+            mail: (chunks) => (
+              <a href={`mailto:${SITE.email}`} className="font-bold underline decoration-brand-black decoration-1 underline-offset-4">
+                {chunks}
+              </a>
+            ),
+          })}
+        </p>
+        <div className="border-t border-brand-black/15 pt-3">
+          <p className="font-bold">{tc("enquiry.urgentTitle")}</p>
+          <p className="mt-1">{tc("enquiry.urgent")}</p>
+        </div>
       </div>
 
       <div>

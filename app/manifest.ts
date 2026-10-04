@@ -8,14 +8,14 @@ import { SITE } from "@/lib/site";
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: SITE.legalName,
+    name: `${SITE.title} | ${SITE.shortName}`,
     short_name: SITE.title,
     description: SITE.description,
     start_url: "/",
     display: "browser",
-    background_color: "#f5efe6",
-    theme_color: "#1a1814",
-    lang: "nl",
+    background_color: "#ffffff",
+    theme_color: "#95b6df",
+    lang: "en",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
       { src: "/apple-icon", sizes: "180x180", type: "image/png", purpose: "maskable" },

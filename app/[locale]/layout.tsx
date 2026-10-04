@@ -7,7 +7,9 @@ import { OrganizationJsonLd } from "@/components/layout/organization-json-ld";
 import { WebsiteJsonLd } from "@/components/layout/website-json-ld";
 import { ConsentProvider } from "@/components/consent/consent-provider";
 import { CookieBanner } from "@/components/consent/cookie-banner";
-import { SITE } from "@/lib/site";
+import { INDEXABLE, SITE } from "@/lib/site";
+import { contentLocale, isRtl } from "@/lib/i18n-status";
+import type { Locale } from "@/i18n/routing";
 import "../globals.css";
 
 // Brand web typeface. The brand guidelines (section 02.2) name Egyptian Slate
@@ -33,7 +35,7 @@ const slab = Roboto_Slab({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.title} | ${SITE.address.city}`,
+    default: `${SITE.title} | ${SITE.shortName} in ${SITE.address.city}, ${SITE.address.country}`,
     template: `%s | ${SITE.title}`,
   },
   description: SITE.description,
@@ -42,15 +44,15 @@ export const metadata: Metadata = {
     locale: "en_BE",
     url: SITE.url,
     siteName: SITE.title,
-    title: `${SITE.title} - ${SITE.shortName}`,
+    title: `${SITE.title} | ${SITE.shortName} in ${SITE.address.city}, ${SITE.address.country}`,
     description: SITE.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.title} - ${SITE.shortName}`,
+    title: `${SITE.title} | ${SITE.shortName} in ${SITE.address.city}, ${SITE.address.country}`,
     description: SITE.description,
   },
-  robots: { index: true, follow: true },
+  robots: INDEXABLE ? { index: true, follow: true } : { index: false, follow: false },
 };
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -66,6 +68,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  if (!routing.locales.includes(locale as Locale)) notFound();
   setRequestLocale(locale);
 
   const messages = await getMessages();
@@ -73,7 +76,11 @@ export default async function RootLayout({
 
   return (
     <html
-      lang={locale}
+      // The language the text is really written in, and its direction (see
+      // lib/i18n-status.ts): until Dutch and Hebrew are translated they show
+      // English and say so.
+      lang={contentLocale(locale as Locale)}
+      dir={isRtl(locale as Locale) ? "rtl" : "ltr"}
       suppressHydrationWarning
       className={slab.variable}
     >

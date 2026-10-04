@@ -1,13 +1,17 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
+import { INDEXABLE, SITE } from "@/lib/site";
 
+/**
+ * While the site is not yet live on the firm's own domain, every crawler is
+ * turned away (see INDEXABLE in lib/site.ts). Once it is, the API is the only
+ * thing kept out.
+ */
 export default function robots(): MetadataRoute.Robots {
+  if (!INDEXABLE) {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/api/", "/case/"],
-    },
+    rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
     sitemap: `${SITE.url}/sitemap.xml`,
   };
 }

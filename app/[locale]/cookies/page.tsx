@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { ConsentControls } from "@/components/consent/consent-controls";
 import {
@@ -22,7 +23,7 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     path: "/cookies",
-    locale: locale as "nl" | "en" | "fr",
+    locale: locale as Locale,
   });
 }
 

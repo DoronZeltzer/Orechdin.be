@@ -1,60 +1,65 @@
 import type { Metadata } from "next";
-import { SITE } from "@/lib/site";
+import { SITE, INDEXABLE } from "@/lib/site";
+import { LOCALES, type Locale } from "@/i18n/routing";
+import { TRANSLATION_READY } from "@/lib/i18n-status";
 
 const base = SITE.url.replace(/\/$/, "");
 
-const LOCALES = ["nl", "en", "fr"] as const;
-const DEFAULT_LOCALE = "nl";
-
-const OG_LOCALE_MAP: Record<(typeof LOCALES)[number], string> = {
-  nl: "nl_BE",
+const OG_LOCALE: Record<Locale, string> = {
   en: "en_BE",
-  fr: "fr_BE",
+  nl: "nl_BE",
+  he: "he_IL",
 };
 
+/** `/en`, `/en/lawyers`, `/nl/office`: every language has its own prefix. */
+const localePath = (l: Locale, p: string) => (p === "/" ? `/${l}` : `/${l}${p}`);
+
 /**
- * Canonical + Open Graph + Twitter for App Router pages (humans-first copy).
+ * Canonical, language relationships, robots, Open Graph and Twitter for a page.
  *
- * When `locale` is provided, generates per-locale `alternates.canonical` plus
- * `alternates.languages` so search engines understand every language variant
- * of the same page. URLs follow next-intl's `localePrefix: 'as-needed'` rule
- * — the default locale (`nl`) lives at unprefixed paths.
+ * Language relationships (hreflang):
+ *   - Only languages with an approved translation are declared (see
+ *     lib/i18n-status.ts). A language that still shows the English text is not
+ *     presented to search engines as a Dutch or Hebrew page.
+ *   - `x-default` is the English page, the master.
+ *   - A page in a language that is not ready names the English page as its
+ *     canonical and is marked noindex, so it can never compete with its source.
+ *
+ * Indexing as a whole stays off until `NEXT_PUBLIC_ALLOW_INDEXING="true"` is
+ * set on the deployment that is served from the firm's real domain.
  */
 export function pageMetadata(opts: {
   title: string;
   description: string;
   path: string;
-  locale?: (typeof LOCALES)[number];
+  locale?: Locale;
+  /** Use the title exactly as given, without the " | ORECH/DIN" suffix. */
+  absoluteTitle?: boolean;
 }): Metadata {
   const path = opts.path === "" ? "/" : opts.path.startsWith("/") ? opts.path : `/${opts.path}`;
-  const fullTitle = `${opts.title} | ${SITE.title}`;
-  const locale = opts.locale ?? DEFAULT_LOCALE;
+  const locale = opts.locale ?? "en";
+  const ready = TRANSLATION_READY[locale];
 
-  const localePath = (l: (typeof LOCALES)[number], p: string) => {
-    if (l === DEFAULT_LOCALE) return p;
-    return p === "/" ? `/${l}` : `/${l}${p}`;
-  };
-
-  const canonicalPath = localePath(locale, path);
-  const url = `${base}${canonicalPath === "/" ? "/" : canonicalPath}`;
+  const fullTitle = opts.absoluteTitle ? opts.title : `${opts.title} | ${SITE.title}`;
+  const canonicalPath = localePath(ready ? locale : "en", path);
 
   const languages: Record<string, string> = {};
   for (const l of LOCALES) {
-    languages[l] = `${base}${localePath(l, path) || "/"}`;
+    if (TRANSLATION_READY[l]) languages[l] = `${base}${localePath(l, path)}`;
   }
-  languages["x-default"] = `${base}${localePath(DEFAULT_LOCALE, path) || "/"}`;
+  languages["x-default"] = `${base}${localePath("en", path)}`;
+
+  const index = INDEXABLE && ready;
 
   return {
-    title: opts.title,
+    title: opts.absoluteTitle ? { absolute: opts.title } : opts.title,
     description: opts.description,
-    alternates: {
-      canonical: canonicalPath,
-      languages,
-    },
+    alternates: { canonical: canonicalPath, languages },
+    robots: { index, follow: index },
     openGraph: {
       type: "website",
-      locale: OG_LOCALE_MAP[locale],
-      url,
+      locale: OG_LOCALE[locale],
+      url: `${base}${localePath(locale, path)}`,
       siteName: SITE.title,
       title: fullTitle,
       description: opts.description,

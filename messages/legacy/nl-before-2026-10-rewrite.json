@@ -1,0 +1,521 @@
+{
+  "Nav": {
+    "home": "Home",
+    "lawyers": "Advocaten",
+    "services": "Praktijkgebieden",
+    "office": "Kantoor",
+    "contact": "Contact",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "localeSwitcher": "Taal kiezen",
+    "skipToContent": "Naar hoofdinhoud"
+  },
+  "Common": {
+    "contactOffice": "Contacteer het kantoor",
+    "callPhone": "Bel {phone}",
+    "openContact": "Open de contactpagina",
+    "openServices": "Bekijk de volledige praktijkgebieden",
+    "allLawyerProfiles": "Alle advocaatprofielen",
+    "contact": "Contact",
+    "office": "Kantoor",
+    "lawyers": "Advocaten",
+    "services": "Praktijkgebieden",
+    "privacy": "Privacy",
+    "mobileLabel": "GSM",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefoon",
+    "primarySections": "Hoofdsecties",
+    "officeLogoAlt": "{title}, {short}"
+  },
+  "Footer": {
+    "contactHeading": "Contact",
+    "legalHeading": "Juridisch",
+    "privacyPolicy": "Privacybeleid",
+    "officialPrivacyLive": "Algemene privacyverklaring van het kantoor",
+    "builtFor": "Gebouwd voor",
+    "copyright": "© {year} {entity}",
+    "cookiePolicy": "Cookiebeleid"
+  },
+  "TrustBand": {
+    "eyebrow": "Praktijkgebieden gepubliceerd door het kantoor",
+    "areas": {
+      "commercial": "Handelsrecht",
+      "civil": "Burgerlijk",
+      "criminal": "Strafrecht",
+      "family": "Familierecht",
+      "employment": "Arbeidsrecht",
+      "realEstate": "Vastgoed",
+      "traffic": "Verkeersrecht"
+    }
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Advies en vertegenwoordiging in Antwerpen",
+      "description": "Orechdin Law Office, gepubliceerde praktijkgebieden in handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht, onder leiding van Nir Zeltzer en Deborah Johnson."
+    },
+    "hero": {
+      "eyebrow": "{city} · Advocaten & Avocats",
+      "h1Line1": "Advies en vertegenwoordiging,",
+      "h1Italic": "geworteld in wat wij publiceren.",
+      "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen in de zaaktypes die het kantoor publiceert, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht. Een opdracht begint met een rechtstreeks gesprek.",
+      "primaryCta": "Contacteer het kantoor",
+      "secondaryCta": "Gepubliceerde praktijkgebieden",
+      "captionStamp": "est. Antwerpen",
+      "imageAlt": "Belgisch kantoorinterieur, boekenkast, antieke bureaulamp en zicht op de Antwerpse Grote Markt"
+    },
+    "pillars": {
+      "eyebrow": "De praktijk",
+      "headlinePart1": "Advies waarop u kunt",
+      "headlineItalic": "vertrouwen,",
+      "headlinePart2": "binnen wat wij schriftelijk publiceren.",
+      "lead": "Elke vermelding hieronder is herleidbaar tot wat het kantoor over zichzelf publiceert. Geen ranglijsten, geen prijzenmuur, geen statistieken over uitkomsten, alleen de discipline die het kantoor toepast op elk dossier dat het aanvaardt.",
+      "items": [
+        {
+          "title": "Antwerpse praktijk",
+          "body": "Het kantoor is gevestigd in het hart van Antwerpen en bedient ondernemingen, particulieren en zelfstandigen."
+        },
+        {
+          "title": "Rechtbank en advies",
+          "body": "Gepubliceerde materialen beschrijven zowel juridisch advies als vertegenwoordiging voor de rechtbanken."
+        },
+        {
+          "title": "Toezicht door de advocaten",
+          "body": "Dossiers worden gevolgd door Nir Zeltzer (vennoot) en Deborah Johnson, met externe specialisten wanneer een zaak dat vereist."
+        },
+        {
+          "title": "Helder over resultaten",
+          "body": "Het kantoor publiceert zelf zijn disclaimer over uitkomsten, integraal weergegeven op deze site."
+        }
+      ]
+    },
+    "practice": {
+      "eyebrow": "Praktijk",
+      "headlinePart1": "De zaaktypes die het kantoor",
+      "headlineItalic": "publiceert.",
+      "lead": "De vermeldingen hieronder volgen letterlijk de publieke website van het kantoor. Of een specifiek dossier binnen een groep past, wordt beslist in een rechtstreeks gesprek met een advocaat, nooit afgeleid uit landingspagina-tekst.",
+      "openServices": "Open de volledige praktijkpagina",
+      "groups": [
+        {
+          "kicker": "disputes",
+          "title": "Handels-, straf- en burgerlijke geschillen",
+          "body": "Zaaktypes die het kantoor opsomt voor ondernemingen en particulieren.",
+          "items": [
+            "Handelszaken",
+            "Strafzaken",
+            "Burgerlijke zaken"
+          ]
+        },
+        {
+          "kicker": "people · work",
+          "title": "Personen, familie & arbeid",
+          "body": "Ondersteuning in persoonlijke en professionele domeinen die het kantoor publiceert.",
+          "items": [
+            "Privaat- en familierecht",
+            "Arbeidsrecht",
+            "Verkeersrecht"
+          ]
+        },
+        {
+          "kicker": "property · recovery",
+          "title": "Vastgoed, aansprakelijkheid & invordering",
+          "body": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken, zonder enig resultaat te garanderen.",
+          "items": [
+            "Vastgoed- en bouwzaken",
+            "Verblijfsrecht, burgerlijke aansprakelijkheid en geschillenoplossing",
+            "Huurzaken, invordering van onbetaalde facturen en schulden"
+          ]
+        }
+      ]
+    },
+    "reasons": {
+      "eyebrow": "Waarom dit kantoor aanstellen",
+      "headlinePart1": "Korte,",
+      "headlineItalic": "feitelijke",
+      "headlinePart2": "redenen.",
+      "lead": "Ontleend aan wat Orechdin over zichzelf publiceert, geen ranglijsten, prijzen of beloften over uitkomst. Elke regel hieronder kan voorgelezen worden in de rechtbank zonder aanpassing.",
+      "items": [
+        {
+          "roman": "I.",
+          "title": "Centraal Antwerpen",
+          "body": "Gevestigd in het hart van de stad, ten dienste van ondernemingen en particulieren."
+        },
+        {
+          "roman": "II.",
+          "title": "Rechtbank en advies",
+          "body": "Gepubliceerde materialen beschrijven zowel juridisch advies als vertegenwoordiging voor de rechtbanken."
+        },
+        {
+          "roman": "III.",
+          "title": "Vermelde advocaten",
+          "body": "Nir Zeltzer en Deborah Johnson volgen de dossiers, met externe specialisten waar een zaak dat vereist."
+        },
+        {
+          "roman": "IV.",
+          "title": "Helder over uitkomst",
+          "body": "Het kantoor publiceert zelf zijn disclaimer over resultaten, integraal weergegeven op deze site."
+        }
+      ]
+    },
+    "lawyers": {
+      "eyebrow": "De advocaten",
+      "headlinePart1": "Mensen die u kunt",
+      "headlineItalic": "bereiken.",
+      "allProfiles": "Alle advocaatprofielen"
+    },
+    "contact": {
+      "eyebrow": "Neem contact op",
+      "headlinePart1": "Klaar om te spreken",
+      "headlineItalic": "met een advocaat?",
+      "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor rechtstreeks of gebruikt u de contactpagina.",
+      "primaryCta": "Open de contactpagina",
+      "asideEyebrow": "Kantoorgegevens"
+    }
+  },
+  "LawyersPage": {
+    "metadata": {
+      "title": "De advocaten",
+      "description": "Nir Zeltzer en Deborah Johnson, rollen, gepubliceerde biografieën en contact voor Orechdin Law Office, Antwerpen."
+    },
+    "eyebrow": "Het team",
+    "headline": "Advocaten die u kunt bereiken",
+    "lead": "Orechdin adviseert ondernemingen en particulieren en vertegenwoordigt cliënten voor de rechtbanken. Het kantoor presenteert zichzelf als dynamisch en groeiend, met elk dossier onder rechtstreeks toezicht van de vennoot en zijn collega, bijgestaan door externe specialisten wanneer een dossier dat vereist.",
+    "profilesHeading": "Advocaatprofielen",
+    "profilesIntro": "Namen, rollen en biografische tekst hieronder zijn ontleend aan de publieke materialen van het kantoor. Zij vormen geen juridisch advies en sommen niet elk type zaak op dat een van beide advocaten kan behandelen.",
+    "biographyNote": "De biografische tekst is gepubliceerd door het kantoor in het Engels en hier integraal weergegeven.",
+    "ctaContactOffice": "Contacteer het kantoor",
+    "ctaPracticeAreas": "Praktijkgebieden",
+    "footerCtaContact": "Contact",
+    "footerCtaOffice": "Kantoor"
+  },
+  "ServicesPage": {
+    "metadata": {
+      "title": "Praktijkgebieden",
+      "description": "Praktijkgebieden gepubliceerd door Orechdin Law Office in Antwerpen, handels-, burgerlijk, straf-, familie-, arbeids-, vastgoed- en verkeersrecht."
+    },
+    "eyebrow": "Gedefinieerde praktijkgebieden",
+    "headline": "Praktijkgebieden die het kantoor publiceert",
+    "lead": "{short} adviseert ondernemingen, particulieren en zelfstandigen. De groepen hieronder weerspiegelen wat het kantoor over zijn werk publiceert. Opname in een groep vormt geen juridisch advies of aanbod tot vertegenwoordiging.",
+    "intlHeading": "Internationale en gespecialiseerde dossiers",
+    "intlBody": "Het kantoor verklaart externe specialisten in te schakelen voor buitenlandse dossiers en zaken met een internationaal aspect. Cliënten worden betrokken bij belangrijke procedurele beslissingen, zoals beschreven in de publieke materialen van het kantoor.",
+    "ctaContact": "Contacteer het kantoor",
+    "ctaLawyerProfiles": "Advocaatprofielen",
+    "groups": [
+      {
+        "title": "Handels-, straf- en burgerlijke zaken",
+        "intro": "Zaaktypes die het kantoor publiceert voor zowel ondernemingen als particulieren. Of een specifiek dossier past, wordt steeds bevestigd in een rechtstreeks gesprek met een advocaat.",
+        "items": [
+          "Handelszaken",
+          "Strafzaken",
+          "Burgerlijke zaken"
+        ]
+      },
+      {
+        "title": "Personen, familie & arbeid",
+        "intro": "Persoonlijke en professionele domeinen die het kantoor publiceert, behandeld met de zorg en helderheid die het kantoor benadrukt.",
+        "items": [
+          "Privaat- en familierecht",
+          "Arbeidsrecht",
+          "Verkeersrecht"
+        ]
+      },
+      {
+        "title": "Vastgoed, aansprakelijkheid & invordering",
+        "intro": "Gepubliceerd vastgoedwerk en uitvoeringsgerichte zaken, zonder een specifieke uitkomst te garanderen.",
+        "items": [
+          "Vastgoed- en bouwzaken",
+          "Verblijfsrecht, burgerlijke aansprakelijkheid en geschillenoplossing",
+          "Huurzaken, invordering van onbetaalde facturen en schulden"
+        ]
+      }
+    ]
+  },
+  "OfficePage": {
+    "metadata": {
+      "title": "Kantoor",
+      "description": "{short}, locatie in {city}, hoe het kantoor zijn aanpak presenteert, en gepubliceerde contactgegevens."
+    },
+    "eyebrow": "Over het kantoor",
+    "headline": "Antwerpen, dicht bij de cliënt",
+    "lead": "Orechdin biedt juridisch advies aan ondernemingen en particulieren en behandelt vertegenwoordiging voor de rechtbanken. Het kantoor presenteert zichzelf als dynamisch en snelgroeiend, met dossiers onder rechtstreeks toezicht van de vennoot en Deborah Johnson, naast een netwerk van externe specialisten wanneer een dossier diepere expertise vereist.",
+    "approachHeading": "Hoe het kantoor zijn werk presenteert",
+    "approachLead": "De publieke site benadrukt toegankelijk advies, rechtstreeks contact met vermelde advocaten, en het inschakelen van externe expertise wanneer een zaak dat vereist, zonder een specifiek resultaat te beloven.",
+    "bullets": [
+      "Advies en procesvoering voor ondernemingen en particulieren.",
+      "Toezicht door de vennoot en Deborah Johnson, met externe specialisten waar gepast.",
+      "Cliënten worden betrokken bij belangrijke procedurele beslissingen, zoals beschreven in de gepubliceerde materialen van het kantoor."
+    ],
+    "publishedAreasLink": "Gepubliceerde praktijkgebieden →",
+    "visitHeading": "Bezoek en algemeen contact",
+    "phoneLabel": "Telefoon",
+    "emailLabel": "E-mail",
+    "mapTitle": "{short} kantoorlocatie",
+    "ctaLawyers": "De Advocaten",
+    "ctaContact": "Contact",
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "De kaart wordt geladen bij Google. Als u ze toont, ontvangt Google uw IP-adres en kan Google cookies op uw toestel plaatsen."
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Contacteer Orechdin Law Office in Antwerpen, telefoon, e-mail, kantooradres."
+    },
+    "eyebrow": "Neem contact op",
+    "headline": "Contact",
+    "lead": "Voor nieuwe opdrachten en vertrouwelijke zaken belt u het kantoor of stuurt u een e-mail naar het onderstaande adres.",
+    "privacyLink": "Privacybeleid",
+    "form": {
+      "title": "Stuur een bericht",
+      "intro": "Liever schriftelijk? Laat uw gegevens en een korte omschrijving achter, dan neemt het kantoor contact met u op.",
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoon",
+      "optional": "Optioneel",
+      "message": "Uw bericht",
+      "messageHint": "Vul enkel in wat nodig is voor een eerste contact.",
+      "notice": "Uw gegevens worden enkel gebruikt om uw bericht te beantwoorden. Lees de <privacy>privacyverklaring</privacy> voor meer informatie.",
+      "submit": "Verzenden",
+      "sending": "Bezig met verzenden…",
+      "successTitle": "Bedankt, uw bericht is verzonden.",
+      "successBody": "Het kantoor leest uw bericht en neemt contact met u op.",
+      "errors": {
+        "name": "Vul uw naam in.",
+        "email": "Vul een geldig e-mailadres in.",
+        "phone": "Gebruik enkel cijfers, spaties en + ( ) - . in het telefoonnummer.",
+        "message": "Schrijf een bericht van minstens 10 tekens.",
+        "send": "Het bericht kon niet worden verzonden.",
+        "rateLimited": "Te veel pogingen na elkaar. Probeer het later opnieuw."
+      },
+      "fallback": "Probeer het later opnieuw of neem rechtstreeks contact op met het kantoor:"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "Pagina niet gevonden",
+    "title": "We konden die pagina niet vinden",
+    "lead": "De pagina die u zocht is verplaatst of werd nooit gepubliceerd. Gebruik onderstaande links om terug te keren naar het kantoor, of neem rechtstreeks contact op.",
+    "ctaHome": "Terug naar de homepagina",
+    "ctaContact": "Contacteer het kantoor"
+  },
+  "Error": {
+    "eyebrow": "Er is iets misgegaan",
+    "title": "Er deed zich een onverwachte fout voor",
+    "lead": "Ons team is op de hoogte gebracht. U kunt opnieuw proberen, terugkeren naar de homepagina, of het kantoor rechtstreeks contacteren.",
+    "ctaRetry": "Opnieuw proberen",
+    "ctaHome": "Terug naar de homepagina"
+  },
+  "Disclaimer": {
+    "body": "Disclaimer: Advocatenkantoor Orechdin kan geen specifiek resultaat garanderen, maar zal alles in het werk stellen om het best mogelijke resultaat te behalen."
+  },
+  "Consent": {
+    "settingsLink": "Cookie-instellingen",
+    "banner": {
+      "eyebrow": "Cookies",
+      "title": "Cookies op deze website",
+      "body": "Wij plaatsen enkel wat strikt noodzakelijk is om deze website te laten werken, tenzij u meer toestaat. Het optionele deel is het Google Maps-kader op onze kantoorpagina, en bezoekersstatistieken mochten wij die ooit toevoegen. Weigeren kost u niets: elke pagina werkt precies hetzelfde.",
+      "acceptAll": "Alles aanvaarden",
+      "refuseAll": "Alles weigeren",
+      "managePreferences": "Voorkeuren beheren",
+      "cookiePolicy": "Cookiebeleid",
+      "privacyPolicy": "Privacyverklaring"
+    },
+    "prefs": {
+      "eyebrow": "Cookievoorkeuren",
+      "title": "Kies wat u toestaat",
+      "intro": "Noodzakelijke onderdelen houden de site werkend en kunnen niet worden uitgeschakeld. Al de rest blijft uit tot u ze aanzet, en u kunt uw keuze op elk moment wijzigen via de voettekst van elke pagina.",
+      "save": "Mijn keuze bewaren",
+      "acceptAll": "Alles aanvaarden",
+      "refuseAll": "Alles weigeren",
+      "toggleLabel": "{category} toestaan",
+      "footnote": "Elk onderdeel, het doel en de bewaartermijn staan in het",
+      "cookiePolicy": "cookiebeleid"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strikt noodzakelijk",
+        "purpose": "Nodig om de website te laten werken: het onthouden van de cookiekeuze die u hier maakt en van de taal die u koos. Geen daarvan volgt u.",
+        "duration": "Tot 1 jaar",
+        "always": "Altijd actief"
+      },
+      "functional": {
+        "name": "Externe inhoud",
+        "purpose": "Inhoud die op uw vraag wordt ingesloten van een ander bedrijf. Vandaag is dat enkel het Google Maps-kader op de kantoorpagina. Toestaan betekent dat Google uw IP-adres ontvangt en eigen cookies kan plaatsen.",
+        "duration": "Bepaald door Google, zie het beleid van Google"
+      },
+      "statistics": {
+        "name": "Bezoekersstatistieken",
+        "purpose": "Anonieme meting van het gebruik van de website, zodat het kantoor ziet welke pagina's mensen helpen. Op deze website draait vandaag geen enkel meetinstrument. De keuze wordt aangeboden zodat er later geen kan worden toegevoegd zonder uw toestemming.",
+        "duration": "Niet van toepassing, geen instrument in gebruik"
+      }
+    },
+    "gate": {
+      "eyebrow": "Externe inhoud",
+      "load": "Kaart tonen",
+      "cookiePolicy": "Lees het cookiebeleid"
+    },
+    "controls": {
+      "heading": "Uw huidige keuze",
+      "body": "Dit is de toestemming die nu in uw browser is opgeslagen. U kunt ze op elk moment wijzigen of intrekken, en intrekken gaat even eenvoudig als geven.",
+      "granted": "Toegestaan",
+      "refused": "Geweigerd",
+      "recordedOn": "Geregistreerd op",
+      "noDecision": "Nog geen keuze geregistreerd",
+      "change": "Mijn keuze wijzigen",
+      "withdraw": "Toestemming intrekken",
+      "limitation": "Intrekken zorgt ervoor dat deze website geen externe inhoud meer laadt en wist onze eigen toestemmingscookie. Het kan geen cookies wissen die een ander bedrijf al in uw browser heeft geplaatst. Die verwijdert u via de instellingen van uw browser."
+    }
+  },
+  "CookiePage": {
+    "metadata": {
+      "title": "Cookiebeleid",
+      "description": "Welke cookies orechdin.be plaatst, waarom, hoelang ze blijven, en hoe u weigert of uw toestemming intrekt."
+    },
+    "eyebrow": "Cookies",
+    "headline": "Cookiebeleid",
+    "intro": "Dit beleid legt uit wat er op uw toestel wordt bewaard wanneer u deze website bezoekt, waarom, en hoe u er controle over houdt. Het geldt voor www.orechdin.be en volgt artikel 129 van de Wet betreffende de elektronische communicatie samen met de Algemene Verordening Gegevensbescherming.",
+    "version": "Versie {version}, laatst bijgewerkt op {date}",
+    "whatHeading": "Wat als cookie geldt",
+    "whatBody1": "Een cookie is een klein bestand dat een website door uw browser laat bewaren. De wet reikt verder dan het woord doet vermoeden: ze dekt elk opslaan of uitlezen van informatie op uw toestel. Daarom vallen ook local storage en session storage onder dezelfde regels. Deze website gebruikt geen van beide.",
+    "whatBody2": "Wat door orechdin.be zelf wordt geplaatst, is eerste partij. Wat door een ander bedrijf wordt geplaatst via ingesloten inhoud, is derde partij, en dat bedrijf beslist wat het ermee doet.",
+    "basisHeading": "Wanneer wij toestemming vragen",
+    "basisBody1": "Opslag die strikt noodzakelijk is voor een dienst die u zelf heeft gevraagd, vereist geen toestemming, en uitschakelen zou de site breken. Al de rest vereist uw voorafgaande, vrije en specifieke toestemming.",
+    "basisBody2": "Wij vragen dus voordat wij iets optioneels plaatsen, nooit vooraf, en wij beschouwen verder surfen nooit als een akkoord. Weigeren is een klik, net als aanvaarden, en heeft geen enkel gevolg voor uw toegang tot welk deel van deze website ook. Uw antwoord wordt zes maanden bewaard, daarna vragen wij het opnieuw.",
+    "registerHeading": "Register van wat wordt bewaard",
+    "registerIntro": "Alles wat deze website op uw toestel kan bewaren, met het doel, wie het kan lezen en hoelang het blijft.",
+    "noConsentNeeded": "Geen toestemming vereist",
+    "consentNeeded": "Enkel na uw toestemming",
+    "emptyCategory": "In deze categorie wordt op deze website momenteel niets gebruikt. Verandert dat, dan wordt het hier vermeld en laadt het pas nadat u het heeft toegestaan.",
+    "table": {
+      "name": "Naam",
+      "provider": "Geplaatst door",
+      "purpose": "Doel",
+      "duration": "Bewaartermijn"
+    },
+    "kind": {
+      "cookie": "Cookie",
+      "localStorage": "Local storage",
+      "sessionStorage": "Session storage"
+    },
+    "entries": {
+      "consent": {
+        "purpose": "Bewaart de cookiekeuze die u heeft gemaakt, zodat wij het niet op elke pagina opnieuw vragen en kunnen aantonen waarmee u akkoord ging.",
+        "duration": "6 maanden"
+      },
+      "googleMaps": {
+        "purpose": "Geplaatst door Google wanneer u ervoor kiest de kaart op de kantoorpagina te laden. Google ontvangt uw IP-adres en gebruikt deze cookies voor eigen doeleinden, waaronder beveiliging en, afhankelijk van uw Google-instellingen, personalisatie.",
+        "duration": "Bepaald door Google, zie het beleid van Google"
+      },
+      "locale": {
+        "purpose": "Onthoudt in welke taal u de site bekijkt, zodat u bij elke pagina in dezelfde taal blijft.",
+        "duration": "1 jaar"
+      }
+    },
+    "thirdPartyHeading": "De enige derde partij",
+    "thirdPartyBody1": "Google Maps is de enige externe dienst die deze website kan aanspreken, enkel op de kantoorpagina, en enkel nadat u dat heeft toegestaan. Tot dan wordt de kaart vervangen door een tijdelijke weergave en bereikt geen enkele aanvraag Google. Staat u het nooit toe, dan verneemt Google nooit dat u deze site bezocht.",
+    "thirdPartyBody2": "Wat Google doet met de gegevens die het ontvangt, valt onder het eigen beleid van Google:",
+    "thirdPartyGoogleLink": "privacybeleid van Google",
+    "secrecyHeading": "Cookies en beroepsgeheim",
+    "secrecyBody": "Als advocaat is dit kantoor gebonden door het beroepsgeheim krachtens artikel 458 van het Strafwetboek. Geen van de bovenstaande onderdelen raakt de inhoud van een dossier: geen enkele cookie op deze website registreert wie u bent, waarover u advies zoekt, of wat u ons schrijft. Die geheimhoudingsplicht is precies de reden waarom deze site geen reclame, geen socialemediapixels en geen externe analysetools draagt.",
+    "browserHeading": "Cookies beheren in uw browser",
+    "browserBody": "Los van de keuze die u hier maakt, kan uw browser cookies blokkeren of wissen voor elke site die u bezoekt. U vindt die instellingen doorgaans onder privacy of gegevensbescherming. Het blokkeren van strikt noodzakelijke onderdelen kan delen van deze website onbruikbaar maken.",
+    "complaintHeading": "Vragen en klachten",
+    "complaintBody1": "Vragen over dit beleid richt u aan {name}, via",
+    "complaintBody2": "Bent u niet tevreden met ons antwoord, dan kunt u klacht indienen bij de Gegevensbeschermingsautoriteit via",
+    "closing": "Dit beleid wordt met een nieuw versienummer opnieuw gepubliceerd telkens het register hierboven wijzigt, en eerdere versies worden bewaard, zodat steeds kan worden vastgesteld wat op een bepaalde datum gold.",
+    "ctaPrivacy": "Lees de privacyverklaring",
+    "ctaContact": "Contacteer het kantoor"
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "Privacyverklaring",
+      "description": "Hoe Orechdin omgaat met persoonsgegevens: doeleinden, rechtsgronden, ontvangers, bewaartermijnen, uw rechten, en de invloed van het beroepsgeheim daarop."
+    },
+    "eyebrow": "GDPR / AVG",
+    "headline": "Privacyverklaring",
+    "intro": "Deze verklaring zet uiteen welke persoonsgegevens het kantoor via deze website verwerkt, waarom, op welke rechtsgrond, en wat u van ons kunt vragen. Zij volgt de artikelen 13 en 14 van de Algemene Verordening Gegevensbescherming.",
+    "scope": "Zij geldt voor deze website. De algemene privacyverklaring voor cliëntendossiers wordt afzonderlijk gepubliceerd op de",
+    "officialPolicy": "algemene privacyverklaring van het kantoor",
+    "version": "Versie {version}, laatst bijgewerkt op {date}",
+    "controllerHeading": "Wie is verantwoordelijk",
+    "controllerBody1": "De verwerkingsverantwoordelijke is het kantoor, gevestigd te {street}, {postal} {city}, België, met ondernemingsnummer {kbo} en ingeschreven bij de {court}.",
+    "controllerBody2": "Voor alles wat persoonsgegevens betreft, kunt u rechtstreeks contact opnemen met {name}, via",
+    "controllerBody3": " of op {phone}.",
+    "secrecyHeading": "Het beroepsgeheim gaat voor",
+    "secrecyBody1": "Een advocaat is gebonden door het beroepsgeheim krachtens artikel 458 van het Strafwetboek. Wat een cliënt of een kandidaat-cliënt het kantoor toevertrouwt, is vertrouwelijk, en die plicht eindigt niet wanneer het dossier wordt afgesloten.",
+    "secrecyBody2": "Dat bepaalt mee uw rechten inzake gegevensbescherming. Wanneer het beantwoorden van een verzoek informatie zou prijsgeven die door het beroepsgeheim wordt gedekt, in het bijzonder informatie die toebehoort aan een andere persoon in een dossier, moet het kantoor die mededeling weigeren. In dat geval laten wij u weten dat het verzoek werd beperkt, en leggen wij uit waarom voor zover het geheim dat toelaat.",
+    "dataHeading": "Welke gegevens wij verwerken",
+    "dataIntro": "Via deze website de volgende:",
+    "dataVisitLabel": "Bezoek aan de site.",
+    "dataVisitBody": "Uw IP-adres en technische aanvraaggegevens, verwerkt door onze hostingpartner om de pagina's te leveren en de dienst veilig te houden. Wij houden geen bezoekersstatistieken bij.",
+    "dataContactLabel": "Contact opnemen.",
+    "dataContactBody": "De naam, het e-mailadres, het telefoonnummer en de omschrijving van uw zaak die u ons via het contactformulier of per e-mail bezorgt.",
+    "dataClientLabel": "Cliënt worden.",
+    "dataClientBody": "Gaat een zaak door, dan verwerkt het kantoor wat nodig is om voor u op te treden, met inbegrip van gegevens over tegenpartijen en derden. Die verwerkingen worden beschreven in de algemene privacyverklaring en niet hier.",
+    "purposesHeading": "Waarom, en op welke rechtsgrond",
+    "purposesIntro": "Elk doel steunt op een van de gronden van artikel 6 AVG:",
+    "basisContractLabel": "Uitvoering van onze opdracht, artikel 6, lid 1, b.",
+    "basisContractBody": "Uw vraag beantwoorden, nagaan of wij voor u kunnen optreden, en het werk uitvoeren zodra dat het geval is.",
+    "basisLegalLabel": "Wettelijke verplichtingen, artikel 6, lid 1, c.",
+    "basisLegalBody": "Identificatie en bewaring krachtens de antiwitwasregels, boekhoudkundige en fiscale verplichtingen, en de deontologische regels van de balie.",
+    "basisInterestLabel": "Gerechtvaardigde belangen, artikel 6, lid 1, f.",
+    "basisInterestBody": "De website veilig en beschikbaar houden, belangenconflicten nagaan, en rechtsvorderingen instellen of verdedigen, ook de onze.",
+    "basisConsentLabel": "Toestemming, artikel 6, lid 1, a.",
+    "basisConsentBody": "Optionele cookies, en een eventuele nieuwsbrief. U kunt uw toestemming op elk moment intrekken, zonder gevolg voor wat voordien gebeurde.",
+    "basisSpecialLabel": "Bijzondere categorieën en strafrechtelijke gegevens, artikelen 9 en 10.",
+    "basisSpecialBody": "Een dossier kan gezondheidsgegevens bevatten, of gegevens over strafbare feiten en veroordelingen. Het kantoor verwerkt die wanneer dat nodig is voor de instelling, uitoefening of onderbouwing van een rechtsvordering, de grond die artikel 9, lid 2, f voorziet voor juridisch werk.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "Deze website bewaart enkel wat noodzakelijk is, tenzij u meer toestaat. Wat er wordt bewaard, waarom, en hoe u uw toestemming intrekt, staat in het",
+    "cookiesLink": "cookiebeleid",
+    "recipientsHeading": "Wie uw gegevens ontvangt",
+    "recipientsBody1": "Het kantoor verkoopt geen persoonsgegevens en deelt ze niet voor de marketing van derden. Gegevens gaan enkel naar:",
+    "recipientHostingLabel": "Onze hosting- en databankpartner.",
+    "recipientHostingBody": "Die de website en de gegevens ervan op onze instructie bewaart, als verwerker.",
+    "recipientMailLabel": "Onze e-mailprovider.",
+    "recipientMailBody": "Die berichten van en naar het kantoor vervoert.",
+    "recipientCounterpartLabel": "Partijen in uw zaak.",
+    "recipientCounterpartBody": "Rechtbanken, raadslieden van tegenpartijen, gerechtsdeurwaarders, deskundigen en overheden, wanneer het optreden voor u dat vereist.",
+    "recipientsBody2": "Verwerkers handelen enkel op onze instructie en onder een schriftelijke overeenkomst. Mededeling aan wie dan ook gebeurt enkel met uw toestemming, of wanneer de wet dat oplegt.",
+    "transfersHeading": "Doorgifte buiten Europa",
+    "transfersBody": "Het kantoor houdt persoonsgegevens binnen de Europese Economische Ruimte waar het kan. Sommige diensten van deze website, in het bijzonder het Google Maps-kader, kunnen gegevens buiten de EER verwerken. Gebeurt dat, dan gebeurt het onder de waarborgen die hoofdstuk V AVG vereist, zoals een adequaatheidsbesluit of standaardbepalingen inzake gegevensbescherming.",
+    "retentionHeading": "Hoelang wij gegevens bewaren",
+    "retentionIntro": "Persoonsgegevens worden niet langer bewaard dan het doel vereist. In de praktijk:",
+    "retentionFilesLabel": "Dossiers.",
+    "retentionFilesBody": "Minstens vijf jaar na afsluiting van het dossier, overeenkomstig artikel 2276bis van het Burgerlijk Wetboek, en in de praktijk tot tien jaar, omdat vorderingen die met de zaak samenhangen in die periode nog kunnen worden ingesteld.",
+    "retentionAccountingLabel": "Boekhoudkundige en identificatiegegevens.",
+    "retentionAccountingBody": "Gedurende de termijnen die de boekhoud-, fiscale en antiwitwasregels opleggen.",
+    "retentionEnquiryLabel": "Vragen die niet tot een dossier leiden.",
+    "retentionEnquiryBody": "Tot een jaar, zodat wij een belangenconflict herkennen mocht u terugkeren, daarna gewist.",
+    "retentionConsentLabel": "Cookietoestemming.",
+    "retentionConsentBody": "Zes maanden, daarna vragen wij het opnieuw.",
+    "securityHeading": "Beveiliging",
+    "securityBody": "De website wordt over een versleutelde verbinding aangeboden en de toegang tot kantoorsystemen is beperkt tot wie ze nodig heeft. Geen enkel systeem is perfect. Mocht een inbreuk ooit uw rechten ernstig in gevaar brengen, dan brengen wij u en de Gegevensbeschermingsautoriteit op de hoogte zoals de AVG vereist.",
+    "automatedHeading": "Geautomatiseerde besluiten",
+    "automatedBody": "Het kantoor neemt geen enkel besluit over u op basis van uitsluitend geautomatiseerde verwerking. Of het kantoor voor u kan optreden, en welk advies u krijgt, beslist een advocaat.",
+    "rightsHeading": "Uw rechten",
+    "rightsIntro": "Op grond van de AVG kunt u ons vragen om:",
+    "rightAccessLabel": "Inzage.",
+    "rightAccessBody": "U te zeggen of wij gegevens over u verwerken, en u daarvan een kopie te bezorgen.",
+    "rightRectifyLabel": "Verbetering.",
+    "rightRectifyBody": "Gegevens recht te zetten die onjuist of onvolledig zijn.",
+    "rightEraseLabel": "Wissing.",
+    "rightEraseBody": "Gegevens te wissen, wanneer geen wettelijke plicht en geen rechtsvordering ons verplicht ze te bewaren.",
+    "rightRestrictLabel": "Beperking.",
+    "rightRestrictBody": "Het gebruik van gegevens op te schorten zolang een betwisting daarover loopt.",
+    "rightPortabilityLabel": "Overdraagbaarheid.",
+    "rightPortabilityBody": "De gegevens die u ons gaf op grond van toestemming of een overeenkomst, in een machineleesbare vorm over te dragen.",
+    "rightObjectLabel": "Bezwaar.",
+    "rightObjectBody": "Een verwerking op grond van onze gerechtvaardigde belangen stop te zetten, tenzij dwingende gronden uw bezwaar overstijgen.",
+    "rightWithdrawLabel": "Intrekking van toestemming.",
+    "rightWithdrawBody": "Een gegeven toestemming op elk moment in te trekken.",
+    "rightsHow": "Richt uw verzoek aan",
+    "rightsHowSuffix": ". Wij antwoorden binnen een maand, en kunnen eerst een identiteitsbewijs vragen zodat wij uw gegevens niet aan iemand anders bezorgen.",
+    "rightsLimit": "Deze rechten zijn niet absoluut. Het beroepsgeheim, een wettelijke bewaarplicht of de rechten van een ander kunnen ons verplichten een verzoek te beperken, en waar het om een dossier gaat, is die beperking eerder regel dan uitzondering. Wij leggen steeds uit wat wij wel kunnen.",
+    "complaintsHeading": "Klachten",
+    "complaintsBody1": "Meent u dat met uw gegevens niet correct wordt omgegaan, laat het ons dan eerst weten zodat wij het kunnen rechtzetten. U heeft ook het recht klacht in te dienen bij de toezichthoudende autoriteit:",
+    "dpaName": "Gegevensbeschermingsautoriteit",
+    "complaintsBody2": "Klachten over het optreden van een advocaat kunnen daarnaast worden gericht aan de stafhouder van de balie van het gerechtelijk arrondissement Antwerpen.",
+    "changesHeading": "Wijzigingen",
+    "changesBody": "Deze verklaring draagt een versienummer en een datum. Wijzigt zij wezenlijk, dan publiceren wij de nieuwe versie hier, en betreft de wijziging iets waarvoor u toestemming gaf, dan vragen wij die opnieuw.",
+    "supportNote": "Deze verklaring is geschreven voor de website. Bent u cliënt, dan gelden daarnaast de opdrachtvoorwaarden en de algemene privacyverklaring voor uw dossier.",
+    "ctaContact": "Contacteer het kantoor",
+    "ctaCookies": "Cookiebeleid"
+  }
+}

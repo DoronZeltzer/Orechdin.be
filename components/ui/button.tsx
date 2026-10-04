@@ -61,6 +61,15 @@ export function Button(props: AsLink | AsButton) {
   );
 
   if ("href" in rest && rest.href !== undefined) {
+    const href = rest.href;
+    if (typeof href === "string" && /^(tel:|mailto:|sms:|https?:)/.test(href)) {
+      const anchorProps = { ...(rest as ComponentProps<"a">) };
+      return (
+        <a {...anchorProps} href={href} className={classes}>
+          {content}
+        </a>
+      );
+    }
     return (
       <Link {...(rest as Omit<AsLink, keyof Common>)} className={classes}>
         {content}

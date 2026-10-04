@@ -1,48 +1,32 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { LogoWordmark } from "@/components/ui/logo-wordmark";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitch } from "@/components/layout/language-switch";
 
 /**
- * The four pages that make up the main navigation. Contact is not in this list:
- * it is the one action the site wants a visitor to take, so it is a button of
- * its own beside the language switch. Privacy is a footer link.
+ * Home | Practice Areas | Our Lawyers | The Office | Contact
+ *
+ * Contact is the one action the site wants a visitor to take, so it is the
+ * highlighted button at the end of the row rather than a fifth plain link.
  */
-const NAV_KEYS = [
+const NAV = [
   { href: "/" as const, key: "home" },
-  { href: "/lawyers" as const, key: "lawyers" },
   { href: "/services" as const, key: "services" },
+  { href: "/lawyers" as const, key: "lawyers" },
   { href: "/office" as const, key: "office" },
 ] as const;
 
-const LOCALES = [
-  { code: "nl" as const, label: "NL" },
-  { code: "en" as const, label: "EN" },
-  { code: "fr" as const, label: "FR" },
-] as const;
-
 export function SiteHeader() {
-  const pathname = usePathname();
+  const pathname = usePathname(); // without the language prefix
   const [menuOpen, setMenuOpen] = useState(false);
   const tNav = useTranslations("Nav");
-  const tCommon = useTranslations("Common");
-  const locale = useLocale();
 
-  const pathWithoutLocale = pathname.replace(/^\/(en|nl|fr)/, "") || "/";
-
-  const switchLocaleHref = (target: "nl" | "en" | "fr") => {
-    if (target === "nl") {
-      return pathWithoutLocale === "/" ? "/" : pathWithoutLocale;
-    }
-    return `/${target}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
-  };
-
-  const isActive = (href: string) => (href === "/" ? pathWithoutLocale === "/" : pathWithoutLocale.startsWith(href));
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   // Escape closes the mobile menu.
   useEffect(() => {
@@ -52,47 +36,20 @@ export function SiteHeader() {
     return () => document.removeEventListener("keydown", onKey);
   }, [menuOpen]);
 
-  const localeSwitch = (onClick?: () => void) =>
-    LOCALES.map((l, i) => (
-      <span key={l.code} className="flex items-center gap-2">
-        <a
-          href={switchLocaleHref(l.code)}
-          hrefLang={l.code}
-          translate="no"
-          onClick={onClick}
-          className={`transition-colors ${l.code === locale ? "font-bold text-brand-black" : "text-brand-black-60 hover:text-brand-black"}`}
-          aria-current={l.code === locale ? "true" : undefined}
-        >
-          {l.label}
-        </a>
-        {i < LOCALES.length - 1 && (
-          <span aria-hidden className="text-brand-black-40">
-            ·
-          </span>
-        )}
-      </span>
-    ));
-
   return (
     <header
       data-site-header
       className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white/95 backdrop-blur"
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-4 px-6 py-3 md:py-4 lg:px-10">
-        {/* The logo is about a quarter larger than before (h-11/12 -> h-12/14). */}
-        <Link
-          href="/"
-          className="flex items-center"
-          aria-label={`${SITE.title}, ${tNav("home")}`}
-        >
+        <Link href="/" className="flex items-center" aria-label={`${SITE.title}, ${SITE.shortName}`}>
           <span className="relative flex h-12 items-center sm:h-14">
             <LogoWordmark className="h-full w-auto object-contain object-left" />
-            <span className="sr-only">{tCommon("officeLogoAlt", { title: SITE.title, short: SITE.shortName })}</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label={tCommon("primarySections")}>
-          {NAV_KEYS.map((item) => {
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
+          {NAV.map((item) => {
             const active = isActive(item.href);
             return (
               <Link
@@ -110,9 +67,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-6 md:flex">
-          <div className="flex items-center gap-2 text-[0.75rem] tracking-wider" aria-label={tNav("localeSwitcher")}>
-            {localeSwitch()}
-          </div>
+          <LanguageSwitch className="flex items-center gap-2 text-[0.75rem] tracking-wider" />
           <Button
             href="/contact"
             className="min-h-10 px-5 py-2 text-[0.75rem]"
@@ -143,7 +98,7 @@ export function SiteHeader() {
         }`}
       >
         <ul className="flex flex-col px-6 pb-6 pt-2">
-          {NAV_KEYS.map((item) => (
+          {NAV.map((item) => (
             <li key={item.href} className="border-b border-brand-black/10">
               <Link
                 href={item.href}
@@ -160,8 +115,8 @@ export function SiteHeader() {
               {tNav("contact")}
             </Button>
           </li>
-          <li className="flex items-center gap-2 pt-6 text-sm tracking-wider" aria-label={tNav("localeSwitcher")}>
-            {localeSwitch(() => setMenuOpen(false))}
+          <li className="pt-6 text-sm tracking-wider">
+            <LanguageSwitch className="flex items-center gap-2" onNavigate={() => setMenuOpen(false)} />
           </li>
         </ul>
       </div>
