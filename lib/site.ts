@@ -45,10 +45,10 @@ export const SITE = {
   email: "info@orechdin.be",
   website: "www.orechdin.be",
   /**
-   * WhatsApp number, in international format without "+" or spaces: +32 477 58 78 97,
+   * WhatsApp number, in international format without "+" or spaces: +32 3 227 50 57 (the office number),
    * confirmed by the firm. Set it to null to hide the WhatsApp button everywhere.
    */
-  whatsapp: "32477587897" as string | null,
+  whatsapp: "3232275057" as string | null,
   /** Opens directions in the visitor's maps app. A plain link, so nothing loads from Google until it is clicked. */
   directionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=Lange+Herentalsestraat+122%2C+2018+Antwerp%2C+Belgium",
