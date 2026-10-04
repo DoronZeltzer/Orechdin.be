@@ -45,11 +45,10 @@ export const SITE = {
   email: "info@orechdin.be",
   website: "www.orechdin.be",
   /**
-   * WhatsApp number, in international format without "+" or spaces, e.g. "32477000000".
-   * Left empty on purpose: which number to use is still an open point. While it is empty
-   * no WhatsApp button is shown anywhere.
+   * WhatsApp number, in international format without "+" or spaces: +32 477 58 78 97,
+   * confirmed by the firm. Set it to null to hide the WhatsApp button everywhere.
    */
-  whatsapp: null as string | null,
+  whatsapp: "32477587897" as string | null,
   /** Opens directions in the visitor's maps app. A plain link, so nothing loads from Google until it is clicked. */
   directionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=Lange+Herentalsestraat+122%2C+2018+Antwerp%2C+Belgium",
@@ -58,8 +57,6 @@ export const SITE = {
   copyrightEntity: "ORECHDIN BV",
   privacyUrl: "/privacy",
   livePrivacyUrl: "https://www.orechdin.be/privacy-policy",
-  disclaimer:
-    "Disclaimer: Orechdin Law Office can not commit to any result, but will make all efforts to achieve the best possible result.",
   dpo: {
     name: "Meester Deborah Johnson",
     email: "dj@orechdin.be",
