@@ -22,10 +22,10 @@ type Background = "default" | "wash" | "dark" | "blue" | "elevated" | "accent";
 
 const SURFACE: Record<Background, string> = {
   default: "bg-brand-white text-brand-black",
-  wash: "bg-brand-wash text-brand-black",
+  wash: "surface-wash text-brand-black",
   dark: "bg-brand-black text-brand-white",
-  blue: "bg-brand-blue text-brand-black",
-  elevated: "bg-brand-wash text-brand-black",
+  blue: "surface-blue text-brand-black",
+  elevated: "surface-wash text-brand-black",
   accent: "bg-brand-white text-brand-black",
 };
 

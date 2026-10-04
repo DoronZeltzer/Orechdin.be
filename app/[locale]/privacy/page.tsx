@@ -50,7 +50,7 @@ export default function PrivacyPage() {
       className="min-h-screen bg-brand-white pb-24 text-brand-black selection:bg-brand-blue/40"
     >
       <article>
-        <header className="bg-brand-wash"><div className="mx-auto max-w-4xl px-6 py-12 md:py-16"><div className="max-w-3xl">
+        <header className="surface-wash"><div className="mx-auto max-w-4xl px-6 py-12 md:py-16"><div className="max-w-3xl">
           <p className="eyebrow">{t("eyebrow")}</p>
           <h1 className="mt-3 font-display text-4xl leading-tight text-orech-ink md:text-5xl">
             {t("headline")}

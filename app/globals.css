@@ -69,6 +69,39 @@
 }
 
 @layer components {
+  /* Coloured page sections (SectionShell) fade in from and out to the white page,
+     so there is no hard edge where one section ends and the next begins. The
+     colours are the brand's: white, wash #d0e1ee and accent #95b6df. The text
+     always sits on the full colour or lighter, so contrast only improves. */
+  .surface-wash,
+  .surface-blue {
+    --fade: clamp(3rem, 9vw, 7rem);
+  }
+  .surface-wash {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 0,
+      #eaf1f7 calc(var(--fade) * 0.35),
+      #d0e1ee var(--fade),
+      #d0e1ee calc(100% - var(--fade)),
+      #eaf1f7 calc(100% - var(--fade) * 0.35),
+      #ffffff 100%
+    );
+  }
+  .surface-blue {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 0,
+      #cbdaed calc(var(--fade) * 0.35),
+      #95b6df var(--fade),
+      #95b6df calc(100% - var(--fade)),
+      #cbdaed calc(100% - var(--fade) * 0.35),
+      #ffffff 100%
+    );
+  }
+
   /* ─── Editorial primitives ─── */
 
   /* Label above a section title, led by the short blue bar the brand
