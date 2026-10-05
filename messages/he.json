@@ -390,6 +390,13 @@
     "address": "כתובת",
     "email": "דוא״ל",
     "phone": "טלפון",
-    "website": "אתר"
+    "website": "אתר",
+    "legalForm": "צורה משפטית",
+    "legalFormValue": "חברה פרטית בערבון מוגבל (BV)",
+    "vat": "מספר מע״מ",
+    "bar": "לשכת עורכי הדין",
+    "barValue": "{bar}",
+    "professionalTitle": "תואר מקצועי",
+    "professionalTitleValue": "Advocaat (עורך דין), תואר שהוענק בבלגיה"
   }
 }

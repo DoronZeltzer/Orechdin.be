@@ -390,6 +390,13 @@
     "address": "Adres",
     "email": "E-mail",
     "phone": "Telefoon",
-    "website": "Website"
+    "website": "Website",
+    "legalForm": "Rechtsvorm",
+    "legalFormValue": "Besloten vennootschap (BV)",
+    "vat": "BTW-nummer",
+    "bar": "Balie",
+    "barValue": "{bar}",
+    "professionalTitle": "Beroepstitel",
+    "professionalTitleValue": "Advocaat, toegekend in België"
   }
 }

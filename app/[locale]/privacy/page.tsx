@@ -87,6 +87,7 @@ export default function PrivacyPage() {
           <Section id="controller" heading={t("controllerHeading")}>
             <p className="leading-relaxed text-orech-ink/80">
               {t("controllerBody1", {
+                name: SITE.legalName,
                 kbo: SITE.kbo,
                 court: SITE.court,
                 street: SITE.address.street,
@@ -163,6 +164,10 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
+          <Section id="marketing" heading={t("marketingHeading")}>
+            <p className="leading-relaxed text-orech-ink/80">{t("marketingBody")}</p>
+          </Section>
+
           <Section id="recipients" heading={t("recipientsHeading")}>
             <p className="leading-relaxed text-orech-ink/80">
               {t("recipientsBody1")}
@@ -173,6 +178,9 @@ export default function PrivacyPage() {
               </Item>
               <Item label={t("recipientMailLabel")}>
                 {t("recipientMailBody")}
+              </Item>
+              <Item label={t("recipientProvidersLabel")}>
+                {t("recipientProvidersBody")}
               </Item>
               <Item label={t("recipientCounterpartLabel")}>
                 {t("recipientCounterpartBody")}

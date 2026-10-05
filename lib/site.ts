@@ -27,7 +27,10 @@ export const INDEXABLE: boolean = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "tr
 export const SITE = {
   // In running text the firm is written ORECH/DIN.
   title: "ORECH/DIN",
-  legalName: "Law firm Nir Zeltzer - Orechdin (ORECHDIN)",
+  // KBO: "Advocatenkantoor Nir Zeltzer - Orechdin", a Besloten Vennootschap (BV) since 30 April 2020.
+  legalName: "Advocatenkantoor Nir Zeltzer - Orechdin BV",
+  vat: "BE 0879.210.671",
+  bar: "Balie Antwerpen",
   shortName: "Boutique Law Office",
   description:
     "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad.",
@@ -57,9 +60,10 @@ export const SITE = {
   copyrightEntity: "ORECHDIN BV",
   privacyUrl: "/privacy",
   livePrivacyUrl: "https://www.orechdin.be/privacy-policy",
+  // Privacy contact: the office itself. No Data Protection Officer is named.
   dpo: {
-    name: "Meester Deborah Johnson",
-    email: "dj@orechdin.be",
+    name: "the office",
+    email: "info@orechdin.be",
     phoneDisplay: "03/227.50.57",
   },
 } as const;
