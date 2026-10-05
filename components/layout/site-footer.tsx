@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { CookieSettingsButton } from "@/components/consent/cookie-settings-button";
 import { LanguageSwitch } from "@/components/layout/language-switch";
+import { LogoWordmark } from "@/components/ui/logo-wordmark";
 
 /**
  * `SiteFooter`: compact. The firm, its address and how to reach it; the same
@@ -27,8 +28,12 @@ export function SiteFooter() {
       <div className="mx-auto max-w-wide px-6 pb-10 lg:px-10">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="text-2xl font-extrabold tracking-tight">{SITE.title}</p>
-            <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{tCommon("shortName")}</p>
+            <Link href="/" className="inline-flex" aria-label={`${SITE.title}, ${tCommon("shortName")}`}>
+              <span className="relative flex h-12 items-center sm:h-14">
+                <LogoWordmark className="h-full w-auto object-contain object-left" />
+              </span>
+            </Link>
+            <p className="mt-3 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{tCommon("shortName")}</p>
             <address className="mt-5 not-italic text-[0.95rem] leading-relaxed">
               <bdi dir="ltr">{SITE.address.street}</bdi>
               <br />
