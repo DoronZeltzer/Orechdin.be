@@ -35,17 +35,21 @@ export function pageMetadata(opts: {
   locale?: Locale;
   /** Use the title exactly as given, without the " | ORECH/DIN" suffix. */
   absoluteTitle?: boolean;
+  /** The page text exists in English only (privacy statement, cookie policy). In other
+   *  languages it names the English page as canonical, is not offered as a translation
+   *  and is not indexed. */
+  englishOnly?: boolean;
 }): Metadata {
   const path = opts.path === "" ? "/" : opts.path.startsWith("/") ? opts.path : `/${opts.path}`;
   const locale = opts.locale ?? "en";
-  const ready = TRANSLATION_READY[locale];
+  const ready = TRANSLATION_READY[locale] && !(opts.englishOnly && locale !== "en");
 
   const fullTitle = opts.absoluteTitle ? opts.title : `${opts.title} | ${SITE.title}`;
   const canonicalPath = localePath(ready ? locale : "en", path);
 
   const languages: Record<string, string> = {};
   for (const l of LOCALES) {
-    if (TRANSLATION_READY[l]) languages[l] = `${base}${localePath(l, path)}`;
+    if (TRANSLATION_READY[l] && (!opts.englishOnly || l === "en")) languages[l] = `${base}${localePath(l, path)}`;
   }
   languages["x-default"] = `${base}${localePath("en", path)}`;
 

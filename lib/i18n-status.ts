@@ -19,8 +19,8 @@ import type { Locale } from "@/i18n/routing";
  */
 export const TRANSLATION_READY: Record<Locale, boolean> = {
   en: true,
-  nl: false,
-  he: false,
+  nl: true,
+  he: true,
 };
 
 /** The language the page text is actually written in. */

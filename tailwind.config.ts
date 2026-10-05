@@ -21,7 +21,7 @@ import type { Config } from "tailwindcss";
  *   3. Geometry
  *      - `editorial` (66rem) for prose-heavy pages, `wide` (78rem) for layouts.
  */
-const slab = ["var(--font-slab)", "Rockwell", "Georgia", "serif"];
+const slab = ["var(--font-hebrew)", "var(--font-slab)", "Rockwell", "Georgia", "serif"];
 
 const config: Config = {
   content: [

@@ -16,7 +16,7 @@ type Tone = "light" | "dark" | "blue";
 type Align = "left" | "center";
 
 const ALIGN: Record<Align, string> = {
-  left: "items-start text-left",
+  left: "items-start text-start",
   center: "items-center text-center mx-auto",
 };
 

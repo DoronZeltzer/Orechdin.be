@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-// English is the master and the only language with approved text so far. Dutch and Hebrew routes
-// exist and currently show the English text, declared as such (see lib/i18n-status.ts).
+// English is the master. Dutch and Hebrew are translated from it (see lib/i18n-status.ts); the privacy
+// statement and cookie policy stay English until their final wording is approved.
 const LOCALES = ["en", "nl", "he"] as const;
 const ROUTES = ["", "/services", "/lawyers", "/office", "/contact", "/privacy", "/cookies", "/legal-notice"] as const;
 
@@ -42,9 +42,21 @@ test.describe("ORECH/DIN smoke", () => {
     await expect(page.getByRole("link", { name: "HE", exact: true }).first()).toHaveAttribute("href", "/he/lawyers");
   });
 
-  test("a language without a translation says so and is not indexed", async ({ page }) => {
+  test("Dutch is left to right and Hebrew right to left, each in its own language", async ({ page }) => {
     await page.goto("/nl", { waitUntil: "load" });
-    await expect(page.locator("html")).toHaveAttribute("lang", "en");
-    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+    await expect(page.locator("html")).toHaveAttribute("lang", "nl");
+    await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Juridische bijstand wanneer het er het meest toe doet.");
+
+    await page.goto("/he", { waitUntil: "load" });
+    await expect(page.locator("html")).toHaveAttribute("lang", "he");
+    await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("סיוע משפטי כשזה הכי חשוב.");
+  });
+
+  test("the privacy statement is English only, marked as such, with a notice in the reader's language", async ({ page }) => {
+    await page.goto("/nl/privacy", { waitUntil: "load" });
+    await expect(page.getByText("Deze pagina is momenteel enkel in het Engels beschikbaar.")).toBeVisible();
+    await expect(page.locator('[lang="en"]').first()).toBeVisible();
   });
 });

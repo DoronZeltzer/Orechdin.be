@@ -17,6 +17,7 @@ import { ContactForm } from "@/components/contact/contact-form";
  */
 export function ContactMain() {
   const t = useTranslations("ContactPage");
+  const tCommon = useTranslations("Common");
 
   const link =
     "font-bold underline decoration-brand-black decoration-1 underline-offset-4 transition-colors hover:bg-brand-white";
@@ -41,32 +42,32 @@ export function ContactMain() {
             <div className="rounded-2xl bg-brand-blue p-8 text-brand-black sm:p-10">
               <address className="not-italic">
                 <p className="text-xl font-extrabold">{SITE.title}</p>
-                <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{SITE.shortName}</p>
+                <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{tCommon("shortName")}</p>
                 <a href={SITE.directionsUrl} target="_blank" rel="noopener noreferrer" className={`mt-5 flex items-start gap-3 ${link}`}>
                   <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                   <span>
-                    {SITE.address.street}
+                    <bdi dir="ltr">{SITE.address.street}</bdi>
                     <br />
-                    {SITE.address.postal} {SITE.address.city}, {SITE.address.country}
+                    <bdi dir="ltr">{SITE.address.postal} {SITE.address.city}, {SITE.address.country}</bdi>
                   </span>
                 </a>
                 <ul className="mt-5 space-y-3 text-lg">
                   <li className="flex items-start gap-3">
                     <Phone className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                     <a href={`tel:${SITE.phoneTel}`} className={link}>
-                      {SITE.phoneDisplay}
+                      <bdi dir="ltr">{SITE.phoneDisplay}</bdi>
                     </a>
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
                     <a href={`mailto:${SITE.email}`} className={link}>
-                      {SITE.email}
+                      <bdi dir="ltr">{SITE.email}</bdi>
                     </a>
                   </li>
                   <li className="flex items-start gap-3">
                     <Globe className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                    <a href={`https://${SITE.website}`} target="_blank" rel="noopener noreferrer" className={link}>
-                      {SITE.website}
+                    <a href={`https://$<bdi dir="ltr">{SITE.website}</bdi>`} target="_blank" rel="noopener noreferrer" className={link}>
+                      <bdi dir="ltr">{SITE.website}</bdi>
                     </a>
                   </li>
                 </ul>
@@ -80,9 +81,9 @@ export function ContactMain() {
       <SectionShell background="wash" id="visit">
         <SectionHeading eyebrow={t("visits.eyebrow")} title={t("visits.title")} lead={t("visits.body")} />
         <p className="mt-6 text-lg">
-          {SITE.address.street}
+          <bdi dir="ltr">{SITE.address.street}</bdi>
           <br />
-          {SITE.address.postal} {SITE.address.city}, {SITE.address.country}
+          <bdi dir="ltr">{SITE.address.postal} {SITE.address.city}, {SITE.address.country}</bdi>
         </p>
         <div className="mt-6">
           <Button href={SITE.directionsUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">

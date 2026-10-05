@@ -37,6 +37,11 @@
     font-weight: 800 !important;
   }
 
+  /* Letter-spacing is a Latin habit: it pulls Hebrew letters apart and breaks the word shapes. */
+  :lang(he), :lang(he) * {
+    letter-spacing: normal !important;
+  }
+
   /* Emphasis inside a heading. The brand font has no italic and the guidelines
      use none, so an <em> is simply set in the heading's own bold. There is
      deliberately no underline, marker or colour: the site carries no blue line

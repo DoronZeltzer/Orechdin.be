@@ -24,12 +24,12 @@ export default function LegalNoticePage() {
 
   const rows: [string, React.ReactNode][] = [
     [t("company"), `${SITE.legalName}`],
-    [t("companyNumber"), SITE.kbo],
-    [t("court"), SITE.court],
-    [t("address"), SITE.address.singleLine],
-    [t("email"), <a key="e" className="font-bold underline underline-offset-4" href={`mailto:${SITE.email}`}>{SITE.email}</a>],
-    [t("phone"), <a key="p" className="font-bold underline underline-offset-4" href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>],
-    [t("website"), SITE.website],
+    [t("companyNumber"), <bdi key="k" dir="ltr">{SITE.kbo}</bdi>],
+    [t("court"), <bdi key="c" dir="ltr">{SITE.court}</bdi>],
+    [t("address"), <bdi key="a" dir="ltr">{SITE.address.singleLine}</bdi>],
+    [t("email"), <a key="e" className="font-bold underline underline-offset-4" href={`mailto:${SITE.email}`}><bdi dir="ltr">{SITE.email}</bdi></a>],
+    [t("phone"), <a key="p" className="font-bold underline underline-offset-4" href={`tel:${SITE.phoneTel}`}><bdi dir="ltr">{SITE.phoneDisplay}</bdi></a>],
+    [t("website"), <bdi key="w" dir="ltr">{SITE.website}</bdi>],
   ];
 
   return (

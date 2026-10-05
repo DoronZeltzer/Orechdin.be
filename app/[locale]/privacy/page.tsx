@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
+import { EnglishOnly } from "@/components/ui/english-only";
 import {
   COOKIE_POLICY_UPDATED,
   COOKIE_POLICY_VERSION,
@@ -21,6 +22,7 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     path: "/privacy",
+    englishOnly: true,
     locale: locale as Locale,
   });
 }
@@ -45,6 +47,7 @@ export default function PrivacyPage() {
   const t = useTranslations("PrivacyPage");
 
   return (
+    <EnglishOnly>
     <main
       id="main-content"
       className="min-h-screen bg-brand-white pb-24 text-brand-black selection:bg-brand-blue/40"
@@ -305,6 +308,7 @@ export default function PrivacyPage() {
         </footer>
       </article>
     </main>
+    </EnglishOnly>
   );
 }
 

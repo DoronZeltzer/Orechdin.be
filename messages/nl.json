@@ -1,1 +1,395 @@
-{}
+{
+  "Nav": {
+    "home": "Home",
+    "services": "Rechtsgebieden",
+    "lawyers": "Onze advocaten",
+    "office": "Het kantoor",
+    "contact": "Contact",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "localeSwitcher": "Taal",
+    "skipToContent": "Ga naar de hoofdinhoud"
+  },
+  "Common": {
+    "contactOffice": "Neem contact op met het kantoor",
+    "callPhone": "Bel {phone}",
+    "openContact": "Open de contactpagina",
+    "openServices": "Open de volledige pagina met rechtsgebieden",
+    "allLawyerProfiles": "Alle profielen van onze advocaten",
+    "contact": "Contact",
+    "office": "Kantoor",
+    "lawyers": "Advocaten",
+    "services": "Rechtsgebieden",
+    "privacy": "Privacy",
+    "mobileLabel": "Gsm",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefoon",
+    "primarySections": "Hoofdsecties",
+    "officeLogoAlt": "{title}, {short}",
+    "englishOnly": "Deze pagina is momenteel enkel in het Engels beschikbaar.",
+    "shortName": "Boutique advocatenkantoor"
+  },
+  "Footer": {
+    "contactHeading": "Contact",
+    "navHeading": "Navigatie",
+    "languagesHeading": "Talen",
+    "legalHeading": "Juridisch",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "legalNotice": "Wettelijke vermeldingen",
+    "phoneLetter": "T",
+    "emailLetter": "E"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "ORECH/DIN | Boutique advocatenkantoor in Antwerpen, België",
+      "description": "ORECH/DIN is een boutique advocatenkantoor in Antwerpen dat particulieren, ondernemers en bedrijven bijstaat in juridische zaken in België, ook cliënten uit het buitenland."
+    },
+    "hero": {
+      "kicker": "Boutique advocatenkantoor · Antwerpen, België",
+      "title": "Juridische bijstand wanneer het er het meest toe doet.",
+      "intro": "ORECH/DIN adviseert en vertegenwoordigt particulieren, ondernemers en bedrijven in juridische zaken in België. Onze advocaten, elk met meer dan 25 jaar ervaring, combineren brede juridische kennis met persoonlijke betrokkenheid, heldere communicatie en een gerichte aanpak.",
+      "supporting": "Wanneer uw rechten of belangen op het spel staan, staan wij aan uw zijde en treden wij vastberaden op.",
+      "imageAlt": "Interieur van een Belgisch advocatenkantoor met een boekenkast, een antieke bureaulamp en uitzicht op de Grote Markt van Antwerpen",
+      "stamp": "Antwerpen sinds"
+    },
+    "personal": {
+      "eyebrow": "Persoonlijke aanpak",
+      "title": "Persoonlijke aandacht, gesteund door ervaring.",
+      "p1": "Elke juridische zaak begint met luisteren. Wij nemen de tijd om uw situatie te begrijpen en te analyseren, te horen wat voor u belangrijk is en wat u wilt bereiken.",
+      "p2": "Uw zaak wordt behandeld door Nir Zeltzer of Deborah Johnson, beiden met meer dan 25 jaar ervaring. Die ervaring wordt gecombineerd met voortdurende bijscholing en een brede juridische kennisbasis.",
+      "p3": "Wanneer extra expertise nuttig is, kunnen wij een beroep doen op een breed professioneel netwerk."
+    },
+    "whatWeDo": {
+      "items": [
+        {
+          "title": "Zakelijke en commerciële zaken",
+          "body": "Advies en vertegenwoordiging in zakelijke en commerciële zaken, waaronder contracten, schuldinvordering en onbetaalde facturen."
+        },
+        {
+          "title": "Vastgoed-, bouw- en huurzaken",
+          "body": "Juridische bijstand in vastgoed-, bouw- en huurzaken."
+        },
+        {
+          "title": "Straf- en verkeerszaken",
+          "body": "Bijstand en vertegenwoordiging in straf- en verkeerszaken."
+        },
+        {
+          "title": "Burgerlijke zaken en aansprakelijkheid",
+          "body": "Burgerlijke zaken en geschillen, waaronder aansprakelijkheid, verzekeringszaken en ongevallen."
+        },
+        {
+          "title": "Privé- en familiezaken",
+          "body": "Bijstand in privé- en familiezaken, waaronder echtscheiding."
+        }
+      ],
+      "cta": "Ontdek onze rechtsgebieden",
+      "title": "Wat wij doen"
+    },
+    "advice": {
+      "title": "Advies, onderhandeling en vertegenwoordiging",
+      "p1": "Niet elk juridisch probleem moet voor de rechtbank eindigen. Wij beoordelen de juridische positie en de praktische mogelijkheden, bespreken de strategie met u en handelen dienovereenkomstig.",
+      "p2": "Wanneer een schikking de zaak op een passende manier kan oplossen, streven wij daarnaar. Wanneer een procedure nodig is, bereiden wij het dossier zorgvuldig voor en komen wij vastberaden op voor uw belangen."
+    },
+    "abroad": {
+      "eyebrow": "Cliënten in het buitenland",
+      "title": "Juridische zaken in België, ook voor cliënten in het buitenland.",
+      "p1": "ORECH/DIN richt zich op juridische zaken in België. Wij staan ook cliënten bij die in het buitenland wonen of actief zijn en juridische bijstand of een betrouwbaar juridisch aanspreekpunt in België nodig hebben.",
+      "p2": "Gesprekken kunnen plaatsvinden op ons kantoor in Antwerpen of online."
+    },
+    "contact": {
+      "title": "Neem contact met ons op.",
+      "p1": "Hebt u een juridische vraag of bevindt u zich in een geschil, dan kunt u rechtstreeks contact opnemen met ORECH/DIN.",
+      "p2": "Bel het kantoor, stuur ons een e-mail of dien een korte aanvraag in.",
+      "p3": "Gesprekken kunnen plaatsvinden op ons kantoor in Antwerpen of online."
+    }
+  },
+  "LawyersPage": {
+    "metadata": {
+      "title": "Onze advocaten",
+      "description": "Nir Zeltzer en Deborah Johnson brengen elk meer dan 25 jaar ervaring en een persoonlijke, praktische aanpak mee naar ORECH/DIN in Antwerpen."
+    },
+    "eyebrow": "Onze advocaten",
+    "title": "Twee ervaren advocaten. Eén persoonlijke aanpak.",
+    "intro": {
+      "p1": "Nir Zeltzer en Deborah Johnson brengen elk meer dan 25 jaar ervaring en hun eigen expertise mee naar ORECH/DIN.",
+      "p2": "Hun werk is gebouwd op vertrouwen, persoonlijke betrokkenheid, praktisch denken en een duidelijk inzicht in wat voor cliënten belangrijk is.",
+      "p3": "Voortdurende bijscholing zorgt ervoor dat deze ervaring wordt ondersteund door actuele juridische kennis."
+    },
+    "blocks": {
+      "education": "Opleiding en kwalificaties",
+      "languages": "Talen",
+      "areas": "Rechtsgebieden"
+    },
+    "nir": {
+      "name": "Nir Zeltzer",
+      "role": "Advocaat",
+      "paragraphs": [
+        "Met meer dan 25 jaar ervaring combineert Nir Zeltzer brede juridische kennis met een persoonlijke, praktische en oplossingsgerichte aanpak.",
+        "Zijn juridische achtergrond wordt aangevuld met een diploma Vastgoedexpertise, dat extra technisch inzicht biedt in vastgoedgerelateerde zaken, en met een master in Business Law van de Universiteit Antwerpen.",
+        "Hij benadert zaken analytisch en met een sterke focus op uw doelstellingen. Zorgvuldige analyse en vertrouwen staan centraal in zijn manier van werken. Wanneer een zaak meer vraagt dan een standaard juridisch antwoord, is hij bereid om buiten de gebaande paden te denken en een beroep te doen op een breed scala aan juridische bronnen, professionele contacten en netwerken om een praktische weg vooruit te vinden.",
+        "Hij heeft uitgebreide ervaring met onderhandelen en conflictoplossing, ook in complexe zaken en in situaties waarin onder druk beslissingen moeten worden genomen. Naargelang de omstandigheden kan dit betekenen: adviseren achter de schermen, onderhandelen naar een werkbare oplossing of, wanneer nodig, een duidelijk standpunt innemen voor de rechtbank.",
+        "Hij blijft gedurende de hele zaak nauw betrokken, legt de beschikbare opties uit en helpt u weloverwogen beslissingen te nemen, met een duidelijke focus op het te bereiken resultaat."
+      ],
+      "education": [
+        "Diploma in de rechten, Universiteit Antwerpen",
+        "Uitgebreide studies in vastgoed",
+        "Diploma Vastgoedexpertise",
+        "Master in Business Law, Universiteit Antwerpen"
+      ],
+      "areas": [
+        "Vastgoedrecht",
+        "Conflictoplossing en onderhandelingen"
+      ]
+    },
+    "deborah": {
+      "name": "Deborah Johnson",
+      "role": "Advocaat",
+      "paragraphs": [
+        "Deborah Johnson is een ervaren pleiter die vastberaden vertegenwoordiging voor de rechtbank combineert met een rustige, gestructureerde en zorgvuldig voorbereide aanpak.",
+        "Met meer dan 25 jaar ervaring weet zij dat cliënten vaak meer nodig hebben dan een juridisch antwoord: ze willen begrijpen wat er gebeurt, wat de opties zijn en wat ze nadien kunnen verwachten. Zij houdt zaken overzichtelijk, legt het verloop duidelijk uit en blijft gedurende het hele dossier nauw betrokken.",
+        "Zij volgde ook de bijzondere opleiding cassatieprocedure in strafzaken.",
+        "Zij benadert elke zaak met diepgang en inzicht en behoudt daarbij een professionele en menselijke aanpak waar cliënten veel waarde aan hechten.",
+        "Vertrouwen, grondige voorbereiding en een duidelijk richtinggevoel staan centraal in haar manier van werken, zowel bij onderhandelingen als voor de rechtbank."
+      ],
+      "education": [
+        "Diploma in de rechten, Universiteit Antwerpen",
+        "Bijzondere opleiding cassatieprocedure in strafzaken"
+      ],
+      "areas": [
+        "Familierecht",
+        "Strafrecht",
+        "Verkeerszaken"
+      ]
+    }
+  },
+  "ServicesPage": {
+    "metadata": {
+      "title": "Rechtsgebieden",
+      "description": "ORECH/DIN staat particulieren, ondernemers en bedrijven bij in juridische zaken in België: zakelijke en commerciële zaken, vastgoed en bouw, straf- en verkeerszaken, burgerlijke zaken en aansprakelijkheid, en privé- en familiezaken."
+    },
+    "title": "Rechtsgebieden",
+    "intro": {
+      "p1": "ORECH/DIN staat particulieren, ondernemers en bedrijven bij in juridische zaken in België.",
+      "p2": "Of het nu gaat om een contract, een commercieel geschil, vastgoed, aansprakelijkheid, een familiezaak of een procedure voor een rechtbank: wij nemen eerst de tijd om de situatie te begrijpen en te analyseren, de beschikbare opties toe te lichten en de passende aanpak te bepalen.",
+      "p3": "Onze advocaten brengen elk meer dan 25 jaar ervaring mee, gecombineerd met een praktische en persoonlijke aanpak en veel aandacht voor wat er voor u op het spel staat."
+    },
+    "areas": [
+      {
+        "title": "Zakelijke en commerciële zaken",
+        "p1": "Juridische problemen kunnen het runnen van een bedrijf snel in de weg staan. Wij staan u bij met contracten, commerciële geschillen, onbetaalde facturen en schuldinvordering, en helpen u een duidelijke weg vooruit te vinden.",
+        "p2": "Wij treden ook op wanneer uw zakelijke belangen, contractuele rechten of financiële positie worden betwist. Waar mogelijk werken wij naar een praktische oplossing toe. Of er nu een procedure nodig is of u wordt gedagvaard, wij bereiden ons grondig voor om uw rechten te doen gelden en uw belangen te verdedigen voor de rechtbanken."
+      },
+      {
+        "title": "Vastgoed-, bouw- en huurzaken",
+        "p1": "Vastgoed-, bouw- en huurzaken kunnen snel complex worden, vooral wanneer contractuele, technische en financiële kwesties door elkaar lopen. Wij helpen u uw positie te begrijpen, geschillen aan te pakken en een praktische weg vooruit te vinden.",
+        "p2": "Ons werk omvat vastgoed- en bouwgeschillen, huurzaken en andere conflicten met betrekking tot onroerend goed, met aandacht voor zowel de juridische positie als de praktische gevolgen voor u. Wanneer een gerechtelijke procedure nodig is, vertegenwoordigen wij u en beschermen wij uw belangen gedurende het hele proces."
+      },
+      {
+        "title": "Straf- en verkeerszaken",
+        "p1": "Straf- en verkeerszaken kunnen mensen overweldigd of onzeker achterlaten over hoe ze moeten reageren. Wij staan aan uw zijde, leggen de situatie en de procedure duidelijk uit en helpen u de keuzes te begrijpen die gemaakt moeten worden.",
+        "p2": "Wij blijven gedurende de hele zaak nauw betrokken en houden u op de hoogte van en betrokken bij de beslissingen. Wanneer vertegenwoordiging nodig is, verdedigen wij uw belangen voor de politie, het openbaar ministerie en de rechtbanken, met aandacht voor zowel de juridische positie als de praktische gevolgen."
+      },
+      {
+        "title": "Burgerlijke zaken en aansprakelijkheid",
+        "p1": "Ongevallen, aansprakelijkheidskwesties en verzekeringsgeschillen kunnen een onmiddellijke impact hebben op het dagelijks leven, de financiën of het bedrijf van iemand. Wij helpen u begrijpen waar u staat, wat redelijkerwijs kan worden gevorderd of verdedigd en welke stappen mogelijk zijn.",
+        "p2": "Wij staan u bij in burgerlijke geschillen, aansprakelijkheidsvorderingen, verzekeringszaken en ongevallen en houden u gedurende het hele proces op de hoogte en betrokken. Wanneer een gerechtelijke procedure nodig is, komen wij zorgvuldig op voor uw rechten of verdedigen wij uw belangen."
+      },
+      {
+        "title": "Privé- en familiezaken",
+        "p1": "Privé- en familiezaken kunnen frustrerend, emotioneel zwaar en moeilijk te doorgronden zijn, zeker wanneer belangrijke persoonlijke beslissingen, praktische gevolgen en soms kinderen in het spel zijn. Wij helpen u uw juridische positie en de beschikbare opties te begrijpen en houden het proces duidelijk en beheersbaar.",
+        "p2": "Wij staan u bij in echtscheidingen en andere privé- of familiegerelateerde zaken, met aandacht voor zowel de juridische als de persoonlijke impact van de situatie. Onze rol is duidelijke begeleiding te bieden, uw positie te beschermen en u te helpen een zeer moeilijke of zelfs traumatische periode door te komen met zoveel zekerheid en controle als mogelijk."
+      }
+    ],
+    "litigation": "Wanneer een zaak niet buiten de rechtbank kan worden opgelost, zijn wij bereid op te treden. Of er nu een procedure nodig is of u wordt gedagvaard, wij bereiden ons grondig voor om uw rechten te doen gelden en uw belangen vastberaden te verdedigen voor de rechtbanken."
+  },
+  "OfficePage": {
+    "metadata": {
+      "title": "Het kantoor",
+      "description": "ORECH/DIN is een boutique advocatenkantoor in Antwerpen. Wij staan particulieren, ondernemers en bedrijven bij in juridische zaken in België, met advies, onderhandeling en vertegenwoordiging wanneer dat nodig is."
+    },
+    "title": "Boutique advocatenkantoor in Antwerpen",
+    "intro": {
+      "p1": "Juridische problemen kunnen snel frustrerend, overweldigend of moeilijk in te schatten worden. Soms is eerst duidelijk, betrouwbaar advies nodig, en een idee van wat de volgende stap moet zijn.",
+      "p2": "Bij ORECH/DIN beginnen wij met het begrijpen van de situatie, wat er op het spel staat en wat u wilt bereiken. Van daaruit bepalen wij de passende juridische en praktische aanpak.",
+      "p3": "Als boutique advocatenkantoor in Antwerpen staan wij particulieren, ondernemers en bedrijven bij in juridische zaken in België. Onze advocaten brengen elk meer dan 25 jaar ervaring mee, gecombineerd met persoonlijke betrokkenheid, vertrouwen en een praktische manier van werken.",
+      "p4": "Wij helpen u uw rechten te doen gelden en te beschermen, via advies, onderhandeling en waar passend een schikking, en via vertegenwoordiging voor de rechtbanken wanneer een procedure nodig is.",
+      "p5": "Wanneer extra expertise nuttig is, kunnen wij een beroep doen op een breed professioneel netwerk."
+    },
+    "values": {
+      "eyebrow": "Waarden en werkwijze",
+      "items": [
+        {
+          "title": "Vertrouwen en betrokkenheid",
+          "body": "Wij nemen de tijd om de zaak te begrijpen en blijven persoonlijk betrokken."
+        },
+        {
+          "title": "Ervaring en perspectief",
+          "body": "Meer dan 25 jaar ervaring helpt ons zowel de juridische positie als de praktische gevolgen in te schatten."
+        },
+        {
+          "title": "Praktische richting",
+          "body": "Wij leggen de beschikbare opties uit en helpen een realistische weg vooruit te bepalen."
+        },
+        {
+          "title": "Daadkracht wanneer nodig",
+          "body": "Wij zoeken waar mogelijk oplossingen en treden daadkrachtig op wanneer uw rechten of belangen moeten worden nagestreefd of verdedigd."
+        }
+      ]
+    },
+    "direct": {
+      "title": "Rechtstreeks contact, duidelijke volgende stappen",
+      "p1": "Juridische zaken zijn gemakkelijker te beheren wanneer de opties duidelijk zijn, de strategie goed is uitgewerkt en de volgende stappen bekend zijn.",
+      "p2": "Voor particulieren, ondernemers en bedrijven zetten wij in op duidelijk juridisch advies en overleg, een efficiënte afhandeling en praktische beslissingen die beschermen wat ertoe doet.",
+      "p3": "Gesprekken kunnen plaatsvinden op ons kantoor in Antwerpen of online."
+    }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Neem contact op met ORECH/DIN, een boutique advocatenkantoor in Antwerpen. Bel of mail het kantoor, of dien een korte aanvraag in. Gesprekken in Antwerpen of online."
+    },
+    "title": "Neem contact op met ORECH/DIN",
+    "intro": {
+      "p1": "Hebt u een juridische vraag, bevindt u zich in een geschil of wilt u gewoon uw positie begrijpen, dan kunt u rechtstreeks contact met ons opnemen.",
+      "p2": "U kunt het kantoor bellen of via WhatsApp contacteren, ons een e-mail sturen of via de website een korte aanvraag indienen.",
+      "p3": "Gesprekken kunnen plaatsvinden op ons kantoor in Antwerpen of online."
+    },
+    "details": {
+      "eyebrow": "Contactgegevens"
+    },
+    "visits": {
+      "eyebrow": "Kantoorbezoek",
+      "title": "Kom langs op ons kantoor in Antwerpen",
+      "body": "Een bezoek aan ons kantoor in Antwerpen is enkel mogelijk op afspraak.",
+      "directions": "Routebeschrijving"
+    },
+    "closing": "Weet u niet waar te beginnen? Neem contact met ons op en wij helpen u de juiste volgende stap te bepalen.",
+    "enquiry": {
+      "title": "Vertel ons kort over uw zaak",
+      "intro": "Deze korte intake helpt u de belangrijkste informatie te ordenen voor uw eerste contact met ORECH/DIN en helpt ons te beoordelen of en hoe wij u kunnen bijstaan.",
+      "review": "Controleer de informatie voordat u ze verzendt.",
+      "notAccepted": "Het indienen van deze aanvraag betekent <not>niet</not> dat ORECH/DIN uw zaak heeft aanvaard of ermee heeft ingestemd om namens u op te treden.",
+      "documents": "Relevante of vertrouwelijke documenten kunnen apart worden gestuurd naar <mail>info@orechdin.be</mail>.",
+      "urgentTitle": "Dringende zaken en termijnen",
+      "urgent": "Is uw zaak dringend of gebonden aan een termijn, neem dan telefonisch contact op met het kantoor en spreek rechtstreeks met een advocaat. Reken voor dringende zaken of tijdsgevoelige termijnen niet op het aanvraagformulier."
+    },
+    "mapConsentTitle": "Google Maps",
+    "mapConsentBody": "De kaart wordt geladen vanuit Google. Als u de kaart toont, ontvangt Google uw IP-adres en kan het cookies op uw toestel plaatsen.",
+    "mapTitle": "Kaart van het kantoor van ORECH/DIN in Antwerpen",
+    "form": {
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoon",
+      "optional": "Optioneel",
+      "message": "Uw bericht",
+      "messageHint": "Vermeld enkel wat nodig is voor een eerste contact.",
+      "notice": "Uw gegevens worden enkel gebruikt om uw bericht te beantwoorden. Zie de <privacy>privacyverklaring</privacy> voor meer informatie.",
+      "submit": "Stuur een aanvraag",
+      "sending": "Bezig met verzenden…",
+      "successTitle": "Dank u, uw bericht is verzonden.",
+      "successBody": "Het kantoor leest uw bericht en neemt contact met u op.",
+      "errors": {
+        "name": "Vul uw naam in.",
+        "email": "Vul een geldig e-mailadres in.",
+        "phone": "Gebruik in het telefoonnummer enkel cijfers, spaties en + ( ) - .",
+        "message": "Schrijf een bericht van minstens 10 tekens.",
+        "send": "Het bericht kon niet worden verzonden.",
+        "rateLimited": "Te veel pogingen na elkaar. Probeer het later opnieuw."
+      },
+      "fallback": "Probeer het later opnieuw, of neem rechtstreeks contact op met het kantoor:"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "Pagina niet gevonden",
+    "title": "Wij konden die pagina niet vinden",
+    "lead": "De pagina die u zocht, is verplaatst of werd nooit gepubliceerd. Gebruik de onderstaande links om terug te keren naar het kantoor, of neem rechtstreeks contact op.",
+    "ctaHome": "Terug naar de startpagina",
+    "ctaContact": "Contact met het kantoor"
+  },
+  "Error": {
+    "eyebrow": "Er is iets misgegaan",
+    "title": "Er is een onverwachte fout opgetreden",
+    "lead": "Ons team is op de hoogte gebracht. U kunt het opnieuw proberen, terugkeren naar de startpagina of rechtstreeks contact opnemen met het kantoor.",
+    "ctaRetry": "Opnieuw proberen",
+    "ctaHome": "Terug naar de startpagina"
+  },
+  "Consent": {
+    "settingsLink": "Cookie-instellingen",
+    "banner": {
+      "eyebrow": "Cookies",
+      "title": "Cookies op deze website",
+      "body": "Wij plaatsen enkel wat strikt noodzakelijk is om deze website te laten werken, tenzij u meer toestaat. Het optionele deel is het Google Maps-kader op onze contactpagina, en bezoekersstatistieken mochten wij die ooit toevoegen. Weigeren kost u niets: elke pagina werkt hoe dan ook precies hetzelfde.",
+      "acceptAll": "Alles accepteren",
+      "refuseAll": "Alles weigeren",
+      "managePreferences": "Voorkeuren beheren",
+      "cookiePolicy": "Cookiebeleid",
+      "privacyPolicy": "Privacyverklaring"
+    },
+    "prefs": {
+      "eyebrow": "Cookievoorkeuren",
+      "title": "Kies wat u toestaat",
+      "intro": "Noodzakelijke items zorgen ervoor dat de site werkt en kunnen niet worden uitgeschakeld. Al het andere blijft uit tot u het inschakelt, en u kunt op elk moment van gedachten veranderen via de voettekst van elke pagina.",
+      "save": "Mijn keuze opslaan",
+      "acceptAll": "Alles accepteren",
+      "refuseAll": "Alles weigeren",
+      "toggleLabel": "{category} toestaan",
+      "footnote": "Elk item, het doel en de levensduur ervan staan vermeld in het",
+      "cookiePolicy": "cookiebeleid"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strikt noodzakelijk",
+        "purpose": "Nodig om de website te laten werken: onthouden welke cookiekeuze u hier maakt en welke taal u koos. Geen van deze items volgt u.",
+        "duration": "Tot 1 jaar",
+        "always": "Altijd actief"
+      },
+      "functional": {
+        "name": "Externe inhoud",
+        "purpose": "Inhoud van een ander bedrijf die op uw verzoek wordt ingebed. Vandaag is dat enkel het Google Maps-kader op de contactpagina. Als u dit toestaat, ontvangt Google uw IP-adres en kan het zelf cookies plaatsen.",
+        "duration": "Bepaald door Google, zie het beleid van Google"
+      },
+      "statistics": {
+        "name": "Bezoekersstatistieken",
+        "purpose": "Anonieme meting van hoe de website wordt gebruikt, zodat het kantoor kan zien welke pagina's mensen verder helpen. Vandaag draait er geen dergelijke tool op deze website. De keuze wordt aangeboden zodat er later geen kan worden toegevoegd zonder uw toestemming.",
+        "duration": "Niet van toepassing, geen tool in gebruik"
+      }
+    },
+    "gate": {
+      "eyebrow": "Externe inhoud",
+      "load": "Toon de kaart",
+      "cookiePolicy": "Lees het cookiebeleid"
+    },
+    "controls": {
+      "heading": "Uw huidige keuze",
+      "body": "Dit is de toestemming die op dit moment in uw browser is vastgelegd. U kunt ze op elk moment wijzigen of intrekken, en intrekken is even gemakkelijk als toestemming geven.",
+      "granted": "Toegestaan",
+      "refused": "Geweigerd",
+      "recordedOn": "Vastgelegd op",
+      "noDecision": "Nog geen keuze vastgelegd",
+      "change": "Mijn keuze wijzigen",
+      "withdraw": "Toestemming intrekken",
+      "limitation": "Door uw toestemming in te trekken, laadt deze website geen externe inhoud meer en wordt onze eigen toestemmingscookie verwijderd. Cookies die een ander bedrijf al in uw browser heeft geplaatst, kunnen daarmee niet worden verwijderd. Die verwijdert u via de instellingen van uw browser."
+    }
+  },
+  "Actions": {
+    "call": "Bel ons",
+    "email": "Mail ons",
+    "whatsapp": "WhatsApp",
+    "enquiry": "Stuur een aanvraag"
+  },
+  "LegalNotice": {
+    "metadata": {
+      "title": "Wettelijke vermeldingen",
+      "description": "Bedrijfsgegevens van ORECH/DIN, boutique advocatenkantoor in Antwerpen."
+    },
+    "title": "Wettelijke vermeldingen",
+    "company": "Onderneming",
+    "companyNumber": "Ondernemingsnummer (KBO)",
+    "court": "Ingeschreven bij",
+    "address": "Adres",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "website": "Website"
+  }
+}

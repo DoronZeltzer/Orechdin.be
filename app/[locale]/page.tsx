@@ -56,7 +56,7 @@ export default function HomePage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/40 via-brand-blue/10 to-transparent mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-white/95 via-brand-white/88 to-brand-white/75 sm:via-brand-white/80 sm:to-brand-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-white/95 via-brand-white/88 to-brand-white/75 sm:via-brand-white/80 sm:to-brand-white/40 rtl:bg-gradient-to-l" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-white via-transparent to-transparent" />
         </div>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
           </div>
 
           {/* The stamp, as before: a small caption over a very faint year. */}
-          <div className="reveal reveal-delay-5 absolute bottom-16 right-10 hidden flex-col items-end gap-1 text-right lg:flex">
+          <div className="reveal reveal-delay-5 absolute bottom-16 end-10 hidden flex-col items-end gap-1 text-end lg:flex">
             <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-black-60">{t("hero.stamp")}</span>
             <span aria-hidden className="text-[3rem] font-light leading-none text-brand-blue/20">
               1999

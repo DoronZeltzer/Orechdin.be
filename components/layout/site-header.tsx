@@ -25,6 +25,7 @@ export function SiteHeader() {
   const pathname = usePathname(); // without the language prefix
   const [menuOpen, setMenuOpen] = useState(false);
   const tNav = useTranslations("Nav");
+  const tCommon = useTranslations("Common");
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
@@ -42,7 +43,7 @@ export function SiteHeader() {
       className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white/95 backdrop-blur"
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-4 px-6 py-3 md:py-4 lg:px-10">
-        <Link href="/" className="flex items-center" aria-label={`${SITE.title}, ${SITE.shortName}`}>
+        <Link href="/" className="flex items-center" aria-label={`${SITE.title}, ${tCommon("shortName")}`}>
           <span className="relative flex h-12 items-center sm:h-14">
             <LogoWordmark className="h-full w-auto object-contain object-left" />
           </span>

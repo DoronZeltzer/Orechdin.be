@@ -56,7 +56,7 @@ export function Button(props: AsLink | AsButton) {
   const content = (
     <>
       {children}
-      {arrow && <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />}
+      {arrow && <ArrowRight className="h-4 w-4 shrink-0 rtl:-scale-x-100" aria-hidden />}
     </>
   );
 

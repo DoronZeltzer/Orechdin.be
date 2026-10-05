@@ -201,10 +201,10 @@ export function ContactForm() {
             <p className="mt-3 text-sm text-brand-black-60">{t("fallback")}</p>
             <p className="mt-2 flex flex-wrap gap-x-6 gap-y-1 font-bold">
               <a href={`tel:${SITE.phoneTel}`} className="underline decoration-brand-black decoration-1 underline-offset-4 hover:bg-brand-blue">
-                {SITE.phoneDisplay}
+                <bdi dir="ltr">{SITE.phoneDisplay}</bdi>
               </a>
               <a href={`mailto:${SITE.email}`} className="underline decoration-brand-black decoration-1 underline-offset-4 hover:bg-brand-blue">
-                {SITE.email}
+                <bdi dir="ltr">{SITE.email}</bdi>
               </a>
             </p>
           </div>
@@ -223,7 +223,7 @@ export function ContactForm() {
           {tc.rich("enquiry.documents", {
             mail: (chunks) => (
               <a href={`mailto:${SITE.email}`} className="font-bold underline decoration-brand-black decoration-1 underline-offset-4">
-                {chunks}
+                <bdi dir="ltr">{chunks}</bdi>
               </a>
             ),
           })}

@@ -16,6 +16,7 @@ import { LanguageSwitch } from "@/components/layout/language-switch";
 export function SiteFooter() {
   const t = useTranslations("Footer");
   const tNav = useTranslations("Nav");
+  const tCommon = useTranslations("Common");
 
   const link = "transition-colors hover:underline hover:decoration-1 hover:underline-offset-4";
 
@@ -27,23 +28,23 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <p className="text-2xl font-extrabold tracking-tight">{SITE.title}</p>
-            <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{SITE.shortName}</p>
+            <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brand-black-80">{tCommon("shortName")}</p>
             <address className="mt-5 not-italic text-[0.95rem] leading-relaxed">
-              {SITE.address.street}
+              <bdi dir="ltr">{SITE.address.street}</bdi>
               <br />
-              {SITE.address.postal} {SITE.address.city}, {SITE.address.country}
+              <bdi dir="ltr">{SITE.address.postal} {SITE.address.city}, {SITE.address.country}</bdi>
             </address>
             <div className="mt-3 space-y-1 text-[0.95rem]">
               <p>
                 <span className="font-bold">{t("phoneLetter")}</span>{" "}
                 <a className={link} href={`tel:${SITE.phoneTel}`}>
-                  {SITE.phoneDisplay}
+                  <bdi dir="ltr">{SITE.phoneDisplay}</bdi>
                 </a>
               </p>
               <p>
                 <span className="font-bold">{t("emailLetter")}</span>{" "}
                 <a className={link} href={`mailto:${SITE.email}`}>
-                  {SITE.email}
+                  <bdi dir="ltr">{SITE.email}</bdi>
                 </a>
               </p>
             </div>

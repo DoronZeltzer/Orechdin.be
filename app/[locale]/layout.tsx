@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Slab } from "next/font/google";
+import { Frank_Ruhl_Libre, Roboto_Slab } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { LegalServiceJsonLd } from "@/components/layout/json-ld";
@@ -30,6 +30,19 @@ const slab = Roboto_Slab({
   variable: "--font-slab",
   weight: "variable",
   display: "swap",
+});
+
+// Hebrew glyphs only (Roboto Slab has none). `preload: false` so the file is fetched only
+// when a page actually contains Hebrew text, never for the English or Dutch pages.
+const hebrew = Frank_Ruhl_Libre({
+  subsets: ["hebrew"],
+  variable: "--font-hebrew",
+  weight: "variable",
+  display: "swap",
+  preload: false,
+  // No size-adjusted local fallback face: it would also match Latin letters and, being
+  // listed first, take them from Roboto Slab.
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -82,7 +95,7 @@ export default async function RootLayout({
       lang={contentLocale(locale as Locale)}
       dir={isRtl(locale as Locale) ? "rtl" : "ltr"}
       suppressHydrationWarning
-      className={slab.variable}
+      className={`${slab.variable} ${hebrew.variable}`}
     >
       <body className="min-h-screen font-prose bg-orech-paper text-orech-ink selection:bg-orech-bronze/30">
         <NextIntlClientProvider messages={messages}>

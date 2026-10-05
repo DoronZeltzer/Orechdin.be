@@ -25,7 +25,9 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "primarySections": "Primary sections",
-    "officeLogoAlt": "{title}, {short}"
+    "officeLogoAlt": "{title}, {short}",
+    "englishOnly": "This page is currently available in English only.",
+    "shortName": "Boutique Law Office"
   },
   "Footer": {
     "contactHeading": "Contact",
