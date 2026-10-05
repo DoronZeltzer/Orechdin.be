@@ -41,7 +41,7 @@
   "HomePage": {
     "metadata": {
       "title": "ORECH/DIN | Boutique Law Office in Antwerp, Belgium",
-      "description": "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad. English, Dutch and Hebrew."
+      "description": "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad."
     },
     "hero": {
       "kicker": "Boutique Law Office · Antwerp, Belgium",
@@ -99,19 +99,19 @@
       "title": "Speak to us.",
       "p1": "If you have a legal question or are facing a dispute, you can contact ORECH/DIN directly.",
       "p2": "Call the office, send us an email or send us a short enquiry.",
-      "p3": "Consultations can take place in Antwerp or online."
+      "p3": "Meetings can take place at our office in Antwerp or online."
     }
   },
   "LawyersPage": {
     "metadata": {
       "title": "Our Lawyers",
-      "description": "Adv. Nir Zeltzer and Adv. Deborah Johnson each bring more than 25 years of legal experience and a personal, practical approach to ORECH/DIN in Antwerp."
+      "description": "Nir Zeltzer and Deborah Johnson each bring more than 25 years of experience and a personal, practical approach to ORECH/DIN in Antwerp."
     },
     "eyebrow": "Our Lawyers",
     "title": "Two experienced lawyers. One personal approach.",
     "intro": {
-      "p1": "Adv. Nir Zeltzer and Adv. Deborah Johnson each bring more than 25 years of legal experience and their own areas of expertise to ORECH/DIN.",
-      "p2": "Their work is built on trust, personal involvement, practical thinking and a clear understanding of what is important to the client.",
+      "p1": "Nir Zeltzer and Deborah Johnson each bring more than 25 years of experience and their own areas of expertise to ORECH/DIN.",
+      "p2": "Their work is built on trust, personal involvement, practical thinking and a clear understanding of what is important to clients.",
       "p3": "Continuous professional training ensures that this experience is supported by up-to-date legal knowledge."
     },
     "blocks": {
@@ -120,30 +120,34 @@
       "areas": "Areas of practice"
     },
     "nir": {
-      "name": "Adv. Nir Zeltzer",
+      "name": "Nir Zeltzer",
       "role": "Lawyer",
       "paragraphs": [
-        "With more than 25 years of legal experience, Adv. Nir Zeltzer combines broad legal knowledge with a personal, practical and solution-focused approach.",
+        "With more than 25 years of experience, Nir Zeltzer combines broad legal knowledge with a personal, practical and solution-focused approach.",
         "His legal background is complemented by a diploma in Real Estate Expertise, providing additional technical insight in property-related matters, as well as a Master in Business Law from the University of Antwerp.",
-        "He approaches matters analytically and with a strong focus on the client’s objectives. Careful analysis and trust are central to the way he works. Where a matter calls for more than a standard legal answer, he is prepared to think outside the box and draw on a broad range of legal sources, professional contacts and networks to identify a practical way forward.",
-        "He has extensive experience in negotiation and conflict resolution, including complex matters and situations requiring decisions under pressure. Depending on the circumstances, this may involve advising behind the scenes, negotiating towards a workable solution or taking a firm position in court when necessary.",
-        "He remains closely involved throughout the matter, explains the available options and helps the client make informed decisions with a clear focus on the result to be achieved."
+        "He approaches matters analytically and with a strong focus on your objectives. Careful analysis and trust are central to the way he works. Where a matter calls for more than a standard legal answer, he is prepared to think outside the box and draw on a broad range of legal sources, professional contacts and networks to identify a practical way forward.",
+        "He has extensive experience in negotiation and conflict resolution, including complex matters and situations requiring decisions under pressure. Depending on the circumstances, this may involve advising behind the scenes, negotiating towards a workable solution or taking a clear position in court when necessary.",
+        "He remains closely involved throughout the matter, explains the available options and helps you make informed decisions with a clear focus on the result to be achieved."
       ],
       "education": [
         "Diploma in law, Antwerp University",
         "Comprehensive studies in Real Estate",
         "Diploma in Real Estate Expertise",
         "Master in Business Law, Antwerp University"
+      ],
+      "areas": [
+        "Real estate law",
+        "Conflict resolution and negotiations"
       ]
     },
     "deborah": {
-      "name": "Adv. Deborah Johnson",
+      "name": "Deborah Johnson",
       "role": "Lawyer",
       "paragraphs": [
-        "Adv. Deborah Johnson is an experienced litigator who combines firm representation in court with a calm, structured and carefully prepared approach.",
-        "With more than 25 years of legal experience, she knows that clients often need more than a legal answer: they need to understand what is happening, what the options are and what to expect next. She keeps matters organised, explains the process clearly and remains closely involved throughout the case.",
+        "Deborah Johnson is an experienced litigator who combines firm representation in court with a calm, structured and carefully prepared approach.",
+        "With more than 25 years of experience, she knows that clients often need more than a legal answer: they need to understand what is happening, what the options are and what to expect next. She keeps matters organised, explains the process clearly and remains closely involved throughout the case.",
         "She has also completed a specialised training in cassation proceedings in criminal cases (bijzondere opleiding cassatieprocedure in strafzaken).",
-        "Deborah approaches each matter with depth and insight, while maintaining a professional and human approach that clients value highly.",
+        "She approaches each matter with depth and insight, while maintaining a professional and human approach that clients value highly.",
         "Trust, thorough preparation and a clear sense of direction are central to the way she works, both in negotiations and in court."
       ],
       "education": [
@@ -160,54 +164,54 @@
   "ServicesPage": {
     "metadata": {
       "title": "Practice Areas",
-      "description": "ORECH/DIN assists private clients, business owners and companies with legal matters in Belgium: business and commercial, property and construction, criminal and traffic, civil and liability, and private and family matters."
+      "description": "ORECH/DIN assists individuals, entrepreneurs and businesses with legal matters in Belgium: business and commercial, property and construction, criminal and traffic, civil and liability, and private and family matters."
     },
     "title": "Practice Areas",
     "intro": {
-      "p1": "ORECH/DIN assists private clients, business owners and companies with legal matters in Belgium.",
+      "p1": "ORECH/DIN assists individuals, entrepreneurs and businesses with legal matters in Belgium.",
       "p2": "Whether the issue concerns a contract, a commercial dispute, property, liability, a family matter or proceedings before a court, we first take the time to understand and analyse the situation, explain the available options and determine the appropriate way forward.",
-      "p3": "Our lawyers each bring more than 25 years of legal experience, combined with a practical and personal approach and close attention to what is at stake for the client."
+      "p3": "Our lawyers each bring more than 25 years of experience, combined with a practical and personal approach and close attention to what is at stake for you."
     },
     "areas": [
       {
         "title": "Business & Commercial Matters",
-        "p1": "Legal issues can quickly become a distraction from running a business. We assist with contracts, commercial disputes, unpaid invoices and debt recovery, and help clients find a clear way forward.",
-        "p2": "We also step in when a client’s business interests, contractual rights or financial position are being challenged. Where possible, we work towards a practical solution. Whether proceedings are necessary or the client is summoned to court, we prepare thoroughly to pursue the client’s rights and defend the client’s interests firmly before the courts."
+        "p1": "Legal issues can quickly become a distraction from running a business. We assist with contracts, commercial disputes, unpaid invoices and debt recovery, and help you find a clear way forward.",
+        "p2": "We also step in when your business interests, contractual rights or financial position are being challenged. Where possible, we work towards a practical solution. Whether proceedings are necessary or you are summoned to court, we prepare thoroughly to pursue your rights and defend your interests before the courts."
       },
       {
         "title": "Property, Construction & Rental Matters",
-        "p1": "Property, construction and rental matters can quickly become complex, particularly where contractual, technical and financial issues overlap. We assist clients in understanding their position, addressing disputes and finding a practical way forward.",
-        "p2": "Our work includes property and construction disputes, rental matters and other conflicts relating to real estate, with attention to both the legal position and the practical consequences for the client. Where court proceedings are required, we provide firm representation and protect the client’s interests throughout the process."
+        "p1": "Property, construction and rental matters can quickly become complex, particularly where contractual, technical and financial issues overlap. We help you understand your position, address disputes and find a practical way forward.",
+        "p2": "Our work includes property and construction disputes, rental matters and other conflicts relating to real estate, with attention to both the legal position and the practical consequences for you. Where court proceedings are required, we represent you and protect your interests throughout the process."
       },
       {
         "title": "Criminal & Traffic Matters",
-        "p1": "Criminal and traffic matters can leave people feeling overwhelmed, uncertain or unsure how to respond. We stand by our clients, explain the situation and the procedure clearly, and help them understand the choices that need to be made.",
-        "p2": "We remain closely involved throughout the matter, while keeping the client informed and involved in the decisions. Where representation is required, we defend the client’s interests firmly before the police, prosecution authorities and courts, with attention to both the legal position and the practical consequences."
+        "p1": "Criminal and traffic matters can leave people feeling overwhelmed, uncertain or unsure how to respond. We stand by you, explain the situation and the procedure clearly, and help you understand the choices that need to be made.",
+        "p2": "We remain closely involved throughout the matter, while keeping you informed and involved in the decisions. Where representation is required, we defend your interests before the police, prosecution authorities and courts, with attention to both the legal position and the practical consequences."
       },
       {
         "title": "Civil Matters & Liability",
-        "p1": "Accidents, liability issues and insurance disputes can have an immediate impact on a person’s daily life, finances or business. We help clients understand where they stand, what can reasonably be claimed or defended, and which steps are available.",
-        "p2": "We assist with civil disputes, liability claims, insurance matters and accidents, keeping the client informed and involved throughout the process. Where court proceedings are required, we pursue the client’s rights or defend the client’s interests firmly and carefully."
+        "p1": "Accidents, liability issues and insurance disputes can have an immediate impact on a person’s daily life, finances or business. We help you understand where you stand, what can reasonably be claimed or defended, and which steps are available.",
+        "p2": "We assist with civil disputes, liability claims, insurance matters and accidents, keeping you informed and involved throughout the process. Where court proceedings are required, we pursue your rights or defend your interests carefully."
       },
       {
         "title": "Private & Family Matters",
-        "p1": "Private and family matters can be frustrating, emotionally demanding and difficult to navigate, especially when important personal decisions, practical consequences and sometimes children are involved. We help clients understand their legal position and the available options, while keeping the process clear and manageable.",
-        "p2": "We assist with divorce and other private or family-related matters, with attention to both the legal and personal impact of the situation. Our role is to provide clear guidance, protect the client’s position and help them move through what can be a deeply difficult or even traumatic period with as much certainty and control as possible."
+        "p1": "Private and family matters can be frustrating, emotionally demanding and difficult to navigate, especially when important personal decisions, practical consequences and sometimes children are involved. We help you understand your legal position and the available options, while keeping the process clear and manageable.",
+        "p2": "We assist with divorce and other private or family-related matters, with attention to both the legal and personal impact of the situation. Our role is to provide clear guidance, protect your position and help you move through what can be a deeply difficult or even traumatic period with as much certainty and control as possible."
       }
     ],
-    "litigation": "When a matter cannot be resolved outside court, we are prepared to act. Whether proceedings are necessary or the client is summoned to court, we prepare thoroughly to pursue the client’s rights and defend the client’s interests firmly before the courts."
+    "litigation": "When a matter cannot be resolved outside court, we are prepared to act. Whether proceedings are necessary or you are summoned to court, we prepare thoroughly to pursue your rights and defend your interests firmly before the courts."
   },
   "OfficePage": {
     "metadata": {
       "title": "The Office",
-      "description": "ORECH/DIN is a boutique law office in Antwerp. We assist private clients, business owners and companies with legal matters in Belgium, through advice, negotiation and firm representation when needed."
+      "description": "ORECH/DIN is a boutique law office in Antwerp. We assist individuals, entrepreneurs and businesses with legal matters in Belgium, through advice, negotiation and representation when needed."
     },
     "title": "Boutique Law Office in Antwerp",
     "intro": {
       "p1": "Legal issues can quickly become frustrating, overwhelming or difficult to assess. Sometimes what is needed first is clear, reliable advice and a sense of what the next step should be.",
-      "p2": "At ORECH/DIN, we start by understanding the situation, what is at stake and what the client wants to achieve. From there, we determine the appropriate legal and practical approach.",
-      "p3": "As a boutique law office based in Antwerp, we assist private clients, business owners and companies with legal matters in Belgium. Our lawyers each bring more than 25 years of experience, combined with personal involvement, trust and a practical way of working.",
-      "p4": "We help clients assert and protect their rights through advice, negotiation and settlement where appropriate, and through firm representation before the courts when proceedings are necessary.",
+      "p2": "At ORECH/DIN, we start by understanding the situation, what is at stake and what you want to achieve. From there, we determine the appropriate legal and practical approach.",
+      "p3": "As a boutique law office based in Antwerp, we assist individuals, entrepreneurs and businesses with legal matters in Belgium. Our lawyers each bring more than 25 years of experience, combined with personal involvement, trust and a practical way of working.",
+      "p4": "We help you assert and protect your rights through advice, negotiation and settlement where appropriate, and through representation before the courts when proceedings are necessary.",
       "p5": "Where additional expertise is useful, we can rely on a broad professional network."
     },
     "values": {
@@ -219,7 +223,7 @@
         },
         {
           "title": "Experience and perspective",
-          "body": "More than 25 years of legal experience help us assess both the legal position and the practical consequences."
+          "body": "More than 25 years of experience help us assess both the legal position and the practical consequences."
         },
         {
           "title": "Practical direction",
@@ -227,14 +231,14 @@
         },
         {
           "title": "Determination when needed",
-          "body": "We seek solutions where possible and act firmly when the client’s rights or interests need to be pursued or defended."
+          "body": "We seek solutions where possible and act decisively when your rights or interests need to be pursued or defended."
         }
       ]
     },
     "direct": {
       "title": "Direct contact, clear next steps",
       "p1": "Legal matters are easier to manage when the options are clear, the strategy is well planned and the next steps are known.",
-      "p2": "For private clients, business owners and companies alike, we focus on clear legal advice and consultation, efficient handling and practical decisions that protect what matters.",
+      "p2": "For individuals, entrepreneurs and businesses alike, we focus on clear legal advice and consultation, efficient handling and practical decisions that protect what matters.",
       "p3": "Meetings can take place at our office in Antwerp or online."
     }
   },

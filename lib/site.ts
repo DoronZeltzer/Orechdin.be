@@ -30,7 +30,7 @@ export const SITE = {
   legalName: "Law firm Nir Zeltzer - Orechdin (ORECHDIN)",
   shortName: "Boutique Law Office",
   description:
-    "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad. English, Dutch and Hebrew.",
+    "ORECH/DIN is a boutique law office in Antwerp assisting individuals, entrepreneurs and businesses with legal matters in Belgium, including clients from abroad.",
   url: SITE_URL,
   locale: "en_BE",
   address: {
