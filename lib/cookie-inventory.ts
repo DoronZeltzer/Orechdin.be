@@ -96,5 +96,9 @@ export const COOKIE_GROUPS: readonly CookieGroup[] = [
 ] as const;
 
 /** Shown on the policy and bumped whenever the register above changes. */
-export const COOKIE_POLICY_VERSION = "1.1";
-export const COOKIE_POLICY_UPDATED = "2026-10-01";
+export const COOKIE_POLICY_VERSION = "2.0";
+export const COOKIE_POLICY_UPDATED = "2026-10-06";
+
+/** The privacy statement is versioned on its own. */
+export const PRIVACY_STATEMENT_VERSION = "2.0";
+export const PRIVACY_STATEMENT_UPDATED = "2026-10-06";

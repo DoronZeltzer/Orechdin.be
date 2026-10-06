@@ -59,7 +59,6 @@ export const SITE = {
   court: "Antwerp business court (RPR Antwerpen)",
   copyrightEntity: "ORECHDIN BV",
   privacyUrl: "/privacy",
-  livePrivacyUrl: "https://www.orechdin.be/privacy-policy",
   // Privacy contact: the office itself. No Data Protection Officer is named.
   dpo: {
     name: "the office",

@@ -52,13 +52,13 @@ export default function CookiePolicyPage() {
       <article>
         <header className="surface-wash"><div className="mx-auto max-w-4xl px-6 py-12 md:py-16"><div className="max-w-3xl">
           <p className="eyebrow">{t("eyebrow")}</p>
-          <h1 className="mt-3 font-display text-4xl leading-tight text-orech-ink md:text-5xl">
+          <h1 className="mt-3 text-4xl leading-tight md:text-5xl">
             {t("headline")}
           </h1>
-          <p className="mt-2 font-display text-xl text-brand-black-80">
+          <p className="mt-2 text-xl font-bold text-brand-black-80">
             {SITE.legalName}
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-brand-black-80">
+          <p className="mt-6 leading-relaxed text-brand-black-80">
             {t("intro")}
           </p>
           <p className="mt-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-brand-black-80">
@@ -70,32 +70,42 @@ export default function CookiePolicyPage() {
         </div></div></header>
 
         <div className="mx-auto mt-14 max-w-4xl space-y-12 px-6">
+          <section aria-labelledby="summary-heading" className="rounded-2xl bg-brand-wash p-8">
+            <h2 id="summary-heading" className="text-2xl md:text-3xl">
+              {t("summaryHeading")}
+            </h2>
+            <p className="mt-4 leading-relaxed text-brand-black-80">{t("summaryBody")}</p>
+          </section>
+
           <section aria-labelledby="what-heading">
             <h2
               id="what-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("whatHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("whatBody1")}
             </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("whatBody2")}
+            </p>
+            <p className="mt-4 leading-relaxed text-brand-black-80">
+              {t("whatBody3")}
             </p>
           </section>
 
           <section aria-labelledby="basis-heading">
             <h2
               id="basis-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("basisHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("basisBody1")}
             </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("basisBody2")}
             </p>
           </section>
@@ -103,18 +113,18 @@ export default function CookiePolicyPage() {
           <section aria-labelledby="register-heading">
             <h2
               id="register-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("registerHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("registerIntro")}
             </p>
 
             <div className="mt-8 space-y-10">
               {COOKIE_GROUPS.map((group) => (
                 <div key={group.id}>
-                  <h3 className="font-display text-xl text-orech-ink">
+                  <h3 className="text-xl">
                     {tConsent(`categories.${group.id}.name`)}
                   </h3>
                   <p className="mt-2 max-w-2xl text-[0.9rem] leading-relaxed text-brand-black-80">
@@ -127,13 +137,13 @@ export default function CookiePolicyPage() {
                   </p>
 
                   {group.entries.length === 0 ? (
-                    <p className="mt-4 rounded-2xl border border-dashed border-orech-line bg-orech-slate/20 p-5 text-[0.9rem] leading-relaxed text-brand-black-80">
+                    <p className="mt-4 rounded-2xl border border-dashed border-brand-black/20 bg-brand-wash/60 p-5 text-[0.9rem] leading-relaxed text-brand-black-80">
                       {t("emptyCategory")}
                     </p>
                   ) : (
-                    <div className="mt-4 overflow-x-auto rounded-2xl border border-orech-line">
-                      <table className="w-full min-w-[36rem] border-collapse text-left text-[0.85rem]">
-                        <thead className="bg-orech-slate/50">
+                    <div className="mt-4 overflow-x-auto rounded-2xl border border-brand-black/20">
+                      <table className="w-full min-w-[36rem] border-collapse text-start text-[0.85rem]">
+                        <thead className="bg-brand-wash">
                           <tr>
                             <th scope="col" className="px-4 py-3 font-semibold">
                               {t("table.name")}
@@ -153,10 +163,10 @@ export default function CookiePolicyPage() {
                           {group.entries.map((entry) => (
                             <tr
                               key={entry.id}
-                              className="border-t border-orech-line align-top"
+                              className="border-t border-brand-black/20 align-top"
                             >
                               <td className="px-4 py-3">
-                                <span className="font-mono text-[0.78rem] text-orech-ink">
+                                <span className="font-mono text-[0.78rem] text-brand-black">
                                   {entry.name}
                                 </span>
                                 <span className="mt-1 block font-mono text-[0.62rem] uppercase tracking-[0.12em] text-brand-black-80">
@@ -166,7 +176,7 @@ export default function CookiePolicyPage() {
                               <td className="px-4 py-3 text-brand-black-80">
                                 {entry.provider}
                               </td>
-                              <td className="px-4 py-3 text-orech-ink/80">
+                              <td className="px-4 py-3 text-brand-black-80">
                                 {t(`entries.${entry.id}.purpose`)}
                               </td>
                               <td className="px-4 py-3 text-brand-black-80">
@@ -186,35 +196,38 @@ export default function CookiePolicyPage() {
           <section aria-labelledby="third-party-heading">
             <h2
               id="third-party-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("thirdPartyHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("thirdPartyBody1")}
             </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("thirdPartyBody2")}{" "}
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-orech-bronzeMuted underline underline-offset-2 hover:text-orech-ink"
+                className="font-bold underline decoration-brand-black decoration-1 underline-offset-4"
               >
                 {t("thirdPartyGoogleLink")}
               </a>
               .
+            </p>
+            <p className="mt-4 leading-relaxed text-brand-black-80">
+              {t("linksBody")}
             </p>
           </section>
 
           <section aria-labelledby="secrecy-heading">
             <h2
               id="secrecy-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("secrecyHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("secrecyBody")}
             </p>
           </section>
@@ -224,11 +237,11 @@ export default function CookiePolicyPage() {
           <section aria-labelledby="browser-heading">
             <h2
               id="browser-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("browserHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("browserBody")}
             </p>
           </section>
@@ -236,27 +249,27 @@ export default function CookiePolicyPage() {
           <section aria-labelledby="complaint-heading">
             <h2
               id="complaint-heading"
-              className="font-display text-2xl text-orech-ink md:text-3xl"
+              className="text-2xl md:text-3xl"
             >
               {t("complaintHeading")}
             </h2>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("complaintBody1", { name: SITE.dpo.name })}{" "}
               <a
                 href={`mailto:${SITE.dpo.email}`}
-                className="font-medium text-orech-bronzeMuted underline underline-offset-2 hover:text-orech-ink"
+                className="font-bold underline decoration-brand-black decoration-1 underline-offset-4"
               >
                 {SITE.dpo.email}
               </a>
               .
             </p>
-            <p className="mt-4 leading-relaxed text-orech-ink/80">
+            <p className="mt-4 leading-relaxed text-brand-black-80">
               {t("complaintBody2")}{" "}
               <a
                 href="https://www.gegevensbeschermingsautoriteit.be"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-orech-bronzeMuted underline underline-offset-2 hover:text-orech-ink"
+                className="font-bold underline decoration-brand-black decoration-1 underline-offset-4"
               >
                 gegevensbeschermingsautoriteit.be
               </a>
