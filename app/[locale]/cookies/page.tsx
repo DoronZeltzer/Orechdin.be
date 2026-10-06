@@ -6,7 +6,6 @@ import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { ConsentControls } from "@/components/consent/consent-controls";
-import { EnglishOnly } from "@/components/ui/english-only";
 import {
   COOKIE_GROUPS,
   COOKIE_POLICY_UPDATED,
@@ -24,7 +23,6 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     path: "/cookies",
-    englishOnly: true,
     locale: locale as Locale,
   });
 }
@@ -44,7 +42,7 @@ export default function CookiePolicyPage() {
   const tConsent = useTranslations("Consent");
 
   return (
-    <EnglishOnly>
+    <>
     <main
       id="main-content"
       className="min-h-screen bg-brand-white pb-24 text-brand-black selection:bg-brand-blue/40"
@@ -299,6 +297,6 @@ export default function CookiePolicyPage() {
         </footer>
       </article>
     </main>
-    </EnglishOnly>
+    </>
   );
 }

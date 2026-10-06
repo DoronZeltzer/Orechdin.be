@@ -5,9 +5,6 @@ import { TRANSLATION_READY } from "@/lib/i18n-status";
 
 const PATHS = ["", "/services", "/lawyers", "/office", "/contact", "/privacy", "/cookies", "/legal-notice"];
 
-/** Pages whose text exists in English only for now: listed for English alone. */
-const ENGLISH_ONLY = ["/privacy", "/cookies"];
-
 /**
  * One entry per page and ready language, each carrying the links to its
  * counterparts in the other ready languages. Languages that still show the
@@ -19,15 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const url = (l: string, p: string) => `${base}/${l}${p}`;
 
   return ready.flatMap((l) =>
-    PATHS.filter((p) => l === "en" || !ENGLISH_ONLY.includes(p)).map((p) => ({
+    PATHS.map((p) => ({
       url: url(l, p),
       lastModified: new Date(),
       changeFrequency: p === "" ? ("weekly" as const) : ("monthly" as const),
       priority: p === "" ? 1 : 0.8,
       alternates: {
-        languages: Object.fromEntries(
-          ready.filter((x) => x === "en" || !ENGLISH_ONLY.includes(p)).map((x) => [x, url(x, p)]),
-        ),
+        languages: Object.fromEntries(ready.map((x) => [x, url(x, p)])),
       },
     })),
   );

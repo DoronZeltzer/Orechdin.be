@@ -6,7 +6,6 @@ import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
-import { EnglishOnly } from "@/components/ui/english-only";
 import { PRIVACY_STATEMENT_UPDATED, PRIVACY_STATEMENT_VERSION } from "@/lib/cookie-inventory";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -16,7 +15,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("title"),
     description: t("description"),
     path: "/privacy",
-    englishOnly: true,
     locale: locale as Locale,
   });
 }
@@ -46,7 +44,7 @@ export default function PrivacyPage() {
     ));
 
   return (
-    <EnglishOnly>
+    <>
       <main id="main-content" className="min-h-screen bg-brand-white pb-24 text-brand-black selection:bg-brand-blue/40">
         <article>
           <header className="surface-wash">
@@ -196,7 +194,7 @@ export default function PrivacyPage() {
           </footer>
         </article>
       </main>
-    </EnglishOnly>
+    </>
   );
 }
 

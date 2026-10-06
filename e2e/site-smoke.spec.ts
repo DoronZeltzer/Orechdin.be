@@ -1,7 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-// English is the master. Dutch and Hebrew are translated from it (see lib/i18n-status.ts); the privacy
-// statement and cookie policy stay English until their final wording is approved.
+// English is the master. Dutch and Hebrew are translated from it (see lib/i18n-status.ts).
 const LOCALES = ["en", "nl", "he"] as const;
 const ROUTES = ["", "/services", "/lawyers", "/office", "/contact", "/privacy", "/cookies", "/legal-notice"] as const;
 
@@ -54,9 +53,11 @@ test.describe("ORECH/DIN smoke", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("סיוע משפטי כשזה הכי חשוב.");
   });
 
-  test("the privacy statement is English only, marked as such, with a notice in the reader's language", async ({ page }) => {
+  test("the privacy statement and cookie policy are translated", async ({ page }) => {
     await page.goto("/nl/privacy", { waitUntil: "load" });
-    await expect(page.getByText("Deze pagina is momenteel enkel in het Engels beschikbaar.")).toBeVisible();
-    await expect(page.locator('[lang="en"]').first()).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Privacyverklaring");
+    await page.goto("/he/cookies", { waitUntil: "load" });
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("מדיניות עוגיות");
+    await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   });
 });
