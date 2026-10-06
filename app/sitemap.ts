@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
+import { SITE, TRAILING_SLASH } from "@/lib/site";
 import { LOCALES } from "@/i18n/routing";
 import { TRANSLATION_READY } from "@/lib/i18n-status";
 
 const PATHS = ["", "/services", "/lawyers", "/office", "/contact", "/privacy", "/cookies", "/legal-notice"];
+
+// Static file: needed so the site can also be built as plain files for ordinary web hosting.
+export const dynamic = "force-static";
 
 /**
  * One entry per page and ready language, each carrying the links to its
@@ -13,7 +16,7 @@ const PATHS = ["", "/services", "/lawyers", "/office", "/contact", "/privacy", "
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
   const ready = LOCALES.filter((l) => TRANSLATION_READY[l]);
-  const url = (l: string, p: string) => `${base}/${l}${p}`;
+  const url = (l: string, p: string) => `${base}/${l}${p}${TRAILING_SLASH ? "/" : ""}`;
 
   return ready.flatMap((l) =>
     PATHS.map((p) => ({

@@ -61,3 +61,8 @@ design-probe-*.png
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+
+# Easyhost static build (generated) and the real mail settings file (a password: never commit)
+.static-build/
+dist-easyhost/
+orechdin-mail.php

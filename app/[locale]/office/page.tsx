@@ -7,6 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { PageHeading, SectionHeading } from "@/components/ui/headings";
 import { IconTile } from "@/components/ui/icon-tile";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const VALUE_ICONS = [Handshake, Scale, Compass, Users] as const;
 
-export default function OfficePage() {
+function OfficePageContent() {
   const t = useTranslations("OfficePage");
   const values = t.raw("values.items") as { title: string; body: string }[];
 
@@ -62,4 +63,11 @@ export default function OfficePage() {
       </SectionShell>
     </main>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function OfficePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <OfficePageContent />;
 }

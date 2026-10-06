@@ -13,7 +13,8 @@
     "capture:local": "node scripts/capture.mjs local",
     "diff": "node scripts/diff-screens.mjs",
     "test:e2e": "playwright test",
-    "portraits:build": "node scripts/build-lawyer-portraits.mjs"
+    "portraits:build": "node scripts/build-lawyer-portraits.mjs",
+    "build:easyhost": "node deploy/easyhost/build.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

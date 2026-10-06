@@ -6,6 +6,7 @@ import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { PageHeading } from "@/components/ui/headings";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * being finalised and are not written here: they are not to be copied from the
  * old documents.
  */
-export default function LegalNoticePage() {
+function LegalNoticePageContent() {
   const t = useTranslations("LegalNotice");
 
   const rows: [string, React.ReactNode][] = [
@@ -53,4 +54,11 @@ export default function LegalNoticePage() {
       </SectionShell>
     </main>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function LegalNoticePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <LegalNoticePageContent />;
 }

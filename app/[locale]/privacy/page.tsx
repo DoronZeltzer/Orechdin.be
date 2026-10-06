@@ -5,8 +5,9 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
-import { SITE } from "@/lib/site";
+import { HOSTED_AT_EASYHOST, SITE } from "@/lib/site";
 import { PRIVACY_STATEMENT_UPDATED, PRIVACY_STATEMENT_VERSION } from "@/lib/cookie-inventory";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -33,13 +34,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * retention, security, rights, complaints. Wording of the statement lives in
  * messages/en.json (PrivacyPage).
  */
-export default function PrivacyPage() {
+function PrivacyPageContent() {
   const t = useTranslations("PrivacyPage");
 
+  // The statement names the host that really serves the site (see HOSTED_AT_EASYHOST in lib/site.ts).
+  const hostSuffix = HOSTED_AT_EASYHOST ? "Easyhost" : "";
   const items = (...keys: string[]) =>
     keys.map((k) => (
       <Item key={k} label={t(`${k}Label`)}>
-        {t(`${k}Body`)}
+        {t(`${k}Body${k === "recipientHosting" ? hostSuffix : ""}`)}
       </Item>
     ));
 
@@ -124,7 +127,7 @@ export default function PrivacyPage() {
             </Section>
 
             <Section id="transfers" heading={t("transfersHeading")}>
-              <P first>{t("transfersBody")}</P>
+              <P first>{t(`transfersBody${hostSuffix}`)}</P>
             </Section>
 
             <Highlight id="retention" heading={t("retentionHeading")}>
@@ -237,4 +240,11 @@ function Item({ label, children }: { label: string; children: ReactNode }) {
       <span className="font-bold text-brand-black">{label}</span> <span>{children}</span>
     </li>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <PrivacyPageContent />;
 }

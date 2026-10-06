@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 /** One icon per area, in the order the areas are listed. */
 const AREA_ICONS = [Briefcase, Building2, Gavel, Scale, Users] as const;
 
-export default function HomePage() {
+function HomePageContent() {
   const t = useTranslations("HomePage");
   const tLawyers = useTranslations("LawyersPage");
 
@@ -171,4 +171,11 @@ export default function HomePage() {
       </SectionShell>
     </main>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <HomePageContent />;
 }

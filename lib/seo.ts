@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE, INDEXABLE } from "@/lib/site";
+import { SITE, INDEXABLE, TRAILING_SLASH } from "@/lib/site";
 import { LOCALES, type Locale } from "@/i18n/routing";
 import { TRANSLATION_READY } from "@/lib/i18n-status";
 
@@ -12,7 +12,10 @@ const OG_LOCALE: Record<Locale, string> = {
 };
 
 /** `/en`, `/en/lawyers`, `/nl/office`: every language has its own prefix. */
-const localePath = (l: Locale, p: string) => (p === "/" ? `/${l}` : `/${l}${p}`);
+const localePath = (l: Locale, p: string) => {
+  const path = p === "/" ? `/${l}` : `/${l}${p}`;
+  return TRAILING_SLASH ? `${path}/` : path;
+};
 
 /**
  * Canonical, language relationships, robots, Open Graph and Twitter for a page.

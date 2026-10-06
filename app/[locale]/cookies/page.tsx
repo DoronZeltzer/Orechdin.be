@@ -11,6 +11,7 @@ import {
   COOKIE_POLICY_UPDATED,
   COOKIE_POLICY_VERSION,
 } from "@/lib/cookie-inventory";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -37,7 +38,7 @@ export async function generateMetadata({
  * page so that changing your mind takes one click from the document that
  * explains what you agreed to.
  */
-export default function CookiePolicyPage() {
+function CookiePolicyPageContent() {
   const t = useTranslations("CookiePage");
   const tConsent = useTranslations("Consent");
 
@@ -299,4 +300,11 @@ export default function CookiePolicyPage() {
     </main>
     </>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function CookiePolicyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <CookiePolicyPageContent />;
 }

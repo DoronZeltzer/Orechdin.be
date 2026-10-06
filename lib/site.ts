@@ -13,6 +13,19 @@ const RAW_SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.orechdin.
 export const SITE_URL: string = RAW_SITE_URL;
 
 /**
+ * The static build for ordinary web hosting (deploy/easyhost) publishes every page as a folder with an
+ * index.html, so its addresses end in a slash. Canonical links, the sitemap and the structured data must
+ * use the same form, or search engines would see two addresses for one page. Off on Vercel.
+ */
+/**
+ * Where the site is hosted, for the privacy statement: Vercel (default) or Easyhost (the static build for
+ * ordinary web hosting sets NEXT_PUBLIC_HOSTING=easyhost). The statement names the host that is really used.
+ */
+export const HOSTED_AT_EASYHOST: boolean = process.env.NEXT_PUBLIC_HOSTING === "easyhost";
+
+export const TRAILING_SLASH: boolean = process.env.NEXT_PUBLIC_TRAILING_SLASH === "true";
+
+/**
  * Whether search engines may index this deployment.
  *
  * Off unless `NEXT_PUBLIC_ALLOW_INDEXING="true"` is set. The site is also served

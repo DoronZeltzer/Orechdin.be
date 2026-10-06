@@ -7,6 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import { LAWYERS, MEDIA } from "@/lib/site";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { PageHeading } from "@/components/ui/headings";
+import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -23,7 +24,7 @@ type Profile = {
   areas?: string[];
 };
 
-export default function LawyersPage() {
+function LawyersPageContent() {
   const t = useTranslations("LawyersPage");
 
   const profiles: Profile[] = [t.raw("nir") as Profile, t.raw("deborah") as Profile];
@@ -108,4 +109,11 @@ export default function LawyersPage() {
       </SectionShell>
     </main>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function LawyersPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <LawyersPageContent />;
 }

@@ -7,6 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import { SectionShell } from "@/components/design-system/section-shell";
 import { PageHeading } from "@/components/ui/headings";
 import { IconTile } from "@/components/ui/icon-tile";
+import { setRequestLocale } from "next-intl/server";
 
 const AREA_ICONS = [Briefcase, Building2, Gavel, Scale, Users] as const;
 
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return pageMetadata({ title: t("title"), description: t("description"), path: "/services", locale: locale as Locale });
 }
 
-export default function ServicesPage() {
+function ServicesPageContent() {
   const t = useTranslations("ServicesPage");
   const areas = t.raw("areas") as { title: string; p1: string; p2: string }[];
 
@@ -59,4 +60,11 @@ export default function ServicesPage() {
       </SectionShell>
     </main>
   );
+}
+
+// The language is set from the address before the page renders, so every page can be generated ahead of time.
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <ServicesPageContent />;
 }

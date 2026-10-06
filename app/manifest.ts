@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 
+// Static file: needed so the site can also be built as plain files for ordinary web hosting.
+export const dynamic = "force-static";
+
 /**
  * Web app manifest. Mostly serves iOS / Android "Add to home screen"
  * and Windows tile metadata. The site itself is not a full PWA — there

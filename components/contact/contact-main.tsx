@@ -66,7 +66,7 @@ export function ContactMain() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Globe className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                    <a href={`https://$<bdi dir="ltr">{SITE.website}</bdi>`} target="_blank" rel="noopener noreferrer" className={link}>
+                    <a href={`https://${SITE.website}`} target="_blank" rel="noopener noreferrer" className={link}>
                       <bdi dir="ltr">{SITE.website}</bdi>
                     </a>
                   </li>

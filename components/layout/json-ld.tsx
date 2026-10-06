@@ -1,4 +1,6 @@
-import { LAWYERS, MEDIA, SITE } from "@/lib/site";
+import { LAWYERS, MEDIA, SITE, TRAILING_SLASH } from "@/lib/site";
+
+const LAWYERS_PAGE = `/en/lawyers${TRAILING_SLASH ? "/" : ""}`;
 
 const PORTRAITS: Record<string, string> = {
   "nir-zeltzer": MEDIA.nirPhoto,
@@ -17,13 +19,13 @@ const PORTRAITS: Record<string, string> = {
 export function LegalServiceJsonLd() {
   const persons = LAWYERS.map((l) => ({
     "@type": "Person" as const,
-    "@id": `${SITE.url}/lawyers#${l.slug}`,
+    "@id": `${SITE.url}${LAWYERS_PAGE}#${l.slug}`,
     name: l.name,
     jobTitle: l.role,
     email: l.email,
     telephone: l.mobileTel,
     image: `${SITE.url}${PORTRAITS[l.slug] ?? ""}`,
-    url: `${SITE.url}/lawyers#${l.slug}`,
+    url: `${SITE.url}${LAWYERS_PAGE}#${l.slug}`,
     worksFor: { "@id": `${SITE.url}#legal-service` },
   }));
 
