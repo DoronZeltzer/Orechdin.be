@@ -50,14 +50,17 @@ test.describe("ORECH/DIN smoke", () => {
     await page.goto("/he", { waitUntil: "load" });
     await expect(page.locator("html")).toHaveAttribute("lang", "he");
     await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("סיוע משפטי כשזה הכי חשוב.");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("סיוע משפטי כשזה חשוב באמת.");
   });
 
-  test("the privacy statement and cookie policy are translated", async ({ page }) => {
+  test("privacy and cookie policy: translated in Dutch, English-only with a Hebrew notice in Hebrew", async ({ page }) => {
     await page.goto("/nl/privacy", { waitUntil: "load" });
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Privacyverklaring");
+    // Hebrew: a Hebrew notice above one English, left-to-right document.
     await page.goto("/he/cookies", { waitUntil: "load" });
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("מדיניות עוגיות");
+    await expect(page.getByText("מדיניות העוגיות זמינה בשלב זה באנגלית בלבד.")).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Cookie policy");
+    await expect(page.locator('div[lang="en"][dir="ltr"]').first()).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   });
 });

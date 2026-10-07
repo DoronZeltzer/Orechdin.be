@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
+import { EnglishOnly } from "@/components/ui/english-only";
 import { ConsentControls } from "@/components/consent/consent-controls";
 import {
   COOKIE_GROUPS,
   COOKIE_POLICY_UPDATED,
   COOKIE_POLICY_VERSION,
+  displayDate,
 } from "@/lib/cookie-inventory";
 import { setRequestLocale } from "next-intl/server";
 
@@ -19,11 +21,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "CookiePage.metadata" });
+  // In Hebrew the page shows the English policy, so its title and description are English too.
+  const t = await getTranslations({ locale: locale === "he" ? "en" : locale, namespace: "CookiePage.metadata" });
   return pageMetadata({
     title: t("title"),
     description: t("description"),
     path: "/cookies",
+    englishOnlyIn: ["he"],
     locale: locale as Locale,
   });
 }
@@ -38,9 +42,13 @@ export async function generateMetadata({
  * page so that changing your mind takes one click from the document that
  * explains what you agreed to.
  */
-function CookiePolicyPageContent() {
-  const t = useTranslations("CookiePage");
-  const tConsent = useTranslations("Consent");
+async function CookiePolicyPageContent({ locale }: { locale: string }) {
+  // The Hebrew page shows the English policy as one document (see EnglishOnly), including the register, the
+  // category names and the withdrawal panel, so no Hebrew prose sits inside the English policy.
+  const textLocale = locale === "he" ? "en" : locale;
+  const messages = await getMessages({ locale: textLocale });
+  const t = createTranslator({ locale: textLocale, messages, namespace: "CookiePage" });
+  const tConsent = createTranslator({ locale: textLocale, messages, namespace: "Consent" });
 
   return (
     <>
@@ -63,7 +71,7 @@ function CookiePolicyPageContent() {
           <p className="mt-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-brand-black-80">
             {t("version", {
               version: COOKIE_POLICY_VERSION,
-              date: COOKIE_POLICY_UPDATED,
+              date: displayDate(COOKIE_POLICY_UPDATED),
             })}
           </p>
         </div></div></header>
@@ -231,7 +239,9 @@ function CookiePolicyPageContent() {
             </p>
           </section>
 
-          <ConsentControls />
+          <NextIntlClientProvider locale={textLocale} messages={messages}>
+            <ConsentControls />
+          </NextIntlClientProvider>
 
           <section aria-labelledby="browser-heading">
             <h2
@@ -306,5 +316,9 @@ function CookiePolicyPageContent() {
 export default async function CookiePolicyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <CookiePolicyPageContent />;
+  return (
+    <EnglishOnly locale={locale} notice="englishOnlyCookies">
+      <CookiePolicyPageContent locale={locale} />
+    </EnglishOnly>
+  );
 }

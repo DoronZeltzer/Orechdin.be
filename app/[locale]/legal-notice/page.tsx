@@ -28,7 +28,7 @@ function LegalNoticePageContent() {
     [t("legalForm"), t("legalFormValue")],
     [t("companyNumber"), <bdi key="k" dir="ltr">{SITE.kbo}</bdi>],
     [t("vat"), <bdi key="v" dir="ltr">{SITE.vat}</bdi>],
-    [t("court"), <bdi key="c" dir="ltr">{SITE.court}</bdi>],
+    [t("court"), <bdi key="c" dir="ltr">{t("courtValue")}</bdi>],
     [t("bar"), t("barValue", { bar: SITE.bar })],
     [t("professionalTitle"), t("professionalTitleValue")],
     [t("address"), <bdi key="a" dir="ltr">{SITE.address.singleLine}</bdi>],

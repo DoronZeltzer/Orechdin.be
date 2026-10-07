@@ -26,7 +26,6 @@
     "phoneLabel": "Telefoon",
     "primarySections": "Hoofdsecties",
     "officeLogoAlt": "{title}, {short}",
-    "englishOnly": "Deze pagina is momenteel enkel in het Engels beschikbaar.",
     "shortName": "Boutique advocatenkantoor"
   },
   "Footer": {
@@ -397,7 +396,8 @@
     "bar": "Balie",
     "barValue": "{bar}",
     "professionalTitle": "Beroepstitel",
-    "professionalTitleValue": "Advocaat, toegekend in België"
+    "professionalTitleValue": "Advocaat, toegekend in België",
+    "courtValue": "Ondernemingsrechtbank Antwerpen (RPR Antwerpen)"
   },
   "PrivacyPage": {
     "metadata": {

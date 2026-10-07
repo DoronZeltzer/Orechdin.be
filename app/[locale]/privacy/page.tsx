@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { createTranslator } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 import { HOSTED_AT_EASYHOST, SITE } from "@/lib/site";
-import { PRIVACY_STATEMENT_UPDATED, PRIVACY_STATEMENT_VERSION } from "@/lib/cookie-inventory";
+import { PRIVACY_STATEMENT_UPDATED, PRIVACY_STATEMENT_VERSION, displayDate } from "@/lib/cookie-inventory";
+import { EnglishOnly } from "@/components/ui/english-only";
 import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "PrivacyPage.metadata" });
+  // In Hebrew the page shows the English statement, so its title and description are English too.
+  const t = await getTranslations({ locale: locale === "he" ? "en" : locale, namespace: "PrivacyPage.metadata" });
   return pageMetadata({
     title: t("title"),
     description: t("description"),
     path: "/privacy",
+    englishOnlyIn: ["he"],
     locale: locale as Locale,
   });
 }
@@ -34,8 +37,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * retention, security, rights, complaints. Wording of the statement lives in
  * messages/en.json (PrivacyPage).
  */
-function PrivacyPageContent() {
-  const t = useTranslations("PrivacyPage");
+async function PrivacyPageContent({ locale }: { locale: string }) {
+  // The Hebrew page shows the English statement as one document (see EnglishOnly).
+  const textLocale = locale === "he" ? "en" : locale;
+  const t = createTranslator({ locale: textLocale, messages: await getMessages({ locale: textLocale }), namespace: "PrivacyPage" });
 
   // The statement names the host that really serves the site (see HOSTED_AT_EASYHOST in lib/site.ts).
   const hostSuffix = HOSTED_AT_EASYHOST ? "Easyhost" : "";
@@ -58,7 +63,7 @@ function PrivacyPageContent() {
                 <p className="mt-2 text-xl font-bold text-brand-black-80">{SITE.legalName}</p>
                 <p className="mt-6 leading-relaxed text-brand-black-80">{t("intro")}</p>
                 <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-brand-black-80">
-                  {t("version", { version: PRIVACY_STATEMENT_VERSION, date: PRIVACY_STATEMENT_UPDATED })}
+                  {t("version", { version: PRIVACY_STATEMENT_VERSION, date: displayDate(PRIVACY_STATEMENT_UPDATED) })}
                 </p>
               </div>
             </div>
@@ -246,5 +251,9 @@ function Item({ label, children }: { label: string; children: ReactNode }) {
 export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <PrivacyPageContent />;
+  return (
+    <EnglishOnly locale={locale} notice="englishOnlyPrivacy">
+      <PrivacyPageContent locale={locale} />
+    </EnglishOnly>
+  );
 }

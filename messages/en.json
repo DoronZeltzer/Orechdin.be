@@ -26,8 +26,9 @@
     "phoneLabel": "Phone",
     "primarySections": "Primary sections",
     "officeLogoAlt": "{title}, {short}",
-    "englishOnly": "This page is currently available in English only.",
-    "shortName": "Boutique Law Office"
+    "shortName": "Boutique Law Office",
+    "englishOnlyPrivacy": "The privacy statement is currently available in English only.",
+    "englishOnlyCookies": "The cookie policy is currently available in English only."
   },
   "Footer": {
     "contactHeading": "Contact",
@@ -581,6 +582,7 @@
     "address": "Address",
     "email": "Email",
     "phone": "Telephone",
-    "website": "Website"
+    "website": "Website",
+    "courtValue": "Antwerp business court (RPR Antwerpen)"
   }
 }

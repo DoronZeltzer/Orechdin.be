@@ -1,20 +1,27 @@
 import type { ReactNode } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 /**
- * Wraps a page whose text exists in English only (the privacy statement and the cookie
- * policy, whose final wording is still to be approved). In another language the reader
- * gets one short notice in their own language, and the English text is marked as English
- * (lang="en", left to right) so screen readers pronounce it correctly.
+ * Wraps a page whose text is shown in English only in one language: the privacy statement and the cookie policy
+ * in Hebrew. The reader gets one short notice in Hebrew (right to left), and the whole policy below it is one
+ * coherent English document: lang="en", left to right, so screen readers pronounce it correctly and Hebrew and
+ * English prose are never mixed inside the policy.
  */
-export function EnglishOnly({ children }: { children: ReactNode }) {
-  const locale = useLocale();
-  const t = useTranslations("Common");
-  if (locale === "en") return <>{children}</>;
+export async function EnglishOnly({
+  locale,
+  notice,
+  children,
+}: {
+  locale: string;
+  notice: "englishOnlyPrivacy" | "englishOnlyCookies";
+  children: ReactNode;
+}) {
+  if (locale !== "he") return <>{children}</>;
+  const t = await getTranslations({ locale, namespace: "Common" });
   return (
     <>
       <div className="bg-brand-wash">
-        <p className="mx-auto max-w-4xl px-6 py-3 text-[0.9rem] text-brand-black-80">{t("englishOnly")}</p>
+        <p className="mx-auto max-w-4xl px-6 py-3 text-[0.9rem] text-brand-black-80">{t(notice)}</p>
       </div>
       <div lang="en" dir="ltr">
         {children}

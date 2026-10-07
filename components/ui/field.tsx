@@ -33,7 +33,7 @@ export function Field({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="flex items-baseline justify-between gap-3 text-sm font-bold text-brand-black">
+      <label htmlFor={id} className="flex items-baseline justify-between gap-3 text-sm font-bold text-brand-black rtl:justify-start">
         <span>{label}</span>
         {optional && optionalLabel && (
           <span className="text-xs font-normal uppercase tracking-wider text-brand-black-60">{optionalLabel}</span>

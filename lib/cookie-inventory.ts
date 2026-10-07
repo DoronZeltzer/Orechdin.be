@@ -102,3 +102,6 @@ export const COOKIE_POLICY_UPDATED = "2026-10-06";
 /** The privacy statement is versioned on its own. */
 export const PRIVACY_STATEMENT_VERSION = "2.0";
 export const PRIVACY_STATEMENT_UPDATED = "2026-10-06";
+
+/** 2026-10-06 is shown as 06/10/2026. */
+export const displayDate = (iso: string) => iso.split("-").reverse().join("/");
