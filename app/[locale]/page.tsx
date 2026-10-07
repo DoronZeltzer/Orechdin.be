@@ -63,7 +63,6 @@ function HomePageContent() {
         <div className="relative z-10 mx-auto w-full max-w-wide px-6 py-10 sm:px-10 sm:py-24 lg:px-16 lg:py-36">
           <div className="reveal max-w-2xl">
             <PageHeading
-              eyebrow={t("hero.kicker")}
               title={t("hero.title")}
               lead={t("hero.intro")}
               className="max-w-none"

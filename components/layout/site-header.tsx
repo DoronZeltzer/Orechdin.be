@@ -26,6 +26,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const tNav = useTranslations("Nav");
   const tCommon = useTranslations("Common");
+  const tHome = useTranslations("HomePage");
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
@@ -43,13 +44,17 @@ export function SiteHeader() {
       className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white/95 backdrop-blur"
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-4 px-6 py-3 md:py-4 lg:px-10">
-        <Link href="/" className="flex items-center" aria-label={`${SITE.title}, ${tCommon("shortName")}`}>
-          <span className="relative flex h-12 items-center sm:h-14">
+        <Link href="/" className="flex flex-col" aria-label={`${SITE.title}, ${tCommon("shortName")}`}>
+          <span className="relative flex h-11 items-center sm:h-14">
             <LogoWordmark className="h-full w-auto object-contain object-left" />
+          </span>
+          {/* The line under the logo, on one line; a little smaller on a phone. */}
+          <span className="mt-1 block whitespace-nowrap text-[0.5rem] font-bold uppercase leading-snug tracking-[0.1em] text-brand-black-80 sm:text-[0.56rem] sm:tracking-[0.14em] lg:text-[0.64rem]">
+            {tHome("hero.kicker")}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
           {NAV.map((item) => {
             const active = isActive(item.href);
             return (
@@ -57,7 +62,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`px-3.5 py-2 text-[0.92rem] transition-colors hover:text-brand-black ${
+                className={`px-2.5 py-2 xl:px-3.5 text-[0.92rem] transition-colors hover:text-brand-black ${
                   active ? "font-extrabold text-brand-black" : "font-medium text-brand-black-60"
                 }`}
               >
@@ -67,7 +72,7 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           <LanguageSwitch className="flex items-center gap-2 text-[0.75rem] tracking-wider" />
           <Button
             href="/contact"
@@ -80,7 +85,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="flex h-12 w-12 flex-col items-center justify-center gap-[5px] rounded-lg border border-brand-black-60 md:hidden"
+          className="flex h-12 w-12 flex-col items-center justify-center gap-[5px] rounded-lg border border-brand-black-60 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
           aria-label={menuOpen ? tNav("closeMenu") : tNav("openMenu")}
@@ -94,7 +99,7 @@ export function SiteHeader() {
 
       <div
         id="mobile-nav"
-        className={`max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-brand-black/10 bg-brand-white md:hidden ${
+        className={`max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-brand-black/10 bg-brand-white lg:hidden ${
           menuOpen ? "block" : "hidden"
         }`}
       >
