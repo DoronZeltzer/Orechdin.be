@@ -43,55 +43,44 @@ export function CookieBanner() {
           role="dialog"
           aria-labelledby="cookie-banner-title"
           aria-describedby="cookie-banner-body"
-          className="fixed inset-x-0 bottom-0 z-[90] rounded-t-2xl border-t border-brand-black/10 bg-brand-white shadow-[0_-12px_40px_rgba(0,0,0,0.12)]"
+          className="fixed inset-x-3 bottom-3 z-[90] rounded-2xl border border-brand-black/10 bg-brand-white shadow-[0_8px_30px_rgba(0,0,0,0.18)] sm:inset-x-auto sm:bottom-4 sm:start-4 sm:w-[22rem]"
         >
-          <div className="mx-auto max-w-wide px-6 py-6 lg:px-10">
-            <p className="eyebrow">{t("banner.eyebrow")}</p>
-            <h2
-              id="cookie-banner-title"
-              className="mt-2 font-display text-xl text-orech-ink md:text-2xl"
-            >
+          <div className="max-h-[70vh] overflow-y-auto p-4">
+            <h2 id="cookie-banner-title" className="text-base leading-snug">
               {t("banner.title")}
             </h2>
             <p
               id="cookie-banner-body"
-              className="mt-3 max-w-3xl text-[0.9rem] leading-relaxed text-brand-black-80"
+              className="mt-2 text-[0.8rem] leading-relaxed text-brand-black-80"
             >
               {t("banner.body")}
             </p>
 
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
-              {/* Equal prominence is the point: same element, same classes. */}
-              <ConsentButton onClick={refuseAll}>
+            {/* Equal prominence is the point: same element, same classes. */}
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <ConsentButton compact onClick={refuseAll}>
                 {t("banner.refuseAll")}
               </ConsentButton>
-              <ConsentButton onClick={acceptAll}>
+              <ConsentButton compact onClick={acceptAll}>
                 {t("banner.acceptAll")}
               </ConsentButton>
+            </div>
+
+            <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.75rem] text-brand-black-80">
               <button
                 type="button"
                 onClick={openPrefs}
-                className="inline-flex min-h-11 items-center justify-center px-2 text-sm font-medium text-brand-black underline underline-offset-4 transition-colors hover:text-orech-ink"
+                className="min-h-8 font-bold text-brand-black underline underline-offset-4"
               >
                 {t("banner.managePreferences")}
               </button>
-            </div>
-
-            <p className="mt-4 text-[0.78rem] text-brand-black-80">
-              <Link
-                href="/cookies"
-                className="underline underline-offset-2 hover:text-brand-black"
-              >
+              <Link href="/cookies" className="underline underline-offset-2 hover:text-brand-black">
                 {t("banner.cookiePolicy")}
               </Link>
-              <span aria-hidden="true"> · </span>
-              <Link
-                href="/privacy"
-                className="underline underline-offset-2 hover:text-brand-black"
-              >
+              <Link href="/privacy" className="underline underline-offset-2 hover:text-brand-black">
                 {t("banner.privacyPolicy")}
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       )}
@@ -108,12 +97,22 @@ export function CookieBanner() {
 function ConsentButton({
   onClick,
   children,
+  compact = false,
 }: {
   onClick: () => void;
   children: React.ReactNode;
+  /** The small popup uses a smaller size; both answers always get the same one. */
+  compact?: boolean;
 }) {
   return (
-    <Button onClick={onClick} className="w-full sm:w-auto sm:min-w-[11rem]">
+    <Button
+      onClick={onClick}
+      className={
+        compact
+          ? "min-h-10 w-full px-3 py-2 text-[0.75rem] tracking-[0.08em]"
+          : "w-full sm:w-auto sm:min-w-[11rem]"
+      }
+    >
       {children}
     </Button>
   );

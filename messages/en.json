@@ -320,7 +320,7 @@
     "banner": {
       "eyebrow": "Cookies",
       "title": "Cookies on this website",
-      "body": "We place only what is strictly necessary for this website to work, unless you allow more. The optional part is the Google Maps frame on our contact page, and visitor statistics should we ever add them. Refusing costs you nothing: every page works exactly the same either way.",
+      "body": "We place only what is strictly necessary for this website to work, unless you allow more. The only optional item is the Google Maps frame on our contact page. Refusing costs you nothing.",
       "acceptAll": "Accept all",
       "refuseAll": "Refuse all",
       "managePreferences": "Manage preferences",
