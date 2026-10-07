@@ -28,7 +28,7 @@ function ServicesPageContent() {
       </SectionShell>
 
       <SectionShell background="default" className="pb-4 lg:pb-6">
-        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+        <div className="max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
           <p>{t("intro.p2")}</p>
           <p>{t("intro.p3")}</p>
         </div>

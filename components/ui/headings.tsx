@@ -48,10 +48,10 @@ export function PageHeading({ eyebrow, titleClassName, title, lead, align = "lef
   return (
     <div className={cn("flex max-w-3xl flex-col gap-5", ALIGN[align], className)}>
       {eyebrow && <p className={cn("eyebrow", t.eyebrow)}>{eyebrow}</p>}
-      <h1 className={cn("text-balance break-words text-4xl leading-[1.08] tracking-editorial sm:text-5xl lg:text-6xl", t.heading, titleClassName)}>
+      <h1 className={cn("text-balance break-words text-[1.8rem] leading-[1.1] tracking-editorial sm:text-5xl sm:leading-[1.08] lg:text-6xl", t.heading, titleClassName)}>
         {title}
       </h1>
-      {lead && <p className={cn("max-w-2xl text-lg leading-relaxed sm:text-xl", t.lead)}>{lead}</p>}
+      {lead && <p className={cn("max-w-2xl text-base leading-relaxed sm:text-xl", t.lead)}>{lead}</p>}
     </div>
   );
 }
@@ -62,7 +62,7 @@ export function SectionHeading({ eyebrow, titleClassName, title, lead, align = "
   return (
     <div className={cn("flex max-w-3xl flex-col gap-4", ALIGN[align], className)}>
       {eyebrow && <p className={cn("eyebrow", t.eyebrow)}>{eyebrow}</p>}
-      <h2 className={cn("text-balance break-words text-3xl leading-[1.12] tracking-editorial sm:text-4xl lg:text-[2.6rem]", t.heading, titleClassName)}>
+      <h2 className={cn("text-balance break-words text-[1.55rem] leading-[1.15] tracking-editorial sm:text-4xl sm:leading-[1.12] lg:text-[2.6rem]", t.heading, titleClassName)}>
         {title}
       </h2>
       {lead && <p className={cn("max-w-2xl text-base leading-relaxed sm:text-lg", t.lead)}>{lead}</p>}

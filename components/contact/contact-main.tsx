@@ -31,7 +31,7 @@ export function ContactMain() {
       <SectionShell background="default">
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
-            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+            <div className="max-w-2xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
               <p>{t("intro.p2")}</p>
               <p>{t("intro.p3")}</p>
             </div>
@@ -115,7 +115,7 @@ export function ContactMain() {
       <SectionShell background="default" id="enquiry" className="scroll-mt-20">
         <div className="max-w-3xl">
           <h2 className="text-3xl leading-tight sm:text-4xl">{t("enquiry.title")}</h2>
-          <p className="mt-4 text-lg leading-relaxed text-brand-black-80">{t("enquiry.intro")}</p>
+          <p className="mt-4 text-base leading-relaxed sm:text-lg text-brand-black-80">{t("enquiry.intro")}</p>
           <div className="mt-8">
             <ContactForm />
           </div>

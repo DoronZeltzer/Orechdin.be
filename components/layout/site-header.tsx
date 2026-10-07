@@ -45,11 +45,11 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-4 px-6 py-3 md:py-4 lg:px-10">
         <Link href="/" className="flex flex-col" aria-label={`${SITE.title}, ${tCommon("shortName")}`}>
-          <span className="relative flex h-11 items-center sm:h-14">
+          <span className="relative flex h-10 items-center sm:h-14">
             <LogoWordmark className="h-full w-auto object-contain object-left" />
           </span>
-          {/* The line under the logo, on one line; a little smaller on a phone. */}
-          <span className="mt-1 block whitespace-nowrap text-[0.5rem] font-bold uppercase leading-snug tracking-[0.1em] text-brand-black-80 sm:text-[0.56rem] sm:tracking-[0.14em] lg:text-[0.64rem]">
+          {/* The line under the logo, on one line. Not shown on a phone: there is no room for it next to the menu button. */}
+          <span className="mt-1 hidden whitespace-nowrap text-[0.56rem] font-bold uppercase leading-snug tracking-[0.14em] text-brand-black-80 sm:block lg:text-[0.64rem]">
             {tHome("hero.kicker")}
           </span>
         </Link>

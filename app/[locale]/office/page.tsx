@@ -28,7 +28,7 @@ function OfficePageContent() {
       </SectionShell>
 
       <SectionShell background="default">
-        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+        <div className="max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
           <p>{t("intro.p2")}</p>
           <p>{t("intro.p3")}</p>
           <p>{t("intro.p4")}</p>
@@ -54,7 +54,7 @@ function OfficePageContent() {
           <div className="lg:col-span-5">
             <SectionHeading title={t("direct.title")} />
           </div>
-          <div className="space-y-5 text-lg leading-relaxed text-brand-black-80 lg:col-span-7">
+          <div className="space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80 lg:col-span-7">
             <p>{t("direct.p1")}</p>
             <p>{t("direct.p2")}</p>
             <p className="font-bold text-brand-black">{t("direct.p3")}</p>

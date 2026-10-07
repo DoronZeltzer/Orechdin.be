@@ -43,7 +43,7 @@ function LawyersPageContent() {
       </SectionShell>
 
       <SectionShell background="default" className="pb-4 lg:pb-6">
-        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+        <div className="max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
           <p>{t("intro.p2")}</p>
           <p>{t("intro.p3")}</p>
         </div>
@@ -75,7 +75,7 @@ function LawyersPageContent() {
                 <h2 className="text-3xl sm:text-4xl">{p.name}</h2>
                 <p className="mt-2 text-lg font-bold text-brand-black-80">{p.role}</p>
 
-                <div className="mt-6 max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+                <div className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
                   {p.paragraphs.map((para) => (
                     <p key={para.slice(0, 40)}>{para}</p>
                   ))}

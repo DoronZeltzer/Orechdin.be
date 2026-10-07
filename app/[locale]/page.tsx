@@ -68,7 +68,7 @@ function HomePageContent() {
               className="max-w-none"
             />
             <ContactActions className="mt-8" />
-            <p className="mt-7 max-w-xl text-lg font-bold leading-snug">{t("hero.supporting")}</p>
+            <p className="mt-7 max-w-xl text-base font-bold leading-snug sm:text-lg">{t("hero.supporting")}</p>
           </div>
 
           {/* The stamp, as before: a small caption over a very faint year. */}
@@ -86,7 +86,7 @@ function HomePageContent() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <SectionHeading eyebrow={t("personal.eyebrow")} title={t("personal.title")} />
-            <div className="mt-6 space-y-5 text-lg leading-relaxed text-brand-black-80">
+            <div className="mt-6 space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
               <p>{t("personal.p1")}</p>
               <p>{t("personal.p2")}</p>
               <p>{t("personal.p3")}</p>
@@ -139,7 +139,7 @@ function HomePageContent() {
           <div className="lg:col-span-5">
             <SectionHeading title={t("advice.title")} />
           </div>
-          <div className="space-y-5 text-lg leading-relaxed text-brand-black-80 lg:col-span-7">
+          <div className="space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80 lg:col-span-7">
             <p>{t("advice.p1")}</p>
             <p>{t("advice.p2")}</p>
           </div>
@@ -149,7 +149,7 @@ function HomePageContent() {
       {/* ═══════════════════════════ CLIENTS ABROAD ═══════════════════════════ */}
       <SectionShell background="blue" id="abroad">
         <SectionHeading tone="blue" eyebrow={t("abroad.eyebrow")} title={t("abroad.title")} className="max-w-4xl" />
-        <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-brand-black-80">
+        <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed sm:text-lg text-brand-black-80">
           <p>{t("abroad.p1")}</p>
           <p className="font-bold text-brand-black">{t("abroad.p2")}</p>
         </div>
@@ -160,7 +160,7 @@ function HomePageContent() {
       <SectionShell background="default" id="contact-cta">
         <div className="rounded-3xl bg-brand-wash p-8 sm:p-12 lg:p-16">
           <h2 className="text-3xl leading-tight sm:text-4xl lg:text-[2.6rem]">{t("contact.title")}</h2>
-          <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-brand-black-80">
+          <div className="mt-6 max-w-2xl space-y-4 text-base leading-relaxed sm:text-lg text-brand-black-80">
             <p>{t("contact.p1")}</p>
             <p>{t("contact.p2")}</p>
             <p>{t("contact.p3")}</p>
