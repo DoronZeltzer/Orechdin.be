@@ -100,8 +100,8 @@ export const MEDIA = {
   // generic Wix-hosted office shot with a piece tuned for the firm's tone.
   // Lawyer portraits below remain the originals (`/media/lawyers/*`).
   heroBg: "/media/site/antwerp-chambers.webp",
-  nirPhoto: "/media/lawyers/nir-2026.webp?v=bfbc20fd",
-  deborahPhoto: "/media/lawyers/deborah.webp?v=664af79c",
+  nirPhoto: "/media/lawyers/nir-2026b.webp?v=ccd91023",
+  deborahPhoto: "/media/lawyers/deborah-2026b.webp?v=f599aa1b",
 } as const;
 
 export const LAWYERS = [

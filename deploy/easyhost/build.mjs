@@ -173,7 +173,7 @@ log("Checking the result");
 const must = [
   "index.html", "404.html", "robots.txt", "sitemap.xml", ".htaccess", "api/contact.php", "api/.htaccess",
   ...["en", "nl", "he"].flatMap((l) => ["", "services", "lawyers", "office", "contact", "privacy", "cookies", "legal-notice"].map((p) => path.posix.join(l, p, "index.html"))),
-  "media/lawyers/nir-2026-w640.webp", "media/site/antwerp-chambers-w1536.webp", "media/site/logo-orechdin.webp",
+  "media/lawyers/nir-2026b-w640.webp", "media/lawyers/deborah-2026b-w640.webp", "media/site/antwerp-chambers-w1536.webp", "media/site/logo-orechdin.webp",
 ];
 const missing = must.filter((f) => !fs.existsSync(path.join(WWW, f)));
 if (missing.length) die(`missing from the result: ${missing.join(", ")}`);
