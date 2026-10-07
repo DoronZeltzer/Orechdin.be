@@ -68,3 +68,19 @@ In https://my.easyhost.be → Domeinnamen → orechdin.be:
 
 ## What the contact form needs on the server
 PHP 8.1 or newer (the plan runs PHP 8.3), the right to connect to `smtp-auth.mailprotect.be:465`, and a writable temporary folder (for the "5 messages per 10 minutes" counter). If a message cannot be sent, the visitor sees the phone number and the email address instead, so nothing is lost silently.
+
+
+---
+
+## What was found and done on 7 October 2026 (first upload to the test address)
+
+- The site was uploaded to `orechdinbe.webhosting.be` (Easyhost Large plan, PHP 8.3.35). The upload used the panel's **File Manager** (My Easyhost, Webhosting, File Manager, Open File Manager), which signs in by itself: no FTP user or password was needed. A zip of `www/` was uploaded and extracted there.
+- The `www` folder held an old WordPress site (2016 to 2023). It was **renamed, not deleted**, to `www-old-wordpress-backup-2026-10-07` in the same home folder. To undo: rename the new `www` to something else and the backup back to `www`.
+- Easyhost's server answers as nginx but **honours `.htaccess`** (redirects, security headers, custom 404, caching and compression all work). `nginx-snippet.conf` is therefore not needed.
+- The temporary address uses a certificate that browsers and tools do not trust. This is normal for Easyhost's temporary names and does not exist on `www.orechdin.be`. Expect a browser warning if you open the test address.
+- The document root is `/data/sites/web/orechdinbe/www`; the home folder (where the mail settings file goes) is the folder above it, which the File Manager shows as its top level.
+- The mail settings file is waiting as `orechdin-mail.sample.php` in the home folder. To switch the contact form on: Edit it in the File Manager, type the mailbox password, and rename it to `orechdin-mail.php`.
+- Easyhost's PHP reaches `smtp-auth.mailprotect.be` securely on ports 465 and 587 (checked from the server itself).
+- File Manager sessions expire after a short while; open it again from the panel.
+- The upload package `orechdin-www.zip`, a connectivity check script and the sample settings file were left in the home folder (outside the web folder).
+- For the live site: build with `npm run build:easyhost -- --live`, zip `dist-easyhost/www`, upload and extract over the test copy.
