@@ -9,6 +9,9 @@ ErrorDocument 404 /404.html
     RewriteEngine On
 
     # One canonical address: www.orechdin.be (the bare orechdin.be forwards to it).
+    # (The certificate authority's ownership check under /.well-known/acme-challenge/ is answered directly,
+    # never redirected, so the free https certificate can be issued for both names.)
+    RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
     RewriteCond %{HTTP_HOST} ^orechdin\.be$ [NC]
     RewriteRule ^ https://www.orechdin.be%{REQUEST_URI} [R=301,L]
 
