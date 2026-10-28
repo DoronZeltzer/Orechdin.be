@@ -24,7 +24,7 @@ export function ContactMain() {
 
   return (
     <>
-      <SectionShell background="wash" className="py-12 sm:py-14 lg:py-20">
+      <SectionShell background="wash" className="py-10 sm:py-12 lg:py-16">
         <PageHeading title={t("title")} lead={t("intro.p1")} />
       </SectionShell>
 

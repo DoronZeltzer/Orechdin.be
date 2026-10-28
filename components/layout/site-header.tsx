@@ -49,7 +49,7 @@ export function SiteHeader() {
             <LogoWordmark className="h-full w-auto object-contain object-left" />
           </span>
           {/* The line under the logo, on one line. Not shown on a phone: there is no room for it next to the menu button. */}
-          <span className="mt-1 hidden whitespace-nowrap text-[0.56rem] font-bold uppercase leading-snug tracking-[0.14em] text-brand-black-80 sm:block lg:text-[0.64rem]">
+          <span className="mt-1 hidden whitespace-nowrap text-[0.56rem] font-bold uppercase leading-snug tracking-[0.14em] text-brand-black-80 sm:block lg:text-[0.64rem] rtl:text-[0.66rem] rtl:lg:text-[0.74rem]">
             {tHome("hero.kicker")}
           </span>
         </Link>

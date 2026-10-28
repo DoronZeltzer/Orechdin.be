@@ -39,7 +39,7 @@ function LegalNoticePageContent() {
 
   return (
     <main id="main-content" className="bg-brand-white text-brand-black selection:bg-brand-blue/40">
-      <SectionShell background="wash" className="py-14 lg:py-20">
+      <SectionShell background="wash" className="py-12 lg:py-16">
         <PageHeading title={t("title")} />
       </SectionShell>
       <SectionShell background="default">

@@ -37,7 +37,8 @@
     "cookies": "Cookies",
     "legalNotice": "Wettelijke vermeldingen",
     "phoneLetter": "T",
-    "emailLetter": "E"
+    "emailLetter": "E",
+    "createdBy": "Gemaakt door"
   },
   "HomePage": {
     "metadata": {
@@ -47,7 +48,7 @@
     "hero": {
       "kicker": "Boutique advocatenkantoor · Antwerpen, België",
       "title": "Juridische bijstand wanneer het er het meest toe doet.",
-      "intro": "ORECH/DIN adviseert en vertegenwoordigt particulieren, ondernemers en bedrijven in juridische zaken in België. Onze advocaten, elk met meer dan 25 jaar ervaring, combineren brede juridische kennis met persoonlijke betrokkenheid, heldere communicatie en een gerichte aanpak.",
+      "intro": "Het advocatenkantoor adviseert en vertegenwoordigt particulieren, ondernemers en bedrijven in juridische zaken in België. Onze advocaten, elk met meer dan 25 jaar ervaring, combineren brede juridische kennis met persoonlijke betrokkenheid, heldere communicatie en een gerichte aanpak.",
       "supporting": "Wanneer uw rechten of belangen op het spel staan, staan wij aan uw zijde en treden wij vastberaden op.",
       "imageAlt": "Interieur van een Belgisch advocatenkantoor met een boekenkast, een antieke bureaulamp en uitzicht op de Grote Markt van Antwerpen",
       "stamp": "Antwerpen sinds"

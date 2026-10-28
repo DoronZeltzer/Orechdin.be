@@ -37,6 +37,13 @@
     font-weight: 800 !important;
   }
 
+  /* Hebrew letters sit smaller on the line than Latin ones at the same size, so
+     the whole Hebrew site is set two points larger (16px to 18px). Everything is
+     in rem, so text, spacing and the header all scale together. */
+  html:lang(he) {
+    font-size: 112.5%;
+  }
+
   /* Letter-spacing is a Latin habit: it pulls Hebrew letters apart and breaks the word shapes. */
   :lang(he), :lang(he) * {
     letter-spacing: normal !important;

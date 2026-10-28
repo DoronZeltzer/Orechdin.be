@@ -83,9 +83,14 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="mt-10 border-t border-brand-black/15 pt-6 text-[0.82rem] text-brand-black-80">
-          © {new Date().getFullYear()} <span className="font-bold text-brand-black">{SITE.copyrightEntity}</span>
-        </p>
+        <div className="mt-10 flex flex-col gap-2 border-t border-brand-black/15 pt-6 text-[0.82rem] text-brand-black-80 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} <span className="font-bold text-brand-black">{SITE.copyrightEntity}</span>
+          </p>
+          <p>
+            {t("createdBy")} <bdi dir="ltr" className="font-bold text-brand-black">ZeltzerTech</bdi>
+          </p>
+        </div>
       </div>
     </footer>
   );

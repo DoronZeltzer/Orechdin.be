@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
  * `SectionShell`: the full-width wrapper every page section sits in.
  *
  * Rhythm: the old shell used `py-24 lg:py-36` on every section, which made the
- * homepage very long with nothing standing out. `py-16 lg:py-24` keeps the air
+ * homepage very long with nothing standing out. `py-12 lg:py-20` keeps the air
  * but lets the page breathe at a reading pace. Sections now alternate between
  * surfaces so the eye can tell where one idea ends and the next begins.
  *
@@ -52,7 +52,7 @@ export function SectionShell({
   return (
     <section
       id={id}
-      className={cn("relative w-full py-16 lg:py-24", SURFACE[background], className)}
+      className={cn("relative w-full py-12 lg:py-20", SURFACE[background], className)}
     >
       <div className={cn("mx-auto px-6 sm:px-10 lg:px-16", WIDTH[width])}>{children}</div>
     </section>

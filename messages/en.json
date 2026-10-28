@@ -39,7 +39,8 @@
     "cookies": "Cookies",
     "legalNotice": "Legal notice",
     "phoneLetter": "T",
-    "emailLetter": "E"
+    "emailLetter": "E",
+    "createdBy": "Created by"
   },
   "HomePage": {
     "metadata": {
@@ -49,7 +50,7 @@
     "hero": {
       "kicker": "Boutique Law Office · Antwerp, Belgium",
       "title": "Legal assistance when it matters the most.",
-      "intro": "ORECH/DIN advises and represents individuals, entrepreneurs and businesses in legal matters in Belgium. With more than 25 years of experience each, our lawyers combine broad legal knowledge with personal involvement, clear communication and a focused approach.",
+      "intro": "The law office advises and represents individuals, entrepreneurs and businesses in legal matters in Belgium. With more than 25 years of experience each, our lawyers combine broad legal knowledge with personal involvement, clear communication and a focused approach.",
       "supporting": "When your rights or interests are at stake, we stand by you and act with determination.",
       "imageAlt": "Belgian chambers interior, bookcase, antique desk lamp and a view onto the Antwerp Grote Markt",
       "stamp": "est. Antwerp"
